@@ -1,0 +1,272 @@
+2019-10-15 08:42:44,752 [10] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 09:37:03,281 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 09:47:41,502 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 09:47:58,050 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 10:51:56,500 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 10:58:04,834 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:18:11,510 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:20:09,434 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:22:21,714 [12] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:27:03,460 [17] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:27:49,168 [16] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:29:39,270 [16] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:30:32,779 [17] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:31:19,802 [17] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:49:37,001 [21] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:51:19,006 [31] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:52:47,021 [18] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:53:04,341 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:53:22,661 [10] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:53:49,207 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:54:30,408 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:55:06,509 [10] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 11:56:32,840 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:03:48,209 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:07:15,446 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_ACT_TabUsuario' esperaba el parámetro '@Codi_Usuario', que no se ha especificado.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:10:31,764 [26] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:15:39,294 [33] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:16:16,933 [33] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:16:40,341 [33] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 12:22:34,703 [33] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 15:02:51,277 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 15:04:00,133 [21] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 15:05:20,904 [21] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78
+2019-10-15 15:12:04,731 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de String a Int16.
+   en Mantenimiento.DataAccess.LoginData.<Actualizapwd>d__1.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\LoginData.cs:línea 80
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ActualizapwdLogic.<Actualizapwd>d__0.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\LoginLogic.cs:línea 78

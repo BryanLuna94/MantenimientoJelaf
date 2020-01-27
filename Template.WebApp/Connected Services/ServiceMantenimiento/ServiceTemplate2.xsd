@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
+  <xs:complexType name="ResponseOfBaseResponsemN2Mq3LJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BaseResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q1:BaseResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfBaseResponsemN2Mq3LJ" nillable="true" type="tns:ResponseOfBaseResponsemN2Mq3LJ" />
+  <xs:complexType name="ResponseOfLoginResponsemN2Mq3LJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LoginResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q2:LoginResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfLoginResponsemN2Mq3LJ" nillable="true" type="tns:ResponseOfLoginResponsemN2Mq3LJ" />
+</xs:schema>

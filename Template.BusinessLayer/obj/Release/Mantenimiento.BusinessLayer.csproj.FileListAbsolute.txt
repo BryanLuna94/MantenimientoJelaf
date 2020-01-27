@@ -1,0 +1,31 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Mantenimiento.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Mantenimiento.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\SeguridadJelaf.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\bin\Release\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Mantenimiento.BusinessLayer.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Mantenimiento.BusinessLayer.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\SeguridadJelaf.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Mantenimiento.DataAccess.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\bin\Release\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.dll
+D:\BryanLuna\MANTENIMIENTO\Template.BusinessLayer\obj\Release\Mantenimiento.BusinessLayer.pdb

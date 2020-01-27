@@ -1,0 +1,126 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Tipos de Mantenimiento Preventivo";
+    ViewBag.Title = "Configuración de Mantenimiento Preventivo";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+<link href="~/wwwroot/AmpleAdmin/plugins/bower_components/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" />
+
+<style>
+    .width-auto-tr > td {
+        width : 100%;
+    }
+</style>
+
+<div class="col-sm-12" id="app">
+    <div style="padding:1px;">
+        <!-- Modal -->
+        @Html.Partial("_Kilometraje")
+        @Html.Partial("_Tarea")
+        @Html.Partial("_Tarea.Repuesto")
+    </div>
+    <div class="white-box p-l-20 p-r-20 " id="Busquedas">
+        <div class="bootstrap-table">
+            <template>
+                <ul id="ulMenuClickDerecho"
+                    tabindex="-1"
+                    ref="right"
+                    v-if="showContextMenu"
+                    @@blur="closeMenu"
+                    :style="{top: top, left: left}">
+
+                    <li @@click="contextAgregarKilometraje(itemSelected1, itemSelected2)">
+                        AGREGAR KILOMETRAJE
+                    </li>
+                    <li @@click="contextAgregarTareas(itemSelected1, itemSelected2)">
+                        AGREGAR TAREAS
+                    </li>
+                </ul>
+            </template>
+            <table class="table table-hover" id="tableTipoMP" ref="#tableTipoMP" data-show-columns="true" data-height="700">
+                <thead>
+                    <tr>
+                        <td align="center">MARCA</td>
+                        <td align="center">MODELO</td>
+                        <td align="center" class="header" v-for="ClaseMP in list.ClaseMP" :key="list.ClaseMP.IdClaseMantenimiento" style="width: auto;">
+                            {{ ClaseMP.IdClaseMantenimiento }}
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="header" v-for="MarcaModelo in list.MarcaModelo" :key="list.MarcaModelo.cod_modelo">
+                        <td>{{ MarcaModelo.marca }}</td>
+                        <td>{{ MarcaModelo.modelo }}</td>
+                        <td v-for="ClaseMP in list.ClaseMP" :key="list.ClaseMP.IdClaseMantenimiento" @@contextmenu="openMenu($event, MarcaModelo, ClaseMP)">
+                            <table>
+                                <tr class="full-width">
+                                    <td>KM CAMBIO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.Kilometros }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>KM AVISO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.KilometrosAviso }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DIAS CAMBIO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.Dias }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DIAS AVISO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.DiasAviso }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>HS CAMBIO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.Horas }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>HS AVISO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.HorasAviso }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <input type="hidden" value="@UsuarioActual.Codi_Empresa" id="hdncodempresa"/>
+    <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+</div>
+
+
+@section scripts{
+
+    <script src="~/wwwroot/AmpleAdmin/plugins/bower_components/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script src="~/wwwroot/AmpleAdmin/plugins/bower_components/bootstrap-table/dist/bootstrap-table.ints.js"></script>
+    <script src="~/wwwroot/js/Vue/Views/TipoMP.js"></script>
+
+}

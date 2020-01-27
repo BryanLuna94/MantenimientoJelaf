@@ -1,0 +1,52 @@
+2020-01-20 15:32:47,822 [53] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Desbordamiento de SqlDateTime. Debe estar entre 1/1/1753 12:00:00 AM y 12/31/9999 11:59:59 PM.
+   en Mantenimiento.DataAccess.MtbfData.<InsertMTBF>d__1.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\MtbfData.cs:línea 120
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 228
+2020-01-20 15:39:09,183 [30] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.InvalidOperationException: TransactionScope se debe eliminar en el mismo subproceso en el que se creó.
+   en System.Transactions.TransactionScope.Dispose()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 236
+2020-01-20 15:41:05,294 [17] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Desbordamiento de SqlDateTime. Debe estar entre 1/1/1753 12:00:00 AM y 12/31/9999 11:59:59 PM.
+   en Mantenimiento.DataAccess.MtbfData.<InsertMTBF>d__1.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\MtbfData.cs:línea 120
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 232
+2020-01-20 15:49:04,059 [46] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_INS_tb_MTBF' esperaba el parámetro '@pTotalHoras', que no se ha especificado.
+   en Mantenimiento.DataAccess.MtbfData.<InsertMTBF>d__1.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\MtbfData.cs:línea 120
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 234
+2020-01-20 15:49:04,367 [46] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_INS_tb_MTBF' esperaba el parámetro '@pTotalHoras', que no se ha especificado.
+   en Mantenimiento.DataAccess.MtbfData.<InsertMTBF>d__1.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\MtbfData.cs:línea 120
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 234
+2020-01-20 15:49:04,533 [26] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_INS_tb_MTBF' esperaba el parámetro '@pTotalHoras', que no se ha especificado.
+   en Mantenimiento.DataAccess.MtbfData.<InsertMTBF>d__1.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\MtbfData.cs:línea 120
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 234
+2020-01-20 15:50:43,132 [47] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_INS_tb_MTBF' esperaba el parámetro '@pTotalHoras', que no se ha especificado.
+   en Mantenimiento.DataAccess.MtbfData.<InsertMTBF>d__1.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\MtbfData.cs:línea 120
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.MtbfLogic.<InsertMtbf>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\MtbfLogic.cs:línea 234

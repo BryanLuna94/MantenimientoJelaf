@@ -1,0 +1,425 @@
+﻿using System.ServiceModel;
+using System.ServiceModel.Web;
+using System.Threading.Tasks;
+using Mantenimiento.Entities.Objects.Others;
+using Mantenimiento.Entities.Peticiones.Requests;
+using Mantenimiento.Entities.Peticiones.Responses;
+using Mantenimiento.Entities.Requests.Responses;
+using Mantenimiento.Utility;
+
+namespace Mantenimiento.Service
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IServiceMantenimiento" in both code and config file together.
+    [ServiceContract]
+    public interface IServiceMantenimiento
+    {
+        #region BASE
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListUsuariosAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListUsuariosAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListSistemasAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListSistemasAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListSubSistemasAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListSubSistemasAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTipoMAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListTipoMAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListEmpresa", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListEmpresa();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListFlotaAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListFlotaAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListPlataformaAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListPlataformaAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareasAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListTareasAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListBeneficiarioAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListBeneficiarioAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListPlanAccionAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListPlanAccionAutocomplete(string value);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListPuntoAtencionAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListPuntoAtencionAutocomplete(string value);
+
+        #endregion
+
+        #region LOGIN
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "Login", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<LoginResponse>> Login(string codiUsuario, string Password);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "Actualizapwd", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<PwdResponse>> Actualizapwd(string codiUsuario, string Password);
+        #endregion
+
+
+        #region SISTEMAS
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SistemasResponse>> ListSistemas(short ID_tb_Sistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SistemasResponse>> DeleteSistemas(short ID_tb_Sistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Response<SistemasResponse> SelectSistemas();
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Response<SistemasResponse> IdSistemas();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SistemasResponse>> InsertSistemas(short ID_tb_Sistema_Mant,string Descripcion);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SistemasResponse>> UpdateSistemas(short ID_tb_Sistema_Mant,string Descripcion);
+
+        #endregion
+
+
+        #region CLASEM
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListClaseM", ResponseFormat = WebMessageFormat.Json)]
+        Response<ClaseMResponse> ListClaseM();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListClaseMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<ClaseMResponse> ListClaseMP();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectClaseM", ResponseFormat = WebMessageFormat.Json)]
+        Response<ClaseMResponse> SelectClaseM(string IdClaseMantenimiento);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteClaseM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<ClaseMResponse>> DeleteClaseM(string IdClaseMantenimiento);
+
+ 
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertClaseM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<ClaseMResponse>> InsertClaseM(string IdClaseMantenimiento, string Descripcion,short NroOrden);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateClaseM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<ClaseMResponse>> UpdateClaseM(string IdClaseMantenimiento, string Descripcion,short NroOrden);
+
+        #endregion
+
+        #region SUBSISTEMAS
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListSubSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Response<SubSistemasResponse> ListSubSistemas();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectSubSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Response<SubSistemasResponse> SelectSubSistemas(string ID_tb_SubSistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdSubSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Response<SubSistemasResponse> IdSubSistemas(short ID_tb_Sistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteSubSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SubSistemasResponse>> DeleteSubSistemas(string ID_tb_SubSistema_Mant);
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertSubSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SubSistemasResponse>> InsertSubSistemas(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateSubSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<SubSistemasResponse>> UpdateSubSistemas(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
+
+        #endregion
+
+        #region TIPOM
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTipoM", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMResponse> ListTipoM();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectTipoM", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMResponse> SelectTipoM(short IdTipMan);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdTipoM", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMResponse> IdTipoM();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteTipoM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TipoMResponse>> DeleteTipoM(short IdTipMan);
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertTipoM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TipoMResponse>> InsertTipoM(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateTipoM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TipoMResponse>> UpdateTipoM(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias,
+            short DiasAviso, short Horas, short HorasAviso);
+
+        #endregion
+
+        #region TipoMP
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdTipoMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMPResponse> IdTipoMP();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTipoMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMPResponse> ListTipoMP();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectTipoMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMPResponse> SelectTipoMP(short IdTipMan);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteTipoMP", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TipoMPResponse>> DeleteTipoMP(short IdTipMan);
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertTipoMP", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TipoMPResponse>> InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros,
+            decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso,
+            short Horas, short HorasAviso, string cod_marca, int cod_modelo);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateTipoMP", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TipoMPResponse>> UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias,
+            short DiasAviso, short Horas, short HorasAviso);
+
+        #endregion
+
+        #region TAREAM
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareaM", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMResponse> ListTareaM();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectTareaM", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMResponse> SelectTareaM(short IdTarea);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdTareaM", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMResponse> IdTareaM();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteTareaM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TareaMResponse>> DeleteTareaM(short IdTarea);
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertTareaM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TareaMResponse>> InsertTareaM(short IdTarea,short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateTareaM", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TareaMResponse>> UpdateTareaM(short IdTarea, short IdTipMan, string Descripcion, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+
+        #endregion
+
+        #region TAREAMP
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdTareaMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMPResponse> IdTareaMP();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareaMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMPResponse> ListTareaMP(short IdTipMan);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectTareaMP", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMPResponse> SelectTareaMP(short IdTarea);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertTareaMP", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TareaMPResponse>> InsertTareaMP(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateTareaMP", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TareaMPResponse>> UpdateTareaMP(short IdTarea, short IdTipMan, string Descripcion, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteTareaMP", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<TareaMPResponse>> DeleteTareaMP(short IdTarea);
+
+        #endregion
+
+        #region ARTICULOT
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdArticuloT", ResponseFormat = WebMessageFormat.Json)]
+        Response<ArticuloTResponse> IdArticuloT();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListArticuloT", ResponseFormat = WebMessageFormat.Json)]
+        Response<ArticuloTResponse> ListArticuloT(short IdTarea);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectArticuloT", ResponseFormat = WebMessageFormat.Json)]
+        Response<ArticuloTResponse> SelectArticuloT(short IdArtTar);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertArticuloT", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<ArticuloTResponse>> InsertArticuloT(short IdTarea, short Cod_Mer, short Cantidad, short Orden);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateArticuloT", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<ArticuloTResponse>> UpdateArticuloT(short IdArtTar, short IdTarea, short Cod_Mer, short Cantidad, short Orden);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteArticuloT", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<ArticuloTResponse>> DeleteArticuloT(short IdArtTar);
+
+        #endregion
+
+        #region PRODUCTO
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListProducto", ResponseFormat = WebMessageFormat.Json)]
+        Response<ProductoResponse> ListProducto(short Index_Compañia, string filtro);
+
+
+        #endregion
+
+        #region MARCAMODELO
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListMarcaModelo", ResponseFormat = WebMessageFormat.Json)]
+        Response<MarcaModeloResponse> ListMarcaModelo();
+
+        #endregion
+
+        #region FALLASD
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectFallasD", ResponseFormat = WebMessageFormat.Json)]
+        Response<FallasDResponse> SelectFallasD(string ID);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "IdFallasD", ResponseFormat = WebMessageFormat.Json)]
+        Response<FallasDResponse> IdFallasD();
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteFallasD", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<FallasDResponse>> DeleteFallasD(string ID);
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertFallasD", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<FallasDResponse>> InsertFallasD(string IdSolicitudRevisionD, string IdSolicitudRevision, string Observacion,
+            string UsuarioRegistro, string FechaRegistro, string HoraRegistro, int Estado,int IdSistema, int IdObservacion);
+
+
+        #endregion
+
+        #region AUXILIOMECANICO
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListAuxilioMecanicoP", ResponseFormat = WebMessageFormat.Json)]
+        Response<AuxilioMecanicoResponse> ListAuxilioMecanico(AuxilioMecanicoRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectAuxilioMecanico", ResponseFormat = WebMessageFormat.Json)]
+        Response<AuxilioMecanicoResponse> SelectAuxilioMecanico(int IdAuxilioMecanico);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteAuxilioMecanico", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<AuxilioMecanicoResponse>> DeleteAuxilioMecanico(int IdAuxilioMecanico);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertAuxilioMecanico", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<AuxilioMecanicoResponse>> InsertAuxilioMecanico(AuxilioMecanicoRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateAuxilioMecanico", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<AuxilioMecanicoResponse>> UpdateAuxilioMecanico(AuxilioMecanicoRequest request);
+
+        #endregion
+
+        #region AUXILIOMECANICO
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListMtbf_AuxilioMecanico", ResponseFormat = WebMessageFormat.Json)]
+        Response<MtbfResponse> ListMtbf_AuxilioMecanico(short anio);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListMtbf", ResponseFormat = WebMessageFormat.Json)]
+        Response<MtbfResponse> ListMtbf(short anio);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertMtbf", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<MtbfResponse>> InsertMtbf(MtbfRequest request);
+
+        #endregion
+
+        #region ORDEN MASIVA
+
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListOrdenMasiva", ResponseFormat = WebMessageFormat.Json)]
+        Response<OrdenMasivaResponse> ListOrdenMasiva(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertCorrectivo", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<OrdenMasivaResponse>> InsertCorrectivo(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "AnularCorrectivo", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<OrdenMasivaResponse>> AnularCorrectivo(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertPreventivo", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<OrdenMasivaResponse>> InsertPreventivo(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceError))]
+        [WebInvoke(Method = "POST", UriTemplate = "AnularPreventivo", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<OrdenMasivaResponse>> AnularPreventivo(OrdenMasivaRequest request);
+
+        #endregion
+
+
+    }
+}

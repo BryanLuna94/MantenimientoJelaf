@@ -1,0 +1,29 @@
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.BusinessLayer.dll
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.BusinessLayer.pdb
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.DataAccess.dll
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.Entities.dll
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.Utility.dll
+D:\Git\Template\Template.BusinessLayer\bin\Debug\JBLV.Log.dll
+D:\Git\Template\Template.BusinessLayer\bin\Debug\log4net.dll
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.DataAccess.pdb
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.Entities.pdb
+D:\Git\Template\Template.BusinessLayer\bin\Debug\Template.Utility.pdb
+D:\Git\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.csprojAssemblyReference.cache
+D:\Git\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.csproj.CopyComplete
+D:\Git\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.dll
+D:\Git\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.pdb
+D:\Git\Template\Template.BusinessLayer\bin\Debug\SeguridadJelaf.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\SeguridadJelaf.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.BusinessLayer\obj\Debug\Template.BusinessLayer.pdb

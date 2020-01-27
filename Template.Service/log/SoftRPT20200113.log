@@ -1,0 +1,184 @@
+2020-01-13 14:32:41,357 [63] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:32:41,615 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:32:41,781 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:34:07,532 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:00,017 [43] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:02,162 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:02,896 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:03,282 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:03,502 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:03,694 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:03,880 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:04,056 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:04,233 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:04,418 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:04,613 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:04,856 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:05,050 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:05,273 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:05,481 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:05,686 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:05,894 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:06,085 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123
+2020-01-13 14:35:06,271 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: No se puede reconocer la cadena como valor DateTime válido.
+   en Mantenimiento.DataAccess.AuxilioMecanicoData.<InsertAuxilioMecanico>d__2.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\AuxilioMecanicoData.cs:línea 160
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.AuxilioMecanicoLogic.<InsertAuxilioMecanico>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\AuxilioMecanicoLogic.cs:línea 123

@@ -1,0 +1,50 @@
+D:\Git\Template\Template.WebApp\bin\Template.WebApp.dll.config
+D:\Git\Template\Template.WebApp\bin\Template.WebApp.dll
+D:\Git\Template\Template.WebApp\bin\Template.WebApp.pdb
+D:\Git\Template\Template.WebApp\bin\Antlr3.Runtime.dll
+D:\Git\Template\Template.WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\Git\Template\Template.WebApp\bin\Newtonsoft.Json.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Helpers.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Mvc.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Optimization.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Razor.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Webpages.Deployment.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Webpages.dll
+D:\Git\Template\Template.WebApp\bin\System.Web.Webpages.Razor.dll
+D:\Git\Template\Template.WebApp\bin\WebGrease.dll
+D:\Git\Template\Template.WebApp\bin\Antlr3.Runtime.pdb
+D:\Git\Template\Template.WebApp\bin\Newtonsoft.Json.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Optimization.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Razor.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Webpages.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Webpages.Deployment.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Webpages.Razor.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Helpers.xml
+D:\Git\Template\Template.WebApp\bin\System.Web.Mvc.xml
+D:\Git\Template\Template.WebApp\obj\Debug\Template.WebApp.csprojAssemblyReference.cache
+D:\Git\Template\Template.WebApp\obj\Debug\Template.WebApp.csproj.CopyComplete
+D:\Git\Template\Template.WebApp\obj\Debug\Template.WebApp.dll
+D:\Git\Template\Template.WebApp\obj\Debug\Template.WebApp.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\Template.WebApp.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\Template.WebApp.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\Antlr3.Runtime.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\Newtonsoft.Json.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Helpers.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Mvc.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Optimization.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Razor.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Webpages.Deployment.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Webpages.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Webpages.Razor.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\WebGrease.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\Antlr3.Runtime.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\Newtonsoft.Json.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Optimization.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Razor.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Webpages.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Webpages.Deployment.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Webpages.Razor.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Helpers.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\bin\System.Web.Mvc.xml
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\obj\Debug\Template.WebApp.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.WebApp\obj\Debug\Template.WebApp.pdb

@@ -1,0 +1,5 @@
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\bin\Release\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\bin\Release\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\obj\Release\Template.Entities.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\obj\Release\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\obj\Release\Template.Entities.pdb

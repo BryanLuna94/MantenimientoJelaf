@@ -1,0 +1,149 @@
+﻿<!-- sample modal content -->
+<div id="appKilometraje" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">Kilometraje</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 m-b-3">
+                        <div class="col-xs-12 col-md-4" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Descripción:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control input-sm"
+                                           v-model="objTipoMP.Descripcion"
+                                           id="Descripcion"
+                                           readonly="readonly"
+                                           ref="Descripcion"
+                                           placeholder="Descripción">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Marca:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control input-sm"
+                                           v-model="objTipoMP.Marca"
+                                           readonly="readonly"
+                                           id="Marca"
+                                           ref="Marca"
+                                           placeholder="Marca">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Modelo:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control input-sm"
+                                           v-model="objTipoMP.Modelo"
+                                           readonly="readonly"
+                                           id="Modelo"
+                                           ref="Modelo"
+                                           placeholder="Modelo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 m-b-6">
+                        <div class="col-xs-6 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Km:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.Kilometros"
+                                           v-mask="'#####'"
+                                           id="Kilometros"
+                                           ref="Kilometros"
+                                           placeholder="Kilometros">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Km Aviso:</label>
+                                <div class="col-md-12 p-0">
+                                    <div class="input-group">
+                                        <input class="form-control text-right input-sm"
+                                               v-model="objTipoMP.KilometrosAviso"
+                                               v-mask="'#####'"
+                                               id="KilometrosAviso"
+                                               ref="KilometrosAviso"
+                                               placeholder="Km Aviso">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Días:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.Dias"
+                                           v-mask="'##'"
+                                           id="Dias"
+                                           ref="Dias"
+                                           placeholder="Días">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Días Aviso:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.DiasAviso"
+                                           id="DiasAviso"
+                                           v-mask="'##'"
+                                           ref="DiasAviso"
+                                           placeholder="Días Aviso">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Hs:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.Horas"
+                                           v-mask="'##'"
+                                           id="Horas"
+                                           ref="Horas"
+                                           placeholder="Horas">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Hs Aviso:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.HorasAviso"
+                                           v-mask="'##'"
+                                           id="HorasAviso"
+                                           ref="HorasAviso"
+                                           placeholder="Horas Aviso">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnSaveKilometraje" class="btn btn-primary waves-effect text-left" v-bind:disabled="!FullFilterKilometraje" ref="btnSaveKilometraje" @@click="saveKilometraje()">
+                    <span class="fa fa-save fa-fw"></span>Aceptar
+                </button>
+                <button class="btn btn-inverse waves-effect waves-light text-left" @@click="close(1)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

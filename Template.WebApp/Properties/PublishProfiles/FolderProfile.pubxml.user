@@ -1,0 +1,2035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\PUBLICAR\SISTEMA</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2019 01:06:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/Template.WebApp.dll">
+      <publishTime>12/17/2019 19:16:45</publishTime>
+    </File>
+    <File Include="bin/Template.WebApp.pdb">
+      <publishTime>12/17/2019 19:16:45</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 13:57:34</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfPwdResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5.datasource">
+      <publishTime>12/05/2019 15:12:40</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/27/2019 14:48:15</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>08/22/2019 18:43:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/11/2019 14:52:33</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>08/27/2019 14:44:08</publishTime>
+    </File>
+    <File Include="Views/Autenticacion/Login.cshtml">
+      <publishTime>10/17/2019 11:33:06</publishTime>
+    </File>
+    <File Include="Views/Autenticacion/Register.cshtml">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="Views/Calendario/Index.cshtml">
+      <publishTime>12/17/2019 16:40:50</publishTime>
+    </File>
+    <File Include="Views/ClaseM/Index.cshtml">
+      <publishTime>12/17/2019 15:12:03</publishTime>
+    </File>
+    <File Include="Views/ErrorPages/NotFound404.cshtml">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="Views/ErrorPages/NotFound500.cshtml">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="Views/Estado/Index.cshtml">
+      <publishTime>12/17/2019 15:28:02</publishTime>
+    </File>
+    <File Include="Views/Fallas/Index.cshtml">
+      <publishTime>12/17/2019 16:47:44</publishTime>
+    </File>
+    <File Include="Views/FallasR/Index.cshtml">
+      <publishTime>12/17/2019 16:45:14</publishTime>
+    </File>
+    <File Include="Views/Generar/Index.cshtml">
+      <publishTime>12/17/2019 15:06:40</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/25/2019 17:29:37</publishTime>
+    </File>
+    <File Include="Views/ImportarA/Index.cshtml">
+      <publishTime>12/17/2019 17:01:26</publishTime>
+    </File>
+    <File Include="Views/ImportarP/Index.cshtml">
+      <publishTime>12/17/2019 14:45:36</publishTime>
+    </File>
+    <File Include="Views/Ordenes/Index.cshtml">
+      <publishTime>12/17/2019 15:13:00</publishTime>
+    </File>
+    <File Include="Views/Perfil/Index.cshtml">
+      <publishTime>11/22/2019 17:33:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>12/17/2019 16:47:54</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutFooter.cshtml">
+      <publishTime>08/07/2019 18:30:35</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutHeader.cshtml">
+      <publishTime>10/11/2019 15:01:42</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutInicio.cshtml">
+      <publishTime>10/20/2019 14:11:54</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutLeftSidebar.cshtml">
+      <publishTime>12/17/2019 15:45:33</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutLogin.cshtml">
+      <publishTime>10/02/2019 10:02:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutRightSidebar.cshtml">
+      <publishTime>08/07/2019 19:04:34</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutTitle.cshtml">
+      <publishTime>12/17/2019 15:45:20</publishTime>
+    </File>
+    <File Include="Views/Sistemas/Index.cshtml">
+      <publishTime>11/25/2019 15:36:10</publishTime>
+    </File>
+    <File Include="Views/Subsistemas/Index.cshtml">
+      <publishTime>12/03/2019 12:07:34</publishTime>
+    </File>
+    <File Include="Views/TareaM/Index.cshtml">
+      <publishTime>12/03/2019 11:36:14</publishTime>
+    </File>
+    <File Include="Views/TipoM/Index.cshtml">
+      <publishTime>11/26/2019 17:11:07</publishTime>
+    </File>
+    <File Include="Views/Unidades/Index.cshtml">
+      <publishTime>12/06/2019 16:45:34</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>10/11/2019 15:01:42</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>10/20/2019 14:11:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/06/2019 16:40:10</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/CHANGELOG.md">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/js/bootstrap.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/dist/js/npm.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/.jshintrc">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/bs-commonjs-generator.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/bs-glyphicons-data-generator.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/bs-lessdoc-parser.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/bs-raw-files-generator.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/configBridge.json">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/grunt/sauce_browsers.yml">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/Gruntfile.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/affix.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/alert.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/button.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/carousel.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/collapse.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/dropdown.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/modal.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/popover.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/scrollspy.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/tab.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/tooltip.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/js/transition.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/alerts.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/badges.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/bootstrap.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/breadcrumbs.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/button-groups.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/buttons.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/carousel.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/close.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/code.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/component-animations.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/dropdowns.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/forms.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/glyphicons.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/grid.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/input-groups.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/jumbotron.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/labels.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/list-group.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/media.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/alerts.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/background-variant.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/border-radius.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/buttons.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/center-block.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/clearfix.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/forms.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/gradients.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/grid-framework.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/grid.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/hide-text.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/image.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/labels.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/list-group.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/nav-divider.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/nav-vertical-align.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/opacity.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/pagination.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/panels.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/progress-bar.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/reset-filter.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/reset-text.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/resize.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/responsive-visibility.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/size.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/tab-focus.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/table-row.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/text-emphasis.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/text-overflow.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/mixins/vendor-prefixes.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/modals.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/navbar.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/navs.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/normalize.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/pager.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/pagination.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/panels.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/popovers.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/print.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/progress-bars.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/responsive-embed.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/responsive-utilities.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/scaffolding.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/tables.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/theme.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/thumbnails.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/tooltip.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/type.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/utilities.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/variables.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/less/wells.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/LICENSE">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/package.json">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/bootstrap/README.md">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/animate.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/blue-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/blue.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/default-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/default.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/gray-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/gray.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/green-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/green.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/megna-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/megna.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/purple-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/purple.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/colors/red-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/linea-icons/linea.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/css/material-design-iconic-font.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/css/material-design-iconic-font.min.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/css/materialdesignicons.min.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/spinners.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/css/style.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/bootstrap-test.json">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/cbpFWTabs.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/chat.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/ColorTheme.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/custom.js">
+      <publishTime>11/25/2019 15:54:01</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/custom.min.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/dashboard1.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/dashboard2.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/dashboard3.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/dashboard4.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/flot-data.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/footable-init.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/jasny-bootstrap.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/jquery.PrintArea.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/jquery.slimscroll.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/jsgrid-init.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/mask.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/morris-data.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/real-estate.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/toastr.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/validator.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/waves.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/js/widget-ext.js">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/blue-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/blue.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/default-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/default.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/gray-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/gray.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/green-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/green.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/megna-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/megna.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/purple-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/purple.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/red-dark.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/colors/red-dark.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/common.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/.bower.json">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/.gitignore">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/.npmignore">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/bower.json">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/css/font-awesome.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/css/font-awesome.min.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/fontawesome-webfont-old.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/HELP-US-OUT.txt">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/animated.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/bordered-pulled.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/core.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/extras.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/fixed-width.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/font-awesome.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/icons.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/larger.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/list.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/mixins.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/path.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/rotated-flipped.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/spinning.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/stacked.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/less/variables.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/font-awesome.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_animated.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_bordered-pulled.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_core.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_extras.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_fixed-width.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_icons.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_larger.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_list.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_mixins.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_path.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_rotated-flipped.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_spinning.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_stacked.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/font-awesome/scss/_variables.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-arrows-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-arrows-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-arrows-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-arrows-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-elaboration-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-elaboration-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-elaboration-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-basic-elaboration-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-ecommerce-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-ecommerce-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-ecommerce-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-ecommerce-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-music-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-music-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-music-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-music-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-software-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-software-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-software-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-software-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-weather-10.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-weather-10.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-weather-10.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/fonts/linea-weather-10.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/linea.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/linea-icons/linea.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/css/material-design-iconic-font.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/css/material-design-iconic-font.min.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/fonts/Material-Design-Iconic-Font.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/fonts/Material-Design-Iconic-Font.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/fonts/Material-Design-Iconic-Font.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/fonts/Material-Design-Iconic-Font.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/material-design-iconic-font2/fonts/Material-Design-Iconic-Font.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/css/simple-line-icons.css">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/fonts/Simple-Line-Icons.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/fonts/Simple-Line-Icons.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/fonts/Simple-Line-Icons.ttf">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/fonts/Simple-Line-Icons.woff">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/fonts/Simple-Line-Icons.woff2">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/less/simple-line-icons.less">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/simple-line-icons/scss/simple-line-icons.scss">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/fonts/themify.eot">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/fonts/themify.svg">
+      <publishTime>07/25/2019 20:27:58</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/fonts/themify.ttf">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/fonts/themify.woff">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/ie7/ie7.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/ie7/ie7.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/themify-icons.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/themify-icons/themify-icons.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/css/weather-icons-core.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/css/weather-icons-variables.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/css/weather-icons-wind.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/css/weather-icons-wind.min.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/css/weather-icons.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/css/weather-icons.min.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/font/weathericons-regular-webfont.eot">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/font/weathericons-regular-webfont.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/font/weathericons-regular-webfont.ttf">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/font/weathericons-regular-webfont.woff">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/font/weathericons-regular-webfont.woff2">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-beaufort.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-day.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-direction.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-misc.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-moon.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-neutral.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-night.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-time.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/css/variables-wind-names.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-beaufort.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-day.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-direction.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-misc.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-moon-aliases.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-moon.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-neutral.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-night.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-time.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-wind-aliases.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-wind-degrees.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-classes/classes-wind.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-beaufort.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-day.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-direction.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-misc.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-moon.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-neutral.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-night.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-time.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/icon-variables/variables-wind-names.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/mappings/wi-forecast-io.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/mappings/wi-owm.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/mappings/wi-wmo4680.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/mappings/wi-yahoo.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons-classes.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons-core.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons-variables.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons-wind.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons-wind.min.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/less/weather-icons.min.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-beaufort.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-day.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-direction.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-misc.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-moon-aliases.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-moon.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-neutral.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-night.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-time.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-wind-aliases.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-wind-degrees.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-classes/classes-wind.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-beaufort.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-day.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-direction.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-misc.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-moon.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-neutral.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-night.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-time.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/icon-variables/variables-wind-names.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/mappings/wi-forecast-io.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/mappings/wi-owm.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/mappings/wi-wmo4680.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/mappings/wi-yahoo.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons-classes.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons-core.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons-variables.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons-wind.min.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons-wind.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons.min.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/icons/weather-icons/sass/weather-icons.scss">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/pages.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/responsive.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/sidebar-nav.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/spinners.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/style.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/variables.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/less/widgets.less">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/bootrstrap-datetimepicker/bootstrap-datetimepicker-4.7.14.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/bootrstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/bootrstrap-datetimepicker/bootstrap-datetimepicker.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/bootrstrap-datetimepicker/moment.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/bootrstrap-datetimepicker/moment_2.10.6_locale_es.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/.bower.json">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/bower.json">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/dist/jquery.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/dist/jquery.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/dist/jquery.min.map">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/jsonp.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/load.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/parseJSON.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/parseXML.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/script.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/var/nonce.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/var/rquery.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/ajax/xhr.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/attributes.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/attributes/attr.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/attributes/classes.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/attributes/prop.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/attributes/support.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/attributes/val.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/callbacks.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/core.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/core/access.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/core/init.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/core/parseHTML.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/core/ready.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/core/var/rsingleTag.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/addGetHookIf.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/curCSS.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/defaultDisplay.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/hiddenVisibleSelectors.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/support.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/swap.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/var/cssExpand.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/var/getStyles.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/var/isHidden.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/var/rmargin.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/css/var/rnumnonpx.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/data.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/data/accepts.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/data/Data.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/data/var/data_priv.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/data/var/data_user.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/deferred.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/deprecated.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/dimensions.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/effects.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/effects/animatedSelector.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/effects/Tween.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/event.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/event/ajax.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/event/alias.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/event/support.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/exports/amd.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/exports/global.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/intro.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/jquery.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/manipulation.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/manipulation/support.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/manipulation/var/rcheckableType.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/manipulation/_evalUrl.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/offset.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/outro.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/queue.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/queue/delay.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/selector-native.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/selector-sizzle.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/selector.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/serialize.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/sizzle/dist/sizzle.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/sizzle/dist/sizzle.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/sizzle/dist/sizzle.min.map">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/traversing.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/traversing/findFilter.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/traversing/var/rneedsContext.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/arr.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/class2type.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/concat.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/hasOwn.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/indexOf.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/pnum.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/push.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/rnotwhite.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/slice.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/strundefined.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/support.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/var/toString.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/jquery/src/wrap.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/owl.carousel/owl.carousel - Shortcut.lnk">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/owl.carousel/owl.carousel.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/owl.carousel/owl.carousel.min.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/owl.carousel/owl.carousel.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/owl.carousel/owl.custom.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/owl.carousel/owl.theme.default.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/.bower.json">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/bower.json">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/Gruntfile.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/LICENSE">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/package.json">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/README.md">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/src/metisMenu.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sidebar-nav/src/metisMenu.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sweetalert/sweetalert.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/sweetalert/sweetalert2.all.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/toast-master/css/jquery.toast.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/bower_components/toast-master/js/jquery.toast.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/admin-logo-dark.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/admin-logo.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/admin-text-dark.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/admin-text.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert2.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert3.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert4.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert5.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert6.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/alert7.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/busy.gif">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/chair.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/chair2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/chair3.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/chair4.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/horizontal-menu.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/resizemenu.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/sidebar.jpeg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/sidebar.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/spinner.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/starter-kit.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/docs/template-structure.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/error-bg.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/favicon.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/features-bg.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-bg/banner-1.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-bg/slide1.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-bg/slide2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-bg/slide3.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-bg/slide4.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-bg/slide6.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/heading-title-bg.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/headline.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/imac.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/img1.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/img2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/img3.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/img4.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/jelaf-blue.gif">
+      <publishTime>01/11/2019 16:57:37</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/jelaf.png">
+      <publishTime>01/11/2019 16:57:37</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/login-register.jpg">
+      <publishTime>09/26/2019 19:00:25</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/logo.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/model.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/model2.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/model3.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/more.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/multiple-arrow.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/perfil.png">
+      <publishTime>08/07/2019 19:36:31</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/profile-menu.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/screen1.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/screen2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/screen3.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/screen4.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/screen5.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/sort_asc.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/sort_asc_disabled.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/sort_both.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/sort_desc.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/sort_desc_disabled.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/Euclid.png">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/shape1.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/shape2.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/shape3.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/tooltip1.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/tooltip2.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/tooltip/tooltip3.svg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/1.jpg">
+      <publishTime>09/30/2019 13:02:24</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/3.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/4.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/5.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/6.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/7.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/8.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/agent.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/agent2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/arijit.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/d1.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/d2.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/d3.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/d4.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/d5.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/genu.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/govinda.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/hritik.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/john.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/pawandeep.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/ritesh.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/salman.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/sonu.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/users/varun.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/AmpleAdmin/plugins/images/weather-bg.jpg">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/css/base.css">
+      <publishTime>10/20/2019 13:54:56</publishTime>
+    </File>
+    <File Include="wwwroot/css/vue-multiselect.min.css">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/css/vue-select.css">
+      <publishTime>08/08/2019 14:52:48</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/base.js">
+      <publishTime>11/29/2019 15:08:16</publishTime>
+    </File>
+    <File Include="wwwroot/js/JqueryDataTables/jquery.dataTables.min.css">
+      <publishTime>07/30/2019 11:36:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/JqueryDataTables/jquery.dataTables.min.js">
+      <publishTime>07/30/2019 11:36:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/SweetAlert2/sweetalert2.js">
+      <publishTime>07/30/2019 11:36:43</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/ajaxcore.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/axios.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/axios.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/axioscore.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/base.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/handlebars.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/handlebars.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/lang.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/lodash.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/lodash.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/v-mask.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vee-validate.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vee-validate.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/Views/ClaseM.js">
+      <publishTime>10/26/2019 12:52:11</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/Views/Fallas.js">
+      <publishTime>12/17/2019 14:58:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/Views/Sistemas.js">
+      <publishTime>11/21/2019 16:24:04</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/Views/SubSistemas.js">
+      <publishTime>12/04/2019 18:31:41</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/Views/TareaM.js">
+      <publishTime>12/03/2019 12:06:06</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/Views/TipoM.js">
+      <publishTime>11/23/2019 13:49:25</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue-bootstrap-datetimepicker.js">
+      <publishTime>08/07/2019 16:54:05</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue-multiselect.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue-paginate.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue-paginate.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue-select.js">
+      <publishTime>10/22/2019 14:45:20</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vue.min.js">
+      <publishTime>07/25/2019 20:27:59</publishTime>
+    </File>
+    <File Include="wwwroot/js/Vue/vuex.js">
+      <publishTime>07/30/2019 11:36:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

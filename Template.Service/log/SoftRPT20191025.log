@@ -1,0 +1,64 @@
+2019-10-25 17:58:44,844 [12] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_DEL_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<DeleteSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 217
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<DeleteSubSistemas>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 97
+2019-10-25 17:59:11,205 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_DEL_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<DeleteSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 217
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<DeleteSubSistemas>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 97
+2019-10-25 17:59:17,710 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_DEL_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<DeleteSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 217
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<DeleteSubSistemas>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 97
+2019-10-25 17:59:44,224 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_DEL_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<DeleteSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 217
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<DeleteSubSistemas>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 97
+2019-10-25 18:02:53,025 [22] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_DEL_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<DeleteSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 217
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<DeleteSubSistemas>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 97
+2019-10-25 18:04:49,793 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_DEL_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<DeleteSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 217
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<DeleteSubSistemas>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 97
+2019-10-25 18:22:42,924 [55] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_UPD_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<UpdateSubSistemas>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 186
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<UpdateSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 168
+2019-10-25 18:25:15,471 [56] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'usp_UPD_tb_SubSistema_Mant' esperaba el parámetro '@ID_tb_SubSistema_Mant', que no se ha especificado.
+   en Mantenimiento.DataAccess.SubSistemasData.<UpdateSubSistemas>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\SubSistemasData.cs:línea 186
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.SubSistemasLogic.<UpdateSubSistemas>d__5.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\SubSistemasLogic.cs:línea 168

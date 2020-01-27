@@ -1,0 +1,35 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Release\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Release\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Service.dll.config
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Release\Mantenimiento.Service.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Release\Mantenimiento.Service.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Release\Mantenimiento.Service.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Service.dll.config
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Service.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Service.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Release\Mantenimiento.Service.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Release\Mantenimiento.Service.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Release\Template.Service.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Release\Template.Service.pdb

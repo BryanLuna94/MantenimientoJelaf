@@ -1,0 +1,50 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.Utility\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.Utility\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.Utility\obj\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\obj\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\JELAF\MANTENIMIENTO\Template.Utility\bin\Debug\Template.Utility.dll
+D:\JELAF\MANTENIMIENTO\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\JELAF\MANTENIMIENTO\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\JELAF\MANTENIMIENTO\Template.Utility\bin\Debug\log4net.dll
+D:\JELAF\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+D:\JELAF\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
+D:\JELAF\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.dll
+D:\JELAF\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Debug\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Debug\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\bin\Debug\Template.Utility.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\bin\Debug\Template.Utility.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\bin\Debug\JBLV.Log.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\bin\Debug\log4net.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\JELAF\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache

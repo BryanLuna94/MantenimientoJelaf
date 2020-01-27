@@ -1,0 +1,36 @@
+2020-01-02 17:33:13,188 [54] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tb_ArticuloTareas_Tb_tareas". The conflict occurred in database "BDALM2019_NIC", table "dbo.Tb_Tareas", column 'IdTarea'.
+The statement has been terminated.
+   en Mantenimiento.DataAccess.ArticuloTData.<InsertArticuloT>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\ArticuloTData.cs:línea 154
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ArticuloTLogic.<InsertArticuloT>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\ArticuloTLogic.cs:línea 140
+2020-01-02 17:33:19,462 [54] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tb_ArticuloTareas_Tb_tareas". The conflict occurred in database "BDALM2019_NIC", table "dbo.Tb_Tareas", column 'IdTarea'.
+The statement has been terminated.
+   en Mantenimiento.DataAccess.ArticuloTData.<InsertArticuloT>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\ArticuloTData.cs:línea 154
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ArticuloTLogic.<InsertArticuloT>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\ArticuloTLogic.cs:línea 140
+2020-01-02 17:35:53,885 [64] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tb_ArticuloTareas_Tb_tareas". The conflict occurred in database "BDALM2019_NIC", table "dbo.Tb_Tareas", column 'IdTarea'.
+The statement has been terminated.
+   en Mantenimiento.DataAccess.ArticuloTData.<InsertArticuloT>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\ArticuloTData.cs:línea 154
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ArticuloTLogic.<InsertArticuloT>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\ArticuloTLogic.cs:línea 140
+2020-01-02 17:37:07,764 [64] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_tb_ArticuloTareas_Tb_tareas". The conflict occurred in database "BDALM2019_NIC", table "dbo.Tb_Tareas", column 'IdTarea'.
+The statement has been terminated.
+   en Mantenimiento.DataAccess.ArticuloTData.<InsertArticuloT>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\ArticuloTData.cs:línea 154
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.ArticuloTLogic.<InsertArticuloT>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\ArticuloTLogic.cs:línea 140

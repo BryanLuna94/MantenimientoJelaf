@@ -1,0 +1,2107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceMantenimiento" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" />
+      <xsd:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceMantenimiento_ListUsuariosAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUsuariosAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListUsuariosAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUsuariosAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListUsuariosAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q1:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSistemasAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSistemasAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSistemasAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSistemasAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSistemasAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q2:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSubSistemasAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSubSistemasAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSubSistemasAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSubSistemasAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSubSistemasAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q3:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoMAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTipoMAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoMAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTipoMAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoMAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q4:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListEmpresa_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q5:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListFlotaAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListFlotaAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListFlotaAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListFlotaAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListFlotaAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q6:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPlataformaAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListPlataformaAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPlataformaAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListPlataformaAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPlataformaAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q7:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareasAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTareasAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareasAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTareasAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareasAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q8:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListBeneficiarioAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListBeneficiarioAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListBeneficiarioAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListBeneficiarioAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListBeneficiarioAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q9:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPlanAccionAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListPlanAccionAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPlanAccionAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListPlanAccionAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPlanAccionAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q10:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPuntoAtencionAutocomplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListPuntoAtencionAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPuntoAtencionAutocomplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListPuntoAtencionAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListPuntoAtencionAutocomplete_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q11:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_Login_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q12:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_Actualizapwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizapwd" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_Actualizapwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizapwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_Actualizapwd_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q13:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q14:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q15:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q16:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q17:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q18:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q19:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListClaseM_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListClaseM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListClaseM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListClaseMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListClaseM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q20:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListClaseMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListClaseMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListClaseMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListClaseMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListClaseMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q21:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectClaseM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClaseM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectClaseM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectClaseMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectClaseM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q22:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteClaseM_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClaseM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteClaseM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClaseMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteClaseM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q23:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertClaseM_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClaseM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertClaseM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertClaseMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertClaseM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q24:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateClaseM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClaseM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateClaseM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClaseMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateClaseM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q25:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSubSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSubSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSubSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSubSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListSubSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q26:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectSubSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSubSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectSubSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSubSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectSubSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q27:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdSubSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdSubSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdSubSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdSubSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdSubSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q28:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteSubSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteSubSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteSubSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q29:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertSubSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSubSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertSubSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSubSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertSubSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q30:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateSubSistemas_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubSistemas" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateSubSistemas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubSistemasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateSubSistemas_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q31:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoM_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTipoM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTipoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q32:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTipoM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTipoM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTipoM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTipoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTipoM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q33:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTipoM_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdTipoM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTipoM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdTipoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTipoM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q34:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTipoM_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTipoM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTipoM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTipoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTipoM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q35:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTipoM_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTipoM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTipoM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTipoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTipoM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q36:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTipoM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTipoM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTipoM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTipoMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTipoM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q37:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTipoMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdTipoMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTipoMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdTipoMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTipoMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q38:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTipoMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTipoMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTipoMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q39:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTipoMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTipoMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTipoMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTipoMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTipoMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q40:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTipoMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTipoMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTipoMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTipoMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTipoMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q41:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTipoMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTipoMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTipoMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTipoMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTipoMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q42:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTipoMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTipoMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTipoMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTipoMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTipoMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q43:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareaM_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTareaM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareaM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTareaMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareaM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q44:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTareaM_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTareaM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTareaM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTareaMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTareaM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q45:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTareaM_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdTareaM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTareaM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdTareaMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTareaM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q46:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTareaM_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTareaM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTareaM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTareaMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTareaM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q47:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTareaM_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTareaM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTareaM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTareaMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTareaM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q48:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTareaM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTareaM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTareaM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTareaMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTareaM_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q49:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTareaMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdTareaMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTareaMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdTareaMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdTareaMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q50:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareaMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTareaMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareaMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTareaMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListTareaMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q51:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTareaMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTareaMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTareaMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTareaMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectTareaMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q52:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTareaMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTareaMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTareaMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTareaMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertTareaMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q53:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTareaMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTareaMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTareaMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTareaMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateTareaMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q54:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTareaMP_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTareaMP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTareaMP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTareaMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteTareaMP_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q55:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdArticuloT_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdArticuloT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdArticuloT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdArticuloTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdArticuloT_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q56:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListArticuloT_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListArticuloT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListArticuloT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListArticuloTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListArticuloT_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q57:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectArticuloT_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectArticuloT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectArticuloT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectArticuloTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectArticuloT_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q58:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertArticuloT_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertArticuloT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertArticuloT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertArticuloTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertArticuloT_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q59:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateArticuloT_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArticuloT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateArticuloT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArticuloTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateArticuloT_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q60:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteArticuloT_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteArticuloT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteArticuloT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteArticuloTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteArticuloT_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q61:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListProducto_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q62:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMarcaModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListMarcaModelo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMarcaModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListMarcaModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMarcaModelo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q63:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectFallasD_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectFallasD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectFallasD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectFallasDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectFallasD_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q64:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdFallasD_InputMessage">
+    <wsdl:part name="parameters" element="tns:IdFallasD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdFallasD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdFallasDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_IdFallasD_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q65:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteFallasD_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFallasD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteFallasD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFallasDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteFallasD_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q66:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertFallasD_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFallasD" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertFallasD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFallasDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertFallasD_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q67:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListAuxilioMecanico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAuxilioMecanico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListAuxilioMecanico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAuxilioMecanicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListAuxilioMecanico_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q68:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectAuxilioMecanico_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAuxilioMecanico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectAuxilioMecanico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAuxilioMecanicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_SelectAuxilioMecanico_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q69:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteAuxilioMecanico_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuxilioMecanico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteAuxilioMecanico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuxilioMecanicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_DeleteAuxilioMecanico_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q70:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertAuxilioMecanico_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAuxilioMecanico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertAuxilioMecanico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAuxilioMecanicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertAuxilioMecanico_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q71:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateAuxilioMecanico_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAuxilioMecanico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateAuxilioMecanico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAuxilioMecanicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_UpdateAuxilioMecanico_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q72:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMtbf_AuxilioMecanico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListMtbf_AuxilioMecanico" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMtbf_AuxilioMecanico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListMtbf_AuxilioMecanicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMtbf_AuxilioMecanico_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q73:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMtbf_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListMtbf" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMtbf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListMtbfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListMtbf_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q74:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertMtbf_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMtbf" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertMtbf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMtbfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertMtbf_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q75:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListOrdenMasiva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListOrdenMasiva" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListOrdenMasiva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListOrdenMasivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListOrdenMasiva_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q76:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertCorrectivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCorrectivo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertCorrectivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCorrectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertCorrectivo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q77:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_AnularCorrectivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnularCorrectivo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_AnularCorrectivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnularCorrectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_AnularCorrectivo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q78:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertPreventivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPreventivo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertPreventivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPreventivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_InsertPreventivo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q79:ServiceError" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_AnularPreventivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnularPreventivo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_AnularPreventivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnularPreventivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_AnularPreventivo_ServiceErrorFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility" name="detail" element="q80:ServiceError" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceMantenimiento">
+    <wsdl:operation name="ListUsuariosAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocomplete" message="tns:IServiceMantenimiento_ListUsuariosAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteResponse" message="tns:IServiceMantenimiento_ListUsuariosAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListUsuariosAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSistemasAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocomplete" message="tns:IServiceMantenimiento_ListSistemasAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteResponse" message="tns:IServiceMantenimiento_ListSistemasAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListSistemasAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSubSistemasAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocomplete" message="tns:IServiceMantenimiento_ListSubSistemasAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteResponse" message="tns:IServiceMantenimiento_ListSubSistemasAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListSubSistemasAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTipoMAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocomplete" message="tns:IServiceMantenimiento_ListTipoMAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteResponse" message="tns:IServiceMantenimiento_ListTipoMAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListTipoMAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListEmpresa" message="tns:IServiceMantenimiento_ListEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListEmpresaResponse" message="tns:IServiceMantenimiento_ListEmpresa_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListEmpresaServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListEmpresa_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListFlotaAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocomplete" message="tns:IServiceMantenimiento_ListFlotaAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteResponse" message="tns:IServiceMantenimiento_ListFlotaAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListFlotaAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPlataformaAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocomplete" message="tns:IServiceMantenimiento_ListPlataformaAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteResponse" message="tns:IServiceMantenimiento_ListPlataformaAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListPlataformaAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTareasAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete" message="tns:IServiceMantenimiento_ListTareasAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse" message="tns:IServiceMantenimiento_ListTareasAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListTareasAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListBeneficiarioAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete" message="tns:IServiceMantenimiento_ListBeneficiarioAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteResponse" message="tns:IServiceMantenimiento_ListBeneficiarioAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListBeneficiarioAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPlanAccionAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocomplete" message="tns:IServiceMantenimiento_ListPlanAccionAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteResponse" message="tns:IServiceMantenimiento_ListPlanAccionAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListPlanAccionAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPuntoAtencionAutocomplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocomplete" message="tns:IServiceMantenimiento_ListPuntoAtencionAutocomplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteResponse" message="tns:IServiceMantenimiento_ListPuntoAtencionAutocomplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListPuntoAtencionAutocomplete_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/Login" message="tns:IServiceMantenimiento_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/LoginResponse" message="tns:IServiceMantenimiento_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/LoginServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_Login_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizapwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/Actualizapwd" message="tns:IServiceMantenimiento_Actualizapwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ActualizapwdResponse" message="tns:IServiceMantenimiento_Actualizapwd_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ActualizapwdServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_Actualizapwd_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSistemas" message="tns:IServiceMantenimiento_ListSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSistemasResponse" message="tns:IServiceMantenimiento_ListSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemas" message="tns:IServiceMantenimiento_DeleteSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemasResponse" message="tns:IServiceMantenimiento_DeleteSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectSistemas" message="tns:IServiceMantenimiento_SelectSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectSistemasResponse" message="tns:IServiceMantenimiento_SelectSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdSistemas" message="tns:IServiceMantenimiento_IdSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdSistemasResponse" message="tns:IServiceMantenimiento_IdSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertSistemas" message="tns:IServiceMantenimiento_InsertSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertSistemasResponse" message="tns:IServiceMantenimiento_InsertSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemas" message="tns:IServiceMantenimiento_UpdateSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemasResponse" message="tns:IServiceMantenimiento_UpdateSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListClaseM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListClaseM" message="tns:IServiceMantenimiento_ListClaseM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListClaseMResponse" message="tns:IServiceMantenimiento_ListClaseM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListClaseMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListClaseM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListClaseMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListClaseMP" message="tns:IServiceMantenimiento_ListClaseMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPResponse" message="tns:IServiceMantenimiento_ListClaseMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListClaseMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectClaseM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectClaseM" message="tns:IServiceMantenimiento_SelectClaseM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectClaseMResponse" message="tns:IServiceMantenimiento_SelectClaseM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectClaseMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectClaseM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClaseM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseM" message="tns:IServiceMantenimiento_DeleteClaseM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseMResponse" message="tns:IServiceMantenimiento_DeleteClaseM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteClaseM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertClaseM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertClaseM" message="tns:IServiceMantenimiento_InsertClaseM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertClaseMResponse" message="tns:IServiceMantenimiento_InsertClaseM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertClaseMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertClaseM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClaseM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseM" message="tns:IServiceMantenimiento_UpdateClaseM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseMResponse" message="tns:IServiceMantenimiento_UpdateClaseM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateClaseM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSubSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemas" message="tns:IServiceMantenimiento_ListSubSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasResponse" message="tns:IServiceMantenimiento_ListSubSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListSubSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSubSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemas" message="tns:IServiceMantenimiento_SelectSubSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasResponse" message="tns:IServiceMantenimiento_SelectSubSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectSubSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdSubSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemas" message="tns:IServiceMantenimiento_IdSubSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemasResponse" message="tns:IServiceMantenimiento_IdSubSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdSubSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemas" message="tns:IServiceMantenimiento_DeleteSubSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasResponse" message="tns:IServiceMantenimiento_DeleteSubSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteSubSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSubSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemas" message="tns:IServiceMantenimiento_InsertSubSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasResponse" message="tns:IServiceMantenimiento_InsertSubSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertSubSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubSistemas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemas" message="tns:IServiceMantenimiento_UpdateSubSistemas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasResponse" message="tns:IServiceMantenimiento_UpdateSubSistemas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateSubSistemas_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTipoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoM" message="tns:IServiceMantenimiento_ListTipoM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMResponse" message="tns:IServiceMantenimiento_ListTipoM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListTipoM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTipoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTipoM" message="tns:IServiceMantenimiento_SelectTipoM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMResponse" message="tns:IServiceMantenimiento_SelectTipoM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectTipoM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdTipoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTipoM" message="tns:IServiceMantenimiento_IdTipoM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTipoMResponse" message="tns:IServiceMantenimiento_IdTipoM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTipoMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdTipoM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTipoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoM" message="tns:IServiceMantenimiento_DeleteTipoM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMResponse" message="tns:IServiceMantenimiento_DeleteTipoM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteTipoM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTipoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTipoM" message="tns:IServiceMantenimiento_InsertTipoM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMResponse" message="tns:IServiceMantenimiento_InsertTipoM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertTipoM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTipoM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoM" message="tns:IServiceMantenimiento_UpdateTipoM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMResponse" message="tns:IServiceMantenimiento_UpdateTipoM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateTipoM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdTipoMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTipoMP" message="tns:IServiceMantenimiento_IdTipoMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTipoMPResponse" message="tns:IServiceMantenimiento_IdTipoMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTipoMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdTipoMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTipoMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMP" message="tns:IServiceMantenimiento_ListTipoMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPResponse" message="tns:IServiceMantenimiento_ListTipoMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListTipoMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTipoMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMP" message="tns:IServiceMantenimiento_SelectTipoMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMPResponse" message="tns:IServiceMantenimiento_SelectTipoMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectTipoMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTipoMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMP" message="tns:IServiceMantenimiento_DeleteTipoMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPResponse" message="tns:IServiceMantenimiento_DeleteTipoMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteTipoMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTipoMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP" message="tns:IServiceMantenimiento_InsertTipoMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse" message="tns:IServiceMantenimiento_InsertTipoMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertTipoMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTipoMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP" message="tns:IServiceMantenimiento_UpdateTipoMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse" message="tns:IServiceMantenimiento_UpdateTipoMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateTipoMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTareaM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareaM" message="tns:IServiceMantenimiento_ListTareaM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse" message="tns:IServiceMantenimiento_ListTareaM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareaMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListTareaM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTareaM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTareaM" message="tns:IServiceMantenimiento_SelectTareaM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMResponse" message="tns:IServiceMantenimiento_SelectTareaM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectTareaM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdTareaM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTareaM" message="tns:IServiceMantenimiento_IdTareaM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTareaMResponse" message="tns:IServiceMantenimiento_IdTareaM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTareaMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdTareaM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTareaM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaM" message="tns:IServiceMantenimiento_DeleteTareaM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMResponse" message="tns:IServiceMantenimiento_DeleteTareaM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteTareaM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTareaM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTareaM" message="tns:IServiceMantenimiento_InsertTareaM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMResponse" message="tns:IServiceMantenimiento_InsertTareaM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertTareaM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTareaM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaM" message="tns:IServiceMantenimiento_UpdateTareaM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMResponse" message="tns:IServiceMantenimiento_UpdateTareaM_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateTareaM_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdTareaMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTareaMP" message="tns:IServiceMantenimiento_IdTareaMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTareaMPResponse" message="tns:IServiceMantenimiento_IdTareaMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdTareaMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdTareaMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTareaMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareaMP" message="tns:IServiceMantenimiento_ListTareaMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareaMPResponse" message="tns:IServiceMantenimiento_ListTareaMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListTareaMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListTareaMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTareaMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMP" message="tns:IServiceMantenimiento_SelectTareaMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMPResponse" message="tns:IServiceMantenimiento_SelectTareaMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectTareaMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTareaMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMP" message="tns:IServiceMantenimiento_InsertTareaMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMPResponse" message="tns:IServiceMantenimiento_InsertTareaMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertTareaMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTareaMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMP" message="tns:IServiceMantenimiento_UpdateTareaMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPResponse" message="tns:IServiceMantenimiento_UpdateTareaMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateTareaMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTareaMP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMP" message="tns:IServiceMantenimiento_DeleteTareaMP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPResponse" message="tns:IServiceMantenimiento_DeleteTareaMP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteTareaMP_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdArticuloT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdArticuloT" message="tns:IServiceMantenimiento_IdArticuloT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdArticuloTResponse" message="tns:IServiceMantenimiento_IdArticuloT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdArticuloTServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdArticuloT_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListArticuloT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListArticuloT" message="tns:IServiceMantenimiento_ListArticuloT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListArticuloTResponse" message="tns:IServiceMantenimiento_ListArticuloT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListArticuloTServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListArticuloT_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectArticuloT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloT" message="tns:IServiceMantenimiento_SelectArticuloT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloTResponse" message="tns:IServiceMantenimiento_SelectArticuloT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloTServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectArticuloT_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertArticuloT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloT" message="tns:IServiceMantenimiento_InsertArticuloT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloTResponse" message="tns:IServiceMantenimiento_InsertArticuloT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloTServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertArticuloT_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArticuloT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloT" message="tns:IServiceMantenimiento_UpdateArticuloT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTResponse" message="tns:IServiceMantenimiento_UpdateArticuloT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateArticuloT_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteArticuloT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloT" message="tns:IServiceMantenimiento_DeleteArticuloT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTResponse" message="tns:IServiceMantenimiento_DeleteArticuloT_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteArticuloT_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListProducto" message="tns:IServiceMantenimiento_ListProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListProductoResponse" message="tns:IServiceMantenimiento_ListProducto_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListProductoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListProducto_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMarcaModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo" message="tns:IServiceMantenimiento_ListMarcaModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloResponse" message="tns:IServiceMantenimiento_ListMarcaModelo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListMarcaModelo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectFallasD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD" message="tns:IServiceMantenimiento_SelectFallasD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse" message="tns:IServiceMantenimiento_SelectFallasD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectFallasDServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectFallasD_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IdFallasD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdFallasD" message="tns:IServiceMantenimiento_IdFallasD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdFallasDResponse" message="tns:IServiceMantenimiento_IdFallasD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/IdFallasDServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_IdFallasD_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFallasD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasD" message="tns:IServiceMantenimiento_DeleteFallasD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasDResponse" message="tns:IServiceMantenimiento_DeleteFallasD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasDServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteFallasD_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFallasD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertFallasD" message="tns:IServiceMantenimiento_InsertFallasD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertFallasDResponse" message="tns:IServiceMantenimiento_InsertFallasD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertFallasDServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertFallasD_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAuxilioMecanico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico" message="tns:IServiceMantenimiento_ListAuxilioMecanico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse" message="tns:IServiceMantenimiento_ListAuxilioMecanico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListAuxilioMecanico_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAuxilioMecanico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico" message="tns:IServiceMantenimiento_SelectAuxilioMecanico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse" message="tns:IServiceMantenimiento_SelectAuxilioMecanico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_SelectAuxilioMecanico_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuxilioMecanico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico" message="tns:IServiceMantenimiento_DeleteAuxilioMecanico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse" message="tns:IServiceMantenimiento_DeleteAuxilioMecanico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_DeleteAuxilioMecanico_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuxilioMecanico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico" message="tns:IServiceMantenimiento_InsertAuxilioMecanico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse" message="tns:IServiceMantenimiento_InsertAuxilioMecanico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertAuxilioMecanico_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuxilioMecanico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico" message="tns:IServiceMantenimiento_UpdateAuxilioMecanico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse" message="tns:IServiceMantenimiento_UpdateAuxilioMecanico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_UpdateAuxilioMecanico_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMtbf_AuxilioMecanico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico" message="tns:IServiceMantenimiento_ListMtbf_AuxilioMecanico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse" message="tns:IServiceMantenimiento_ListMtbf_AuxilioMecanico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListMtbf_AuxilioMecanico_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMtbf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMtbf" message="tns:IServiceMantenimiento_ListMtbf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse" message="tns:IServiceMantenimiento_ListMtbf_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListMtbfServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListMtbf_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMtbf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf" message="tns:IServiceMantenimiento_InsertMtbf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse" message="tns:IServiceMantenimiento_InsertMtbf_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertMtbfServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertMtbf_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListOrdenMasiva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva" message="tns:IServiceMantenimiento_ListOrdenMasiva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse" message="tns:IServiceMantenimiento_ListOrdenMasiva_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_ListOrdenMasiva_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCorrectivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo" message="tns:IServiceMantenimiento_InsertCorrectivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse" message="tns:IServiceMantenimiento_InsertCorrectivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertCorrectivo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularCorrectivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo" message="tns:IServiceMantenimiento_AnularCorrectivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoResponse" message="tns:IServiceMantenimiento_AnularCorrectivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_AnularCorrectivo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPreventivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivo" message="tns:IServiceMantenimiento_InsertPreventivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivoResponse" message="tns:IServiceMantenimiento_InsertPreventivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_InsertPreventivo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnularPreventivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivo" message="tns:IServiceMantenimiento_AnularPreventivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivoResponse" message="tns:IServiceMantenimiento_AnularPreventivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivoServiceErrorFault" name="ServiceErrorFault" message="tns:IServiceMantenimiento_AnularPreventivo_ServiceErrorFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceMantenimiento" type="tns:IServiceMantenimiento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListUsuariosAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListSistemasAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListSubSistemasAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListTipoMAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListFlotaAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListPlataformaAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListTareasAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListBeneficiarioAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListPlanAccionAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListPuntoAtencionAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizapwd">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/Actualizapwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListClaseM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListClaseM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListClaseMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListClaseMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectClaseM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectClaseM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClaseM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteClaseM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertClaseM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertClaseM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClaseM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateClaseM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListSubSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSubSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectSubSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdSubSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdSubSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSubSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertSubSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubSistemas">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListTipoM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListTipoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTipoM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectTipoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdTipoM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdTipoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTipoM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTipoM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertTipoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTipoM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdTipoMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdTipoMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListTipoMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListTipoMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTipoMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTipoMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTipoMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTipoMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListTareaM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListTareaM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTareaM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectTareaM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdTareaM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdTareaM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTareaM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTareaM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertTareaM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTareaM">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdTareaMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdTareaMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListTareaMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListTareaMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTareaMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTareaMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTareaMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTareaMP">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdArticuloT">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdArticuloT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListArticuloT">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListArticuloT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectArticuloT">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectArticuloT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertArticuloT">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertArticuloT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArticuloT">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateArticuloT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteArticuloT">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteArticuloT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListProducto">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListMarcaModelo">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFallasD">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectFallasD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IdFallasD">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/IdFallasD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFallasD">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteFallasD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFallasD">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertFallasD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListAuxilioMecanico">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAuxilioMecanico">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuxilioMecanico">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuxilioMecanico">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuxilioMecanico">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListMtbf_AuxilioMecanico">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListMtbf">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListMtbf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMtbf">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertMtbf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListOrdenMasiva">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCorrectivo">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AnularCorrectivo">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPreventivo">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/InsertPreventivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AnularPreventivo">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/AnularPreventivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorFault">
+        <soap:fault use="literal" name="ServiceErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceMantenimiento">
+    <wsdl:port name="BasicHttpBinding_IServiceMantenimiento" binding="tns:BasicHttpBinding_IServiceMantenimiento">
+      <soap:address location="http://localhost:51922/ServiceMantenimiento.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

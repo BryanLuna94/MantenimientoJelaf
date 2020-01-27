@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\PUBLICAR\SERVICIO</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/JBLV.Log.dll">
+      <publishTime>08/22/2019 18:43:06</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>08/22/2019 18:43:06</publishTime>
+    </File>
+    <File Include="bin/Mantenimiento.BusinessLayer.dll">
+      <publishTime>12/17/2019 17:13:59</publishTime>
+    </File>
+    <File Include="bin/Mantenimiento.BusinessLayer.pdb">
+      <publishTime>12/17/2019 17:13:59</publishTime>
+    </File>
+    <File Include="bin/Mantenimiento.DataAccess.dll">
+      <publishTime>12/17/2019 17:13:58</publishTime>
+    </File>
+    <File Include="bin/Mantenimiento.DataAccess.pdb">
+      <publishTime>12/17/2019 17:13:58</publishTime>
+    </File>
+    <File Include="bin/Mantenimiento.Entities.dll">
+      <publishTime>12/17/2019 17:13:57</publishTime>
+    </File>
+    <File Include="bin/Mantenimiento.Entities.pdb">
+      <publishTime>12/17/2019 17:13:57</publishTime>
+    </File>
+    <File Include="bin/SeguridadJelaf.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Template.BusinessLayer.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Template.DataAccess.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Template.Entities.dll">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Template.Service.dll">
+      <publishTime>12/17/2019 19:16:23</publishTime>
+    </File>
+    <File Include="bin/Template.Service.pdb">
+      <publishTime>12/17/2019 19:16:23</publishTime>
+    </File>
+    <File Include="bin/Template.Utility.dll">
+      <publishTime>12/17/2019 17:13:57</publishTime>
+    </File>
+    <File Include="bin/Template.Utility.pdb">
+      <publishTime>12/17/2019 17:13:57</publishTime>
+    </File>
+    <File Include="ServiceMantenimiento.svc">
+      <publishTime>10/11/2019 13:00:56</publishTime>
+    </File>
+    <File Include="ServiceTemplate.svc">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/17/2019 17:14:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

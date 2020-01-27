@@ -1,0 +1,296 @@
+2019-11-22 11:01:46,979 [19] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:02:01,824 [44] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:11:36,832 [46] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:15:38,760 [40] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:16:02,237 [40] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:16:42,138 [46] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:16:47,528 [40] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:16:54,104 [40] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:18:24,438 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 11:22:55,298 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 12:13:22,573 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 12:14:38,522 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 12:14:50,277 [27] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 12:15:06,036 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 12:15:53,986 [25] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 12:16:27,027 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:30:06,695 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:30:47,720 [5] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:33:42,431 [5] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:34:04,839 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:50:21,534 [51] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:52:42,338 [51] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 16:53:02,609 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 17:14:57,166 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 17:14:57,444 [51] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 17:15:03,041 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 17:16:40,361 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de Char a Boolean.
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 17:17:02,148 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Error al convertir el valor del parámetro de Char a Boolean.
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 17:17:21,403 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:00:38,286 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:04:11,664 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:04:13,989 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:06:18,535 [14] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:06:41,698 [14] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:06:45,215 [14] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:06:47,725 [14] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137
+2019-11-22 18:06:51,214 [14] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Conflicto de tipos de operandos: text es incompatible con smalldatetime
+   en Mantenimiento.DataAccess.TipoMData.<InsertTipoM>d__3.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\TipoMData.cs:línea 181
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMLogic.<InsertTipoM>d__4.MoveNext() en D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.BusinessLayer\TipoMLogic.cs:línea 137

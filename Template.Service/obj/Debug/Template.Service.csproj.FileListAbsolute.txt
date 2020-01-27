@@ -1,0 +1,33 @@
+D:\Git\Template\Template.Service\bin\Template.Service.dll.config
+D:\Git\Template\Template.Service\bin\Template.Service.dll
+D:\Git\Template\Template.Service\bin\Template.Service.pdb
+D:\Git\Template\Template.Service\bin\Template.BusinessLayer.dll
+D:\Git\Template\Template.Service\bin\Template.Entities.dll
+D:\Git\Template\Template.Service\bin\Template.Utility.dll
+D:\Git\Template\Template.Service\bin\Template.DataAccess.dll
+D:\Git\Template\Template.Service\bin\JBLV.Log.dll
+D:\Git\Template\Template.Service\bin\log4net.dll
+D:\Git\Template\Template.Service\bin\Template.BusinessLayer.pdb
+D:\Git\Template\Template.Service\bin\Template.Entities.pdb
+D:\Git\Template\Template.Service\bin\Template.Utility.pdb
+D:\Git\Template\Template.Service\bin\Template.DataAccess.pdb
+D:\Git\Template\Template.Service\obj\Debug\Template.Service.csprojAssemblyReference.cache
+D:\Git\Template\Template.Service\obj\Debug\Template.Service.csproj.CopyComplete
+D:\Git\Template\Template.Service\obj\Debug\Template.Service.dll
+D:\Git\Template\Template.Service\obj\Debug\Template.Service.pdb
+D:\Git\Template\Template.Service\bin\SeguridadJelaf.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\obj\Debug\Template.Service.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\obj\Debug\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\obj\Debug\Template.Service.pdb

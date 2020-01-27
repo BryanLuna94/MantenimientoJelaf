@@ -1,0 +1,26 @@
+2019-12-31 01:09:23,314 [71] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Procedure or function 'usp_INS_Tb_Tareas' expects parameter '@ID_tb_SubSistema_Mant', which was not supplied.
+   en Mantenimiento.DataAccess.TareaMPData.<InsertTareaMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TareaMPData.cs:línea 167
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TareaMPLogic.<InsertTareaMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TareaMPLogic.cs:línea 140
+2019-12-31 01:14:31,875 [70] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   en Mantenimiento.DataAccess.TareaMPData.<InsertTareaMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TareaMPData.cs:línea 167
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TareaMPLogic.<InsertTareaMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TareaMPLogic.cs:línea 140
+2019-12-31 01:21:55,776 [70] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: The conversion of a varchar data type to a smalldatetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   en Mantenimiento.DataAccess.TareaMPData.<InsertTareaMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TareaMPData.cs:línea 167
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TareaMPLogic.<InsertTareaMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TareaMPLogic.cs:línea 141

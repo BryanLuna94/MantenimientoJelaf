@@ -1,0 +1,29 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache
+D:\JELAF\MANTENIMIENTO\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+D:\JELAF\MANTENIMIENTO\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+D:\JELAF\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+D:\JELAF\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+D:\JELAF\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+D:\JELAF\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache

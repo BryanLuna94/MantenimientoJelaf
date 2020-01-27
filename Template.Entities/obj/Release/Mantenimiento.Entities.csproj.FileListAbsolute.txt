@@ -1,0 +1,11 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\bin\Release\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\bin\Release\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Release\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Release\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Release\Mantenimiento.Entities.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Entities\obj\Release\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\bin\Release\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\bin\Release\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Release\Mantenimiento.Entities.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Release\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Release\Mantenimiento.Entities.pdb

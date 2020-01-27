@@ -1,0 +1,25 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Release\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Release\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.pdb

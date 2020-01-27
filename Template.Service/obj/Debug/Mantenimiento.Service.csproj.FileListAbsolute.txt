@@ -1,0 +1,89 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Template.Service.dll.config
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\bin\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\obj\Debug\Mantenimiento.Service.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CopyComplete
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\obj\Debug\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.Service\obj\Debug\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Service.dll.config
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\bin\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Debug\Mantenimiento.Service.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CopyComplete
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Debug\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Service\obj\Debug\Template.Service.pdb
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Template.Service.dll.config
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Template.Service.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Template.Service.pdb
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Template.Utility.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\JBLV.Log.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\log4net.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.pdb
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Template.Utility.pdb
+D:\JELAF\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.pdb
+D:\JELAF\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csprojAssemblyReference.cache
+D:\JELAF\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CoreCompileInputs.cache
+D:\JELAF\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CopyComplete
+D:\JELAF\MANTENIMIENTO\Template.Service\obj\Debug\Template.Service.dll
+D:\JELAF\MANTENIMIENTO\Template.Service\obj\Debug\Template.Service.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Service.dll.config
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Service.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Service.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Debug\Template.Service.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Service\obj\Debug\Template.Service.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Template.Service.dll.config
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Template.Service.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Template.Service.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Template.Utility.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\JBLV.Log.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\log4net.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Mantenimiento.BusinessLayer.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Mantenimiento.Entities.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Template.Utility.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\bin\Mantenimiento.DataAccess.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csprojAssemblyReference.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CoreCompileInputs.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\obj\Debug\Mantenimiento.Service.csproj.CopyComplete
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\obj\Debug\Template.Service.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Service\obj\Debug\Template.Service.pdb

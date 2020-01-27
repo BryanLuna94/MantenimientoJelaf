@@ -1,0 +1,29 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Tipos de Mantenimiento Preventivo";
+    ViewBag.Title = "Configuración de Mantenimiento Preventivo";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+<!-- .row -->
+    <div class="col-sm-12" id="app">
+
+
+
+        <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+    </div>
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+
+    <script src="~/wwwroot/js/Vue/Views/Fallas.js"></script>
+
+}

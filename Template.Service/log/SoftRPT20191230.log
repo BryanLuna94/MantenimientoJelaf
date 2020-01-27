@@ -1,0 +1,32 @@
+2019-12-30 01:32:04,696 [62] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Operand type clash: text is incompatible with smalldatetime
+   en Mantenimiento.DataAccess.TipoMPData.<InsertTipoMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TipoMPData.cs:línea 179
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMPLogic.<InsertTipoMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TipoMPLogic.cs:línea 156
+2019-12-30 01:32:14,286 [62] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Operand type clash: text is incompatible with smalldatetime
+   en Mantenimiento.DataAccess.TipoMPData.<InsertTipoMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TipoMPData.cs:línea 179
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMPLogic.<InsertTipoMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TipoMPLogic.cs:línea 156
+2019-12-30 01:33:20,532 [63] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Operand type clash: text is incompatible with smalldatetime
+   en Mantenimiento.DataAccess.TipoMPData.<InsertTipoMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TipoMPData.cs:línea 179
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMPLogic.<InsertTipoMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TipoMPLogic.cs:línea 156
+2019-12-30 01:39:24,435 [64] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Procedure or function 'usp_INS_tb_tipomantenimiento' expects parameter '@Cod_Marca', which was not supplied.
+   en Mantenimiento.DataAccess.TipoMPData.<InsertTipoMP>d__3.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.DataAccess\TipoMPData.cs:línea 179
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.TipoMPLogic.<InsertTipoMP>d__4.MoveNext() en D:\JELAF\MANTENIMIENTO\Template.BusinessLayer\TipoMPLogic.cs:línea 156

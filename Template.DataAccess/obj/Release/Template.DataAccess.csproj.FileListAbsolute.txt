@@ -1,0 +1,11 @@
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\Template.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Release\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\obj\Release\Template.DataAccess.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\obj\Release\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\obj\Release\Template.DataAccess.pdb

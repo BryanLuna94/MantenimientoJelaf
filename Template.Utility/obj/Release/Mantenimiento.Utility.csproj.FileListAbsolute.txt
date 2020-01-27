@@ -1,0 +1,17 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Release\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Release\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Release\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\bin\Release\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Release\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Release\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Release\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Release\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Release\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Release\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\bin\Release\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Template.Utility.pdb

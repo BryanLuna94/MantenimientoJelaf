@@ -1,0 +1,14 @@
+D:\Git\Template\Template.Utility\bin\Debug\Template.Utility.dll
+D:\Git\Template\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\Git\Template\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\Git\Template\Template.Utility\bin\Debug\log4net.dll
+D:\Git\Template\Template.Utility\obj\Debug\Template.Utility.csprojAssemblyReference.cache
+D:\Git\Template\Template.Utility\obj\Debug\Template.Utility.csproj.CopyComplete
+D:\Git\Template\Template.Utility\obj\Debug\Template.Utility.dll
+D:\Git\Template\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Utility\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Utility\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Utility\obj\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Utility\obj\Debug\Template.Utility.pdb

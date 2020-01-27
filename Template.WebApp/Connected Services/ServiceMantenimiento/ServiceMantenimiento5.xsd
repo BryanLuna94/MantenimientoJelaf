@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" />
+  <xs:element name="ListUsuariosAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListUsuariosAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListUsuariosAutocompleteResult" nillable="true" type="q1:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSistemasAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSistemasAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListSistemasAutocompleteResult" nillable="true" type="q2:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSubSistemasAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSubSistemasAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListSubSistemasAutocompleteResult" nillable="true" type="q3:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTipoMAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTipoMAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListTipoMAutocompleteResult" nillable="true" type="q4:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmpresa">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListEmpresaResult" nillable="true" type="q5:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListFlotaAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListFlotaAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListFlotaAutocompleteResult" nillable="true" type="q6:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPlataformaAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPlataformaAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListPlataformaAutocompleteResult" nillable="true" type="q7:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTareasAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTareasAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListTareasAutocompleteResult" nillable="true" type="q8:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListBeneficiarioAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListBeneficiarioAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListBeneficiarioAutocompleteResult" nillable="true" type="q9:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPlanAccionAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPlanAccionAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListPlanAccionAutocompleteResult" nillable="true" type="q10:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPuntoAtencionAutocomplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListPuntoAtencionAutocompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListPuntoAtencionAutocompleteResult" nillable="true" type="q11:ResponseOfBaseResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="LoginResult" nillable="true" type="q12:ResponseOfLoginResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizapwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codiUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizapwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ActualizapwdResult" nillable="true" type="q13:ResponseOfPwdResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListSistemasResult" nillable="true" type="q14:ResponseOfSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteSistemasResult" nillable="true" type="q15:ResponseOfSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSistemas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectSistemasResult" nillable="true" type="q16:ResponseOfSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdSistemas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdSistemasResult" nillable="true" type="q17:ResponseOfSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertSistemasResult" nillable="true" type="q18:ResponseOfSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateSistemasResult" nillable="true" type="q19:ResponseOfSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListClaseM">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListClaseMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListClaseMResult" nillable="true" type="q20:ResponseOfClaseMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListClaseMP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListClaseMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListClaseMPResult" nillable="true" type="q21:ResponseOfClaseMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClaseM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClaseMantenimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectClaseMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectClaseMResult" nillable="true" type="q22:ResponseOfClaseMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClaseM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClaseMantenimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteClaseMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteClaseMResult" nillable="true" type="q23:ResponseOfClaseMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertClaseM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClaseMantenimiento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroOrden" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertClaseMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertClaseMResult" nillable="true" type="q24:ResponseOfClaseMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClaseM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClaseMantenimiento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NroOrden" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateClaseMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateClaseMResult" nillable="true" type="q25:ResponseOfClaseMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSubSistemas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSubSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListSubSistemasResult" nillable="true" type="q26:ResponseOfSubSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSubSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectSubSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectSubSistemasResult" nillable="true" type="q27:ResponseOfSubSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdSubSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdSubSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdSubSistemasResult" nillable="true" type="q28:ResponseOfSubSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSubSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSubSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteSubSistemasResult" nillable="true" type="q29:ResponseOfSubSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSubSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSubSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertSubSistemasResult" nillable="true" type="q30:ResponseOfSubSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSubSistemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSubSistemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateSubSistemasResult" nillable="true" type="q31:ResponseOfSubSistemasResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTipoM">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTipoMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListTipoMResult" nillable="true" type="q32:ResponseOfTipoMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTipoM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTipoMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectTipoMResult" nillable="true" type="q33:ResponseOfTipoMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTipoM">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTipoMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdTipoMResult" nillable="true" type="q34:ResponseOfTipoMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTipoM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTipoMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteTipoMResult" nillable="true" type="q35:ResponseOfTipoMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTipoM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:short" />
+        <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTipoMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertTipoMResult" nillable="true" type="q36:ResponseOfTipoMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTipoM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Kilometros" type="xs:decimal" />
+        <xs:element minOccurs="0" name="KilometrosAviso" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Dias" type="xs:short" />
+        <xs:element minOccurs="0" name="DiasAviso" type="xs:short" />
+        <xs:element minOccurs="0" name="Horas" type="xs:short" />
+        <xs:element minOccurs="0" name="HorasAviso" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTipoMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateTipoMResult" nillable="true" type="q37:ResponseOfTipoMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTipoMP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTipoMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdTipoMPResult" nillable="true" type="q38:ResponseOfTipoMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTipoMP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTipoMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListTipoMPResult" nillable="true" type="q39:ResponseOfTipoMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTipoMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTipoMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectTipoMPResult" nillable="true" type="q40:ResponseOfTipoMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTipoMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTipoMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteTipoMPResult" nillable="true" type="q41:ResponseOfTipoMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTipoMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Kilometros" type="xs:decimal" />
+        <xs:element minOccurs="0" name="KilometrosAviso" type="xs:decimal" />
+        <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:short" />
+        <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Dias" type="xs:short" />
+        <xs:element minOccurs="0" name="DiasAviso" type="xs:short" />
+        <xs:element minOccurs="0" name="Horas" type="xs:short" />
+        <xs:element minOccurs="0" name="HorasAviso" type="xs:short" />
+        <xs:element minOccurs="0" name="cod_marca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cod_modelo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTipoMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertTipoMPResult" nillable="true" type="q42:ResponseOfTipoMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTipoMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Kilometros" type="xs:decimal" />
+        <xs:element minOccurs="0" name="KilometrosAviso" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Dias" type="xs:short" />
+        <xs:element minOccurs="0" name="DiasAviso" type="xs:short" />
+        <xs:element minOccurs="0" name="Horas" type="xs:short" />
+        <xs:element minOccurs="0" name="HorasAviso" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTipoMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateTipoMPResult" nillable="true" type="q43:ResponseOfTipoMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTareaM">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTareaMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListTareaMResult" nillable="true" type="q44:ResponseOfTareaMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTareaM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTareaMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectTareaMResult" nillable="true" type="q45:ResponseOfTareaMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTareaM">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTareaMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdTareaMResult" nillable="true" type="q46:ResponseOfTareaMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTareaM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTareaMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteTareaMResult" nillable="true" type="q47:ResponseOfTareaMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTareaM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:short" />
+        <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTareaMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertTareaMResult" nillable="true" type="q48:ResponseOfTareaMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTareaM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTareaMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateTareaMResult" nillable="true" type="q49:ResponseOfTareaMResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTareaMP">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdTareaMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdTareaMPResult" nillable="true" type="q50:ResponseOfTareaMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTareaMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListTareaMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListTareaMPResult" nillable="true" type="q51:ResponseOfTareaMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTareaMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTareaMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectTareaMPResult" nillable="true" type="q52:ResponseOfTareaMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTareaMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:short" />
+        <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Flg_Revision" type="xs:int" />
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTareaMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertTareaMPResult" nillable="true" type="q53:ResponseOfTareaMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTareaMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+        <xs:element minOccurs="0" name="IdTipMan" type="xs:short" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Flg_Revision" type="xs:int" />
+        <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+        <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTareaMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateTareaMPResult" nillable="true" type="q54:ResponseOfTareaMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTareaMP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTareaMPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteTareaMPResult" nillable="true" type="q55:ResponseOfTareaMPResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdArticuloT">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdArticuloTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdArticuloTResult" nillable="true" type="q56:ResponseOfArticuloTResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListArticuloT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListArticuloTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListArticuloTResult" nillable="true" type="q57:ResponseOfArticuloTResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectArticuloT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdArtTar" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectArticuloTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectArticuloTResult" nillable="true" type="q58:ResponseOfArticuloTResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertArticuloT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+        <xs:element minOccurs="0" name="Cod_Mer" type="xs:short" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:short" />
+        <xs:element minOccurs="0" name="Orden" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertArticuloTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertArticuloTResult" nillable="true" type="q59:ResponseOfArticuloTResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateArticuloT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdArtTar" type="xs:short" />
+        <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+        <xs:element minOccurs="0" name="Cod_Mer" type="xs:short" />
+        <xs:element minOccurs="0" name="Cantidad" type="xs:short" />
+        <xs:element minOccurs="0" name="Orden" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateArticuloTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateArticuloTResult" nillable="true" type="q60:ResponseOfArticuloTResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteArticuloT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdArtTar" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteArticuloTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteArticuloTResult" nillable="true" type="q61:ResponseOfArticuloTResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Index_Compañia" type="xs:short" />
+        <xs:element minOccurs="0" name="filtro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListProductoResult" nillable="true" type="q62:ResponseOfProductoResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListMarcaModelo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListMarcaModeloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListMarcaModeloResult" nillable="true" type="q63:ResponseOfMarcaModeloResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFallasD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectFallasDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectFallasDResult" nillable="true" type="q64:ResponseOfFallasDResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdFallasD">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdFallasDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="IdFallasDResult" nillable="true" type="q65:ResponseOfFallasDResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFallasD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFallasDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteFallasDResult" nillable="true" type="q66:ResponseOfFallasDResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFallasD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdSolicitudRevisionD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdSolicitudRevision" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UsuarioRegistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HoraRegistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Estado" type="xs:int" />
+        <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="IdObservacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertFallasDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertFallasDResult" nillable="true" type="q67:ResponseOfFallasDResponseozx_PhYH5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAuxilioMecanico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q68:AuxilioMecanicoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAuxilioMecanicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListAuxilioMecanicoResult" nillable="true" type="q69:ResponseOfAuxilioMecanicoResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAuxilioMecanico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAuxilioMecanico" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAuxilioMecanicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="SelectAuxilioMecanicoResult" nillable="true" type="q70:ResponseOfAuxilioMecanicoResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAuxilioMecanico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdAuxilioMecanico" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAuxilioMecanicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="DeleteAuxilioMecanicoResult" nillable="true" type="q71:ResponseOfAuxilioMecanicoResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAuxilioMecanico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q72:AuxilioMecanicoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAuxilioMecanicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertAuxilioMecanicoResult" nillable="true" type="q73:ResponseOfAuxilioMecanicoResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAuxilioMecanico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q74:AuxilioMecanicoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAuxilioMecanicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="UpdateAuxilioMecanicoResult" nillable="true" type="q75:ResponseOfAuxilioMecanicoResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListMtbf_AuxilioMecanico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anio" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListMtbf_AuxilioMecanicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListMtbf_AuxilioMecanicoResult" nillable="true" type="q76:ResponseOfMtbfResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListMtbf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="anio" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListMtbfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListMtbfResult" nillable="true" type="q77:ResponseOfMtbfResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMtbf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q78:MtbfRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMtbfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertMtbfResult" nillable="true" type="q79:ResponseOfMtbfResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListOrdenMasiva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q80:OrdenMasivaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListOrdenMasivaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="ListOrdenMasivaResult" nillable="true" type="q81:ResponseOfOrdenMasivaResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCorrectivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q82:OrdenMasivaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCorrectivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertCorrectivoResult" nillable="true" type="q83:ResponseOfOrdenMasivaResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnularCorrectivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q84:OrdenMasivaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnularCorrectivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="AnularCorrectivoResult" nillable="true" type="q85:ResponseOfOrdenMasivaResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPreventivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q86:OrdenMasivaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPreventivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="InsertPreventivoResult" nillable="true" type="q87:ResponseOfOrdenMasivaResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnularPreventivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" minOccurs="0" name="request" nillable="true" type="q88:OrdenMasivaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnularPreventivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" minOccurs="0" name="AnularPreventivoResult" nillable="true" type="q89:ResponseOfOrdenMasivaResponseH6V5Udoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

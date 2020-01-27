@@ -1,0 +1,111 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Tipos de Mantenimiento";
+    ViewBag.Title = "Tipos de Mantenimiento";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+
+<!-- .row -->
+    <div class="col-sm-12" id="app">
+        <div class="col-sm-12">
+            <div class="form-horizontal">
+
+
+                <div class="col-md-12">
+                    <label id="lblEstadoC" class="hidden">0</label>
+                    <span id="spaEstadoD" class="label label-info"></span>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form class="form-horizontal new-lg-form" ref="frmTipoM" id="frmTipoM" method="get" autocomplete="off">
+                            <div class="col-md-1 col-sm-12 col-xs-12">
+                                <label>Codigo:</label>
+                            </div>
+                            <div class="col-md-1 col-sm-12 col-xs-12">
+                                <label id="lblcodtipom"></label>
+                            </div>
+                            <div class="col-md-1 col-sm-12 col-xs-12">
+                                <label>Nombre:</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <input id="txtdesctipom" class="form-control" required> <span class="highlight"></span> <span class="bar"></span>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <br><br>
+                            </div>
+                            <div class="col-md-2 col-sm-12 col-xs-4">
+                                <button id="btnNuevo" class="btn btn-info" v-on:click.prevent="Nuevo">Nuevo</button>
+                            </div>
+                            <div class="col-md-2 col-sm-12 col-xs-4">
+                                <button id="btnGrabar" class="btn btn-success" v-on:click.prevent="Grabar" disabled>Grabar</button>
+                            </div>
+                            <div class="col-md-2 col-sm-12 col-xs-4">
+                                <button id="btnCancelar" class="btn btn-warning" v-on:click.prevent="Cancelar">Cancelar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="white-box p-l-20 p-r-20">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <form id="search" class="floating-labels">
+
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                        <input class="form-control" type="text" id="TxtFiltro1" onkeyup="Filtrar1()" placeholder="Codigo.."><span class="highlight"></span> <span class="bar"></span>
+                        <span class="glyphicon glyphicon-search form-control-feedback t-0"></span>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <input class="form-control" type="text" id="TxtFiltro2" onkeyup="Filtrar2()" placeholder="Tipo Mantenimiento Correctivo.."><span class="highlight"></span> <span class="bar"></span>
+                        <span class="glyphicon glyphicon-search form-control-feedback t-0"></span>
+                    </div>
+
+
+                </form>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td width="15%">CÓDIGO</td>
+                        <td width="60%">MANTENIMIENTO CORRECTIVO</td>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-hover" id="tableTipoM" ref="#tableTipoM">
+                <tbody id="tableTipoMtbody">
+                    <tr class="header" v-for="TipoM in list.TipoM" :key="list.TipoM.IdTipMan">
+                        <td width="20%">{{ TipoM.IdTipMan }}</td>
+                        <td width="60%">{{ TipoM.Descripcion }}</td>
+                        <td width="10%">
+                            <a href="#" class="btn btn-warning btn-sm" v-on:click.prevent="SelectTipoM(IdTipMan)">Editar</a>
+                        </td>
+                        <td width="10%">
+                            <a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="DeleteTipoM(IdTipMan)">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+    </div>
+
+
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+
+    <script src="~/wwwroot/js/Vue/Views/TipoM.js"></script>
+}

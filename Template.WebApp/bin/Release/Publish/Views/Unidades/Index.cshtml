@@ -1,0 +1,113 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Control de Unidades";
+    ViewBag.Title = "Control de Unidades";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+<!-- .row -->
+    <div class="col-sm-12" id="app">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                    <!-- Tabstyle start -->
+                    <!-- Tabstyle start -->
+                    <hr>
+                    <h3 class="box-title m-b-0 m-t-40">Control de Unidades</h3> <code> </code>
+                    <svg class="hidden">
+                        <defs>
+                            <path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z" />
+                        </defs>
+                    </svg>
+                    <section class="m-t-40">
+                        <div class="sttabs tabs-style-shape">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#section-shape-1">
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg> <span>Unidades</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-shape-2">
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg>
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg> <span>Sistemas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-shape-3">
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg>
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg> <span>Repuestos</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-shape-4">
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg>
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg> <span>Trabajos realizados</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-shape-5">
+                                            <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                                                <use xlink:href="#tabshape"></use>
+                                            </svg> <span>Componentes</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="content-wrap">
+                                <section id="section-shape-1">
+                                    <h3></h3>
+                                    <p></p>
+                                </section>
+                                <section id="section-shape-2">
+                                    <h2></h2>
+                                </section>
+                                <section id="section-shape-3">
+                                    <h2><h2>
+                                </section>
+                                <section id="section-shape-4">
+                                    <h2></h2>
+                                </section>
+                                <section id="section-shape-5">
+                                    <h2></h2>
+                                </section>
+                            </div>
+                            <!-- /content -->
+                        </div>
+                        <!-- /tabs -->
+                    </section>
+
+                </div>
+            </div>
+        </div>
+        <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+    </div>
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+ 
+    <script src="~/wwwroot/js/Vue/Views/Fallas.js"></script>
+}

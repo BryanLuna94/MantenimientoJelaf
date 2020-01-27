@@ -1,0 +1,9 @@
+D:\Git\Template\Template.Entities\bin\Debug\Template.Entities.dll
+D:\Git\Template\Template.Entities\bin\Debug\Template.Entities.pdb
+D:\Git\Template\Template.Entities\obj\Debug\Template.Entities.dll
+D:\Git\Template\Template.Entities\obj\Debug\Template.Entities.pdb
+D:\Git\Template\Template.Entities\obj\Debug\Template.Entities.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\bin\Debug\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\bin\Debug\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\obj\Debug\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Entities\obj\Debug\Template.Entities.pdb

@@ -1,0 +1,23 @@
+D:\Git\Template\Template.DataAccess\bin\Debug\Template.DataAccess.dll
+D:\Git\Template\Template.DataAccess\bin\Debug\Template.DataAccess.pdb
+D:\Git\Template\Template.DataAccess\bin\Debug\Template.Entities.dll
+D:\Git\Template\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\Git\Template\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\Git\Template\Template.DataAccess\bin\Debug\log4net.dll
+D:\Git\Template\Template.DataAccess\bin\Debug\Template.Entities.pdb
+D:\Git\Template\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\Git\Template\Template.DataAccess\obj\Debug\Template.DataAccess.csprojAssemblyReference.cache
+D:\Git\Template\Template.DataAccess\obj\Debug\Template.DataAccess.csproj.CopyComplete
+D:\Git\Template\Template.DataAccess\obj\Debug\Template.DataAccess.dll
+D:\Git\Template\Template.DataAccess\obj\Debug\Template.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\Template.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\obj\Debug\Template.DataAccess.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\obj\Debug\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.DataAccess\obj\Debug\Template.DataAccess.pdb

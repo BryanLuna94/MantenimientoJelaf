@@ -1,0 +1,65 @@
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Mantenimiento\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO mvc\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\log4net.dll
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+D:\JELAF\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\log4net.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\Template.Utility.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\JBLV.Log.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\log4net.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\bin\Debug\Template.Utility.pdb
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb

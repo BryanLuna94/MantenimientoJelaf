@@ -1,0 +1,246 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Reporte de Fallas";
+    ViewBag.Title = "Reporte de Fallas";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+<!-- .row -->
+<div class="col-sm-12" id="app">
+    <div class="col-sm-12">
+        <div class="form-horizontal">
+
+
+            <div class="col-md-12">
+                <p class="text-muted m-b-30 font-13">Estimado: <code>@UsuarioActual.Codigo  @UsuarioActual.Nombre  @UsuarioActual.Ben_Codigo  @UsuarioActual.Ben_Nombre</code></p>
+                <p class="text-muted m-b-30 font-13">
+                    Id Solicitud:&nbsp;<label id="IdSolicitudRevision">4</label>&nbsp;<button data-toggle="collapse" class="btn btn-success" data-target="#demo">Mostrar Datos/Ocultar</button>
+                    <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#busqueda">Buscar Viaje <span class="glyphicon glyphicon-search"></span></button>
+                </p>                           
+          
+               
+
+
+
+                <label id="lblEstadoC" class="hidden">1</label>
+                <span id="spaEstadoD" class="label label-info">Activo</span>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" id="DivFallas">
+                    <form class="form-horizontal new-lg-form" ref="frmFallas" id="frmFallas" method="get" autocomplete="off">
+                        <div id="demo" class="collapse">
+                            <div class="col-md-1 col-sm-6 col-xs-3">
+                                <input disabled style="background-color:#c0cfe5;" type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>N° Viaje</label>
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-3">
+                                <input disabled style="background-color:#c0cfe5;" type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>N° Prog</label>
+                            </div>
+                            <div class="col-md-7 col-sm-6 col-xs-6">
+                                <input disabled style="background-color:#c0cfe5;" type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>Chofer</label>
+                            </div>
+
+                            <div class="col-md-2 col-sm-6 col-xs-6">
+                                <input disabled style="background-color:#c0cfe5;" type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>Unidad</label>
+                            </div>
+
+
+
+                            <div class="col-md-2 col-sm-6 col-xs-6">
+                                <input disabled style="background-color:#c0cfe5;" type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>Placa</label>
+                            </div>
+
+                            <div class="col-md-7 col-sm-8 col-xs-8">
+                                <input disabled style="background-color:#c0cfe5;" type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>Ruta</label>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-4">
+                                <input type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                <label>Kilometraje</label>
+                            </div>
+
+
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <br><br>
+                            </div>
+ 
+                            <div class="col-md-2 col-sm-3 col-xs-3">
+                                <button id="btnGrabar" class="btn btn-success" v-on:click.prevent="Grabar" disabled>Grabar</button>
+                            </div>
+                            <div class="col-md-2 col-sm-3 col-xs-3">
+                                <button id="btnCancelar" class="btn btn-warning" v-on:click.prevent="Cancelar">Cancelar</button>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+
+                              <label id="lblIdSolD"  class="hidden">0</label>
+                            <label>Observación:</label>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <v-select v-model="objTipoM.IdTipMan"
+                                      :options="list.TipoM"
+                                      index="Codigo"
+                                      label="Descripcion"
+                                      @@search="getTipoM"
+                                      id="txtCodTipoM"
+                                      ref="txtCodTipoM"
+                                      placeholder="--Seleccione--">
+                            </v-select>
+                            <label>Tipo Mantenimiento</label>
+
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <v-select v-model="objTipoM.IdTipMan"
+                                      :options="list.TipoM"
+                                      index="Codigo"
+                                      label="Descripcion"
+                                      @@search="getTipoM"
+                                      id="txtCodTarea"
+                                      ref="txtCodTarea"
+                                      placeholder="--Seleccione--">
+                            </v-select>
+                            <label>Tarea</label>
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="form-group m-b-5">
+                                <textarea class="form-control" rows="4" id="txtObservacion" required></textarea><span class="highlight"></span> <span class="bar"></span>
+                                <label for="input7">Ingrese el detalle de la falla</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-3">
+                            <button id="btnAgregar" class="btn btn-info" v-on:click.prevent="Agregar">+ Agregar Observación</button>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+                <h3 class="box-title">Listado de Observaciones</h3>
+                <div class="scrollable">
+                    <div class="table-responsive">
+                        <table id="tableFallasD" ref="#tableFallasD" class="table m-t-30 table-hover contact-list" data-page-size="10">
+                            <thead>
+                                <tr>
+                                    <th width="20%" style="display:none;">ID</th>
+                                    <th width="60%">Observación</th>
+                                    <th width="10%">Estado</th>
+                                    <th width="10%">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableFallasDtbody">
+                                <tr class="header" v-for="FallasD in list.FallasD" :key="list.FallasD.IdSolicitudRevisionD">
+                                    <td width="20%" style="display:none;">{{ FallasD.IdSolicitudRevisionD }}</td>
+                                    <td width="50%">{{ FallasD.Observacion }}</td>
+                                   <td style="display:none;" width="10%">{{ FallasD.Estado }}</td>
+                                    <td  width="10%"><span class="label label-table label-danger">Pendiente</span></td>
+                                    <td width="10%">
+                                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" v-on:click.prevent="DeleteFallasD(IdSolicitudRevisionD)"><i class="ti-close" aria-hidden="true"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">
+                                    </td>
+
+                                    <td colspan="7">
+                                        <div class="text-right">
+                                            <ul class="pagination"> </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+
+                    </div>
+                </div>
+ 
+                <div id="busqueda" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">Buscar Viajes</h4>
+                            </div>
+                            <div class="modal-body">
+                     
+                                <div class="form-group">
+                                    <table id="demo-foo-addrow" ref="#tableFallasD" class="table m-t-30 table-hover contact-list" data-page-size="10">
+                                        <thead>
+                                            <tr>
+                                                <th width="20%" style="display:none;">ID</th>
+                                                <th width="60%">Observación</th>
+                                                <th width="10%">Estado</th>
+                                                <th width="10%">Eliminar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableFallasDtbody">
+                                            <tr class="header" v-for="FallasD in list.FallasD" :key="list.FallasD.IdSolicitudRevisionD">
+                                                <td width="20%" style="display:none;">{{ FallasD.IdSolicitudRevisionD }}</td>
+                                                <td width="50%">{{ FallasD.Observacion }}</td>
+                                                <td style="display:none;" width="10%">{{ FallasD.Estado }}</td>
+                                                <td width="10%"><span class="label label-table label-danger">Pendiente</span></td>
+                                                <td width="10%">
+                                                    <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete" v-on:click.prevent="DeleteFallasD(IdSolicitudRevisionD)"><i class="ti-close" aria-hidden="true"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+ 
+
+                                                <td colspan="9">
+                                                    <div class="text-right">
+                                                        <ul class="pagination"> </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Buscar</button>
+                                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+</div>
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+ 
+    <script src="~/wwwroot/js/Vue/Views/Fallas.js"></script>
+}

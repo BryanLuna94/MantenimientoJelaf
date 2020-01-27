@@ -1,0 +1,16 @@
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Service.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.BusinessLayer.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Entities.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Utility.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.DataAccess.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\SeguridadJelaf.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\JBLV.Log.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\log4net.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.BusinessLayer.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Entities.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.Utility.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\bin\Template.DataAccess.pdb
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\obj\Release\Template.Service.csprojResolveAssemblyReference.cache
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\obj\Release\Template.Service.dll
+D:\PROYECTOS A IMPLEMENTAR\Template\Template\Template.Service\obj\Release\Template.Service.pdb
