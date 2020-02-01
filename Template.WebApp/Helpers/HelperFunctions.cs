@@ -2,7 +2,7 @@
 {
     public class HelperFunctions
     {
-        public static string ValdiarFechaStr(string fecha)
+        public static string ValidarFechaStr(string fecha)
         {
             var fechaSalida = "";
             if (fecha == "__/__/____ __:__")
@@ -15,5 +15,6 @@
             }
             return fechaSalida;
         }
+
     }
 }

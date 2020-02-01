@@ -1,5 +1,5 @@
 ﻿
- 
+
 
 let app = new Vue({
     el: "#app",
@@ -7,14 +7,42 @@ let app = new Vue({
         objFallasD: {
             IdSolicitudRevisionD: '',
             IdSolicitudRevision: '',
-            Observacion:'',
+            Observacion: '',
             UsuarioRegistro: '',
             Fecharegistro: '',
             HoraRegistro: '',
             Estado: '',
             IdSistema: '',
-            IdObservacion:''
-            
+            IdObservacion: ''
+
+        },
+        objFiltro: {
+            correlativo: '',
+            Fecha: '',
+            Hora: '',
+            Chofer: '',
+            Placa: '',
+            Destino: '',
+            Usuario: ''
+
+        },
+        objSolicitud: {
+            IdSolicitudRevision: '',
+            NumeroInforme: '',
+            Odometro: 0,
+            OdometroAnterior: 0,
+            Chofer: '',
+            CorrelativoInterno: '',
+            Destino: '',
+            Estado: '',
+            FechaDoc: '',
+            FechaViaje: '',
+            HoraDoc: '',
+            HoraViaje: '',
+            Origen: '',
+            Unidad: '',
+            Ruta: '',
+            IdUnidad: ''
         },
         objTipoM: {
             Codigo: '',
@@ -24,12 +52,14 @@ let app = new Vue({
             FallasD: [],
             TipoM: [],
             Id: [],
-            Viajes:[]
+            Viajes: [],
+            Solicitudes: [],
+            SolicitudesFiltradas: []
         }
     },
     created: async function () {
-        await this.SelectFallasD();
         await this.getTipoM("");
+        await this.ValidarUsuarioChofer();
     },
     mounted: async function () {
         this.$nextTick(() => {
@@ -49,10 +79,126 @@ let app = new Vue({
                     Notifications.Messages.error('Ocurrió una excepción en el metodo getTipoM');
                 });
         },
-        SelectFallasD: async function () {
+
+        SelectSolicitud: async function (itemSolicitud) {
+
             let _this = this;
-            Id = document.getElementById("IdSolicitudRevision").innerHTML;
-            
+            await _this.ObtenerSolicitud(itemSolicitud.correlativo);
+            await _this.SelectFallasD();
+            _this.close(1);
+
+        },
+
+        ValidarUsuarioChofer: async function () {
+
+            let _this = this;
+
+            let ben_codigo = document.getElementById('Ben_Codigo').value;
+
+            if (ben_codigo.substring(0, 1) !== "C") return;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Fallas/ObtenerUltimaRevisionChofer'))
+                .then(res => {
+                    if (res.data.Estado) {
+                        if (res.data.Valor.IdSolicitud !== "") {
+                            _this.objSolicitud.IdSolicitudRevision = res.data.Valor.IdSolicitud;
+                            _this.ObtenerSolicitud(_this.objSolicitud.IdSolicitudRevision);
+                            _this.SelectFallasD();
+                        }
+
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ObtenerSolicitud');
+                });
+
+        },
+
+        Guardar: async function () {
+
+            let _this = this;
+
+            let data = {
+                SolicitudRevision: _this.objSolicitud
+            };
+
+            var json = JSON.stringify(data);
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Fallas/UpdateSolicitudRevision'), {
+                json: json
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo InsertMantenimiento');
+                });
+
+        },
+
+        ObtenerSolicitud: async function (IdSolicitudRevision) {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Fallas/SelectSolicitudRevision'), { params: { IdSolicitudRevision: IdSolicitudRevision } })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.objSolicitud.NumeroInforme = res.data.Valor.SolicitudRevision.NumeroInforme;
+                        _this.objSolicitud.Odometro = res.data.Valor.SolicitudRevision.Odometro;
+                        _this.objSolicitud.OdometroAnterior = res.data.Valor.SolicitudRevision.Odometro;
+                        _this.objSolicitud.Chofer = res.data.Valor.SolicitudRevision.Chofer;
+                        _this.objSolicitud.CorrelativoInterno = res.data.Valor.SolicitudRevision.CorrelativoInterno;
+                        _this.objSolicitud.Destino = res.data.Valor.SolicitudRevision.Destino;
+                        _this.objSolicitud.Estado = res.data.Valor.SolicitudRevision.Estado;
+                        _this.objSolicitud.FechaDoc = res.data.Valor.SolicitudRevision.FechaDoc;
+                        _this.objSolicitud.FechaViaje = res.data.Valor.SolicitudRevision.FechaViaje;
+                        _this.objSolicitud.HoraDoc = res.data.Valor.SolicitudRevision.HoraDoc;
+                        _this.objSolicitud.HoraViaje = res.data.Valor.SolicitudRevision.HoraViaje;
+                        _this.objSolicitud.Origen = res.data.Valor.SolicitudRevision.Origen;
+                        _this.objSolicitud.Unidad = res.data.Valor.SolicitudRevision.Unidad;
+                        _this.objSolicitud.IdUnidad = res.data.Valor.SolicitudRevision.IdUnidad;
+                        _this.objSolicitud.Ruta = _this.objSolicitud.Origen + ' - ' + _this.objSolicitud.Destino;
+                        _this.objSolicitud.IdSolicitudRevision = res.data.Valor.SolicitudRevision.IdSolicitudRevision;
+
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ObtenerSolicitud');
+                });
+        },
+
+        ShowBuscador: async function () {
+
+            let _this = this;
+            _this.ListSolicitudes();
+            $('#appBuscadorSolicitudes').modal('show');
+
+        },
+        ListSolicitudes: async function () {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Fallas/ListBusqueda')
+            )
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.Solicitudes = (res.data.Valor.ListBusqueda) ? res.data.Valor.ListBusqueda : [];
+                        _this.list.SolicitudesFiltradas = _this.list.Solicitudes;
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListSolicitudes');
+                });
+        },
+
+        SelectFallasD: async function () {
+
+            let _this = this;
+            Id = _this.objSolicitud.IdSolicitudRevision;// document.getElementById("IdSolicitudRevision").innerHTML;
+
             axios.post(getBaseUrl.obtenerUrlAbsoluta("Fallas/SelectFallasD"), { ID: Id })
                 .then(res => {
                     if (res.data.Estado) {
@@ -65,10 +211,10 @@ let app = new Vue({
 
 
             //DESACTIVA Div SubSistemas y su contenido
-            var nodes = document.getElementById("busqueda").getElementsByTagName('*');
-            for (var i = 0; i < nodes.length; i++) {
-                nodes[i].disabled = false;
-            }
+            //var nodes = document.getElementById("busqueda").getElementsByTagName('*');
+            //for (var i = 0; i < nodes.length; i++) {
+            //    nodes[i].disabled = false;
+            //}
             //fin DESACTIVA Div SubSistemas y su contenido
         },
         DeleteFallasD: async function (e) {
@@ -139,10 +285,11 @@ let app = new Vue({
             //codigo y SubSistemas
             //codigo y sistema
             //asigna id maximo desde la bd
+            let _this = this;
             var IdSolD = ""
-            var IdSolC = document.getElementById('IdSolicitudRevision').innerHTML;
+            var IdSolC = _this.objSolicitud.IdSolicitudRevision;// document.getElementById('IdSolicitudRevision').innerHTML;
             var tm = this.$refs.txtCodTipoM.value;
-            var ta = this.$refs.txtCodTarea.value
+            var ta = this.$refs.txtCodTarea.value;
             var obs = document.getElementById('txtObservacion').value;
             var coduser = document.getElementById("lblcodusuario").innerHTML;
             var fecha = new Date();
@@ -174,9 +321,11 @@ let app = new Vue({
                 confirmButtonText: 'Sì, Grabar SubSistema'
             }).then((result) => {
                 if (result.value) {
+
                     //swal-end
-                    if (document.getElementById('lblEstadoC').innerHTML == "1") {
-                        //get id axios
+                    var estado = document.getElementById('lblEstadoC').value;
+                    if (estado === "1") {
+
                         let _this = this;
 
                         axios.post(getBaseUrl.obtenerUrlAbsoluta("Fallas/IdFallasD"))
@@ -193,14 +342,16 @@ let app = new Vue({
                                     //nuevo elemento
                                     //nuevo
                                     axios.post(getBaseUrl.obtenerUrlAbsoluta("Fallas/InsertFallasD"), {
-                                        IdSolicitudRevisionD: IdSolD,IdSolicitudRevision: IdSolC, Observacion: obs, UsuarioRegistro: coduser, FechaRegistro: fechar,
-                                        HoraRegistro: horar, Estado: 0, IdSistema: tm, IdObservacion: ta })
+                                        IdSolicitudRevisionD: IdSolD, IdSolicitudRevision: IdSolC, Observacion: obs, UsuarioRegistro: coduser, FechaRegistro: fechar,
+                                        HoraRegistro: horar, Estado: 0, IdSistema: tm, IdObservacion: ta
+                                    })
 
                                         .then(res => {
                                             if (res.data.Estado) {
                                                 Notifications.Messages.success("Registro Guardado");
-                                                setTimeout(() => { this.$refs.frmFallas.submit(); }, 500);
-                                                window.setTimeout(function () { location.reload() }, 500)
+                                                _this.SelectFallasD();
+                                                //setTimeout(() => { this.$refs.frmFallas.submit(); }, 500);
+                                                //window.setTimeout(function () { location.reload() }, 500);
 
                                             } else if (res.data.tipoNotificacion) {
                                                 ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
@@ -228,17 +379,45 @@ let app = new Vue({
             }
 
             )
+        },
+
+        close: function (code) {
+            if (code === 1) {
+                $('#appBuscadorSolicitudes').modal('hide');
+                this.$nextTick(() => {
+
+                });
+            }
         }
         //fin swal2
     },
-         
+
 
     computed: {
         FullFields: function () {
             return this.validateForm();
-        }
+        },
+        SolicitudesFiltradas2() {
+            return this.list.Solicitudes.filter(item => {
+                return (
+                    item.Chofer.toLowerCase().indexOf(this.objFiltro.Chofer.toLowerCase()) > -1 &&
+                    item.Placa.toLowerCase().indexOf(this.objFiltro.Placa.toLowerCase()) > -1 &&
+                    item.correlativo.toLowerCase().indexOf(this.objFiltro.correlativo.toLowerCase()) > -1 &&
+                    item.Fecha.toLowerCase().indexOf(this.objFiltro.Fecha.toLowerCase()) > -1 &&
+                    item.Hora.toLowerCase().indexOf(this.objFiltro.Hora.toLowerCase()) > -1 &&
+                    item.Destino.toLowerCase().indexOf(this.objFiltro.Destino.toLowerCase()) > -1 &&
+                    item.Usuario.toLowerCase().indexOf(this.objFiltro.Usuario.toLowerCase()) > -1
+                )
+            })
+        },
+        FullCabecera: function () {
+            return (
+                this.objSolicitud.NumeroInforme &&
+                this.objSolicitud.Odometro
+            ) ? true : false;
+        },
     },
- 
+
     watch: {
         "objFallasD.IdSolicitudRevisionD": function (newval, oldval) {
             if (newval) {
@@ -248,4 +427,4 @@ let app = new Vue({
     }
 });
 
- 
+

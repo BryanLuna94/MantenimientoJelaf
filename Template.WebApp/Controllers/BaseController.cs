@@ -72,6 +72,13 @@ namespace Mantenimiento.WebApp.Controllers
         }
 
         [HttpGet]
+        public async Task<ActionResult> ListTareasCAutocomplete(string value)
+        {
+            var res = await _ServiceMantenimiento.ListTareasCAutocompleteAsync(value);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
         public async Task<ActionResult> ListTareasAutocomplete(string value)
         {
             var res = await _ServiceMantenimiento.ListTareasAutocompleteAsync(value);
@@ -82,6 +89,13 @@ namespace Mantenimiento.WebApp.Controllers
         public async Task<ActionResult> ListPuntoAtencionAutocomplete(string value)
         {
             var res = await _ServiceMantenimiento.ListPuntoAtencionAutocompleteAsync(value);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> ListMecanicosAutocomplete(string value)
+        {
+            var res = await _ServiceMantenimiento.ListMecanicosAutocompleteAsync(value);
             return Json(res, JsonRequestBehavior.AllowGet);
         }
     }

@@ -48,3 +48,12 @@ C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Mante
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.dll
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Utility\obj\Debug\Template.Utility.pdb
 D:\JELAF\MANTENIMIENTO\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\bin\Debug\Template.Utility.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\bin\Debug\Template.Utility.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\bin\Debug\JBLV.Log.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\bin\Debug\log4net.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Template.Utility.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache

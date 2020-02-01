@@ -1,0 +1,21 @@
+2020-01-30 18:59:05,842 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101
+2020-01-30 18:59:17,006 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101
+2020-01-30 18:59:39,754 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101
+2020-01-30 19:00:20,307 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101
+2020-01-30 19:00:54,362 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101
+2020-01-30 19:01:32,423 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101
+2020-01-30 19:01:53,559 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(Decimal NumeroInforme, String TipoInforme, Int32 TipoU) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 101

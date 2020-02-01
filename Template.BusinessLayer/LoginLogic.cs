@@ -25,19 +25,19 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objUsuario == null)
                 {
-                    BusinessException.Generate(Constants.USUARIO_NO_EXISTE);
+                    BusinessException.Generar(Constants.USUARIO_NO_EXISTE);
                 }
 
            //     if (Seguridad.Desencripta(objUsuario.Password, Constants.UnaLlave).ToUpper() != Password.ToUpper())
            //     {
-            //        BusinessException.Generate(Constants.CLAVE_INCORRECTA);
+            //        BusinessException.Generar(Constants.CLAVE_INCORRECTA);
             //    }
 
 
 
               if (objUsuario.Password.ToUpper() != Password.ToUpper())
                   {
-                    BusinessException.Generate(Constants.CLAVE_INCORRECTA);
+                    BusinessException.Generar(Constants.CLAVE_INCORRECTA);
                }
 
                 objUsuario.Password = null;
@@ -81,7 +81,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (Password == "")
                 {
-                    BusinessException.Generate(Constants.CLAVE_VACIA);
+                    BusinessException.Generar(Constants.CLAVE_VACIA);
                 }
 
                 response = new Response<PwdResponse>

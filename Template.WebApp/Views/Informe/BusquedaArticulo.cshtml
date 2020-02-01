@@ -1,0 +1,63 @@
+﻿<!-- sample modal content -->
+<div id="appRequisicion" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:50%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(4)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Busqueda Artículo :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableBolsa" ref="#tableBolsa">
+                                <thead>
+                                    <tr class="advanced-table active">
+                                        <td>Fecha</td>
+                                        <td>Código</td>
+                                        <td>Original</td>
+                                        <td>Repuesto</td>
+                                        <td>Cantidad</td>
+                                        <td>Consumo</td>
+                                        <td>Solicitado</td>
+                                        <td>Saldo</td>
+                                        <td>Tipo</td>
+                                        <td>Almacén</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="header" v-for="Bolsa in list.Bolsas">
+                                        <td width="5%" align="center">{{ Bolsa.Fecha }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Codigo }}</td>
+                                        <td width="10%" align="center">{{ Bolsa.Original }}</td>
+                                        <td width="35%" align="center">{{ Bolsa.Descripcion }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Cantidad }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Consumo }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Solicitado }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Saldo }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Tipo }}</td>
+                                        <td width="5%" align="center">{{ Bolsa.Almacen }}</td>
+                                        <td width="5%"><a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="DeleteBolsa(Bolsa)">Del</a></td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default waves-effect waves-light text-left" @@click="close(3)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->

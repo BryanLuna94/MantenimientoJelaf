@@ -47,5 +47,36 @@ namespace Mantenimiento.DataAccess
 
             return null;
         }
+
+        public static async Task<MTBFEntity> UpdateAre_OdometroAcumulado(string are_codigo, decimal odometro)
+        {
+
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("usp_UPD_Are_OdometroAcumulado", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@pOdometro", SqlDbType.Decimal).Value = odometro;
+                        cmd.Parameters.Add("@pAre_Codigo", SqlDbType.VarChar).Value = are_codigo;
+                        await cmd.ExecuteNonQueryAsync();
+                        cmd.Dispose();
+                    }
+
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return null;
+
+        }
     }
 }

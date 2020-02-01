@@ -98,7 +98,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objClaseM != null)
                 {
-                    BusinessException.Generate(Constants.NO_ELIMINO);
+                    BusinessException.Generar(Constants.NO_ELIMINO);
                 }
 
                 response = new Response<ClaseMResponse>

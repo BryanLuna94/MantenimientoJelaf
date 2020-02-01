@@ -63,3 +63,16 @@ C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Ma
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\log4net.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb

@@ -1,0 +1,150 @@
+2020-01-29 00:21:59,577 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_InformeTareas_Insert' esperaba el parámetro '@ServTerceros_TbgDocumento', que no se ha especificado.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 90
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 156
+2020-01-29 00:24:40,759 [67] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: La función o el procedimiento Usp_Tb_InformeTareas_Insert tiene demasiados argumentos.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 91
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 156
+2020-01-29 00:26:33,423 [67] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Instrucción INSERT en conflicto con la restricción FOREIGN KEY "FK_tb_InformeTareas_Tb_Tareas". El conflicto ha aparecido en la base de datos "BDALM2019_NIC", tabla "dbo.Tb_Tareas", column 'IdTarea'.
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 90
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 156
+2020-01-29 00:27:15,366 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Instrucción INSERT en conflicto con la restricción FOREIGN KEY "FK_tb_InformeTareas_Tb_Tareas". El conflicto ha aparecido en la base de datos "BDALM2019_NIC", tabla "dbo.Tb_Tareas", column 'IdTarea'.
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 90
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 156
+2020-01-29 00:30:49,231 [78] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Instrucción INSERT en conflicto con la restricción FOREIGN KEY "FK_tb_InformeTareas_Tb_Tareas". El conflicto ha aparecido en la base de datos "BDALM2019_NIC", tabla "dbo.Tb_Tareas", column 'IdTarea'.
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 90
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 156
+2020-01-29 00:48:56,854 [69] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_InformeTareas_Delete' esperaba el parámetro '@estado', que no se ha especificado.
+   en Mantenimiento.DataAccess.InformeTareasData.<DeleteInformeTareas>d__3.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 158
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<DeleteInformeTareas>d__3.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 123
+2020-01-29 00:50:09,792 [53] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_InformeTareas_Delete' esperaba el parámetro '@estado', que no se ha especificado.
+   en Mantenimiento.DataAccess.InformeTareasData.<DeleteInformeTareas>d__3.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 158
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<DeleteInformeTareas>d__3.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 123
+2020-01-29 00:52:09,872 [59] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Infracción de la restricción PRIMARY KEY 'PK_tb_InformeTareas'. No se puede insertar una clave duplicada en el objeto 'dbo.tb_InformeTareas'. El valor de la clave duplicada es (48739, 12).
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 90
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 156
+2020-01-29 10:46:48,076 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Utility.ServiceError]: Advertencia del lado del servidor El detalle del error es igual a Mantenimiento.Utility.ServiceError.
+2020-01-29 10:48:24,462 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Utility.ServiceError]: Advertencia del lado del servidor El detalle del error es igual a Mantenimiento.Utility.ServiceError.
+2020-01-29 10:49:59,525 [34] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Utility.ServiceError]: Este registro ya existe El detalle del error es igual a Mantenimiento.Utility.ServiceError.
+2020-01-29 10:56:04,021 [42] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Utility.ServiceError]: Este registro ya existe El detalle del error es igual a Mantenimiento.Utility.ServiceError.
+2020-01-29 11:05:43,938 [42] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Utility.ServiceError]: Este registro ya existe El detalle del error es igual a Mantenimiento.Utility.ServiceError.
+2020-01-29 11:20:52,771 [64] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Advertencia del lado del servidor El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-01-29 11:22:37,795 [64] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Advertencia del lado del servidor El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-01-29 11:23:55,513 [51] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Advertencia del lado del servidor El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-01-29 11:32:06,193 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Infracción de la restricción PRIMARY KEY 'PK_tb_InformeTareas'. No se puede insertar una clave duplicada en el objeto 'dbo.tb_InformeTareas'. El valor de la clave duplicada es (48739, 19).
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 91
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 172
+2020-01-29 11:32:34,942 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Infracción de la restricción PRIMARY KEY 'PK_tb_InformeTareas'. No se puede insertar una clave duplicada en el objeto 'dbo.tb_InformeTareas'. El valor de la clave duplicada es (48739, 19).
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeTareasData.<InsertInformeTareas>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeTareasData.cs:línea 91
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertInformeTareas>d__4.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 172
+2020-01-29 18:11:54,597 [68] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Insert' esperaba el parámetro '@HoraInicio', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<InsertTareaMecanico>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 97
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertTareaMecanico>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 293
+2020-01-29 18:12:38,129 [26] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Insert' esperaba el parámetro '@HoraInicio', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<InsertTareaMecanico>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 97
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertTareaMecanico>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 293
+2020-01-29 18:32:39,918 [108] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Insert' esperaba el parámetro '@Observacion', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<InsertTareaMecanico>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 97
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertTareaMecanico>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 302
+2020-01-29 18:34:30,978 [103] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Insert' esperaba el parámetro '@Observacion', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<InsertTareaMecanico>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 97
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertTareaMecanico>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 302
+2020-01-29 18:42:34,091 [97] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Insert' esperaba el parámetro '@Observacion', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<InsertTareaMecanico>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 97
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertTareaMecanico>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 302
+2020-01-29 18:45:39,732 [72] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Insert' esperaba el parámetro '@Observacion', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<InsertTareaMecanico>d__1.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 97
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<InsertTareaMecanico>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 302

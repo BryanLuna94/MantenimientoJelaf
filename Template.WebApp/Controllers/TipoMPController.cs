@@ -45,7 +45,7 @@ namespace Mantenimiento.WebApp.Controllers
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
-            catch (FaultException<ServiceError> ex)
+            catch (FaultException<ServiceErrorResponse> ex)
             {
                 //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
                 return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
@@ -67,7 +67,7 @@ namespace Mantenimiento.WebApp.Controllers
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
-            catch (FaultException<ServiceError> ex)
+            catch (FaultException<ServiceErrorResponse> ex)
             {
                 //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
                 return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
@@ -88,7 +88,7 @@ namespace Mantenimiento.WebApp.Controllers
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
-            catch (FaultException<ServiceError> ex)
+            catch (FaultException<ServiceErrorResponse> ex)
             {
                 //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
                 return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);

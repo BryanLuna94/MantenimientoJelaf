@@ -25,7 +25,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objSistemas == null)
                 {
-                    BusinessException.Generate(Constants.CODIGO_VACIO);
+                    BusinessException.Generar(Constants.CODIGO_VACIO);
                 }
 
   
@@ -64,7 +64,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objSistemas != null)
                 {
-                    BusinessException.Generate(Constants.NO_ELIMINO);
+                    BusinessException.Generar(Constants.NO_ELIMINO);
                 }
 
                 response = new Response<SistemasResponse>

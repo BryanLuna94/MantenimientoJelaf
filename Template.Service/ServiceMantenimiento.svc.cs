@@ -45,6 +45,11 @@ namespace Mantenimiento.Service
             return BaseLogic.ListPlataformaAutocomplete(value);
         }
 
+        public Response<BaseResponse> ListTareasCAutocomplete(string value)
+        {
+            return BaseLogic.ListTareasCAutocomplete(value);
+        }
+
         public Response<BaseResponse> ListTareasAutocomplete(string value)
         {
             return BaseLogic.ListTareasAutocomplete(value);
@@ -62,6 +67,16 @@ namespace Mantenimiento.Service
         public Response<BaseResponse> ListPuntoAtencionAutocomplete(string value)
         {
             return BaseLogic.ListPuntoAtencionAutocomplete(value);
+        }
+
+        public Response<BaseResponse> ListMecanicosAutocomplete(string value)
+        {
+            return BaseLogic.ListMecanicosAutocomplete(value);
+        }
+
+        public Response<BaseResponse> ListAlmacenesAutocomplete(string value)
+        {
+            return BaseLogic.ListAlmacenesAutocomplete(value);
         }
 
         #endregion
@@ -180,8 +195,6 @@ namespace Mantenimiento.Service
 
 
         #endregion
-
-
 
         #region TIPOM
         public Response<TipoMResponse> ListTipoM()
@@ -396,6 +409,25 @@ namespace Mantenimiento.Service
         }
 
 
+        public Response<FallasDResponse> SolicitudRevisionBusqueda(string NivelUsuario, string CodSucursal)
+        {
+            return FallasDLogic.SolicitudRevisionBusqueda(NivelUsuario, CodSucursal);
+        }
+
+        public Response<FallasDResponse> SelectSolicitudRevision(string IdsolicitudRevision)
+        {
+            return FallasDLogic.SelectSolicitudRevision(IdsolicitudRevision);
+        }
+
+        public async Task<Response<FallasDResponse>> UpdateSolicitudRevision(FallasDRequest request)
+        {
+            return await FallasDLogic.UpdateSolicitudRevision(request);
+        }
+
+        public Response<FallasDResponse> ObtenerUltimaRevisionChofer(string CodChofer)
+        {
+            return FallasDLogic.ObtenerUltimaRevisionChofer(CodChofer);
+        }
 
         #endregion
 
@@ -475,6 +507,95 @@ namespace Mantenimiento.Service
             return await OrdenMasivaLogic.AnularPreventivo(request);
         }
 
+
+        #endregion
+
+        #region INFORME
+
+
+        public Response<InformeResponse> ListInforme(InformeRequest request)
+        {
+            return InformeLogic.ListInforme(request);
+        }
+        public Response<InformeResponse> SelectInforme(int IdInforme)
+        {
+            return InformeLogic.SelectInforme(IdInforme);
+        }
+
+        public Response<InformeResponse> SelectInformeCorrectivoPreventivoTractoCarreta(decimal NumeroInforme, string TipoInforme, int TipoU)
+        {
+            return InformeLogic.SelectInformeCorrectivoPreventivoTractoCarreta(NumeroInforme, TipoInforme, TipoU);
+        }
+
+        public Response<InformeResponse> ListInformeTareas(int IdInforme)
+        {
+            return InformeLogic.ListInformeTareas(IdInforme);
+        }
+
+        public async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea)
+        {
+            return await InformeLogic.DeleteInformeTareas(IdInforme, IdTarea);
+        }
+
+        public async Task<Response<InformeResponse>> InsertInformeTareas(InformeRequest request)
+        {
+            return await InformeLogic.InsertInformeTareas(request);
+        }
+
+        public async Task<Response<InformeResponse>> UpdateInformeTareas(InformeRequest request)
+        {
+            return await InformeLogic.UpdateInformeTareas(request);
+        }
+
+        public Response<InformeResponse> ListTareaMecanico(int IdInforme, int IdTarea)
+        {
+            return InformeLogic.ListTareaMecanico(IdInforme, IdTarea);
+        }
+
+        public async Task<Response<InformeResponse>> DeleteTareaMecanico(int IdTareaMecanico)
+        {
+            return await InformeLogic.DeleteTareaMecanico(IdTareaMecanico);
+        }
+
+        public async Task<Response<InformeResponse>> InsertTareaMecanico(InformeRequest request)
+        {
+            return await InformeLogic.InsertTareaMecanico(request);
+        }
+
+        public async Task<Response<InformeResponse>> UpdateTareaMecanico(InformeRequest request)
+        {
+            return await InformeLogic.UpdateTareaMecanico(request);
+        }
+
+        public Response<InformeResponse> ListTareaMecanicosAyudante(int IdTareaMecanico)
+        {
+            return InformeLogic.ListTareaMecanicosAyudante(IdTareaMecanico);
+        }
+
+        public async Task<Response<InformeResponse>> DeleteTareaMecanicosAyudante(int IdAyudante)
+        {
+            return await InformeLogic.DeleteTareaMecanicosAyudante(IdAyudante);
+        }
+
+        public async Task<Response<InformeResponse>> InsertTareaMecanicosAyudante(InformeRequest request)
+        {
+            return await InformeLogic.InsertTareaMecanicosAyudante(request);
+        }
+
+        public Response<InformeResponse> BusquedaArticulo(string CodEmpresa, string CodAlmacen)
+        {
+            return InformeLogic.BusquedaArticulo(CodEmpresa, CodAlmacen);
+        }
+
+        public async Task<Response<InformeResponse>> InsertBolsas(InformeRequest request)
+        {
+            return await InformeLogic.InsertBolsas(request);
+        }
+
+        public Response<InformeResponse> AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme)
+        {
+            return InformeLogic.AgregarBolsas(CodAlmacen, IdTarea, IdInforme);
+        }
 
         #endregion
     }

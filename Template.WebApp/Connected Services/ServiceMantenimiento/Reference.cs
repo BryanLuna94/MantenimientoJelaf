@@ -15,6 +15,3247 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
+        "s")]
+    [System.SerializableAttribute()]
+    public partial class OrdenMasivaRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaGenerarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaFilter FiltroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListInsertarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioRegistroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaGenerar {
+            get {
+                return this.FechaGenerarField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaGenerarField, value) != true)) {
+                    this.FechaGenerarField = value;
+                    this.RaisePropertyChanged("FechaGenerar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaFilter Filtro {
+            get {
+                return this.FiltroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroField, value) != true)) {
+                    this.FiltroField = value;
+                    this.RaisePropertyChanged("Filtro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListInsertar {
+            get {
+                return this.ListInsertarField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListInsertarField, value) != true)) {
+                    this.ListInsertarField = value;
+                    this.RaisePropertyChanged("ListInsertar");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioRegistro {
+            get {
+                return this.UsuarioRegistroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioRegistroField, value) != true)) {
+                    this.UsuarioRegistroField = value;
+                    this.RaisePropertyChanged("UsuarioRegistro");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaFilter", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters")]
+    [System.SerializableAttribute()]
+    public partial class OrdenMasivaFilter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DestinoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FecFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FecIniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool GeneradoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrigenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UnidadField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chofer {
+            get {
+                return this.ChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChoferField, value) != true)) {
+                    this.ChoferField = value;
+                    this.RaisePropertyChanged("Chofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Destino {
+            get {
+                return this.DestinoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DestinoField, value) != true)) {
+                    this.DestinoField = value;
+                    this.RaisePropertyChanged("Destino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FecFin {
+            get {
+                return this.FecFinField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FecFinField, value) != true)) {
+                    this.FecFinField = value;
+                    this.RaisePropertyChanged("FecFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FecIni {
+            get {
+                return this.FecIniField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FecIniField, value) != true)) {
+                    this.FecIniField = value;
+                    this.RaisePropertyChanged("FecIni");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Generado {
+            get {
+                return this.GeneradoField;
+            }
+            set {
+                if ((this.GeneradoField.Equals(value) != true)) {
+                    this.GeneradoField = value;
+                    this.RaisePropertyChanged("Generado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrdenField, value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Origen {
+            get {
+                return this.OrigenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrigenField, value) != true)) {
+                    this.OrigenField = value;
+                    this.RaisePropertyChanged("Origen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Unidad {
+            get {
+                return this.UnidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UnidadField, value) != true)) {
+                    this.UnidadField = value;
+                    this.RaisePropertyChanged("Unidad");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class OrdenMasivaList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ben_NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BusCodIntField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BusPlacaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CODI_PROGRAMACION_REALField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodDestinoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodOrigenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Codi_ProgramacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool CorrectivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DestinoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmpresaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExternoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaViajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool GeneradoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GlosaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraViajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdUnidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KILOMETRAJEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NumeroMantenimientoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NumeroOrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OdometroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrigenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool PreventivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RUTAVIAJEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Tipo_sField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tipoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ben_Nombre {
+            get {
+                return this.Ben_NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ben_NombreField, value) != true)) {
+                    this.Ben_NombreField = value;
+                    this.RaisePropertyChanged("Ben_Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BusCodInt {
+            get {
+                return this.BusCodIntField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BusCodIntField, value) != true)) {
+                    this.BusCodIntField = value;
+                    this.RaisePropertyChanged("BusCodInt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BusPlaca {
+            get {
+                return this.BusPlacaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BusPlacaField, value) != true)) {
+                    this.BusPlacaField = value;
+                    this.RaisePropertyChanged("BusPlaca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CODI_PROGRAMACION_REAL {
+            get {
+                return this.CODI_PROGRAMACION_REALField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CODI_PROGRAMACION_REALField, value) != true)) {
+                    this.CODI_PROGRAMACION_REALField = value;
+                    this.RaisePropertyChanged("CODI_PROGRAMACION_REAL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodDestino {
+            get {
+                return this.CodDestinoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodDestinoField, value) != true)) {
+                    this.CodDestinoField = value;
+                    this.RaisePropertyChanged("CodDestino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodOrigen {
+            get {
+                return this.CodOrigenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodOrigenField, value) != true)) {
+                    this.CodOrigenField = value;
+                    this.RaisePropertyChanged("CodOrigen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codi_Programacion {
+            get {
+                return this.Codi_ProgramacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Codi_ProgramacionField, value) != true)) {
+                    this.Codi_ProgramacionField = value;
+                    this.RaisePropertyChanged("Codi_Programacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Correctivo {
+            get {
+                return this.CorrectivoField;
+            }
+            set {
+                if ((this.CorrectivoField.Equals(value) != true)) {
+                    this.CorrectivoField = value;
+                    this.RaisePropertyChanged("Correctivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Destino {
+            get {
+                return this.DestinoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DestinoField, value) != true)) {
+                    this.DestinoField = value;
+                    this.RaisePropertyChanged("Destino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Empresa {
+            get {
+                return this.EmpresaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmpresaField, value) != true)) {
+                    this.EmpresaField = value;
+                    this.RaisePropertyChanged("Empresa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Externo {
+            get {
+                return this.ExternoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExternoField, value) != true)) {
+                    this.ExternoField = value;
+                    this.RaisePropertyChanged("Externo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaViaje {
+            get {
+                return this.FechaViajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaViajeField, value) != true)) {
+                    this.FechaViajeField = value;
+                    this.RaisePropertyChanged("FechaViaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Generado {
+            get {
+                return this.GeneradoField;
+            }
+            set {
+                if ((this.GeneradoField.Equals(value) != true)) {
+                    this.GeneradoField = value;
+                    this.RaisePropertyChanged("Generado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Glosa {
+            get {
+                return this.GlosaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GlosaField, value) != true)) {
+                    this.GlosaField = value;
+                    this.RaisePropertyChanged("Glosa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraViaje {
+            get {
+                return this.HoraViajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraViajeField, value) != true)) {
+                    this.HoraViajeField = value;
+                    this.RaisePropertyChanged("HoraViaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IDChofer {
+            get {
+                return this.IDChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDChoferField, value) != true)) {
+                    this.IDChoferField = value;
+                    this.RaisePropertyChanged("IDChofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdUnidad {
+            get {
+                return this.IdUnidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdUnidadField, value) != true)) {
+                    this.IdUnidadField = value;
+                    this.RaisePropertyChanged("IdUnidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string KILOMETRAJE {
+            get {
+                return this.KILOMETRAJEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KILOMETRAJEField, value) != true)) {
+                    this.KILOMETRAJEField = value;
+                    this.RaisePropertyChanged("KILOMETRAJE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NumeroMantenimiento {
+            get {
+                return this.NumeroMantenimientoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NumeroMantenimientoField, value) != true)) {
+                    this.NumeroMantenimientoField = value;
+                    this.RaisePropertyChanged("NumeroMantenimiento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NumeroOrden {
+            get {
+                return this.NumeroOrdenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NumeroOrdenField, value) != true)) {
+                    this.NumeroOrdenField = value;
+                    this.RaisePropertyChanged("NumeroOrden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Odometro {
+            get {
+                return this.OdometroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OdometroField, value) != true)) {
+                    this.OdometroField = value;
+                    this.RaisePropertyChanged("Odometro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Origen {
+            get {
+                return this.OrigenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrigenField, value) != true)) {
+                    this.OrigenField = value;
+                    this.RaisePropertyChanged("Origen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Preventivo {
+            get {
+                return this.PreventivoField;
+            }
+            set {
+                if ((this.PreventivoField.Equals(value) != true)) {
+                    this.PreventivoField = value;
+                    this.RaisePropertyChanged("Preventivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RUTAVIAJE {
+            get {
+                return this.RUTAVIAJEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RUTAVIAJEField, value) != true)) {
+                    this.RUTAVIAJEField = value;
+                    this.RaisePropertyChanged("RUTAVIAJE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo_s {
+            get {
+                return this.Tipo_sField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Tipo_sField, value) != true)) {
+                    this.Tipo_sField = value;
+                    this.RaisePropertyChanged("Tipo_s");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tipoField, value) != true)) {
+                    this.tipoField = value;
+                    this.RaisePropertyChanged("tipo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfOrdenMasivaResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
+    [System.SerializableAttribute()]
+    public partial class ResponseOfOrdenMasivaResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EsCorrectoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaResponse ValorField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EsCorrecto {
+            get {
+                return this.EsCorrectoField;
+            }
+            set {
+                if ((this.EsCorrectoField.Equals(value) != true)) {
+                    this.EsCorrectoField = value;
+                    this.RaisePropertyChanged("EsCorrecto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mensaje {
+            get {
+                return this.MensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
+                    this.MensajeField = value;
+                    this.RaisePropertyChanged("Mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaResponse Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+        "es")]
+    [System.SerializableAttribute()]
+    public partial class OrdenMasivaResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> List {
+            get {
+                return this.ListField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListField, value) != true)) {
+                    this.ListField = value;
+                    this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+        "es")]
+    [System.SerializableAttribute()]
+    public partial class ServiceErrorResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SubCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string SubCode {
+            get {
+                return this.SubCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SubCodeField, value) != true)) {
+                    this.SubCodeField = value;
+                    this.RaisePropertyChanged("SubCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
+        "s")]
+    [System.SerializableAttribute()]
+    public partial class InformeRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.InformeFilter FiltroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.InformeTareasEntity InformeTareasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.Tb_CtrlBolsaRepInformeEntity> ListBolsasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicosEntity TareaMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicosAyudanteEntity TareaMecanicosAyudanteField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.InformeFilter Filtro {
+            get {
+                return this.FiltroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroField, value) != true)) {
+                    this.FiltroField = value;
+                    this.RaisePropertyChanged("Filtro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.InformeTareasEntity InformeTareas {
+            get {
+                return this.InformeTareasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InformeTareasField, value) != true)) {
+                    this.InformeTareasField = value;
+                    this.RaisePropertyChanged("InformeTareas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.Tb_CtrlBolsaRepInformeEntity> ListBolsas {
+            get {
+                return this.ListBolsasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListBolsasField, value) != true)) {
+                    this.ListBolsasField = value;
+                    this.RaisePropertyChanged("ListBolsas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicosEntity TareaMecanico {
+            get {
+                return this.TareaMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TareaMecanicoField, value) != true)) {
+                    this.TareaMecanicoField = value;
+                    this.RaisePropertyChanged("TareaMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicosAyudanteEntity TareaMecanicosAyudante {
+            get {
+                return this.TareaMecanicosAyudanteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TareaMecanicosAyudanteField, value) != true)) {
+                    this.TareaMecanicosAyudanteField = value;
+                    this.RaisePropertyChanged("TareaMecanicosAyudante");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeFilter", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters")]
+    [System.SerializableAttribute()]
+    public partial class InformeFilter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Fech_finField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Fech_iniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NivelUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrdenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool SoloMiUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoUField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsrCodigoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fech_fin {
+            get {
+                return this.Fech_finField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Fech_finField, value) != true)) {
+                    this.Fech_finField = value;
+                    this.RaisePropertyChanged("Fech_fin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fech_ini {
+            get {
+                return this.Fech_iniField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Fech_iniField, value) != true)) {
+                    this.Fech_iniField = value;
+                    this.RaisePropertyChanged("Fech_ini");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NInforme {
+            get {
+                return this.NInformeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NInformeField, value) != true)) {
+                    this.NInformeField = value;
+                    this.RaisePropertyChanged("NInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NivelUsuario {
+            get {
+                return this.NivelUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NivelUsuarioField, value) != true)) {
+                    this.NivelUsuarioField = value;
+                    this.RaisePropertyChanged("NivelUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Orden {
+            get {
+                return this.OrdenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrdenField, value) != true)) {
+                    this.OrdenField = value;
+                    this.RaisePropertyChanged("Orden");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool SoloMiUsuario {
+            get {
+                return this.SoloMiUsuarioField;
+            }
+            set {
+                if ((this.SoloMiUsuarioField.Equals(value) != true)) {
+                    this.SoloMiUsuarioField = value;
+                    this.RaisePropertyChanged("SoloMiUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoU {
+            get {
+                return this.TipoUField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoUField, value) != true)) {
+                    this.TipoUField = value;
+                    this.RaisePropertyChanged("TipoU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsrCodigo {
+            get {
+                return this.UsrCodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsrCodigoField, value) != true)) {
+                    this.UsrCodigoField = value;
+                    this.RaisePropertyChanged("UsrCodigo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeTareasEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class InformeTareasEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UsuarioRegistroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarea {
+            get {
+                return this.IdTareaField;
+            }
+            set {
+                if ((this.IdTareaField.Equals(value) != true)) {
+                    this.IdTareaField = value;
+                    this.RaisePropertyChanged("IdTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UsuarioRegistro {
+            get {
+                return this.UsuarioRegistroField;
+            }
+            set {
+                if ((this.UsuarioRegistroField.Equals(value) != true)) {
+                    this.UsuarioRegistroField = value;
+                    this.RaisePropertyChanged("UsuarioRegistro");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TareaMecanicosEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class TareaMecanicosEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaTerminoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraTerminoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UsuarioRegistroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodMecanico {
+            get {
+                return this.CodMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodMecanicoField, value) != true)) {
+                    this.CodMecanicoField = value;
+                    this.RaisePropertyChanged("CodMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaTermino {
+            get {
+                return this.FechaTerminoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaTerminoField, value) != true)) {
+                    this.FechaTerminoField = value;
+                    this.RaisePropertyChanged("FechaTermino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraInicio {
+            get {
+                return this.HoraInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraInicioField, value) != true)) {
+                    this.HoraInicioField = value;
+                    this.RaisePropertyChanged("HoraInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraTermino {
+            get {
+                return this.HoraTerminoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraTerminoField, value) != true)) {
+                    this.HoraTerminoField = value;
+                    this.RaisePropertyChanged("HoraTermino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarea {
+            get {
+                return this.IdTareaField;
+            }
+            set {
+                if ((this.IdTareaField.Equals(value) != true)) {
+                    this.IdTareaField = value;
+                    this.RaisePropertyChanged("IdTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UsuarioRegistro {
+            get {
+                return this.UsuarioRegistroField;
+            }
+            set {
+                if ((this.UsuarioRegistroField.Equals(value) != true)) {
+                    this.UsuarioRegistroField = value;
+                    this.RaisePropertyChanged("UsuarioRegistro");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TareaMecanicosAyudanteEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class TareaMecanicosAyudanteEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdAyudanteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaMecanicosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodMecanico {
+            get {
+                return this.CodMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodMecanicoField, value) != true)) {
+                    this.CodMecanicoField = value;
+                    this.RaisePropertyChanged("CodMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdAyudante {
+            get {
+                return this.IdAyudanteField;
+            }
+            set {
+                if ((this.IdAyudanteField.Equals(value) != true)) {
+                    this.IdAyudanteField = value;
+                    this.RaisePropertyChanged("IdAyudante");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTareaMecanicos {
+            get {
+                return this.IdTareaMecanicosField;
+            }
+            set {
+                if ((this.IdTareaMecanicosField.Equals(value) != true)) {
+                    this.IdTareaMecanicosField = value;
+                    this.RaisePropertyChanged("IdTareaMecanicos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Tb_CtrlBolsaRepInformeEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Tb_CtrlBolsaRepInformeEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal CantidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodiAlmacenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ConsumoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdArticuloTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OriginalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PendienteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal SolicitadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Cantidad {
+            get {
+                return this.CantidadField;
+            }
+            set {
+                if ((this.CantidadField.Equals(value) != true)) {
+                    this.CantidadField = value;
+                    this.RaisePropertyChanged("Cantidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodiAlmacen {
+            get {
+                return this.CodiAlmacenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodiAlmacenField, value) != true)) {
+                    this.CodiAlmacenField = value;
+                    this.RaisePropertyChanged("CodiAlmacen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Consumo {
+            get {
+                return this.ConsumoField;
+            }
+            set {
+                if ((this.ConsumoField.Equals(value) != true)) {
+                    this.ConsumoField = value;
+                    this.RaisePropertyChanged("Consumo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdArticuloTarea {
+            get {
+                return this.IdArticuloTareaField;
+            }
+            set {
+                if ((this.IdArticuloTareaField.Equals(value) != true)) {
+                    this.IdArticuloTareaField = value;
+                    this.RaisePropertyChanged("IdArticuloTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarea {
+            get {
+                return this.IdTareaField;
+            }
+            set {
+                if ((this.IdTareaField.Equals(value) != true)) {
+                    this.IdTareaField = value;
+                    this.RaisePropertyChanged("IdTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Original {
+            get {
+                return this.OriginalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OriginalField, value) != true)) {
+                    this.OriginalField = value;
+                    this.RaisePropertyChanged("Original");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Pendiente {
+            get {
+                return this.PendienteField;
+            }
+            set {
+                if ((this.PendienteField.Equals(value) != true)) {
+                    this.PendienteField = value;
+                    this.RaisePropertyChanged("Pendiente");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Solicitado {
+            get {
+                return this.SolicitadoField;
+            }
+            set {
+                if ((this.SolicitadoField.Equals(value) != true)) {
+                    this.SolicitadoField = value;
+                    this.RaisePropertyChanged("Solicitado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo {
+            get {
+                return this.TipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfInformeResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
+    [System.SerializableAttribute()]
+    public partial class ResponseOfInformeResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EsCorrectoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.InformeResponse ValorField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EsCorrecto {
+            get {
+                return this.EsCorrectoField;
+            }
+            set {
+                if ((this.EsCorrectoField.Equals(value) != true)) {
+                    this.EsCorrectoField = value;
+                    this.RaisePropertyChanged("EsCorrecto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mensaje {
+            get {
+                return this.MensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
+                    this.MensajeField = value;
+                    this.RaisePropertyChanged("Mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.InformeResponse Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+        "es")]
+    [System.SerializableAttribute()]
+    public partial class InformeResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.InformeEntity InformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.InformeList> ListField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.Tb_CtrlBolsaRepInformeEntity> ListBolsasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.BusquedaArticuloList> ListBusquedaArticuloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.InformeTareasList> ListInformeTareasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicoList> ListTareaMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicosAyudanteList> ListTareaMecanicosAyudanteField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.InformeEntity Informe {
+            get {
+                return this.InformeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InformeField, value) != true)) {
+                    this.InformeField = value;
+                    this.RaisePropertyChanged("Informe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.InformeList> List {
+            get {
+                return this.ListField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListField, value) != true)) {
+                    this.ListField = value;
+                    this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.Tb_CtrlBolsaRepInformeEntity> ListBolsas {
+            get {
+                return this.ListBolsasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListBolsasField, value) != true)) {
+                    this.ListBolsasField = value;
+                    this.RaisePropertyChanged("ListBolsas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.BusquedaArticuloList> ListBusquedaArticulo {
+            get {
+                return this.ListBusquedaArticuloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListBusquedaArticuloField, value) != true)) {
+                    this.ListBusquedaArticuloField = value;
+                    this.RaisePropertyChanged("ListBusquedaArticulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.InformeTareasList> ListInformeTareas {
+            get {
+                return this.ListInformeTareasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListInformeTareasField, value) != true)) {
+                    this.ListInformeTareasField = value;
+                    this.RaisePropertyChanged("ListInformeTareas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicoList> ListTareaMecanico {
+            get {
+                return this.ListTareaMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListTareaMecanicoField, value) != true)) {
+                    this.ListTareaMecanicoField = value;
+                    this.RaisePropertyChanged("ListTareaMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaMecanicosAyudanteList> ListTareaMecanicosAyudante {
+            get {
+                return this.ListTareaMecanicosAyudanteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListTareaMecanicosAyudanteField, value) != true)) {
+                    this.ListTareaMecanicosAyudanteField = value;
+                    this.RaisePropertyChanged("ListTareaMecanicosAyudante");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class InformeEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ben_CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChoferEntregaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CostoManoObraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal CostoRepuestosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstCierreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaStrField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdPlanEjecucionTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdSolicitudRevisionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdUndAlertaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal KilometrajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal KmUnidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NumeroInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ofi_CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OficinaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ServicioTercerosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SolicitanteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short UsuarioRegistroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Codigo {
+            get {
+                return this.Are_CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_CodigoField, value) != true)) {
+                    this.Are_CodigoField = value;
+                    this.RaisePropertyChanged("Are_Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Nombre {
+            get {
+                return this.Are_NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_NombreField, value) != true)) {
+                    this.Are_NombreField = value;
+                    this.RaisePropertyChanged("Are_Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Observacion {
+            get {
+                return this.Are_ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_ObservacionField, value) != true)) {
+                    this.Are_ObservacionField = value;
+                    this.RaisePropertyChanged("Are_Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ben_Codigo {
+            get {
+                return this.Ben_CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ben_CodigoField, value) != true)) {
+                    this.Ben_CodigoField = value;
+                    this.RaisePropertyChanged("Ben_Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chofer {
+            get {
+                return this.ChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChoferField, value) != true)) {
+                    this.ChoferField = value;
+                    this.RaisePropertyChanged("Chofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ChoferEntrega {
+            get {
+                return this.ChoferEntregaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChoferEntregaField, value) != true)) {
+                    this.ChoferEntregaField = value;
+                    this.RaisePropertyChanged("ChoferEntrega");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CostoManoObra {
+            get {
+                return this.CostoManoObraField;
+            }
+            set {
+                if ((this.CostoManoObraField.Equals(value) != true)) {
+                    this.CostoManoObraField = value;
+                    this.RaisePropertyChanged("CostoManoObra");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal CostoRepuestos {
+            get {
+                return this.CostoRepuestosField;
+            }
+            set {
+                if ((this.CostoRepuestosField.Equals(value) != true)) {
+                    this.CostoRepuestosField = value;
+                    this.RaisePropertyChanged("CostoRepuestos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EstCierre {
+            get {
+                return this.EstCierreField;
+            }
+            set {
+                if ((this.EstCierreField.Equals(value) != true)) {
+                    this.EstCierreField = value;
+                    this.RaisePropertyChanged("EstCierre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((this.FechaField.Equals(value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaStr {
+            get {
+                return this.FechaStrField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaStrField, value) != true)) {
+                    this.FechaStrField = value;
+                    this.RaisePropertyChanged("FechaStr");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Hora {
+            get {
+                return this.HoraField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraField, value) != true)) {
+                    this.HoraField = value;
+                    this.RaisePropertyChanged("Hora");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdPlanEjecucionTarea {
+            get {
+                return this.IdPlanEjecucionTareaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdPlanEjecucionTareaField, value) != true)) {
+                    this.IdPlanEjecucionTareaField = value;
+                    this.RaisePropertyChanged("IdPlanEjecucionTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdSolicitudRevision {
+            get {
+                return this.IdSolicitudRevisionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdSolicitudRevisionField, value) != true)) {
+                    this.IdSolicitudRevisionField = value;
+                    this.RaisePropertyChanged("IdSolicitudRevision");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdUndAlerta {
+            get {
+                return this.IdUndAlertaField;
+            }
+            set {
+                if ((this.IdUndAlertaField.Equals(value) != true)) {
+                    this.IdUndAlertaField = value;
+                    this.RaisePropertyChanged("IdUndAlerta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Kilometraje {
+            get {
+                return this.KilometrajeField;
+            }
+            set {
+                if ((this.KilometrajeField.Equals(value) != true)) {
+                    this.KilometrajeField = value;
+                    this.RaisePropertyChanged("Kilometraje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal KmUnidad {
+            get {
+                return this.KmUnidadField;
+            }
+            set {
+                if ((this.KmUnidadField.Equals(value) != true)) {
+                    this.KmUnidadField = value;
+                    this.RaisePropertyChanged("KmUnidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NumeroInforme {
+            get {
+                return this.NumeroInformeField;
+            }
+            set {
+                if ((this.NumeroInformeField.Equals(value) != true)) {
+                    this.NumeroInformeField = value;
+                    this.RaisePropertyChanged("NumeroInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ofi_Codigo {
+            get {
+                return this.Ofi_CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ofi_CodigoField, value) != true)) {
+                    this.Ofi_CodigoField = value;
+                    this.RaisePropertyChanged("Ofi_Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Oficina {
+            get {
+                return this.OficinaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OficinaField, value) != true)) {
+                    this.OficinaField = value;
+                    this.RaisePropertyChanged("Oficina");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal ServicioTerceros {
+            get {
+                return this.ServicioTercerosField;
+            }
+            set {
+                if ((this.ServicioTercerosField.Equals(value) != true)) {
+                    this.ServicioTercerosField = value;
+                    this.RaisePropertyChanged("ServicioTerceros");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Solicitante {
+            get {
+                return this.SolicitanteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SolicitanteField, value) != true)) {
+                    this.SolicitanteField = value;
+                    this.RaisePropertyChanged("Solicitante");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo {
+            get {
+                return this.TipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoInforme {
+            get {
+                return this.TipoInformeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoInformeField, value) != true)) {
+                    this.TipoInformeField = value;
+                    this.RaisePropertyChanged("TipoInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short UsuarioRegistro {
+            get {
+                return this.UsuarioRegistroField;
+            }
+            set {
+                if ((this.UsuarioRegistroField.Equals(value) != true)) {
+                    this.UsuarioRegistroField = value;
+                    this.RaisePropertyChanged("UsuarioRegistro");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class InformeList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaCierreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string InternoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal NumeroInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OficinaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PlacaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TIPOUField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Usr_NombreField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chofer {
+            get {
+                return this.ChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChoferField, value) != true)) {
+                    this.ChoferField = value;
+                    this.RaisePropertyChanged("Chofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodChofer {
+            get {
+                return this.CodChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodChoferField, value) != true)) {
+                    this.CodChoferField = value;
+                    this.RaisePropertyChanged("CodChofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaField, value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaCierre {
+            get {
+                return this.FechaCierreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaCierreField, value) != true)) {
+                    this.FechaCierreField = value;
+                    this.RaisePropertyChanged("FechaCierre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Interno {
+            get {
+                return this.InternoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InternoField, value) != true)) {
+                    this.InternoField = value;
+                    this.RaisePropertyChanged("Interno");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal NumeroInforme {
+            get {
+                return this.NumeroInformeField;
+            }
+            set {
+                if ((this.NumeroInformeField.Equals(value) != true)) {
+                    this.NumeroInformeField = value;
+                    this.RaisePropertyChanged("NumeroInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Oficina {
+            get {
+                return this.OficinaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OficinaField, value) != true)) {
+                    this.OficinaField = value;
+                    this.RaisePropertyChanged("Oficina");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Placa {
+            get {
+                return this.PlacaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlacaField, value) != true)) {
+                    this.PlacaField = value;
+                    this.RaisePropertyChanged("Placa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TIPOU {
+            get {
+                return this.TIPOUField;
+            }
+            set {
+                if ((this.TIPOUField.Equals(value) != true)) {
+                    this.TIPOUField = value;
+                    this.RaisePropertyChanged("TIPOU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tipo {
+            get {
+                return this.TipoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usr_Nombre {
+            get {
+                return this.Usr_NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Usr_NombreField, value) != true)) {
+                    this.Usr_NombreField = value;
+                    this.RaisePropertyChanged("Usr_Nombre");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BusquedaArticuloList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class BusquedaArticuloList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AbrField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MarcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OriginalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal StockField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Abr {
+            get {
+                return this.AbrField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AbrField, value) != true)) {
+                    this.AbrField = value;
+                    this.RaisePropertyChanged("Abr");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigo {
+            get {
+                return this.CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
+                    this.CodigoField = value;
+                    this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Marca {
+            get {
+                return this.MarcaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MarcaField, value) != true)) {
+                    this.MarcaField = value;
+                    this.RaisePropertyChanged("Marca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Original {
+            get {
+                return this.OriginalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OriginalField, value) != true)) {
+                    this.OriginalField = value;
+                    this.RaisePropertyChanged("Original");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Stock {
+            get {
+                return this.StockField;
+            }
+            set {
+                if ((this.StockField.Equals(value) != true)) {
+                    this.StockField = value;
+                    this.RaisePropertyChanged("Stock");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InformeTareasList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class InformeTareasList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTipManField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MantenimientoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TareaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarea {
+            get {
+                return this.IdTareaField;
+            }
+            set {
+                if ((this.IdTareaField.Equals(value) != true)) {
+                    this.IdTareaField = value;
+                    this.RaisePropertyChanged("IdTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTipMan {
+            get {
+                return this.IdTipManField;
+            }
+            set {
+                if ((this.IdTipManField.Equals(value) != true)) {
+                    this.IdTipManField = value;
+                    this.RaisePropertyChanged("IdTipMan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mantenimiento {
+            get {
+                return this.MantenimientoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MantenimientoField, value) != true)) {
+                    this.MantenimientoField = value;
+                    this.RaisePropertyChanged("Mantenimiento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tarea {
+            get {
+                return this.TareaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TareaField, value) != true)) {
+                    this.TareaField = value;
+                    this.RaisePropertyChanged("Tarea");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TareaMecanicoList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class TareaMecanicoList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaTerminoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraTerminoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaMecanicosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodMecanico {
+            get {
+                return this.CodMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodMecanicoField, value) != true)) {
+                    this.CodMecanicoField = value;
+                    this.RaisePropertyChanged("CodMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaTermino {
+            get {
+                return this.FechaTerminoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaTerminoField, value) != true)) {
+                    this.FechaTerminoField = value;
+                    this.RaisePropertyChanged("FechaTermino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraInicio {
+            get {
+                return this.HoraInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraInicioField, value) != true)) {
+                    this.HoraInicioField = value;
+                    this.RaisePropertyChanged("HoraInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraTermino {
+            get {
+                return this.HoraTerminoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraTerminoField, value) != true)) {
+                    this.HoraTerminoField = value;
+                    this.RaisePropertyChanged("HoraTermino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTareaMecanicos {
+            get {
+                return this.IdTareaMecanicosField;
+            }
+            set {
+                if ((this.IdTareaMecanicosField.Equals(value) != true)) {
+                    this.IdTareaMecanicosField = value;
+                    this.RaisePropertyChanged("IdTareaMecanicos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mecanico {
+            get {
+                return this.MecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MecanicoField, value) != true)) {
+                    this.MecanicoField = value;
+                    this.RaisePropertyChanged("Mecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TareaMecanicosAyudanteList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class TareaMecanicosAyudanteList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdAyudanteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaMecanicosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObservacionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodMecanico {
+            get {
+                return this.CodMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodMecanicoField, value) != true)) {
+                    this.CodMecanicoField = value;
+                    this.RaisePropertyChanged("CodMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdAyudante {
+            get {
+                return this.IdAyudanteField;
+            }
+            set {
+                if ((this.IdAyudanteField.Equals(value) != true)) {
+                    this.IdAyudanteField = value;
+                    this.RaisePropertyChanged("IdAyudante");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTareaMecanicos {
+            get {
+                return this.IdTareaMecanicosField;
+            }
+            set {
+                if ((this.IdTareaMecanicosField.Equals(value) != true)) {
+                    this.IdTareaMecanicosField = value;
+                    this.RaisePropertyChanged("IdTareaMecanicos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Observacion {
+            get {
+                return this.ObservacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObservacionField, value) != true)) {
+                    this.ObservacionField = value;
+                    this.RaisePropertyChanged("Observacion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfBaseResponseozx_PhYH5", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
     [System.SerializableAttribute()]
     public partial class ResponseOfBaseResponseozx_PhYH5 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -231,99 +3472,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.RucField, value) != true)) {
                     this.RucField = value;
                     this.RaisePropertyChanged("Ruc");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-    [System.SerializableAttribute()]
-    public partial class ServiceError : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SubCodeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Code {
-            get {
-                return this.CodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
-                    this.CodeField = value;
-                    this.RaisePropertyChanged("Code");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Message {
-            get {
-                return this.MessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
-                    this.MessageField = value;
-                    this.RaisePropertyChanged("Message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SubCode {
-            get {
-                return this.SubCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SubCodeField, value) != true)) {
-                    this.SubCodeField = value;
-                    this.RaisePropertyChanged("SubCode");
                 }
             }
         }
@@ -4029,7 +7177,16 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdSolicitudField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.FallasDEntity> ListField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.SolicitudRevisionBusquedaList> ListBusquedaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.SolicitudRevisionList SolicitudRevisionField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -4042,6 +7199,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdSolicitud {
+            get {
+                return this.IdSolicitudField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdSolicitudField, value) != true)) {
+                    this.IdSolicitudField = value;
+                    this.RaisePropertyChanged("IdSolicitud");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.FallasDEntity> List {
             get {
                 return this.ListField;
@@ -4050,6 +7220,301 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.ListField, value) != true)) {
                     this.ListField = value;
                     this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.SolicitudRevisionBusquedaList> ListBusqueda {
+            get {
+                return this.ListBusquedaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListBusquedaField, value) != true)) {
+                    this.ListBusquedaField = value;
+                    this.RaisePropertyChanged("ListBusqueda");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.SolicitudRevisionList SolicitudRevision {
+            get {
+                return this.SolicitudRevisionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SolicitudRevisionField, value) != true)) {
+                    this.SolicitudRevisionField = value;
+                    this.RaisePropertyChanged("SolicitudRevision");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SolicitudRevisionList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class SolicitudRevisionList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CorrelativoInternoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DestinoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaDocField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaViajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraDocField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraViajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdSolicitudRevisionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdUnidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal NumeroInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal OdometroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal OdometroAnteriorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrigenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UnidadField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chofer {
+            get {
+                return this.ChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChoferField, value) != true)) {
+                    this.ChoferField = value;
+                    this.RaisePropertyChanged("Chofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CorrelativoInterno {
+            get {
+                return this.CorrelativoInternoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CorrelativoInternoField, value) != true)) {
+                    this.CorrelativoInternoField = value;
+                    this.RaisePropertyChanged("CorrelativoInterno");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Destino {
+            get {
+                return this.DestinoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DestinoField, value) != true)) {
+                    this.DestinoField = value;
+                    this.RaisePropertyChanged("Destino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaDoc {
+            get {
+                return this.FechaDocField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaDocField, value) != true)) {
+                    this.FechaDocField = value;
+                    this.RaisePropertyChanged("FechaDoc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaViaje {
+            get {
+                return this.FechaViajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaViajeField, value) != true)) {
+                    this.FechaViajeField = value;
+                    this.RaisePropertyChanged("FechaViaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraDoc {
+            get {
+                return this.HoraDocField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraDocField, value) != true)) {
+                    this.HoraDocField = value;
+                    this.RaisePropertyChanged("HoraDoc");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HoraViaje {
+            get {
+                return this.HoraViajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraViajeField, value) != true)) {
+                    this.HoraViajeField = value;
+                    this.RaisePropertyChanged("HoraViaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdSolicitudRevision {
+            get {
+                return this.IdSolicitudRevisionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdSolicitudRevisionField, value) != true)) {
+                    this.IdSolicitudRevisionField = value;
+                    this.RaisePropertyChanged("IdSolicitudRevision");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdUnidad {
+            get {
+                return this.IdUnidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdUnidadField, value) != true)) {
+                    this.IdUnidadField = value;
+                    this.RaisePropertyChanged("IdUnidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal NumeroInforme {
+            get {
+                return this.NumeroInformeField;
+            }
+            set {
+                if ((this.NumeroInformeField.Equals(value) != true)) {
+                    this.NumeroInformeField = value;
+                    this.RaisePropertyChanged("NumeroInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Odometro {
+            get {
+                return this.OdometroField;
+            }
+            set {
+                if ((this.OdometroField.Equals(value) != true)) {
+                    this.OdometroField = value;
+                    this.RaisePropertyChanged("Odometro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal OdometroAnterior {
+            get {
+                return this.OdometroAnteriorField;
+            }
+            set {
+                if ((this.OdometroAnteriorField.Equals(value) != true)) {
+                    this.OdometroAnteriorField = value;
+                    this.RaisePropertyChanged("OdometroAnterior");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Origen {
+            get {
+                return this.OrigenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrigenField, value) != true)) {
+                    this.OrigenField = value;
+                    this.RaisePropertyChanged("Origen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Unidad {
+            get {
+                return this.UnidadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UnidadField, value) != true)) {
+                    this.UnidadField = value;
+                    this.RaisePropertyChanged("Unidad");
                 }
             }
         }
@@ -4223,6 +7688,209 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.UsuarioRegistroField, value) != true)) {
                     this.UsuarioRegistroField = value;
                     this.RaisePropertyChanged("UsuarioRegistro");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SolicitudRevisionBusquedaList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class SolicitudRevisionBusquedaList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChoferField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DestinoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HoraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OrigenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PlacaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string correlativoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chofer {
+            get {
+                return this.ChoferField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChoferField, value) != true)) {
+                    this.ChoferField = value;
+                    this.RaisePropertyChanged("Chofer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Destino {
+            get {
+                return this.DestinoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DestinoField, value) != true)) {
+                    this.DestinoField = value;
+                    this.RaisePropertyChanged("Destino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fecha {
+            get {
+                return this.FechaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaField, value) != true)) {
+                    this.FechaField = value;
+                    this.RaisePropertyChanged("Fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Hora {
+            get {
+                return this.HoraField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HoraField, value) != true)) {
+                    this.HoraField = value;
+                    this.RaisePropertyChanged("Hora");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Origen {
+            get {
+                return this.OrigenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrigenField, value) != true)) {
+                    this.OrigenField = value;
+                    this.RaisePropertyChanged("Origen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Placa {
+            get {
+                return this.PlacaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlacaField, value) != true)) {
+                    this.PlacaField = value;
+                    this.RaisePropertyChanged("Placa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string correlativo {
+            get {
+                return this.correlativoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.correlativoField, value) != true)) {
+                    this.correlativoField = value;
+                    this.RaisePropertyChanged("correlativo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FallasDRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
+        "s")]
+    [System.SerializableAttribute()]
+    public partial class FallasDRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.SolicitudRevisionList SolicitudRevisionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.SolicitudRevisionList SolicitudRevision {
+            get {
+                return this.SolicitudRevisionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SolicitudRevisionField, value) != true)) {
+                    this.SolicitudRevisionField = value;
+                    this.RaisePropertyChanged("SolicitudRevision");
                 }
             }
         }
@@ -5726,1412 +9394,896 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
-        "s")]
-    [System.SerializableAttribute()]
-    public partial class OrdenMasivaRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FechaGenerarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaFilter FiltroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListInsertarField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioRegistroField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FechaGenerar {
-            get {
-                return this.FechaGenerarField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FechaGenerarField, value) != true)) {
-                    this.FechaGenerarField = value;
-                    this.RaisePropertyChanged("FechaGenerar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaFilter Filtro {
-            get {
-                return this.FiltroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FiltroField, value) != true)) {
-                    this.FiltroField = value;
-                    this.RaisePropertyChanged("Filtro");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListInsertar {
-            get {
-                return this.ListInsertarField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListInsertarField, value) != true)) {
-                    this.ListInsertarField = value;
-                    this.RaisePropertyChanged("ListInsertar");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioRegistro {
-            get {
-                return this.UsuarioRegistroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioRegistroField, value) != true)) {
-                    this.UsuarioRegistroField = value;
-                    this.RaisePropertyChanged("UsuarioRegistro");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaFilter", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters")]
-    [System.SerializableAttribute()]
-    public partial class OrdenMasivaFilter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ChoferField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DestinoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FecFinField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FecIniField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool GeneradoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OrdenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OrigenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UnidadField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Chofer {
-            get {
-                return this.ChoferField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ChoferField, value) != true)) {
-                    this.ChoferField = value;
-                    this.RaisePropertyChanged("Chofer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Destino {
-            get {
-                return this.DestinoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DestinoField, value) != true)) {
-                    this.DestinoField = value;
-                    this.RaisePropertyChanged("Destino");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FecFin {
-            get {
-                return this.FecFinField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FecFinField, value) != true)) {
-                    this.FecFinField = value;
-                    this.RaisePropertyChanged("FecFin");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FecIni {
-            get {
-                return this.FecIniField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FecIniField, value) != true)) {
-                    this.FecIniField = value;
-                    this.RaisePropertyChanged("FecIni");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Generado {
-            get {
-                return this.GeneradoField;
-            }
-            set {
-                if ((this.GeneradoField.Equals(value) != true)) {
-                    this.GeneradoField = value;
-                    this.RaisePropertyChanged("Generado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Orden {
-            get {
-                return this.OrdenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrdenField, value) != true)) {
-                    this.OrdenField = value;
-                    this.RaisePropertyChanged("Orden");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Origen {
-            get {
-                return this.OrigenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrigenField, value) != true)) {
-                    this.OrigenField = value;
-                    this.RaisePropertyChanged("Origen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Unidad {
-            get {
-                return this.UnidadField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UnidadField, value) != true)) {
-                    this.UnidadField = value;
-                    this.RaisePropertyChanged("Unidad");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
-    [System.SerializableAttribute()]
-    public partial class OrdenMasivaList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Ben_NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BusCodIntField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BusPlacaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CODI_PROGRAMACION_REALField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodDestinoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodOrigenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Codi_ProgramacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool CorrectivoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DestinoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmpresaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ExternoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FechaViajeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool GeneradoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string GlosaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HoraViajeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IDChoferField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdUnidadField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string KILOMETRAJEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NumeroMantenimientoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NumeroOrdenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OdometroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OrigenField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool PreventivoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RUTAVIAJEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Tipo_sField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string tipoField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Ben_Nombre {
-            get {
-                return this.Ben_NombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Ben_NombreField, value) != true)) {
-                    this.Ben_NombreField = value;
-                    this.RaisePropertyChanged("Ben_Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BusCodInt {
-            get {
-                return this.BusCodIntField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BusCodIntField, value) != true)) {
-                    this.BusCodIntField = value;
-                    this.RaisePropertyChanged("BusCodInt");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BusPlaca {
-            get {
-                return this.BusPlacaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BusPlacaField, value) != true)) {
-                    this.BusPlacaField = value;
-                    this.RaisePropertyChanged("BusPlaca");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CODI_PROGRAMACION_REAL {
-            get {
-                return this.CODI_PROGRAMACION_REALField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CODI_PROGRAMACION_REALField, value) != true)) {
-                    this.CODI_PROGRAMACION_REALField = value;
-                    this.RaisePropertyChanged("CODI_PROGRAMACION_REAL");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CodDestino {
-            get {
-                return this.CodDestinoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodDestinoField, value) != true)) {
-                    this.CodDestinoField = value;
-                    this.RaisePropertyChanged("CodDestino");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CodOrigen {
-            get {
-                return this.CodOrigenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CodOrigenField, value) != true)) {
-                    this.CodOrigenField = value;
-                    this.RaisePropertyChanged("CodOrigen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Codi_Programacion {
-            get {
-                return this.Codi_ProgramacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Codi_ProgramacionField, value) != true)) {
-                    this.Codi_ProgramacionField = value;
-                    this.RaisePropertyChanged("Codi_Programacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Correctivo {
-            get {
-                return this.CorrectivoField;
-            }
-            set {
-                if ((this.CorrectivoField.Equals(value) != true)) {
-                    this.CorrectivoField = value;
-                    this.RaisePropertyChanged("Correctivo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Destino {
-            get {
-                return this.DestinoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DestinoField, value) != true)) {
-                    this.DestinoField = value;
-                    this.RaisePropertyChanged("Destino");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Empresa {
-            get {
-                return this.EmpresaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmpresaField, value) != true)) {
-                    this.EmpresaField = value;
-                    this.RaisePropertyChanged("Empresa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Externo {
-            get {
-                return this.ExternoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ExternoField, value) != true)) {
-                    this.ExternoField = value;
-                    this.RaisePropertyChanged("Externo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FechaViaje {
-            get {
-                return this.FechaViajeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FechaViajeField, value) != true)) {
-                    this.FechaViajeField = value;
-                    this.RaisePropertyChanged("FechaViaje");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Generado {
-            get {
-                return this.GeneradoField;
-            }
-            set {
-                if ((this.GeneradoField.Equals(value) != true)) {
-                    this.GeneradoField = value;
-                    this.RaisePropertyChanged("Generado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Glosa {
-            get {
-                return this.GlosaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GlosaField, value) != true)) {
-                    this.GlosaField = value;
-                    this.RaisePropertyChanged("Glosa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HoraViaje {
-            get {
-                return this.HoraViajeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HoraViajeField, value) != true)) {
-                    this.HoraViajeField = value;
-                    this.RaisePropertyChanged("HoraViaje");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IDChofer {
-            get {
-                return this.IDChoferField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IDChoferField, value) != true)) {
-                    this.IDChoferField = value;
-                    this.RaisePropertyChanged("IDChofer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IdUnidad {
-            get {
-                return this.IdUnidadField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdUnidadField, value) != true)) {
-                    this.IdUnidadField = value;
-                    this.RaisePropertyChanged("IdUnidad");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KILOMETRAJE {
-            get {
-                return this.KILOMETRAJEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KILOMETRAJEField, value) != true)) {
-                    this.KILOMETRAJEField = value;
-                    this.RaisePropertyChanged("KILOMETRAJE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NumeroMantenimiento {
-            get {
-                return this.NumeroMantenimientoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NumeroMantenimientoField, value) != true)) {
-                    this.NumeroMantenimientoField = value;
-                    this.RaisePropertyChanged("NumeroMantenimiento");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NumeroOrden {
-            get {
-                return this.NumeroOrdenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NumeroOrdenField, value) != true)) {
-                    this.NumeroOrdenField = value;
-                    this.RaisePropertyChanged("NumeroOrden");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Odometro {
-            get {
-                return this.OdometroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OdometroField, value) != true)) {
-                    this.OdometroField = value;
-                    this.RaisePropertyChanged("Odometro");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Origen {
-            get {
-                return this.OrigenField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrigenField, value) != true)) {
-                    this.OrigenField = value;
-                    this.RaisePropertyChanged("Origen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Preventivo {
-            get {
-                return this.PreventivoField;
-            }
-            set {
-                if ((this.PreventivoField.Equals(value) != true)) {
-                    this.PreventivoField = value;
-                    this.RaisePropertyChanged("Preventivo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RUTAVIAJE {
-            get {
-                return this.RUTAVIAJEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RUTAVIAJEField, value) != true)) {
-                    this.RUTAVIAJEField = value;
-                    this.RaisePropertyChanged("RUTAVIAJE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Tipo_s {
-            get {
-                return this.Tipo_sField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Tipo_sField, value) != true)) {
-                    this.Tipo_sField = value;
-                    this.RaisePropertyChanged("Tipo_s");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.tipoField, value) != true)) {
-                    this.tipoField = value;
-                    this.RaisePropertyChanged("tipo");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfOrdenMasivaResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
-    [System.SerializableAttribute()]
-    public partial class ResponseOfOrdenMasivaResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EsCorrectoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MensajeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaResponse ValorField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EsCorrecto {
-            get {
-                return this.EsCorrectoField;
-            }
-            set {
-                if ((this.EsCorrectoField.Equals(value) != true)) {
-                    this.EsCorrectoField = value;
-                    this.RaisePropertyChanged("EsCorrecto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mensaje {
-            get {
-                return this.MensajeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
-                    this.MensajeField = value;
-                    this.RaisePropertyChanged("Mensaje");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaResponse Valor {
-            get {
-                return this.ValorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
-                    this.ValorField = value;
-                    this.RaisePropertyChanged("Valor");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-        "es")]
-    [System.SerializableAttribute()]
-    public partial class OrdenMasivaResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> List {
-            get {
-                return this.ListField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListField, value) != true)) {
-                    this.ListField = value;
-                    this.RaisePropertyChanged("List");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceMantenimiento.IServiceMantenimiento")]
     public interface IServiceMantenimiento {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteServiceErrorFaul" +
-            "t", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListUsuariosAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListUsuariosAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteServiceErrorFaul" +
-            "t", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListSistemasAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListSistemasAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteServiceErrorF" +
-            "ault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListSubSistemasAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListSubSistemasAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTipoMAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTipoMAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListEmpresa", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListEmpresaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListEmpresaServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListEmpresa();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListEmpresa", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListEmpresaResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListEmpresaAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListFlotaAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListFlotaAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteServiceErrorFa" +
-            "ult", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListPlataformaAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPlataformaAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteServiceError" +
-            "Fault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListBeneficiarioAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListBeneficiarioAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteServiceErrorFa" +
-            "ult", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListPlanAccionAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPlanAccionAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteServiceErro" +
-            "rFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListPuntoAtencionAutocomplete(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPuntoAtencionAutocompleteAsync(string value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Login", ReplyAction="http://tempuri.org/IServiceMantenimiento/LoginResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/LoginServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5 Login(string codiUsuario, string Password);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Login", ReplyAction="http://tempuri.org/IServiceMantenimiento/LoginResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5> LoginAsync(string codiUsuario, string Password);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Actualizapwd", ReplyAction="http://tempuri.org/IServiceMantenimiento/ActualizapwdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ActualizapwdServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfPwdResponseozx_PhYH5 Actualizapwd(string codiUsuario, string Password);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Actualizapwd", ReplyAction="http://tempuri.org/IServiceMantenimiento/ActualizapwdResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfPwdResponseozx_PhYH5> ActualizapwdAsync(string codiUsuario, string Password);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 ListSistemas(short ID_tb_Sistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> ListSistemasAsync(short ID_tb_Sistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 DeleteSistemas(short ID_tb_Sistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> DeleteSistemasAsync(short ID_tb_Sistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 SelectSistemas();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> SelectSistemasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 IdSistemas();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> IdSistemasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 InsertSistemas(short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> InsertSistemasAsync(short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 UpdateSistemas(short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> UpdateSistemasAsync(short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListClaseMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 ListClaseM();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 ListClaseMP();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMPAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectClaseMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectClaseMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 SelectClaseM(string IdClaseMantenimiento);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectClaseMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> SelectClaseMAsync(string IdClaseMantenimiento);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteClaseMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 DeleteClaseM(string IdClaseMantenimiento);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteClaseMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> DeleteClaseMAsync(string IdClaseMantenimiento);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertClaseMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertClaseMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 InsertClaseM(string IdClaseMantenimiento, string Descripcion, short NroOrden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertClaseMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> InsertClaseMAsync(string IdClaseMantenimiento, string Descripcion, short NroOrden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateClaseMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 UpdateClaseM(string IdClaseMantenimiento, string Descripcion, short NroOrden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateClaseMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> UpdateClaseMAsync(string IdClaseMantenimiento, string Descripcion, short NroOrden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 ListSubSistemas();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> ListSubSistemasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 SelectSubSistemas(string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> SelectSubSistemasAsync(string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSubSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 IdSubSistemas(short ID_tb_Sistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSubSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> IdSubSistemasAsync(short ID_tb_Sistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 DeleteSubSistemas(string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> DeleteSubSistemasAsync(string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 InsertSubSistemas(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> InsertSubSistemasAsync(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 UpdateSubSistemas(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> UpdateSubSistemasAsync(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 ListTipoM();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> ListTipoMAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 SelectTipoM(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> SelectTipoMAsync(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdTipoMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 IdTipoM();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> IdTipoMAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 DeleteTipoM(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> DeleteTipoMAsync(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 InsertTipoM(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> InsertTipoMAsync(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 UpdateTipoM(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> UpdateTipoMAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdTipoMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 IdTipoMP();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> IdTipoMPAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 ListTipoMP();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> ListTipoMPAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 SelectTipoMP(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> SelectTipoMPAsync(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 DeleteTipoMP(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> DeleteTipoMPAsync(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> InsertTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> UpdateTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 ListTareaM();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> ListTareaMAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 SelectTareaM(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> SelectTareaMAsync(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdTareaMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 IdTareaM();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> IdTareaMAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 DeleteTareaM(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> DeleteTareaMAsync(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 InsertTareaM(short IdTarea, short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> InsertTareaMAsync(short IdTarea, short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 UpdateTareaM(short IdTarea, short IdTipMan, string Descripcion, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> UpdateTareaMAsync(short IdTarea, short IdTipMan, string Descripcion, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdTareaMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 IdTareaMP();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> IdTareaMPAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 ListTareaMP(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> ListTareaMPAsync(short IdTipMan);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 SelectTareaMP(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> SelectTareaMPAsync(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 InsertTareaMP(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> InsertTareaMPAsync(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 UpdateTareaMP(short IdTarea, short IdTipMan, string Descripcion, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> UpdateTareaMPAsync(short IdTarea, short IdTipMan, string Descripcion, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 DeleteTareaMP(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> DeleteTareaMPAsync(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdArticuloTResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdArticuloTServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 IdArticuloT();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdArticuloTResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> IdArticuloTAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListArticuloTResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListArticuloTServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 ListArticuloT(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListArticuloTResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> ListArticuloTAsync(short IdTarea);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectArticuloTResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloTServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 SelectArticuloT(short IdArtTar);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectArticuloTResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> SelectArticuloTAsync(short IdArtTar);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertArticuloTResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloTServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 InsertArticuloT(short IdTarea, short Cod_Mer, short Cantidad, short Orden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertArticuloTResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> InsertArticuloTAsync(short IdTarea, short Cod_Mer, short Cantidad, short Orden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 UpdateArticuloT(short IdArtTar, short IdTarea, short Cod_Mer, short Cantidad, short Orden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> UpdateArticuloTAsync(short IdArtTar, short IdTarea, short Cod_Mer, short Cantidad, short Orden);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 DeleteArticuloT(short IdArtTar);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> DeleteArticuloTAsync(short IdArtTar);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListProducto", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListProductoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListProductoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfProductoResponseozx_PhYH5 ListProducto(short Index_Compañia, string filtro);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListProducto", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListProductoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfProductoResponseozx_PhYH5> ListProductoAsync(short Index_Compañia, string filtro);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListMarcaModelo();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaModeloAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectFallasDServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectFallasD(string ID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectFallasDAsync(string ID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdFallasDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/IdFallasDServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 IdFallasD();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdFallasDResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> IdFallasDAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteFallasDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasDServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 DeleteFallasD(string ID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteFallasDResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> DeleteFallasDAsync(string ID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertFallasDResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertFallasDServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 InsertFallasD(string IdSolicitudRevisionD, string IdSolicitudRevision, string Observacion, string UsuarioRegistro, string FechaRegistro, string HoraRegistro, int Estado, int IdSistema, int IdObservacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertFallasDResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> InsertFallasDAsync(string IdSolicitudRevisionD, string IdSolicitudRevision, string Observacion, string UsuarioRegistro, string FechaRegistro, string HoraRegistro, int Estado, int IdSistema, int IdObservacion);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> ListAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc SelectAuxilioMecanico(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> SelectAuxilioMecanicoAsync(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc DeleteAuxilioMecanico(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> DeleteAuxilioMecanicoAsync(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc InsertAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> InsertAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc UpdateAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> UpdateAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoServiceErrorFaul" +
-            "t", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf_AuxilioMecanico(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbf_AuxilioMecanicoAsync(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListMtbfServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbfAsync(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertMtbfServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc InsertMtbf(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListOrdenMasivaAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc AnularCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> AnularCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertPreventivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivoServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
         Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertPreventivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertPreventivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertPreventivoResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertPreventivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularPreventivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceError), Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivoServiceErrorFault", Name="ServiceError", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Utility")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivoServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
         Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc AnularPreventivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularPreventivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularPreventivoResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> AnularPreventivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListInformeServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListInforme(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectInformeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectInformeServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc SelectInforme(int IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectInformeResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> SelectInformeAsync(int IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectInformeCorrectivoPreventivoTractoC" +
+            "arreta", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectInformeCorrectivoPreventivoTractoC" +
+            "arretaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectInformeCorrectivoPreventivoTractoC" +
+            "arretaServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc SelectInformeCorrectivoPreventivoTractoCarreta(decimal NumeroInforme, string TipoInforme, int TipoU);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectInformeCorrectivoPreventivoTractoC" +
+            "arreta", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectInformeCorrectivoPreventivoTractoC" +
+            "arretaResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> SelectInformeCorrectivoPreventivoTractoCarretaAsync(decimal NumeroInforme, string TipoInforme, int TipoU);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeTareasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareasServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListInformeTareas(int IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeTareasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeTareasAsync(int IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteInformeTareasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteInformeTareasServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteInformeTareas(int IdInforme, int IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteInformeTareasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> DeleteInformeTareasAsync(int IdInforme, int IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertInformeTareasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertInformeTareasServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertInformeTareas(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertInformeTareasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertInformeTareasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateInformeTareas(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListTareaMecanico(int IdInforme, int IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListTareaMecanicoAsync(int IdInforme, int IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicoServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteTareaMecanico(int IdTareaMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> DeleteTareaMecanicoAsync(int IdTareaMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicoServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertTareaMecanico(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertTareaMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMecanicoServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateTareaMecanico(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateTareaMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicosAyudante", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicosAyudanteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicosAyudanteServiceErrorRe" +
+            "sponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListTareaMecanicosAyudante(int IdTareaMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicosAyudante", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicosAyudanteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListTareaMecanicosAyudanteAsync(int IdTareaMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicosAyudante", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicosAyudanteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicosAyudanteServiceError" +
+            "ResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteTareaMecanicosAyudante(int IdAyudante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicosAyudante", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMecanicosAyudanteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> DeleteTareaMecanicosAyudanteAsync(int IdAyudante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicosAyudante", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicosAyudanteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicosAyudanteServiceError" +
+            "ResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertTareaMecanicosAyudante(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicosAyudante", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMecanicosAyudanteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertTareaMecanicosAyudanteAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/BusquedaArticulo", ReplyAction="http://tempuri.org/IServiceMantenimiento/BusquedaArticuloResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/BusquedaArticuloServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc BusquedaArticulo(string CodEmpresa, string CodAlmacen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/BusquedaArticulo", ReplyAction="http://tempuri.org/IServiceMantenimiento/BusquedaArticuloResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> BusquedaArticuloAsync(string CodEmpresa, string CodAlmacen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertBolsas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertBolsasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertBolsasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertBolsas(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertBolsas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertBolsasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertBolsasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AgregarBolsas", ReplyAction="http://tempuri.org/IServiceMantenimiento/AgregarBolsasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/AgregarBolsasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AgregarBolsas", ReplyAction="http://tempuri.org/IServiceMantenimiento/AgregarBolsasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> AgregarBolsasAsync(string CodAlmacen, int IdTarea, int IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteServiceErrorResp" +
+            "onseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListUsuariosAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListUsuariosAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListUsuariosAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteServiceErrorResp" +
+            "onseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListSistemasAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListSistemasAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteServiceErrorR" +
+            "esponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListSubSistemasAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListSubSistemasAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTipoMAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTipoMAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListEmpresa", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListEmpresaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListEmpresaServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListEmpresa();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListEmpresa", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListEmpresaResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListEmpresaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListFlotaAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListFlotaAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListFlotaAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteServiceErrorRe" +
+            "sponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListPlataformaAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlataformaAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPlataformaAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasCAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasCAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareasCAutocompleteServiceErrorRespo" +
+            "nseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasCAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasCAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasCAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasCAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteServiceErrorRespon" +
+            "seFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteServiceError" +
+            "ResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListBeneficiarioAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListBeneficiarioAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteServiceErrorRe" +
+            "sponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListPlanAccionAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPlanAccionAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPlanAccionAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteServiceErro" +
+            "rResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListPuntoAtencionAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListPuntoAtencionAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPuntoAtencionAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMecanicosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMecanicosAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMecanicosAutocompleteServiceErrorRes" +
+            "ponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListMecanicosAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMecanicosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMecanicosAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListMecanicosAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAlmacenesAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAlmacenesAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListAlmacenesAutocompleteServiceErrorRes" +
+            "ponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListAlmacenesAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAlmacenesAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAlmacenesAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListAlmacenesAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Login", ReplyAction="http://tempuri.org/IServiceMantenimiento/LoginResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/LoginServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5 Login(string codiUsuario, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Login", ReplyAction="http://tempuri.org/IServiceMantenimiento/LoginResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5> LoginAsync(string codiUsuario, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Actualizapwd", ReplyAction="http://tempuri.org/IServiceMantenimiento/ActualizapwdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ActualizapwdServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfPwdResponseozx_PhYH5 Actualizapwd(string codiUsuario, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Actualizapwd", ReplyAction="http://tempuri.org/IServiceMantenimiento/ActualizapwdResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfPwdResponseozx_PhYH5> ActualizapwdAsync(string codiUsuario, string Password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 ListSistemas(short ID_tb_Sistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> ListSistemasAsync(short ID_tb_Sistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 DeleteSistemas(short ID_tb_Sistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> DeleteSistemasAsync(short ID_tb_Sistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 SelectSistemas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> SelectSistemasAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 IdSistemas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> IdSistemasAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 InsertSistemas(short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> InsertSistemasAsync(short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5 UpdateSistemas(short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5> UpdateSistemasAsync(short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListClaseMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 ListClaseM();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 ListClaseMP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectClaseMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectClaseMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 SelectClaseM(string IdClaseMantenimiento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectClaseMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> SelectClaseMAsync(string IdClaseMantenimiento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteClaseMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 DeleteClaseM(string IdClaseMantenimiento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteClaseMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> DeleteClaseMAsync(string IdClaseMantenimiento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertClaseMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertClaseMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 InsertClaseM(string IdClaseMantenimiento, string Descripcion, short NroOrden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertClaseMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> InsertClaseMAsync(string IdClaseMantenimiento, string Descripcion, short NroOrden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateClaseMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 UpdateClaseM(string IdClaseMantenimiento, string Descripcion, short NroOrden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateClaseMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> UpdateClaseMAsync(string IdClaseMantenimiento, string Descripcion, short NroOrden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemasServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 ListSubSistemas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListSubSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> ListSubSistemasAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 SelectSubSistemas(string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSubSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> SelectSubSistemasAsync(string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSubSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemasServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 IdSubSistemas(short ID_tb_Sistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdSubSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> IdSubSistemasAsync(short ID_tb_Sistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 DeleteSubSistemas(string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteSubSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> DeleteSubSistemasAsync(string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 InsertSubSistemas(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertSubSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> InsertSubSistemasAsync(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5 UpdateSubSistemas(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSubSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5> UpdateSubSistemasAsync(string ID_tb_SubSistema_Mant, short ID_tb_Sistema_Mant, string Descripcion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 ListTipoM();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> ListTipoMAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 SelectTipoM(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> SelectTipoMAsync(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdTipoMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 IdTipoM();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> IdTipoMAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 DeleteTipoM(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> DeleteTipoMAsync(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 InsertTipoM(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> InsertTipoMAsync(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5 UpdateTipoM(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5> UpdateTipoMAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 IdTipoMP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTipoMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> IdTipoMPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 ListTipoMP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> ListTipoMPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 SelectTipoMP(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> SelectTipoMPAsync(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 DeleteTipoMP(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTipoMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> DeleteTipoMPAsync(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> InsertTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> UpdateTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 ListTareaM();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> ListTareaMAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 SelectTareaM(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> SelectTareaMAsync(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 IdTareaM();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> IdTareaMAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 DeleteTareaM(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> DeleteTareaMAsync(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 InsertTareaM(short IdTarea, short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> InsertTareaMAsync(short IdTarea, short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 UpdateTareaM(short IdTarea, short IdTipMan, string Descripcion, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> UpdateTareaMAsync(short IdTarea, short IdTipMan, string Descripcion, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdTareaMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 IdTareaMP();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdTareaMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> IdTareaMPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 ListTareaMP(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> ListTareaMPAsync(short IdTipMan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 SelectTareaMP(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> SelectTareaMPAsync(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 InsertTareaMP(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareaMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> InsertTareaMPAsync(short IdTipMan, string Descripcion, short UsuarioRegistro, string FechaRegistro, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 UpdateTareaMP(short IdTarea, short IdTipMan, string Descripcion, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTareaMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> UpdateTareaMPAsync(short IdTarea, short IdTipMan, string Descripcion, int Flg_Revision, int ID_tb_Sistema_Mant, string ID_tb_SubSistema_Mant);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5 DeleteTareaMP(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteTareaMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteTareaMPResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH5> DeleteTareaMPAsync(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdArticuloTResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdArticuloTServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 IdArticuloT();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdArticuloTResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> IdArticuloTAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListArticuloTResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListArticuloTServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 ListArticuloT(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListArticuloTResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> ListArticuloTAsync(short IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectArticuloTResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloTServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 SelectArticuloT(short IdArtTar);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectArticuloTResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> SelectArticuloTAsync(short IdArtTar);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertArticuloTResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloTServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 InsertArticuloT(short IdTarea, short Cod_Mer, short Cantidad, short Orden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertArticuloTResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> InsertArticuloTAsync(short IdTarea, short Cod_Mer, short Cantidad, short Orden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 UpdateArticuloT(short IdArtTar, short IdTarea, short Cod_Mer, short Cantidad, short Orden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateArticuloTResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> UpdateArticuloTAsync(short IdArtTar, short IdTarea, short Cod_Mer, short Cantidad, short Orden);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5 DeleteArticuloT(short IdArtTar);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteArticuloT", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteArticuloTResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH5> DeleteArticuloTAsync(short IdArtTar);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListProducto", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListProductoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListProductoServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfProductoResponseozx_PhYH5 ListProducto(short Index_Compañia, string filtro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListProducto", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListProductoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfProductoResponseozx_PhYH5> ListProductoAsync(short Index_Compañia, string filtro);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListMarcaModelo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaModeloAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectFallasDServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectFallasD(string ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectFallasDAsync(string ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdFallasDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdFallasDServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 IdFallasD();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdFallasDResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> IdFallasDAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteFallasDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasDServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 DeleteFallasD(string ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteFallasDResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> DeleteFallasDAsync(string ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertFallasDResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertFallasDServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 InsertFallasD(string IdSolicitudRevisionD, string IdSolicitudRevision, string Observacion, string UsuarioRegistro, string FechaRegistro, string HoraRegistro, int Estado, int IdSistema, int IdObservacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertFallasDResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> InsertFallasDAsync(string IdSolicitudRevisionD, string IdSolicitudRevision, string Observacion, string UsuarioRegistro, string FechaRegistro, string HoraRegistro, int Estado, int IdSistema, int IdObservacion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SolicitudRevisionBusqueda", ReplyAction="http://tempuri.org/IServiceMantenimiento/SolicitudRevisionBusquedaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SolicitudRevisionBusquedaServiceErrorRes" +
+            "ponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SolicitudRevisionBusqueda(string NivelUsuario, string CodSucursal);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SolicitudRevisionBusqueda", ReplyAction="http://tempuri.org/IServiceMantenimiento/SolicitudRevisionBusquedaResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SolicitudRevisionBusquedaAsync(string NivelUsuario, string CodSucursal);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSolicitudRevision", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSolicitudRevisionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectSolicitudRevisionServiceErrorRespo" +
+            "nseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectSolicitudRevision(string IdsolicitudRevision);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectSolicitudRevision", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectSolicitudRevisionResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectSolicitudRevisionAsync(string IdsolicitudRevision);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSolicitudRevision", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSolicitudRevisionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateSolicitudRevisionServiceErrorRespo" +
+            "nseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 UpdateSolicitudRevision(Mantenimiento.WebApp.ServiceMantenimiento.FallasDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateSolicitudRevision", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateSolicitudRevisionResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> UpdateSolicitudRevisionAsync(Mantenimiento.WebApp.ServiceMantenimiento.FallasDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ObtenerUltimaRevisionChofer", ReplyAction="http://tempuri.org/IServiceMantenimiento/ObtenerUltimaRevisionChoferResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ObtenerUltimaRevisionChoferServiceErrorR" +
+            "esponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 ObtenerUltimaRevisionChofer(string CodChofer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ObtenerUltimaRevisionChofer", ReplyAction="http://tempuri.org/IServiceMantenimiento/ObtenerUltimaRevisionChoferResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> ObtenerUltimaRevisionChoferAsync(string CodChofer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> ListAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc SelectAuxilioMecanico(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> SelectAuxilioMecanicoAsync(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc DeleteAuxilioMecanico(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> DeleteAuxilioMecanicoAsync(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc InsertAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> InsertAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc UpdateAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> UpdateAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoServiceErrorResp" +
+            "onseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf_AuxilioMecanico(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbf_AuxilioMecanicoAsync(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMtbfServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbfAsync(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertMtbfServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc InsertMtbf(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListOrdenMasivaAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc AnularCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> AnularCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -7159,6 +10311,158 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public ServiceMantenimientoClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertPreventivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
+            return base.Channel.InsertPreventivo(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertPreventivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
+            return base.Channel.InsertPreventivoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc AnularPreventivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
+            return base.Channel.AnularPreventivo(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> AnularPreventivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
+            return base.Channel.AnularPreventivoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListInforme(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.ListInforme(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.ListInformeAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc SelectInforme(int IdInforme) {
+            return base.Channel.SelectInforme(IdInforme);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> SelectInformeAsync(int IdInforme) {
+            return base.Channel.SelectInformeAsync(IdInforme);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc SelectInformeCorrectivoPreventivoTractoCarreta(decimal NumeroInforme, string TipoInforme, int TipoU) {
+            return base.Channel.SelectInformeCorrectivoPreventivoTractoCarreta(NumeroInforme, TipoInforme, TipoU);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> SelectInformeCorrectivoPreventivoTractoCarretaAsync(decimal NumeroInforme, string TipoInforme, int TipoU) {
+            return base.Channel.SelectInformeCorrectivoPreventivoTractoCarretaAsync(NumeroInforme, TipoInforme, TipoU);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListInformeTareas(int IdInforme) {
+            return base.Channel.ListInformeTareas(IdInforme);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeTareasAsync(int IdInforme) {
+            return base.Channel.ListInformeTareasAsync(IdInforme);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteInformeTareas(int IdInforme, int IdTarea) {
+            return base.Channel.DeleteInformeTareas(IdInforme, IdTarea);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> DeleteInformeTareasAsync(int IdInforme, int IdTarea) {
+            return base.Channel.DeleteInformeTareasAsync(IdInforme, IdTarea);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertInformeTareas(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertInformeTareas(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertInformeTareasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertInformeTareasAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateInformeTareas(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.UpdateInformeTareas(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.UpdateInformeTareasAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListTareaMecanico(int IdInforme, int IdTarea) {
+            return base.Channel.ListTareaMecanico(IdInforme, IdTarea);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListTareaMecanicoAsync(int IdInforme, int IdTarea) {
+            return base.Channel.ListTareaMecanicoAsync(IdInforme, IdTarea);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteTareaMecanico(int IdTareaMecanico) {
+            return base.Channel.DeleteTareaMecanico(IdTareaMecanico);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> DeleteTareaMecanicoAsync(int IdTareaMecanico) {
+            return base.Channel.DeleteTareaMecanicoAsync(IdTareaMecanico);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertTareaMecanico(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertTareaMecanico(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertTareaMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertTareaMecanicoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateTareaMecanico(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.UpdateTareaMecanico(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateTareaMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.UpdateTareaMecanicoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListTareaMecanicosAyudante(int IdTareaMecanico) {
+            return base.Channel.ListTareaMecanicosAyudante(IdTareaMecanico);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListTareaMecanicosAyudanteAsync(int IdTareaMecanico) {
+            return base.Channel.ListTareaMecanicosAyudanteAsync(IdTareaMecanico);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteTareaMecanicosAyudante(int IdAyudante) {
+            return base.Channel.DeleteTareaMecanicosAyudante(IdAyudante);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> DeleteTareaMecanicosAyudanteAsync(int IdAyudante) {
+            return base.Channel.DeleteTareaMecanicosAyudanteAsync(IdAyudante);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertTareaMecanicosAyudante(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertTareaMecanicosAyudante(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertTareaMecanicosAyudanteAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertTareaMecanicosAyudanteAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc BusquedaArticulo(string CodEmpresa, string CodAlmacen) {
+            return base.Channel.BusquedaArticulo(CodEmpresa, CodAlmacen);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> BusquedaArticuloAsync(string CodEmpresa, string CodAlmacen) {
+            return base.Channel.BusquedaArticuloAsync(CodEmpresa, CodAlmacen);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc InsertBolsas(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertBolsas(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> InsertBolsasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
+            return base.Channel.InsertBolsasAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme) {
+            return base.Channel.AgregarBolsas(CodAlmacen, IdTarea, IdInforme);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> AgregarBolsasAsync(string CodAlmacen, int IdTarea, int IdInforme) {
+            return base.Channel.AgregarBolsasAsync(CodAlmacen, IdTarea, IdInforme);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListUsuariosAutocomplete(string value) {
@@ -7217,6 +10521,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListPlataformaAutocompleteAsync(value);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasCAutocomplete(string value) {
+            return base.Channel.ListTareasCAutocomplete(value);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasCAutocompleteAsync(string value) {
+            return base.Channel.ListTareasCAutocompleteAsync(value);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string value) {
             return base.Channel.ListTareasAutocomplete(value);
         }
@@ -7247,6 +10559,22 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListPuntoAtencionAutocompleteAsync(string value) {
             return base.Channel.ListPuntoAtencionAutocompleteAsync(value);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListMecanicosAutocomplete(string value) {
+            return base.Channel.ListMecanicosAutocomplete(value);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListMecanicosAutocompleteAsync(string value) {
+            return base.Channel.ListMecanicosAutocompleteAsync(value);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListAlmacenesAutocomplete(string value) {
+            return base.Channel.ListAlmacenesAutocomplete(value);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListAlmacenesAutocompleteAsync(string value) {
+            return base.Channel.ListAlmacenesAutocompleteAsync(value);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5 Login(string codiUsuario, string Password) {
@@ -7697,6 +11025,38 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.InsertFallasDAsync(IdSolicitudRevisionD, IdSolicitudRevision, Observacion, UsuarioRegistro, FechaRegistro, HoraRegistro, Estado, IdSistema, IdObservacion);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SolicitudRevisionBusqueda(string NivelUsuario, string CodSucursal) {
+            return base.Channel.SolicitudRevisionBusqueda(NivelUsuario, CodSucursal);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SolicitudRevisionBusquedaAsync(string NivelUsuario, string CodSucursal) {
+            return base.Channel.SolicitudRevisionBusquedaAsync(NivelUsuario, CodSucursal);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectSolicitudRevision(string IdsolicitudRevision) {
+            return base.Channel.SelectSolicitudRevision(IdsolicitudRevision);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectSolicitudRevisionAsync(string IdsolicitudRevision) {
+            return base.Channel.SelectSolicitudRevisionAsync(IdsolicitudRevision);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 UpdateSolicitudRevision(Mantenimiento.WebApp.ServiceMantenimiento.FallasDRequest request) {
+            return base.Channel.UpdateSolicitudRevision(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> UpdateSolicitudRevisionAsync(Mantenimiento.WebApp.ServiceMantenimiento.FallasDRequest request) {
+            return base.Channel.UpdateSolicitudRevisionAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 ObtenerUltimaRevisionChofer(string CodChofer) {
+            return base.Channel.ObtenerUltimaRevisionChofer(CodChofer);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> ObtenerUltimaRevisionChoferAsync(string CodChofer) {
+            return base.Channel.ObtenerUltimaRevisionChoferAsync(CodChofer);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
             return base.Channel.ListAuxilioMecanico(request);
         }
@@ -7783,22 +11143,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> AnularCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
             return base.Channel.AnularCorrectivoAsync(request);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertPreventivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
-            return base.Channel.InsertPreventivo(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertPreventivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
-            return base.Channel.InsertPreventivoAsync(request);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc AnularPreventivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
-            return base.Channel.AnularPreventivo(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> AnularPreventivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
-            return base.Channel.AnularPreventivoAsync(request);
         }
     }
 }

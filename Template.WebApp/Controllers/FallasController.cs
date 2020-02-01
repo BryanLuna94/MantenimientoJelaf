@@ -1,5 +1,6 @@
 ﻿using Mantenimiento.WebApp.Helpers;
 using Mantenimiento.WebApp.ServiceMantenimiento;
+using Newtonsoft.Json;
 using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace Mantenimiento.WebApp.Controllers
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
-            catch (FaultException<ServiceError> ex)
+            catch (FaultException<ServiceErrorResponse> ex)
             {
                 //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
                 return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
@@ -60,7 +61,7 @@ namespace Mantenimiento.WebApp.Controllers
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
-            catch (FaultException<ServiceError> ex)
+            catch (FaultException<ServiceErrorResponse> ex)
             {
                 //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
                 return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
@@ -71,7 +72,49 @@ namespace Mantenimiento.WebApp.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<ActionResult> ListBusqueda()
+        {
 
+            var usuario = DataSession.UserLoggedIn;
+
+            var res = await _ServiceMantenimiento.SolicitudRevisionBusquedaAsync(usuario.Nivel.ToString(), usuario.Sucursal.ToString());
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<ActionResult> SelectSolicitudRevision(string IdSolicitudRevision)
+        {
+            var res = await _ServiceMantenimiento.SelectSolicitudRevisionAsync(IdSolicitudRevision);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<ActionResult> ObtenerUltimaRevisionChofer()
+        {
+            var usuario = DataSession.UserLoggedIn;
+            var res = await _ServiceMantenimiento.ObtenerUltimaRevisionChoferAsync(usuario.Ben_Codigo);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<ActionResult> UpdateSolicitudRevision(string json)
+        {
+            try
+            {
+                var request = JsonConvert.DeserializeObject<FallasDRequest>(json);
+
+                var res = await _ServiceMantenimiento.UpdateSolicitudRevisionAsync(request);
+
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 
 }

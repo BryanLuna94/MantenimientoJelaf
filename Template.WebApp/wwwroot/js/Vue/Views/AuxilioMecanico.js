@@ -139,7 +139,7 @@
                     }
 
                 }).catch(error => {
-                    Notifications.Messages.error('Ocurrió una excepción en el metodo getSistemas');
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getBeneficiarios');
                 });
         },
 
@@ -159,7 +159,7 @@
 
         getTareas: async function (value) {
             let _this = this;
-            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasCAutocomplete'), { params: { value: value } })
                 .then(res => {
                     if (res.data.Estado) {
                         _this.list.Tareas = (res.data.Valor.List) ? res.data.Valor.List : [];

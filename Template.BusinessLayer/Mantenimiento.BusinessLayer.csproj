@@ -49,8 +49,10 @@
     <Compile Include="ArticuloTLogic.cs" />
     <Compile Include="AuxilioMecanicoLogic.cs" />
     <Compile Include="BaseLogic.cs" />
+    <Compile Include="BusinessException.cs" />
     <Compile Include="ClaseMLogic.cs" />
     <Compile Include="FallasDLogic.cs" />
+    <Compile Include="InformeLogic.cs" />
     <Compile Include="MarcaModeloLogic.cs" />
     <Compile Include="MtbfLogic.cs" />
     <Compile Include="OrdenMasivaLogic.cs" />

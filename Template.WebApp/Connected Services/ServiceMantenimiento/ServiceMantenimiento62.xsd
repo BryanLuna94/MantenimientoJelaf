@@ -1,25 +1,402 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="AuxilioMecanicoFilter">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InformeTareasEntity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Are_codigo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Ben_codigo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="AuxilioMecanicoFilter" nillable="true" type="tns:AuxilioMecanicoFilter" />
-  <xs:complexType name="OrdenMasivaFilter">
+  <xs:element name="InformeTareasEntity" nillable="true" type="tns:InformeTareasEntity" />
+  <xs:complexType name="ArrayOfTb_CtrlBolsaRepInformeEntity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Destino" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FecFin" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FecIni" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Generado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Unidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:Tb_CtrlBolsaRepInformeEntity" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="OrdenMasivaFilter" nillable="true" type="tns:OrdenMasivaFilter" />
+  <xs:element name="ArrayOfTb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:ArrayOfTb_CtrlBolsaRepInformeEntity" />
+  <xs:complexType name="Tb_CtrlBolsaRepInformeEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodiAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consumo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdArticuloTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="Original" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pendiente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Solicitado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:Tb_CtrlBolsaRepInformeEntity" />
+  <xs:complexType name="TareaMecanicosEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodMecanico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaTermino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoraInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoraTermino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TareaMecanicosEntity" nillable="true" type="tns:TareaMecanicosEntity" />
+  <xs:complexType name="TareaMecanicosAyudanteEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodMecanico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdAyudante" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTareaMecanicos" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TareaMecanicosAyudanteEntity" nillable="true" type="tns:TareaMecanicosAyudanteEntity" />
+  <xs:complexType name="InformeEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Are_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Are_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Are_Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Chofer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChoferEntrega" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostoManoObra" type="xs:int" />
+      <xs:element minOccurs="0" name="CostoRepuestos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EstCierre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaStr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPlanEjecucionTarea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSolicitudRevision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUndAlerta" type="xs:int" />
+      <xs:element minOccurs="0" name="Kilometraje" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KmUnidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ofi_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServicioTerceros" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Solicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoInforme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformeEntity" nillable="true" type="tns:InformeEntity" />
+  <xs:complexType name="ArrayOfBaseEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BaseEntity" nillable="true" type="tns:BaseEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaseEntity" nillable="true" type="tns:ArrayOfBaseEntity" />
+  <xs:complexType name="BaseEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseEntity" nillable="true" type="tns:BaseEntity" />
+  <xs:complexType name="UsuarioEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ben_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codi_Empresa" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursal" type="xs:int" />
+      <xs:element minOccurs="0" name="Terminal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioEntity" nillable="true" type="tns:UsuarioEntity" />
+  <xs:complexType name="ArrayOfSistemasEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SistemasEntity" nillable="true" type="tns:SistemasEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSistemasEntity" nillable="true" type="tns:ArrayOfSistemasEntity" />
+  <xs:complexType name="SistemasEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SistemasEntity" nillable="true" type="tns:SistemasEntity" />
+  <xs:complexType name="ArrayOfClaseMEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaseMEntity" nillable="true" type="tns:ClaseMEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaseMEntity" nillable="true" type="tns:ArrayOfClaseMEntity" />
+  <xs:complexType name="ClaseMEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdClaseMantenimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroOrden" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaseMEntity" nillable="true" type="tns:ClaseMEntity" />
+  <xs:complexType name="ArrayOfSubSistemasEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubSistemasEntity" nillable="true" type="tns:SubSistemasEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubSistemasEntity" nillable="true" type="tns:ArrayOfSubSistemasEntity" />
+  <xs:complexType name="SubSistemasEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubSistemasEntity" nillable="true" type="tns:SubSistemasEntity" />
+  <xs:complexType name="ArrayOfTipoMEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoMEntity" nillable="true" type="tns:TipoMEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoMEntity" nillable="true" type="tns:ArrayOfTipoMEntity" />
+  <xs:complexType name="TipoMEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cod_Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_Modelo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dias" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasAviso" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlgMov" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Horas" type="xs:int" />
+      <xs:element minOccurs="0" name="HorasAviso" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipMan" type="xs:int" />
+      <xs:element minOccurs="0" name="Kilometros" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KilometrosAviso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoMEntity" nillable="true" type="tns:TipoMEntity" />
+  <xs:complexType name="ArrayOfTipoMPEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoMPEntity" nillable="true" type="tns:TipoMPEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoMPEntity" nillable="true" type="tns:ArrayOfTipoMPEntity" />
+  <xs:complexType name="TipoMPEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cod_Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_Modelo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dias" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasAviso" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlgMov" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Horas" type="xs:int" />
+      <xs:element minOccurs="0" name="HorasAviso" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipMan" type="xs:int" />
+      <xs:element minOccurs="0" name="Kilometros" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KilometrosAviso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoMPEntity" nillable="true" type="tns:TipoMPEntity" />
+  <xs:complexType name="ArrayOfTareaMEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TareaMEntity" nillable="true" type="tns:TareaMEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTareaMEntity" nillable="true" type="tns:ArrayOfTareaMEntity" />
+  <xs:complexType name="TareaMEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CostoIndirectoPorMinRef" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoInternoPorMin" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoTopeExterno" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flg_Revision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipMan" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosLabor" type="xs:int" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TareaMEntity" nillable="true" type="tns:TareaMEntity" />
+  <xs:complexType name="ArrayOfTareaMPEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TareaMPEntity" nillable="true" type="tns:TareaMPEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTareaMPEntity" nillable="true" type="tns:ArrayOfTareaMPEntity" />
+  <xs:complexType name="TareaMPEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CostoIndirectoPorMinRef" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoInternoPorMin" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoTopeExterno" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flg_Revision" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_tb_Sistema_Mant" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_tb_SubSistema_Mant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipMan" type="xs:int" />
+      <xs:element minOccurs="0" name="MinutosLabor" type="xs:int" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TareaMPEntity" nillable="true" type="tns:TareaMPEntity" />
+  <xs:complexType name="ArrayOfArticuloTEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticuloTEntity" nillable="true" type="tns:ArticuloTEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticuloTEntity" nillable="true" type="tns:ArrayOfArticuloTEntity" />
+  <xs:complexType name="ArticuloTEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="Cod_Mer" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdArtTar" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="Orden" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticuloTEntity" nillable="true" type="tns:ArticuloTEntity" />
+  <xs:complexType name="ArrayOfProductoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductoEntity" nillable="true" type="tns:ProductoEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductoEntity" nillable="true" type="tns:ArrayOfProductoEntity" />
+  <xs:complexType name="ProductoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoAlternativo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Index" type="xs:double" />
+      <xs:element minOccurs="0" name="ID_Key" type="xs:double" />
+      <xs:element minOccurs="0" name="Index_Compañia" type="xs:double" />
+      <xs:element minOccurs="0" name="Index_Marca" type="xs:int" />
+      <xs:element minOccurs="0" name="Index_Modelo" type="xs:int" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductoEntity" nillable="true" type="tns:ProductoEntity" />
+  <xs:complexType name="ArrayOfMarcaModeloEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MarcaModeloEntity" nillable="true" type="tns:MarcaModeloEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarcaModeloEntity" nillable="true" type="tns:ArrayOfMarcaModeloEntity" />
+  <xs:complexType name="MarcaModeloEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="are_codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="are_nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="are_observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cod_marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cod_modelo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modelo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarcaModeloEntity" nillable="true" type="tns:MarcaModeloEntity" />
+  <xs:complexType name="ArrayOfFallasDEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FallasDEntity" nillable="true" type="tns:FallasDEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFallasDEntity" nillable="true" type="tns:ArrayOfFallasDEntity" />
+  <xs:complexType name="FallasDEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecharegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoraRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdObservacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSolicitudRevision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSolicitudRevisionD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FallasDEntity" nillable="true" type="tns:FallasDEntity" />
+  <xs:complexType name="AuxilioMecanicoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Are_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Are_Codigo2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Atencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CambioTracto" type="xs:short" />
+      <xs:element minOccurs="0" name="Carga" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Causa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Controlable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Falla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fechahora_fin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fechahora_ini" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Tb_AuxilioMecanico" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPlan" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_plataforma" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Idtarea_c" type="xs:short" />
+      <xs:element minOccurs="0" name="Kmt_Perdido" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Kmt_recorrido" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Kmt_unidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MMG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Responsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Servicio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuxilioMecanicoEntity" nillable="true" type="tns:AuxilioMecanicoEntity" />
+  <xs:complexType name="ArrayOfMTBFEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MTBFEntity" nillable="true" type="tns:MTBFEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMTBFEntity" nillable="true" type="tns:ArrayOfMTBFEntity" />
+  <xs:complexType name="MTBFEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anio" type="xs:short" />
+      <xs:element minOccurs="0" name="Bam" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CambioTractos" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DiasMes" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="DisponibilidadFlota" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DisponibilidadMecanica" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Eficiencia" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FallasMecanicas" type="xs:short" />
+      <xs:element minOccurs="0" name="FechaHoraRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HorasDia" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="IdMtbf" type="xs:int" />
+      <xs:element minOccurs="0" name="KmPerdidos" type="xs:int" />
+      <xs:element minOccurs="0" name="MTBFDiario" type="xs:short" />
+      <xs:element minOccurs="0" name="MTBFHorasTotales" type="xs:short" />
+      <xs:element minOccurs="0" name="MTBFViajes" type="xs:short" />
+      <xs:element minOccurs="0" name="MTTR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Meta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MetaMTBF" type="xs:short" />
+      <xs:element minOccurs="0" name="NombreMes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumMes" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="TotalHoras" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ViajeEnHoras" type="xs:short" />
+      <xs:element minOccurs="0" name="Viajes" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MTBFEntity" nillable="true" type="tns:MTBFEntity" />
 </xs:schema>

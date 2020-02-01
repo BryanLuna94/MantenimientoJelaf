@@ -16,6 +16,7 @@ namespace Mantenimiento.Utility
         public const string CODIGO_VACIO = "Debe escoger un nuevo código";
         public const string DESCRIPCION_VACIA = "Debe ingresar una descripción";
         public const string NO_ELIMINO = "No se ha eliminado el registro";
+        public const string YA_EXISTE = "Este registro ya existe";
         // Estados
         public const Int16 GENERADO = 1;
         public const Int16 PENDIENTE = 2;
@@ -24,5 +25,11 @@ namespace Mantenimiento.Utility
         public const Int16 ANULADO = 5;
         public const Int16 ENTREGADO = 6;
         public const Int16 DEVUELTO = 7;
+
+        public class Configuracion
+        {
+            public const int CODIGO_MAXIMO_ODOMETRO_FALLAS = 1;
+            public const int CODIGO_MINIMO_ODOMETRO_FALLAS = 1;
+        }
     }
 }

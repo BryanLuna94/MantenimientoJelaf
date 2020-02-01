@@ -100,7 +100,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objTareaMP != null)
                 {
-                    BusinessException.Generate(Constants.NO_ELIMINO);
+                    BusinessException.Generar(Constants.NO_ELIMINO);
                 }
 
                 response = new Response<TareaMPResponse>

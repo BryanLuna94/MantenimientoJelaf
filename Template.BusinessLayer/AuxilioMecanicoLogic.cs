@@ -88,7 +88,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objAuxilioMecanico != null)
                 {
-                    BusinessException.Generate(Constants.NO_ELIMINO);
+                    BusinessException.Generar(Constants.NO_ELIMINO);
                 }
 
                 response = new Response<AuxilioMecanicoResponse>

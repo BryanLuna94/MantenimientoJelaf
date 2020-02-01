@@ -1,0 +1,584 @@
+﻿using System.Collections.Generic;
+using System;
+using System.ServiceModel;
+using System.Threading.Tasks;
+using Mantenimiento.DataAccess;
+using Mantenimiento.Entities.Objects.Entities;
+using Mantenimiento.Entities.Objects.Others;
+using Mantenimiento.Utility;
+using Mantenimiento.Entities.Peticiones.Responses;
+using Mantenimiento.Entities.Objects.Filters;
+using Mantenimiento.Entities.Peticiones.Requests;
+using Mantenimiento.Entities.Objects.Lists;
+using System.Transactions;
+
+namespace Mantenimiento.BusinessLayer
+{
+    public class InformeLogic
+    {
+        public static Response<InformeResponse> ListInforme(InformeRequest request)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<InformeList> List;
+                InformeFilter objFiltro;
+
+                objFiltro = request.Filtro;
+
+                List = new List<InformeList>();
+
+                if (objFiltro.SoloMiUsuario)
+                {
+                    List = InformeData.ListInformeSoloMiUsuario(objFiltro);
+                }
+                else
+                {
+                    if (objFiltro.NivelUsuario == "2")
+                    {
+                        List = InformeData.ListInformeAdmin(objFiltro);
+                    }
+                    else if (objFiltro.NivelUsuario == "1")
+                    {
+                        List = InformeData.ListInformeUsuario(objFiltro);
+                    }
+                }
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { List = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<InformeResponse> SelectInforme(int IdInforme)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                InformeEntity List;
+                SolicitudRevisionTecnica_CEntity objDatosInforme;
+
+                List = InformeData.SelectInforme(IdInforme);
+                objDatosInforme = SolicitudRevisionTecnicaData.SelectSolicitudRevisionTecnica_C_Informe(List.NumeroInforme);
+                List.IdSolicitudRevision = objDatosInforme.IdSolicitudRevision;
+                List.Kilometraje = objDatosInforme.Kilometraje;
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { Informe = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<InformeResponse> SelectInformeCorrectivoPreventivoTractoCarreta(decimal NumeroInforme, string TipoInforme, int TipoU)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                InformeEntity List;
+                SolicitudRevisionTecnica_CEntity objDatosInforme;
+
+                List = InformeData.SelectInformeCorrectivoPreventivoTractoCarreta(NumeroInforme, TipoInforme, TipoU);
+                if (List != null)
+                {
+                    objDatosInforme = SolicitudRevisionTecnicaData.SelectSolicitudRevisionTecnica_C_Informe(List.NumeroInforme);
+                    List.IdSolicitudRevision = objDatosInforme.IdSolicitudRevision;
+                    List.Kilometraje = objDatosInforme.Kilometraje;
+                }
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { Informe = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<InformeResponse> ListInformeTareas(int IdInforme)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<InformeTareasList> List;
+
+                List = InformeTareasData.ListInformeTareas(IdInforme);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListInformeTareas = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                await InformeTareasData.DeleteInformeTareas(IdInforme, IdTarea);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> InsertInformeTareas(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            InformeTareasEntity objInformeTareas;
+            List<InformeTareasList> objInformeTareasAnteriorActivo;
+            List<InformeTareasList> objInformeTareasAnteriorInactivo;
+
+            try
+            {
+                objInformeTareas = request.InformeTareas;
+                objInformeTareasAnteriorActivo = InformeTareasData.ListInformeTareas(objInformeTareas.IdInforme, objInformeTareas.IdTarea);
+                objInformeTareasAnteriorInactivo = InformeTareasData.ListInformeTareas(objInformeTareas.IdInforme, objInformeTareas.IdTarea, 0);
+
+                if (objInformeTareasAnteriorActivo.Count > 0)
+                {
+                    BusinessException.Generar(Constants.YA_EXISTE);
+                }
+                else if (objInformeTareasAnteriorInactivo.Count > 0)
+                {
+                    await InformeTareasData.DeleteInformeTareas(objInformeTareas.IdInforme, objInformeTareas.IdTarea, 1, objInformeTareas.Observacion);
+                }
+                else
+                {
+                    await InformeTareasData.InsertInformeTareas(objInformeTareas);
+                }
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> UpdateInformeTareas(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            InformeTareasEntity objInformeTareas;
+
+            try
+            {
+                objInformeTareas = request.InformeTareas;
+                int idAuxilioMecanico = await InformeTareasData.UpdateInformeTareas(objInformeTareas);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        #region MECANICOS
+
+        public static Response<InformeResponse> ListTareaMecanico(int IdInforme, int IdTarea)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<TareaMecanicoList> List;
+
+                List = TareaMecanicoData.ListTareaMecanico(IdInforme, IdTarea);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListTareaMecanico = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> DeleteTareaMecanico(int IdTareaMecanico)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                await TareaMecanicoData.DeleteTareaMecanico(IdTareaMecanico);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> InsertTareaMecanico(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            TareaMecanicosEntity objTareaMecanico;
+            List<TareaMecanicoList> ListExiste;
+
+            try
+            {
+                objTareaMecanico = request.TareaMecanico;
+
+                ListExiste = TareaMecanicoData.ListTareaMecanico(objTareaMecanico.IdInforme, objTareaMecanico.IdTarea, objTareaMecanico.CodMecanico);
+
+                if (ListExiste.Count > 0)
+                {
+                    BusinessException.Generar(Constants.YA_EXISTE);
+                }
+
+                var fechaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortDateString();
+                var fechaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortDateString();
+                var horaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortTimeString();
+                var horaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortTimeString();
+
+                objTareaMecanico.FechaTermino = fechaTermino;
+                objTareaMecanico.FechaInicio = fechaTermino;
+                objTareaMecanico.HoraInicio = horaInicio;
+                objTareaMecanico.HoraTermino = horaTermino;
+
+                await TareaMecanicoData.InsertTareaMecanico(objTareaMecanico);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> UpdateTareaMecanico(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            TareaMecanicosEntity objTareaMecanico;
+
+            try
+            {
+                objTareaMecanico = request.TareaMecanico;
+
+                await TareaMecanicoData.UpdateTareaMecanico(objTareaMecanico);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        #endregion
+
+        #region AYUDANTES
+
+        public static Response<InformeResponse> ListTareaMecanicosAyudante(int IdTareaMecanico)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<TareaMecanicosAyudanteList> List;
+
+                List = TareaMecanicosAyudanteData.ListTareaMecanicosAyudante(IdTareaMecanico);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListTareaMecanicosAyudante = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> DeleteTareaMecanicosAyudante(int IdAyudante)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                await TareaMecanicosAyudanteData.DeleteTareaMecanicosAyudante(IdAyudante);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> InsertTareaMecanicosAyudante(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            TareaMecanicosAyudanteEntity objTareaMecanicosAyudante;
+            List<TareaMecanicosAyudanteList> ListTareaMecanicosAyudanteExiste;
+
+            try
+            {
+                objTareaMecanicosAyudante = request.TareaMecanicosAyudante;
+                ListTareaMecanicosAyudanteExiste = TareaMecanicosAyudanteData.ListTareaMecanicosAyudante(objTareaMecanicosAyudante.IdTareaMecanicos, objTareaMecanicosAyudante.CodMecanico);
+
+                if (ListTareaMecanicosAyudanteExiste.Count > 0)
+                {
+                    BusinessException.Generar(Constants.YA_EXISTE);
+                }
+
+                await TareaMecanicosAyudanteData.InsertTareaMecanicosAyudante(objTareaMecanicosAyudante);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        #endregion
+
+        #region REQUISICION
+
+        public static Response<InformeResponse> BusquedaArticulo(string CodEmpresa, string CodAlmacen)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<BusquedaArticuloList> List;
+
+                List = ArticuloData.BusquedaArticulo(CodEmpresa, CodAlmacen);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListBusquedaArticulo = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<InformeResponse> AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<Tb_CtrlBolsaRepInformeEntity> List;
+
+                List = Tb_CtrlBolsaRepInformeData.AgregarBolsa(CodAlmacen, IdTarea, IdInforme);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListBolsas = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> InsertBolsas(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            List<Tb_CtrlBolsaRepInformeEntity> ListBolsas;
+
+            try
+            {
+                ListBolsas = request.ListBolsas;
+
+                foreach (var item in ListBolsas)
+                {
+                    await Tb_CtrlBolsaRepInformeData.InsertBolsa(item);
+                }
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        #endregion
+    }
+}

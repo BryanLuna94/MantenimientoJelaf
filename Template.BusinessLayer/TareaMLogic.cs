@@ -98,7 +98,7 @@ namespace Mantenimiento.BusinessLayer
 
                 if (objTareaM != null)
                 {
-                    BusinessException.Generate(Constants.NO_ELIMINO);
+                    BusinessException.Generar(Constants.NO_ELIMINO);
                 }
 
                 response = new Response<TareaMResponse>

@@ -27,3 +27,9 @@ C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mant
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
 C:\Users\DESAROLLO01\Desktop\test\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
 D:\JELAF\MANTENIMIENTO\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache

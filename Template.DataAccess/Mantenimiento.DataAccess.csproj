@@ -43,9 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreData.cs" />
+    <Compile Include="ArticuloData.cs" />
     <Compile Include="ArticuloTData.cs" />
     <Compile Include="AuxilioMecanicoData.cs" />
     <Compile Include="BaseData.cs" />
+    <Compile Include="ConfiguracionMantenimientoData.cs" />
+    <Compile Include="ControlUnidadTipoMantenimientoData.cs" />
+    <Compile Include="TareaMecanicoData.cs" />
+    <Compile Include="InformeTareasData.cs" />
     <Compile Include="SolicitudRevisionTecnicaData.cs" />
     <Compile Include="FallasDData.cs" />
     <Compile Include="InformeData.cs" />
@@ -55,7 +60,9 @@
     <Compile Include="ProductoData.cs" />
     <Compile Include="ProgramacionData.cs" />
     <Compile Include="TareaMData.cs" />
+    <Compile Include="TareaMecanicosAyudanteData.cs" />
     <Compile Include="TareaMPData.cs" />
+    <Compile Include="Tb_CtrlBolsaRepInformeData.cs" />
     <Compile Include="TipoMData.cs" />
     <Compile Include="SubSistemasData.cs" />
     <Compile Include="Connection\GetConnection.cs" />

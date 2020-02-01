@@ -150,6 +150,9 @@
     <Content Include="Connected Services\ServiceMantenimiento\Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceMantenimiento\Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServiceMantenimiento\ServiceMantenimiento.disco" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
@@ -667,6 +670,7 @@
     <Content Include="wwwroot\js\Vue\v-mask.min.js" />
     <Content Include="wwwroot\js\Vue\vee-validate.js" />
     <Content Include="wwwroot\js\Vue\vee-validate.min.js" />
+    <Content Include="wwwroot\js\Vue\Views\Informe.js" />
     <Content Include="wwwroot\js\Vue\Views\OrdenMasiva.js" />
     <Content Include="wwwroot\js\Vue\Views\Fallas.js" />
     <Content Include="wwwroot\js\Vue\Views\AuxilioMecanico.js" />
@@ -711,9 +715,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceMantenimiento\ServiceMantenimiento62.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceMantenimiento\ServiceMantenimiento63.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceMantenimiento\ServiceTemplate.disco" />
@@ -1037,6 +1038,7 @@
     <Compile Include="Controllers\EstadoController.cs" />
     <Compile Include="Controllers\ImportarAController.cs" />
     <Compile Include="Controllers\GenerarController.cs" />
+    <Compile Include="Controllers\InformeController.cs" />
     <Compile Include="Controllers\MarcaModeloController.cs" />
     <Compile Include="Controllers\MtbfController.cs" />
     <Compile Include="Controllers\OrdenesController.cs" />
@@ -1128,6 +1130,12 @@
     <Content Include="Views\AuxilioMecanico\Editor.cshtml" />
     <Content Include="Views\Mtbf\Index.cshtml" />
     <Content Include="Views\OrdenMasiva\Index.cshtml" />
+    <Content Include="Views\Informe\Index.cshtml" />
+    <Content Include="Views\Informe\Buscador.cshtml" />
+    <Content Include="Views\Informe\Ayudantes.cshtml" />
+    <Content Include="Views\Informe\Requisicion.cshtml" />
+    <Content Include="Views\Informe\BusquedaArticulo.cshtml" />
+    <Content Include="Views\Fallas\Buscador.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

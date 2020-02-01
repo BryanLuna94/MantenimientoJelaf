@@ -15,6 +15,263 @@ namespace Mantenimiento.DataAccess
 {
     public class InformeData
     {
+        public static List<InformeList> ListInformeAdmin(InformeFilter objFiltro)
+        {
+            List<InformeList> List = new List<InformeList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("LIS_Tb_Informe_Admin", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@TIPOU", SqlDbType.Int).Value = Functions.Check.Int32(objFiltro.TipoU);
+                    cmd.Parameters.Add("@NINFORME", SqlDbType.Int).Value = Functions.Check.Int32(objFiltro.NInforme);
+                    cmd.Parameters.Add("@FECH_INI", SqlDbType.Date).Value = Convert.ToDateTime(objFiltro.Fech_ini);
+                    cmd.Parameters.Add("@FECH_FIN", SqlDbType.Date).Value = Convert.ToDateTime(objFiltro.Fech_fin);
+                    cmd.Parameters.Add("@ORDEN", SqlDbType.VarChar).Value = objFiltro.Orden;
+
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new InformeList
+                            {
+                                Chofer = DataReader.GetStringValue(dr, "Chofer"),
+                                TIPOU = DataReader.GetIntValue(dr, "TIPOU"),
+                                CodChofer = DataReader.GetStringValue(dr, "CodChofer"),
+                                Fecha = DataReader.GetDateTimeValue(dr, "Fecha").Value.ToShortDateString(),
+                                FechaCierre = Functions.Check.Datetime(DataReader.GetStringValue(dr, "FechaCierre")).Value.ToShortDateString(),
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme"),
+                                Interno = DataReader.GetStringValue(dr, "Interno"),
+                                NumeroInforme = DataReader.GetDecimalValue(dr, "NumeroInforme"),
+                                Oficina = DataReader.GetStringValue(dr, "Oficina"),
+                                Placa = DataReader.GetStringValue(dr, "Placa"),
+                                Tipo = DataReader.GetStringValue(dr, "Tipo"),
+                                Usr_Nombre = DataReader.GetStringValue(dr, "Usr_Nombre"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<InformeList> ListInformeSoloMiUsuario(InformeFilter objFiltro)
+        {
+            List<InformeList> List = new List<InformeList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("LIS_Tb_Informe_User", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@TIPOU", SqlDbType.Int).Value = Functions.Check.Int32(objFiltro.TipoU);
+                    cmd.Parameters.Add("@NINFORME", SqlDbType.Int).Value = Functions.Check.Int32(objFiltro.NInforme);
+                    cmd.Parameters.Add("@FECH_INI", SqlDbType.Date).Value = Convert.ToDateTime(objFiltro.Fech_ini);
+                    cmd.Parameters.Add("@FECH_FIN", SqlDbType.Date).Value = Convert.ToDateTime(objFiltro.Fech_fin);
+                    cmd.Parameters.Add("@ORDEN", SqlDbType.VarChar).Value = objFiltro.Orden;
+                    cmd.Parameters.Add("@USR_CODIGO", SqlDbType.Int).Value = objFiltro.UsrCodigo;
+
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new InformeList
+                            {
+                                Chofer = DataReader.GetStringValue(dr, "Chofer"),
+                                TIPOU = DataReader.GetIntValue(dr, "TIPOU"),
+                                CodChofer = DataReader.GetStringValue(dr, "CodChofer"),
+                                Fecha = DataReader.GetDateTimeValue(dr, "Fecha").Value.ToShortDateString(),
+                                FechaCierre = Functions.Check.Datetime(DataReader.GetStringValue(dr, "FechaCierre")).Value.ToShortDateString(),
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme"),
+                                Interno = DataReader.GetStringValue(dr, "Interno"),
+                                NumeroInforme = DataReader.GetDecimalValue(dr, "NumeroInforme"),
+                                Oficina = DataReader.GetStringValue(dr, "Oficina"),
+                                Placa = DataReader.GetStringValue(dr, "Placa"),
+                                Tipo = DataReader.GetStringValue(dr, "Tipo"),
+                                Usr_Nombre = DataReader.GetStringValue(dr, "Usr_Nombre"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<InformeList> ListInformeUsuario(InformeFilter objFiltro)
+        {
+            List<InformeList> List = new List<InformeList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("LIS_Tb_Informe_Sucursal", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@TIPOU", SqlDbType.Int).Value = Functions.Check.Int32(objFiltro.TipoU);
+                    cmd.Parameters.Add("@NINFORME", SqlDbType.Int).Value = Functions.Check.Int32(objFiltro.NInforme);
+                    cmd.Parameters.Add("@FECH_INI", SqlDbType.Date).Value = Convert.ToDateTime(objFiltro.Fech_ini);
+                    cmd.Parameters.Add("@FECH_FIN", SqlDbType.Date).Value = Convert.ToDateTime(objFiltro.Fech_fin);
+                    cmd.Parameters.Add("@ORDEN", SqlDbType.VarChar).Value = objFiltro.Orden;
+                    cmd.Parameters.Add("@USR_CODIGO", SqlDbType.Int).Value = objFiltro.UsrCodigo;
+
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new InformeList
+                            {
+                                Chofer = DataReader.GetStringValue(dr, "Chofer"),
+                                TIPOU = DataReader.GetIntValue(dr, "TIPOU"),
+                                CodChofer = DataReader.GetStringValue(dr, "CodChofer"),
+                                Fecha = DataReader.GetDateTimeValue(dr, "Fecha").Value.ToShortDateString(),
+                                FechaCierre = Functions.Check.Datetime(DataReader.GetStringValue(dr, "FechaCierre")).Value.ToShortDateString(),
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme"),
+                                Interno = DataReader.GetStringValue(dr, "Interno"),
+                                NumeroInforme = DataReader.GetDecimalValue(dr, "NumeroInforme"),
+                                Oficina = DataReader.GetStringValue(dr, "Oficina"),
+                                Placa = DataReader.GetStringValue(dr, "Placa"),
+                                Tipo = DataReader.GetStringValue(dr, "Tipo"),
+                                Usr_Nombre = DataReader.GetStringValue(dr, "Usr_Nombre"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static InformeEntity SelectInforme(int idInforme)
+        {
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("Usp_Tb_Infome_Find_", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@id", SqlDbType.Int).Value = idInforme;
+                    cmd.Parameters.Add("@e", SqlDbType.Int).Value = 1;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            return new InformeEntity
+                            {
+                                IdInforme = DataReader.GetIntValue(dr, "IDINFORME"),
+                                Are_Codigo = DataReader.GetStringValue(dr, "ARE_CODIGO"),
+                                Are_Nombre = DataReader.GetStringValue(dr, "ARE_NOMBRE"),
+                                Ofi_Codigo = DataReader.GetStringValue(dr, "Ofi_Codigo"),
+                                Oficina = DataReader.GetStringValue(dr, "Oficina"),
+                                Ben_Codigo = DataReader.GetStringValue(dr, "Ben_Codigo"),
+                                Chofer = DataReader.GetStringValue(dr, "Cocher"),
+                                FechaStr = DataReader.GetDateTimeValue(dr, "FECHA").Value.ToShortDateString(),
+                                Hora = DataReader.GetStringValue(dr, "hora"),
+                                Observacion = DataReader.GetStringValue(dr, "OBSERVACION"),
+                                KmUnidad = DataReader.GetDecimalValue(dr, "KMUNIDAD"),
+                                EstCierre = DataReader.GetBooleanValue(dr, "EstCierre"),
+                                TipoInforme = DataReader.GetStringValue(dr, "TipoInforme"),
+                                Are_Observacion = DataReader.GetStringValue(dr, "are_observacion"),
+                                IdUndAlerta = DataReader.GetIntValue(dr, "IdUndAlerta"),
+                                NumeroInforme = DataReader.GetIntValue(dr, "NumeroInforme"),
+                                Solicitante = DataReader.GetStringValue(dr, "Solicitante")
+                            };
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return null;
+        }
+
+        public static InformeEntity SelectInformeCorrectivoPreventivoTractoCarreta(decimal NumeroInforme, string TipoInforme, int TipoU)
+        {
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("Usp_Tb_Infome_Find_TraerCorrectivoPreventivoTractoCarreta", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pNumeroInforme", SqlDbType.Decimal).Value = NumeroInforme;
+                    cmd.Parameters.Add("@pTipoInforme", SqlDbType.VarChar).Value = TipoInforme;
+                    cmd.Parameters.Add("@pTipoU", SqlDbType.Int).Value = TipoU;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            return new InformeEntity
+                            {
+                                IdInforme = DataReader.GetIntValue(dr, "IDINFORME"),
+                                Are_Codigo = DataReader.GetStringValue(dr, "ARE_CODIGO"),
+                                Are_Nombre = DataReader.GetStringValue(dr, "ARE_NOMBRE"),
+                                Ofi_Codigo = DataReader.GetStringValue(dr, "Ofi_Codigo"),
+                                Oficina = DataReader.GetStringValue(dr, "Oficina"),
+                                Ben_Codigo = DataReader.GetStringValue(dr, "Ben_Codigo"),
+                                Chofer = DataReader.GetStringValue(dr, "Cocher"),
+                                FechaStr = DataReader.GetDateTimeValue(dr, "FECHA").Value.ToShortDateString(),
+                                Hora = DataReader.GetStringValue(dr, "hora"),
+                                Observacion = DataReader.GetStringValue(dr, "OBSERVACION"),
+                                KmUnidad = DataReader.GetDecimalValue(dr, "KMUNIDAD"),
+                                EstCierre = DataReader.GetBooleanValue(dr, "EstCierre"),
+                                TipoInforme = DataReader.GetStringValue(dr, "TipoInforme"),
+                                Are_Observacion = DataReader.GetStringValue(dr, "are_observacion"),
+                                IdUndAlerta = DataReader.GetIntValue(dr, "IdUndAlerta"),
+                                NumeroInforme = DataReader.GetIntValue(dr, "NumeroInforme"),
+                                Solicitante = DataReader.GetStringValue(dr, "Solicitante"),
+                                Tipo = DataReader.GetStringValue(dr, "TIPOU")
+                            };
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return null;
+        }
+
         public static int InsertInforme(InformeEntity objEntidad)
         {
             int nuevoId = 0;

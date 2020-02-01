@@ -16,5 +16,7 @@
         public System.DateTime FechaViaje { get; set; }
         public string HoraViahe { get; set; }
         public int Estado { get; set; }
+
+        
     }
 }

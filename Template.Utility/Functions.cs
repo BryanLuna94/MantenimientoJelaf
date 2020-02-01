@@ -291,7 +291,14 @@ namespace Mantenimiento.Utility
                 }
                 else
                 {
-                    return Convert.ToInt32(entero);
+                    if (entero.ToString() == "")
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return Convert.ToInt32(entero);
+                    }
                 }
             }
 

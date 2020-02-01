@@ -13,6 +13,7 @@ namespace Mantenimiento.DataAccess
         {
             List<BaseEntity> List = new List<BaseEntity>();
 
+
             using (var con = GetConnection.BDALMACEN())
             {
                 using (var cmd = new SqlCommand("", con))
@@ -44,6 +45,7 @@ namespace Mantenimiento.DataAccess
 
             return List;
         }
+
         public static List<BaseEntity> ListUsuariosAutocomplete(string value)
         {
             List<BaseEntity> List = new List<BaseEntity>();
@@ -260,13 +262,49 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
-        public static List<BaseEntity> ListTareasAutocomplete(string value)
+        public static List<BaseEntity> ListTareasCAutocomplete(string value)
         {
             List<BaseEntity> List = new List<BaseEntity>();
 
             using (var con = GetConnection.BDALMACEN())
             {
                 using (var cmd = new SqlCommand("usp_Tb_Tareas_c_Listar_Autocomplete", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pDescripcion", SqlDbType.VarChar, 30).Value = (value != null) ? value : string.Empty;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "IdTarea"),
+                                Descripcion = DataReader.GetStringValue(dr, "Descripcion"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<BaseEntity> ListTareasAutocomplete(string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_Tb_Tareas_Listar_Autocomplete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@pDescripcion", SqlDbType.VarChar, 30).Value = (value != null) ? value : string.Empty;
@@ -389,6 +427,78 @@ namespace Mantenimiento.DataAccess
                             {
                                 Codigo = DataReader.GetStringValue(dr, "ID_Index"),
                                 Descripcion = DataReader.GetStringValue(dr, "Descripcion01"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<BaseEntity> ListMecanicosAutocomplete(string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_Mecanicos_Listar_Autocomplete", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pDescripcion", SqlDbType.VarChar, 30).Value = (value != null) ? value : string.Empty;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "COD_TIP"),
+                                Descripcion = DataReader.GetStringValue(dr, "NOM_TIP"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<BaseEntity> ListAlmacenesAutocomplete(string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_Almacenes_Listar_Autocomplete", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pSucursal", SqlDbType.Int).Value = (value != null) ? value : string.Empty;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "Tbg_Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "Tbg_Descripcion"),
                             });
                         }
 
