@@ -53,6 +53,8 @@
     <Compile Include="Objects\Entities\InformeTareasEntity.cs" />
     <Compile Include="Objects\Entities\MarcaModeloEntity.cs" />
     <Compile Include="Objects\Entities\MTBFEntity.cs" />
+    <Compile Include="Objects\Entities\ODMdEntity.cs" />
+    <Compile Include="Objects\Entities\ODMEntity.cs" />
     <Compile Include="Objects\Entities\PlanAccionEntity.cs" />
     <Compile Include="Objects\Entities\ProductoEntity.cs" />
     <Compile Include="Objects\Entities\ProgramacionEntity.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Objects\Lists\AuxilioMecanicoList.cs" />
     <Compile Include="Objects\Lists\BusquedaArticuloList.cs" />
     <Compile Include="Objects\Lists\InformeList.cs" />
+    <Compile Include="Objects\Lists\ODMdList.cs" />
     <Compile Include="Objects\Lists\SolicitudRevisionBusquedaList.cs" />
     <Compile Include="Objects\Lists\SolicitudRevisionList.cs" />
     <Compile Include="Objects\Lists\TareaMecanicoList.cs" />

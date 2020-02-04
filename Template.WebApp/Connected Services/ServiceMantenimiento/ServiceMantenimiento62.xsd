@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Tb_CtrlBolsaRepInformeEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodiAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consumo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdArticuloTarea" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Original" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pendiente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Solicitado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:Tb_CtrlBolsaRepInformeEntity" />
   <xs:complexType name="InformeTareasEntity">
     <xs:sequence>
       <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
@@ -10,30 +29,48 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="InformeTareasEntity" nillable="true" type="tns:InformeTareasEntity" />
-  <xs:complexType name="ArrayOfTb_CtrlBolsaRepInformeEntity">
+  <xs:complexType name="ODMEntity">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:Tb_CtrlBolsaRepInformeEntity" />
+      <xs:element minOccurs="0" name="Are_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_Codigo_Jefe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_Codigo_Solicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Emp_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTareaMecanicos" type="xs:int" />
+      <xs:element minOccurs="0" name="ODM_Codigo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ODM_Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_FechContable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_FechMovimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_FechVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ODM_Hora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_Incluye" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_Informe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ODM_Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ofi_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suc_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usr_Codigo" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfTb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:ArrayOfTb_CtrlBolsaRepInformeEntity" />
-  <xs:complexType name="Tb_CtrlBolsaRepInformeEntity">
+  <xs:element name="ODMEntity" nillable="true" type="tns:ODMEntity" />
+  <xs:complexType name="ODMdEntity">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
-      <xs:element minOccurs="0" name="CodiAlmacen" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Consumo" type="xs:decimal" />
-      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IdArticuloTarea" type="xs:int" />
-      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
-      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
-      <xs:element minOccurs="0" name="Original" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Pendiente" type="xs:decimal" />
-      <xs:element minOccurs="0" name="Solicitado" type="xs:decimal" />
-      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Are_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COD_OFI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_Componente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DTem_Destino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DTem_Informe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Emp_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_CtrlBolsaRepInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="Mer_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_Codigo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ODMd_Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ODMd_Codigo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ODMd_Observacion" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Tb_CtrlBolsaRepInformeEntity" nillable="true" type="tns:Tb_CtrlBolsaRepInformeEntity" />
+  <xs:element name="ODMdEntity" nillable="true" type="tns:ODMdEntity" />
   <xs:complexType name="TareaMecanicosEntity">
     <xs:sequence>
       <xs:element minOccurs="0" name="CodMecanico" nillable="true" type="xs:string" />

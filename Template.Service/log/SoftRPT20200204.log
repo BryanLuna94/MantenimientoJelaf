@@ -1,0 +1,35 @@
+2020-02-04 16:41:12,132 [20] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Advertencia del lado del servidor El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-02-04 17:01:04,183 [69] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Instrucción DELETE en conflicto con la restricción REFERENCE "FK_tb_InformeTareas_tb_Informe". El conflicto ha aparecido en la base de datos "BDALM2019_NIC", tabla "dbo.tb_InformeTareas", column 'IdInforme'.
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeData.<AnularInforme>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 409
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.<AnularCorrectivo>d__2.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 176
+2020-02-04 17:01:12,169 [69] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: Instrucción DELETE en conflicto con la restricción REFERENCE "FK_tb_InformeTareas_tb_Informe". El conflicto ha aparecido en la base de datos "BDALM2019_NIC", tabla "dbo.tb_InformeTareas", column 'IdInforme'.
+Se terminó la instrucción.
+   en Mantenimiento.DataAccess.InformeData.<AnularInforme>d__8.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 409
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.<AnularCorrectivo>d__2.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 176
+2020-02-04 17:04:04,546 [44] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-04 17:06:31,619 [49] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-04 17:30:22,654 [49] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39

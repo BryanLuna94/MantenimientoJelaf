@@ -487,7 +487,7 @@ namespace Mantenimiento.DataAccess
                 using (var cmd = new SqlCommand("usp_Almacenes_Listar_Autocomplete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@pSucursal", SqlDbType.Int).Value = (value != null) ? value : string.Empty;
+                    cmd.Parameters.Add("@pSucursal", SqlDbType.Int).Value = value;
                     bool openConn = (con.State == ConnectionState.Open);
                     if (!openConn) { con.Open(); }
 
@@ -499,6 +499,44 @@ namespace Mantenimiento.DataAccess
                             {
                                 Codigo = DataReader.GetStringValue(dr, "Tbg_Codigo"),
                                 Descripcion = DataReader.GetStringValue(dr, "Tbg_Descripcion"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<BaseEntity> ListArticulosAutocomplete(string idEmpresa, string idAlmacen,string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_Mer_Listar_Autocomplete", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pCodi_Empresa", SqlDbType.VarChar).Value = idEmpresa;
+                    cmd.Parameters.Add("@pidalmacen", SqlDbType.VarChar).Value = idAlmacen;
+                    cmd.Parameters.Add("@pfiltro", SqlDbType.VarChar).Value = (value != null) ? value : string.Empty;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "Descripcion"),
                             });
                         }
 

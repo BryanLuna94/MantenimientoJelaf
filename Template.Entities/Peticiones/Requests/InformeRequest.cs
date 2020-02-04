@@ -17,6 +17,10 @@ namespace Mantenimiento.Entities.Peticiones.Requests
         [DataMember]
         public TareaMecanicosEntity TareaMecanico { get; set; }
         [DataMember]
-        public List<Tb_CtrlBolsaRepInformeEntity> ListBolsas { get; set; }
+        public Tb_CtrlBolsaRepInformeEntity Bolsa { get; set; }
+        [DataMember]
+        public ODMEntity ODM { get; set; }
+        [DataMember]
+        public ODMdEntity ODMd { get; set; }
     }
 }

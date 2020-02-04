@@ -146,13 +146,79 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
-        public static async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea)
+        public static async Task<Response<InformeResponse>> DeleteInforme(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo)
         {
             Response<InformeResponse> response;
 
             try
             {
                 await InformeTareasData.DeleteInformeTareas(IdInforme, IdTarea);
+                await ControlUnidadTipoMantenimientoData.AnularControlUnidadMantenimiento(IdTipMan, AreCodigo);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> AnularInforme(int IdInforme)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                await InformeData.AnularInforme(IdInforme);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        #region INFORME TAREAS
+
+        public static async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                await InformeTareasData.DeleteInformeTareas(IdInforme, IdTarea);
+                await ControlUnidadTipoMantenimientoData.AnularControlUnidadMantenimiento(IdTipMan, AreCodigo);
 
                 response = new Response<InformeResponse>
                 {
@@ -254,6 +320,8 @@ namespace Mantenimiento.BusinessLayer
                 return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
             }
         }
+
+        #endregion
 
         #region MECANICOS
 
@@ -521,14 +589,93 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
-        public static Response<InformeResponse> AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme)
+        public static Response<InformeResponse> AgregarBolsas(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            List<Tb_CtrlBolsaRepInformeEntity> List;
+            Tb_CtrlBolsaRepInformeEntity objBolsa;
+            ODMEntity objODM;
+            ODMdEntity objODMd;
+            decimal codigoODM;
+            int idBolsa;
+
+            try
+            {
+                objBolsa = request.Bolsa;
+                objODM = request.ODM;
+
+                List = Tb_CtrlBolsaRepInformeData.AgregarBolsa(objBolsa.CodiAlmacen, objBolsa.IdTarea, Convert.ToInt32(objODM.ODM_Informe));
+
+                if (List.Count == 0)
+                {
+                    BusinessException.Generar("No se encontrarón bolsas de repuestos para esta tarea");
+                }
+
+                codigoODM = ODMData.ValidaExiste(objODM.Ben_Codigo_Solicitante, objODM.ODM_Informe);
+
+                if (codigoODM == 0)
+                {
+                    objODM.ODM_Fecha = DateTime.Now;
+                    objODM.ODM_Hora = DateTime.Now.ToShortTimeString();
+                    objODM.ODM_Incluye = "N";
+                    objODM.ODM_Observacion = "Informe N°" + objODM.ODM_Informe;
+                    objODM.ODM_Estado = "00";
+                    codigoODM = ODMData.InsertODM(objODM);
+                }
+
+                foreach (var item in List)
+                {
+                    item.Consumo = 0;
+                    item.Pendiente = 0;
+                    item.Solicitado = 0;
+                    item.FechaInicio = objBolsa.FechaInicio;
+                    item.IdTipMan = objBolsa.IdTipMan;
+                    idBolsa = Tb_CtrlBolsaRepInformeData.InsertBolsa(item);
+
+                    objODMd = new ODMdEntity
+                    {
+                        Emp_Codigo = objODM.Emp_Codigo,
+                        Are_Codigo = objODM.Are_Codigo,
+                        Ben_Codigo = objODM.Ben_Codigo_Solicitante,
+                        COD_OFI = objBolsa.CodiAlmacen,
+                        Cod_Sistema = objBolsa.IdTipMan,
+                        DTem_Destino = objBolsa.CodiAlmacen,
+                        Cod_Componente = item.IdTarea.ToString(),
+                        DTem_Informe = objODM.ODM_Informe.ToString(),
+                        Id_CtrlBolsaRepInforme = idBolsa,
+                        Mer_Codigo = item.Codigo,
+                        ODMd_Cantidad = item.Cantidad,
+                        ODMd_Observacion = "Informe N°" + objODM.ODM_Informe,
+                        ODM_Codigo = codigoODM
+                    };
+
+                    ODMdData.InsertODMd(objODMd);
+                }
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListBolsas = new List<ODMdList>() },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public static Response<InformeResponse> ListBolsas(decimal IdInforme, string Ben_Codigo)
         {
             try
             {
                 Response<InformeResponse> response;
-                List<Tb_CtrlBolsaRepInformeEntity> List;
+                List<ODMdList> List;
 
-                List = Tb_CtrlBolsaRepInformeData.AgregarBolsa(CodAlmacen, IdTarea, IdInforme);
+                List = ODMdData.ListBolsas(IdInforme, Ben_Codigo);
 
                 response = new Response<InformeResponse>
                 {
@@ -546,19 +693,94 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
-        public static async Task<Response<InformeResponse>> InsertBolsas(InformeRequest request)
+        public static Response<InformeResponse> InsertBolsa(InformeRequest request)
         {
             Response<InformeResponse> response;
-            List<Tb_CtrlBolsaRepInformeEntity> ListBolsas;
+            Tb_CtrlBolsaRepInformeEntity objBolsa;
+            ODMEntity objODM;
+            ODMdEntity objODMd;
+
+            decimal codigoODM;
+            int idBolsa;
 
             try
             {
-                ListBolsas = request.ListBolsas;
-
-                foreach (var item in ListBolsas)
+                using (TransactionScope tran = new TransactionScope())
                 {
-                    await Tb_CtrlBolsaRepInformeData.InsertBolsa(item);
+                    objBolsa = request.Bolsa;
+                    objODM = request.ODM;
+
+                    codigoODM = ODMData.ValidaExiste(objODM.Ben_Codigo_Solicitante, objODM.ODM_Informe);
+
+                    if (codigoODM == 0)
+                    {
+                        objODM.ODM_Fecha = DateTime.Now;
+                        objODM.ODM_Hora = DateTime.Now.ToShortTimeString();
+                        objODM.ODM_Incluye = "N";
+                        objODM.ODM_Observacion = "Informe N°" + objODM.ODM_Informe;
+                        objODM.ODM_Estado = "00";
+                        codigoODM = ODMData.InsertODM(objODM);
+                    }
+
+                    objBolsa.Consumo = 0;
+                    objBolsa.Tipo = "LIBRE";
+                    objBolsa.Pendiente = 0;
+                    objBolsa.Solicitado = 0;
+
+                    idBolsa = Tb_CtrlBolsaRepInformeData.InsertBolsa(objBolsa);
+
+                    objODMd = new ODMdEntity
+                    {
+                        Emp_Codigo = objODM.Emp_Codigo,
+                        Are_Codigo = objODM.Are_Codigo,
+                        Ben_Codigo = objODM.Ben_Codigo_Solicitante,
+                        COD_OFI = objBolsa.CodiAlmacen,
+                        Cod_Sistema = objBolsa.IdTipMan,
+                        DTem_Destino = objBolsa.CodiAlmacen,
+                        Cod_Componente = objBolsa.IdTarea.ToString(),
+                        DTem_Informe = objODM.ODM_Informe.ToString(),
+                        Id_CtrlBolsaRepInforme = idBolsa,
+                        Mer_Codigo = objBolsa.Codigo,
+                        ODMd_Cantidad = objBolsa.Cantidad,
+                        ODMd_Observacion = "Informe N°" + objODM.ODM_Informe,
+                        ODM_Codigo = codigoODM
+                    };
+
+                    ODMdData.InsertODMd(objODMd);
+
+                    tran.Complete();
                 }
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> DeleteBolsa(InformeRequest request)
+        {
+            Response<InformeResponse> response;
+            ODMdEntity objODMd;
+
+            objODMd = request.ODMd;
+
+            try
+            {
+                await ODMdData.DeleteODMd(objODMd.ODMd_Codigo);
+                await Tb_CtrlBolsaRepInformeData.DeleteBolsa(objODMd.Id_CtrlBolsaRepInforme);
 
                 response = new Response<InformeResponse>
                 {

@@ -49,6 +49,8 @@
     <Compile Include="BaseData.cs" />
     <Compile Include="ConfiguracionMantenimientoData.cs" />
     <Compile Include="ControlUnidadTipoMantenimientoData.cs" />
+    <Compile Include="ODMData.cs" />
+    <Compile Include="ODMdData.cs" />
     <Compile Include="TareaMecanicoData.cs" />
     <Compile Include="InformeTareasData.cs" />
     <Compile Include="SolicitudRevisionTecnicaData.cs" />

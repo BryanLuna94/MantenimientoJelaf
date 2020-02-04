@@ -16,8 +16,7 @@
         <!-- Modal -->
         @Html.Partial("Buscador")
         @Html.Partial("Ayudantes")
-        @*@Html.Partial("Requicision")*@
-        @Html.Partial("BusquedaArticulo")
+        @Html.Partial("Requisicion")
     </div>
     <div class="row">
         <div class="col-lg-12">
@@ -163,6 +162,7 @@
                                         <button type="button" v-on:click.prevent="ShowBuscador()" class="btn waves-effect waves-light btn-inverse">BUSCAR INFORME</button>
                                         <button type="button" id="btnTractoCarreta" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarTractoCarreta()" class="btn waves-effect waves-light btn-inverse">IR A CARRETA</button>
                                         <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarCorrectivoPreventivo()" class="btn waves-effect waves-light btn-inverse">IR A PREVENTIVO</button>
+                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="AnularInforme()" class="btn waves-effect waves-light btn-inverse">ANULAR</button>
                                     </div>
                                 </div>
                             </form>
@@ -186,7 +186,7 @@
                                                       :options="list.Sistemas"
                                                       index="Codigo"
                                                       label="Descripcion"
-                                                      @@search="getSistemas"
+                                                      @@search="getSistemas($event.target.value)"
                                                       id="IdTarea"
                                                       placeholder="--Seleccione--"
                                                       ref="IdTarea">
@@ -209,7 +209,7 @@
                                     <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
                                         <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">_</label>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
-                                            <button type="button" v-on:click.prevent="NuevoMantenimiento()" v-bind:disabled="!FullInforme" class="btn waves-effect waves-light btn-inverse">NUEVO</button>
+                                            <button type="button" v-on:click.prevent="ClearMantenimiento()" v-bind:disabled="!FullInforme" class="btn waves-effect waves-light btn-inverse">NUEVO</button>
                                             <button type="button" v-on:click.prevent="saveMantenimiento()" v-bind:disabled="!FullMantenimiento" class="btn waves-effect waves-light btn-inverse">GUARDAR</button>
                                         </div>
                                     </div>
@@ -310,7 +310,7 @@
                                     <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
                                         <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">_</label>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
-                                            <button type="button" v-on:click.prevent="NuevoMecanico()" v-bind:disabled="!FullNuevoMecanico" class="btn waves-effect waves-light btn-inverse">NUEVO</button>
+                                            <button type="button" v-on:click.prevent="ClearMecanico()" v-bind:disabled="!FullNuevoMecanico" class="btn waves-effect waves-light btn-inverse">NUEVO</button>
                                             <button type="button" v-on:click.prevent="saveMecanico()" v-bind:disabled="!FullMecanico" class="btn waves-effect waves-light btn-inverse">GUARDAR</button>
                                         </div>
                                     </div>
@@ -340,7 +340,7 @@
                                         <td width="20%">
                                             <button type="button" v-on:click.prevent="DeleteMecanico(Mecanico)" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
                                             <button type="button" v-on:click.prevent="ShowAyudantes(Mecanico)" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-key"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-pencil-alt"></i></button>                                            
+                                            <button type="button" v-on:click.prevent="ShowRequisicion(Mecanico)" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-pencil-alt"></i></button>                                            
                                         </td>
                                     </tr>
                                 </tbody>
@@ -356,6 +356,7 @@
         </div>
     </div>
     <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+
 </div>
 
 <!-- /.row -->
@@ -368,6 +369,7 @@
 
     <script>
         let _FechaActual = '@FechaActual'
+        let _Sucursal = '@UsuarioActual.Sucursal'
     </script>
     <script src="~/wwwroot/js/Vue/Views/Informe.js"></script>
 

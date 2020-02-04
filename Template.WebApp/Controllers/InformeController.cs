@@ -51,6 +51,25 @@ namespace Mantenimiento.WebApp.Controllers
             return Json(res, JsonRequestBehavior.AllowGet);
         }
 
+        public async Task<ActionResult> AnularInforme(int IdInforme)
+        {
+            try
+            {
+                var res = await _ServiceMantenimiento.AnularInformeAsync(IdInforme);
+
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
         [HttpGet]
         public async Task<ActionResult> ListInformeTareas(int IdInforme)
         {
@@ -89,11 +108,11 @@ namespace Mantenimiento.WebApp.Controllers
             }
         }
 
-        public async Task<ActionResult> DeleteInformeTarea(int IdInforme, int IdTarea)
+        public async Task<ActionResult> DeleteInformeTarea(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo)
         {
             try
             {
-                var res = await _ServiceMantenimiento.DeleteInformeTareasAsync(IdInforme, IdTarea);
+                var res = await _ServiceMantenimiento.DeleteInformeTareasAsync(IdInforme, IdTarea, IdTipMan, AreCodigo);
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
@@ -292,16 +311,15 @@ namespace Mantenimiento.WebApp.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> AgregarBolsa(string CodAlmacen, int IdTarea, int IdInforme)
+        public async Task<ActionResult> ListBolsas(decimal IdInforme, string Cod_Ben)
         {
             try
             {
-                var res = await _ServiceMantenimiento.AgregarBolsasAsync(CodAlmacen, IdTarea, IdInforme);
+                var res = await _ServiceMantenimiento.ListBolsasAsync(IdInforme, Cod_Ben);
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {
-
                 throw;
             }
 
@@ -311,9 +329,67 @@ namespace Mantenimiento.WebApp.Controllers
         {
             try
             {
+                var usuarioSesion = DataSession.UserLoggedIn;
+
                 var request = JsonConvert.DeserializeObject<InformeRequest>(json);
 
-                var res = await _ServiceMantenimiento.InsertBolsasAsync(request);
+                request.ODM.Usr_Codigo = usuarioSesion.Codigo.ToString("000#");
+                request.ODM.Ben_Codigo_Jefe = usuarioSesion.Ben_Codigo;
+                request.ODM.Emp_Codigo = usuarioSesion.Codi_Empresa.ToString("0#");
+                request.ODM.Suc_Codigo = usuarioSesion.Sucursal.ToString("00#"); ;
+                request.ODM.Ofi_Codigo = usuarioSesion.Sucursal.ToString("00#"); ;
+
+                var res = await _ServiceMantenimiento.InsertBolsaAsync(request);
+
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public async Task<ActionResult> AgregarBolsas(string json)
+        {
+            try
+            {
+                var usuarioSesion = DataSession.UserLoggedIn;
+
+                var request = JsonConvert.DeserializeObject<InformeRequest>(json);
+
+                request.ODM.Usr_Codigo = usuarioSesion.Codigo.ToString("000#");
+                request.ODM.Ben_Codigo_Jefe = usuarioSesion.Ben_Codigo;
+                request.ODM.Emp_Codigo = usuarioSesion.Codi_Empresa.ToString("0#");
+                request.ODM.Suc_Codigo = usuarioSesion.Sucursal.ToString("00#"); ;
+                request.ODM.Ofi_Codigo = usuarioSesion.Sucursal.ToString("00#"); ;
+
+                var res = await _ServiceMantenimiento.AgregarBolsasAsync(request);
+
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public async Task<ActionResult> DeleteBolsa(string json)
+        {
+            try
+            {
+                var request = JsonConvert.DeserializeObject<InformeRequest>(json);
+
+                var res = await _ServiceMantenimiento.DeleteBolsaAsync(request);
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }

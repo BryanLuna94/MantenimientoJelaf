@@ -1,4 +1,5 @@
-﻿using Mantenimiento.WebApp.ServiceMantenimiento;
+﻿using Mantenimiento.WebApp.Helpers;
+using Mantenimiento.WebApp.ServiceMantenimiento;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -96,6 +97,22 @@ namespace Mantenimiento.WebApp.Controllers
         public async Task<ActionResult> ListMecanicosAutocomplete(string value)
         {
             var res = await _ServiceMantenimiento.ListMecanicosAutocompleteAsync(value);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> ListAlmacenesAutocomplete()
+        {
+            var usuario = DataSession.UserLoggedIn;
+            var res = await _ServiceMantenimiento.ListAlmacenesAutocompleteAsync(usuario.Sucursal.ToString());
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> ListArticulosAutocomplete(string idAlmacen, string value)
+        {
+            var usuario = DataSession.UserLoggedIn;
+            var res = await _ServiceMantenimiento.ListArticulosAutocompleteAsync(usuario.Codi_Empresa.ToString("0#"), idAlmacen, value);
             return Json(res, JsonRequestBehavior.AllowGet);
         }
     }

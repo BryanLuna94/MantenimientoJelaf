@@ -21,6 +21,6 @@ namespace Mantenimiento.Entities.Peticiones.Responses
         [DataMember]
         public List<BusquedaArticuloList> ListBusquedaArticulo { get; set; }
         [DataMember]
-        public List<Tb_CtrlBolsaRepInformeEntity> ListBolsas { get; set; }
+        public List<ODMdList> ListBolsas { get; set; }
     }
 }

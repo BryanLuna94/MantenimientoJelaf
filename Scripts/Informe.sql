@@ -399,7 +399,7 @@ GO
 
 
 
-create proc SEL_maxsolxChofer
+create proc SEL_maxsolxChofer 
  @Ben_Codigo  VarChar(30)
   as
 select max(IdSolicitudRevision) from tb_SolicitudRevisionTecnica_C where idchofer=@Ben_Codigo

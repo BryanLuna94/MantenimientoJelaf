@@ -71,6 +71,10 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "GET", UriTemplate = "ListAlmacenesAutocomplete", ResponseFormat = WebMessageFormat.Json)]
         Response<BaseResponse> ListAlmacenesAutocomplete(string value);
 
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListArticulosAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListArticulosAutocomplete(string idEmpresa, string idAlmacen, string value);
+
         #endregion
 
         #region LOGIN
@@ -378,6 +382,10 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "GET", UriTemplate = "ObtenerUltimaRevisionChofer", ResponseFormat = WebMessageFormat.Json)]
         Response<FallasDResponse> ObtenerUltimaRevisionChofer(string CodChofer);
 
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "AnularSolicitudRevision", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<FallasDResponse>> AnularSolicitudRevision(string IdSolicitudRevision);
+
         #endregion
 
         #region AUXILIOMECANICO
@@ -468,7 +476,11 @@ namespace Mantenimiento.Service
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "DeleteInformeTareas", ResponseFormat = WebMessageFormat.Json)]
-        Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea);
+        Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "POST", UriTemplate = "AnularInforme", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<InformeResponse>> AnularInforme(int IdInforme);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "InsertInformeTareas", ResponseFormat = WebMessageFormat.Json)]
@@ -511,14 +523,20 @@ namespace Mantenimiento.Service
         Response<InformeResponse> BusquedaArticulo(string CodEmpresa, string CodAlmacen);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
-        [WebInvoke(Method = "POST", UriTemplate = "InsertBolsas", ResponseFormat = WebMessageFormat.Json)]
-        Task<Response<InformeResponse>> InsertBolsas(InformeRequest request);
+        [WebInvoke(Method = "POST", UriTemplate = "InsertBolsa", ResponseFormat = WebMessageFormat.Json)]
+        Response<InformeResponse> InsertBolsa(InformeRequest request);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
-        [WebInvoke(Method = "GET", UriTemplate = "AgregarBolsas", ResponseFormat = WebMessageFormat.Json)]
-        Response<InformeResponse> AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme);
+        [WebInvoke(Method = "POST", UriTemplate = "AgregarBolsas", ResponseFormat = WebMessageFormat.Json)]
+        Response<InformeResponse> AgregarBolsas(InformeRequest request);
 
-        
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListBolsas", ResponseFormat = WebMessageFormat.Json)]
+        Response<InformeResponse> ListBolsas(decimal IdInforme, string Ben_Codigo);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "POST", UriTemplate = "DeleteBolsa", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<InformeResponse>> DeleteBolsa(InformeRequest request);
 
         #endregion
     }

@@ -241,6 +241,33 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+        public static async Task<Response<FallasDResponse>> AnularSolicitudRevision(string IdSolicitudRevision)
+        {
+            Response<FallasDResponse> response;
+
+            try
+            {
+                await SolicitudRevisionTecnicaData.AnularSolicitudRevisionTecnica_C(IdSolicitudRevision);
+
+                response = new Response<FallasDResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new FallasDResponse
+                    {
+                        SolicitudRevision = new SolicitudRevisionList()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public static Response<FallasDResponse> ObtenerUltimaRevisionChofer(string CodChofer)
         {
             try

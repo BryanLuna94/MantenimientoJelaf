@@ -376,5 +376,35 @@ namespace Mantenimiento.DataAccess
 
             return ultimoId;
         }
+
+        public static async Task<MTBFEntity> AnularSolicitudRevisionTecnica_C(string IdSolicitudRevision)
+        {
+
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("usp_tb_SolicitudRevisionTecnica_C_Anular", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@pIdSolicitudRevision", SqlDbType.VarChar).Value = IdSolicitudRevision;
+                        await cmd.ExecuteNonQueryAsync();
+                        cmd.Dispose();
+                    }
+
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return null;
+
+        }
     }
 }

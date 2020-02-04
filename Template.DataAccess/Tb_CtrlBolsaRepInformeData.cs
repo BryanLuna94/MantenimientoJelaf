@@ -38,7 +38,6 @@ namespace Mantenimiento.DataAccess
                             List.Add(new Tb_CtrlBolsaRepInformeEntity
                             {
                                 IdArticuloTarea = DataReader.GetIntValue(dr, "idarttar"),
-                                FechaInicio = DataReader.GetDateTimeValue(dr, "FechaInicio").Value.ToShortDateString(),
                                 Codigo = DataReader.GetStringValue(dr, "Codigo"),
                                 Original = DataReader.GetStringValue(dr, "Original"),
                                 Descripcion = DataReader.GetStringValue(dr, "Descripcion"),
@@ -47,7 +46,7 @@ namespace Mantenimiento.DataAccess
                                 Solicitado = 0,
                                 Pendiente = 0,
                                 Tipo = "BOLSA",
-                                CodiAlmacen = ""
+                                CodiAlmacen = IdAlmacen
                             });
                         }
 
@@ -63,7 +62,7 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
-        public static async Task<int> InsertBolsa(Tb_CtrlBolsaRepInformeEntity objEntidad)
+        public static int InsertBolsa(Tb_CtrlBolsaRepInformeEntity objEntidad)
         {
             int nuevoId = 0;
             try
@@ -78,11 +77,54 @@ namespace Mantenimiento.DataAccess
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("@IdInforme", SqlDbType.Int).Value = objEntidad.IdInforme;
                         cmd.Parameters.Add("@IdTarea", SqlDbType.Int).Value = objEntidad.IdTarea;
-                        cmd.Parameters.Add("@IdArtTar", SqlDbType.Int).Value = objEntidad.IdArticuloTarea;
+                        if (objEntidad.IdArticuloTarea == null)
+                        {
+                            cmd.Parameters.Add("@IdArtTar", SqlDbType.Int).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            cmd.Parameters.Add("@IdArtTar", SqlDbType.Int).Value = objEntidad.IdArticuloTarea;
+                        }
                         cmd.Parameters.Add("@Mer_codigo", SqlDbType.VarChar).Value = objEntidad.Codigo;
                         cmd.Parameters.Add("@Cantidad", SqlDbType.Decimal).Value = objEntidad.Cantidad;
+                        cmd.Parameters.Add("@Consumido", SqlDbType.Decimal).Value = 0;
                         cmd.Parameters.Add("@Tipo", SqlDbType.VarChar).Value = objEntidad.Tipo;
+                        using (var dr = cmd.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                nuevoId = Convert.ToInt32(dr[0]);
+                            }
+                            cmd.Dispose();
+                            dr.Close();
+                        }
+                    }
 
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return nuevoId;
+        }
+
+        public static async Task<int> DeleteBolsa(int IdBolsa)
+        {
+            int nuevoId = 0;
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("usp_DEL_Tb_CtrlBolsaRepInforme", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@pidCtrlBolsaRepInforme", SqlDbType.Int).Value = IdBolsa;
                         await cmd.ExecuteNonQueryAsync();
                         cmd.Dispose();
                     }

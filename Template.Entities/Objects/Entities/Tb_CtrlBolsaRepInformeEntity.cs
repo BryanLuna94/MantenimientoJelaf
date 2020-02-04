@@ -2,7 +2,7 @@
 {
     public class Tb_CtrlBolsaRepInformeEntity
     {
-        public int IdArticuloTarea { get; set; }
+        public int? IdArticuloTarea { get; set; }
         public string FechaInicio { get; set; }
         public string Codigo { get; set; }
         public string Original { get; set; }
@@ -15,5 +15,6 @@
         public string CodiAlmacen { get; set; }
         public int IdTarea { get; set; }
         public int IdInforme { get; set; }
+        public string IdTipMan { get; set; }
     }
 }

@@ -78,7 +78,7 @@
                                 <button id="btnGrabar" class="btn btn-success" v-bind:disabled="!FullCabecera" v-on:click.prevent="Guardar">Grabar</button>
                             </div>
                             <div class="col-md-2 col-sm-3 col-xs-3">
-                                <button id="btnCancelar" class="btn btn-warning" v-on:click.prevent="Cancelar">Cancelar</button>
+                                <button id="btnCancelar" class="btn btn-warning" v-bind:disabled="!FullRegistro" v-on:click.prevent="Anular">Anular</button>
                             </div>
 
                         </div>

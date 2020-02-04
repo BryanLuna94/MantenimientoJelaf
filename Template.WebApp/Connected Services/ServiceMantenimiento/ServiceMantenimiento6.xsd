@@ -45,7 +45,7 @@
     <xs:sequence>
       <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Informe" nillable="true" type="q2:InformeEntity" />
       <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q3:ArrayOfInformeList" />
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ListBolsas" nillable="true" type="q4:ArrayOfTb_CtrlBolsaRepInformeEntity" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBolsas" nillable="true" type="q4:ArrayOfODMdList" />
       <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBusquedaArticulo" nillable="true" type="q5:ArrayOfBusquedaArticuloList" />
       <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInformeTareas" nillable="true" type="q6:ArrayOfInformeTareasList" />
       <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanico" nillable="true" type="q7:ArrayOfTareaMecanicoList" />

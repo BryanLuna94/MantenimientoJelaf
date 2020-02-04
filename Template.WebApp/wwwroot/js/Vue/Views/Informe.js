@@ -20,14 +20,26 @@
             NumeroInforme: 0,
             Solicitante: '',
             TipoInformeDesc: '',
+            Kilometraje: 0,
             TipoU: ''
         },
 
         objMantenimiento: {
             IdInforme: '',
             IdTarea: '',
+            IdTipMan: '',
             Observacion: '',
             FechaInicio: ''
+        },
+
+        objODM: {
+            Are_Codigo: '',
+            ODM_FechMovimiento: '',
+            ODM_FechContable: '',
+            ODM_FechVencimiento: '',
+            Ben_Codigo_Solicitante: '',
+            ODM_Informe: '',
+            IdTareaMecanicos: ''
         },
 
         objMecanico: {
@@ -55,15 +67,35 @@
             SoloMiUsuario: false
         },
 
+        objBolsa: {
+            IdArticuloTarea: 0,
+            FechaInicio: '',
+            Codigo: '',
+            Original: '',
+            Descripcion: '',
+            Cantidad: '',
+            Solicitado: 0,
+            Consumo: 0,
+            Pendiente: 0,
+            Tipo: '',
+            CodiAlmacen: '',
+            IdTarea: '',
+            IdInforme: '',
+            IdTipMan: ''
+        },
+
         list: {
             Informes: [],
             Usuarios: [],
+            Almacenes: [],
+            Articulos: [],
             Sistemas: [],
             Mantenimientos: [],
             Beneficiarios: [],
             Mecanicos: [],
             MecanicosAyudantes: [],
-            Ayudantes: []
+            Ayudantes: [],
+            Bolsas: []
         },
 
     },
@@ -165,10 +197,47 @@
                 });
         },
 
+        getAlmacenes: async function () {
+
+            let _this = this;
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListAlmacenesAutocomplete'))
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.Almacenes = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getAlmacenes');
+                });
+        },
+
+        getArticulos: async function (value) {
+            let _this = this;
+
+            let codigoAlmacen = _this.objBolsa.CodiAlmacen;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListArticulosAutocomplete'), {
+                params:
+                {
+                    idAlmacen: codigoAlmacen,
+                    value: value
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.Articulos = (res.data.Valor.List) ? res.data.Valor.List : [];
+
+                    }
+
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getArticulos');
+                });
+        },
+
         ShowBuscador: async function () {
 
             var _this = this;
-            _this.getUsuarios('');
+            await _this.getUsuarios('');
+            _this.ListInforme();
             $('#appBuscadorInforme').modal('show');
         },
 
@@ -194,6 +263,77 @@
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo ListInforme');
                 });
+        },
+
+        ClearInforme: async function () {
+
+            var _this = this;
+
+            _this.objInforme.IdInforme = '';
+            _this.objInforme.Are_Codigo = '';
+            _this.objInforme.Are_Nombre = '';
+            _this.objInforme.Ofi_Codigo = '';
+            _this.objInforme.Oficina = '';
+            _this.objInforme.Ben_Codigo = '';
+            _this.objInforme.Chofer = '';
+            _this.objInforme.FechaStr = '';
+            _this.objInforme.Hora = '';
+            _this.objInforme.Observacion = '';
+            _this.objInforme.KmUnidad = 0;
+            _this.objInforme.EstCierre = false;
+            _this.objInforme.TipoInforme = '';
+            _this.objInforme.IdUndAlerta = 0;
+            _this.objInforme.NumeroInforme = 0;
+            _this.objInforme.Solicitante = '';
+            _this.objInforme.TipoInformeDesc = '';
+            _this.objInforme.TipoU = '';
+            _this.objInforme.Kilometraje = 0;
+        },
+
+        AnularInforme: async function () {
+
+            let _this = this;
+            //this.processing = true;
+
+            Swal.fire({
+                title: '¿Estas Seguro?',
+                text: "Deseas eliminar este registro",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sì, Eliminar Registro'
+            }).then((result) => {
+                if (result.value) {
+                    //swal-end
+                    axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/AnularInforme'),
+                        {
+                            IdInforme: _this.objInforme.IdInforme
+                        })
+                        .then(res => {
+                            if (res.data.Estado) {
+                                Notifications.Messages.success('Se eliminó registro exitosamente');
+                                _this.ClearInforme();
+                                _this.ClearMantenimiento();
+                                _this.ClearMecanico();
+                                _this.list.Mecanicos = [];
+                                _this.list.Mantenimientos = [];
+                            }
+                            if (res.data.Estado === false) {
+                                Notifications.Messages.warning("esta registro no se pudo eliminar");
+                            }
+
+                        }).catch(error => {
+                            Notifications.Messages.error('Ocurrió una excepción en el metodo AnularInforme');
+                        });
+                    //fin delete    
+                    //fin swal 1
+                }
+
+
+            })
+            //fin swal2
+
         },
 
         ListInformeTareas: async function () {
@@ -252,7 +392,7 @@
                             existe = true;
                             _this.ListInformeTareas();
                         }
-                        
+
                     }
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo SelectInformeCambiar');
@@ -431,7 +571,7 @@
                         this.ListInformeTareas();
                     } else if (res.data.tipoNotificacion) {
                         ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
-                    } else if (res.data.tip){
+                    } else if (res.data.tip) {
                         Notifications.Messages.warning(res.data.Mensaje);
                     }
                 }).catch(error => {
@@ -454,8 +594,16 @@
                 confirmButtonText: 'Sì, Eliminar Registro'
             }).then((result) => {
                 if (result.value) {
+
+                    debugger;
                     //swal-end
-                    axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/DeleteInformeTarea'), { IdInforme: _this.objInforme.IdInforme, IdTarea: itemMantenimiento.IdTarea })
+                    axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/DeleteInformeTarea'),
+                        {
+                            IdInforme: _this.objInforme.IdInforme,
+                            IdTarea: itemMantenimiento.IdTarea,
+                            IdTipMan: itemMantenimiento.IdTipMan,
+                            AreCodigo: _this.objInforme.Are_Codigo
+                        })
                         .then(res => {
                             if (res.data.Estado) {
                                 Notifications.Messages.success('Se eliminó registro exitosamente');
@@ -483,8 +631,20 @@
 
             let _this = this;
             _this.objMecanico.IdTarea = itemMantenimiento.IdTarea;
+            _this.objMecanico.IdTipMan = itemMantenimiento.IdTipMan;
             _this.ListMecanicos(itemMantenimiento.IdTarea);
             _this.getBeneficiarios('');
+        },
+
+        ClearMantenimiento: async function () {
+
+            var _this = this;
+
+            _this.objMantenimiento.IdInforme = '';
+            _this.objMantenimiento.IdTarea = '';
+            _this.objMantenimiento.IdTipMan = '';
+            _this.objMantenimiento.Observacion = '';
+            _this.objMantenimiento.FechaInicio = '';
         },
 
         //FIN MANTENIMIENTO
@@ -539,7 +699,7 @@
         },
 
         UpdateMecanico: async function () {
-                       
+
         },
 
         InsertMecanico: async function () {
@@ -611,6 +771,17 @@
 
         },
 
+        ClearMecanico: async function () {
+
+            var _this = this;
+
+            _this.objMecanico.IdInforme = '';
+            _this.objMecanico.IdTarea = '';
+            _this.objMecanico.CodMecanico = '';
+            _this.objMecanico.FechaInicio = '';
+            _this.objMecanico.FechaTermino = '';
+        },
+
         //FIN MECANICO
 
         //INICIO AYUDANTES
@@ -644,7 +815,7 @@
         saveAyudante: async function () {
 
             let _this = this;
- 
+
             await _this.InsertAyudante();
         },
 
@@ -717,6 +888,190 @@
 
         //FIN AYUDANTES
 
+        //INICIO REQUISICION
+
+        ShowRequisicion: async function (itemMecanico) {
+            var _this = this;
+            _this.objODM.IdTareaMecanicos = itemMecanico.IdTareaMecanicos;
+            _this.objMecanico.CodMecanico = itemMecanico.CodMecanico;
+            await _this.getAlmacenes();
+            await _this.ListBolsas();
+            await _this.ClearBolsa();
+            _this.objBolsa.CodiAlmacen = _this.list.Almacenes[0].Codigo;
+            $('#appRequisicion').modal('show');
+        },
+
+        ListBolsas: async function () {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Informe/ListBolsas'), {
+                params: {
+                    IdInforme: _this.objInforme.IdInforme,
+                    Cod_Ben: _this.objMecanico.CodMecanico
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.Bolsas = (res.data.Valor.ListBolsas) ? res.data.Valor.ListBolsas : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListBolsas');
+                });
+        },
+
+        InsertBolsa: async function () {
+
+            let _this = this;
+
+            _this.objODM.Are_Codigo = _this.objInforme.Are_Codigo;
+            _this.objODM.ODM_FechMovimiento = _this.objBolsa.FechaInicio;
+            _this.objODM.ODM_FechContable = _this.objBolsa.FechaInicio;
+            _this.objODM.ODM_FechVencimiento = _this.objBolsa.FechaInicio;
+            _this.objODM.Ben_Codigo_Solicitante = _this.objMecanico.CodMecanico;
+            _this.objODM.ODM_Informe = _this.objInforme.IdInforme;
+
+            _this.objBolsa.IdInforme = _this.objInforme.IdInforme;
+            _this.objBolsa.Descripcion = _this.$refs.Codigo.$refs.selectedOptions.innerText;
+            _this.objBolsa.IdTarea = _this.objMecanico.IdTarea;
+            _this.objBolsa.IdTipMan = _this.objMecanico.IdTipMan;
+            _this.objBolsa.IdArticuloTarea = 0;
+
+            let data = {
+                Bolsa: _this.objBolsa,
+                ODM: _this.objODM
+            };
+
+            var json = JSON.stringify(data);
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/InsertBolsa'), {
+                json: json
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        _this.ListBolsas();
+                        _this.ClearBolsa();
+                        _this.objBolsa.CodiAlmacen.$refs.search.focus();
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo InsertBolsa');
+                });
+        },
+
+        AgregarBolsas: async function () {
+
+            let _this = this;
+
+            _this.objODM.Are_Codigo = _this.objInforme.Are_Codigo;
+            _this.objODM.ODM_FechMovimiento = _FechaActual;
+            _this.objODM.ODM_FechContable = _FechaActual;
+            _this.objODM.ODM_FechVencimiento = _FechaActual;
+            _this.objODM.Ben_Codigo_Solicitante = _this.objMecanico.CodMecanico;
+            _this.objODM.ODM_Informe = _this.objInforme.IdInforme;
+
+            _this.objBolsa.IdInforme = _this.objInforme.IdInforme;
+            _this.objBolsa.IdTarea = _this.objMecanico.IdTarea;
+            _this.objBolsa.IdTipMan = _this.objMecanico.IdTipMan;
+            _this.objBolsa.FechaInicio = _FechaActual;
+            _this.objBolsa.Cantidad = 0;
+
+            let data = {
+                Bolsa: _this.objBolsa,
+                ODM: _this.objODM
+            };
+
+            var json = JSON.stringify(data);
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/AgregarBolsas'), {
+                json: json
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        _this.ListBolsas();
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo InsertBolsa');
+                });
+        },
+
+        DeleteBolsa: async function (itemBolsa) {
+
+            let _this = this;
+            //this.processing = true;
+
+            Swal.fire({
+                title: '¿Estas Seguro?',
+                text: "Deseas eliminar este registro",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sì, Eliminar Registro'
+            }).then((result) => {
+                if (result.value) {
+                    //swal-end
+
+                    let data = {
+                        ODMd: itemBolsa
+                    };
+
+                    var json = JSON.stringify(data);
+
+                    axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/DeleteBolsa'),
+                        {
+                            json: json
+                        })
+                        .then(res => {
+                            if (res.data.Estado) {
+                                Notifications.Messages.success('Se eliminó registro exitosamente');
+                                _this.ListBolsas();
+                            }
+                            if (res.data.Estado === false) {
+                                Notifications.Messages.warning("esta registro no se pudo eliminar");
+                            }
+
+                        }).catch(error => {
+                            Notifications.Messages.error('Ocurrió una excepción en el metodo DeleteBolsa');
+                        });
+                    //fin delete    
+                    //fin swal 1
+                }
+            })
+            //fin swal2
+
+        },
+
+        ClearBolsa: async function () {
+
+            var _this = this;
+
+            _this.objBolsa.IdArticuloTarea = 0;
+            _this.objBolsa.FechaInicio = '';
+            _this.objBolsa.Codigo = '';
+            _this.objBolsa.Original = '';
+            _this.objBolsa.Descripcion = '';
+            _this.objBolsa.Cantidad = '';
+            _this.objBolsa.Solicitado = 0;
+            _this.objBolsa.Consumo = 0;
+            _this.objBolsa.Pendiente = 0;
+            _this.objBolsa.Tipo = '';
+            _this.objBolsa.CodiAlmacen = '';
+        },
+
+        //FIN REQUISICION
+
         close: function (code) {
             if (code === 1) {
                 $('#appBuscadorInforme').modal('hide');
@@ -766,14 +1121,27 @@
                 this.objMecanico.IdTarea
             ) ? true : false;
         },
+        FullBolsa: function () {
+            return (
+                this.objBolsa.Codigo &&
+                this.objBolsa.CodiAlmacen &&
+                this.objBolsa.Cantidad &&
+                this.objBolsa.FechaInicio
+            ) ? true : false;
+        },
+        FullAgregarBolsas: function () {
+            return (
+                this.objBolsa.CodiAlmacen
+            ) ? true : false;
+        },
     },
 
     watch: {
-        /*"objTareaM.IdTarea": function (newval, oldval) {
+        "objBolsa.CodiAlmacen": function (newval, oldval) {
             if (newval) {
-                this.SetFocus();
+                this.getArticulos('');
             }
-        }*/
+        }
     }
 });
 

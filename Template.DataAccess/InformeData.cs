@@ -412,5 +412,35 @@ namespace Mantenimiento.DataAccess
             return null;
 
         }
+
+        public static async Task<MTBFEntity> AnularInforme(int IdInforme)
+        {
+
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("usp_tb_Informe_Anular", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@pIdinforme", SqlDbType.Decimal).Value = IdInforme;
+                        await cmd.ExecuteNonQueryAsync();
+                        cmd.Dispose();
+                    }
+
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return null;
+
+        }
     }
 }

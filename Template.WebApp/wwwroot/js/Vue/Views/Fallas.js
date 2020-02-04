@@ -276,9 +276,46 @@ let app = new Vue({
 
         },
 
+        Anular: async function () {
 
-        Cancelar: function () {
-            window.setTimeout(function () { location.reload() }, 50)
+            let _this = this;
+            //this.processing = true;
+
+            Swal.fire({
+                title: '¿Estas Seguro?',
+                text: "Deseas eliminar este registro",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sì, Eliminar Registro'
+            }).then((result) => {
+                if (result.value) {
+
+                    //swal-end
+                    axios.post(getBaseUrl.obtenerUrlAbsoluta('Fallas/AnularSolicitudRevision'),
+                        {
+                            idSolicitudRevision: _this.objSolicitud.IdSolicitudRevision
+                        })
+                        .then(res => {
+                            if (res.data.Estado) {
+                                Notifications.Messages.success('Se eliminó registro exitosamente');
+                                _this.objSolicitud.Estado = "ANULADO";
+                            }
+                            if (res.data.Estado === false) {
+                                Notifications.Messages.warning("esta registro no se pudo eliminar");
+                            }
+
+                        }).catch(error => {
+                            Notifications.Messages.error('Ocurrió una excepción en el metodo Anular');
+                        });
+                    //fin delete    
+                    //fin swal 1
+                }
+
+            })
+            //fin swal2
+
         },
 
         Agregar: async function () {
@@ -414,6 +451,11 @@ let app = new Vue({
             return (
                 this.objSolicitud.NumeroInforme &&
                 this.objSolicitud.Odometro
+            ) ? true : false;
+        },
+        FullRegistro: function () {
+            return (
+                this.objSolicitud.IdSolicitudRevision
             ) ? true : false;
         },
     },

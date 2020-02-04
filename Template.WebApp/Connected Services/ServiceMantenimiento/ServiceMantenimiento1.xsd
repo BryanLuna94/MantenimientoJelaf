@@ -61,6 +61,30 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="InformeList" nillable="true" type="tns:InformeList" />
+  <xs:complexType name="ArrayOfODMdList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ODMdList" nillable="true" type="tns:ODMdList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfODMdList" nillable="true" type="tns:ArrayOfODMdList" />
+  <xs:complexType name="ODMdList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Atendida" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BenNombreSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ben_Codigo_Solicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_Componente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_CtrlBolsaRepInforme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mer_CodOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mer_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mer_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODM_FechMovimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODMd_Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ODMd_Codigo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ODMdList" nillable="true" type="tns:ODMdList" />
   <xs:complexType name="ArrayOfBusquedaArticuloList">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="BusquedaArticuloList" nillable="true" type="tns:BusquedaArticuloList" />

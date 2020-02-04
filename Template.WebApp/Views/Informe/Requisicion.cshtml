@@ -15,26 +15,42 @@
                                     <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
                                         <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Almacén:</label>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
-                                            <v-select v-model="objBolsa.CodAlmacen"
+                                            <v-select v-model="objBolsa.CodiAlmacen"
                                                       :options="list.Almacenes"
                                                       index="Codigo"
                                                       label="Descripcion"
-                                                      id="CodAlmacen"
-                                                      ref="CodAlmacen">
+                                                      @@keydown.13.native.prevent="$refs.Codigo.$refs.search.focus()"
+                                                      id="CodiAlmacen"
+                                                      ref="CodiAlmacen">
+                                            </v-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Artículo:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <v-select v-model="objBolsa.Codigo"
+                                                      :options="list.Articulos"
+                                                      index="Codigo"
+                                                      @@search="getArticulos"
+                                                      label="Descripcion"
+                                                      @@keydown.13.native.prevent="$refs.FechaInicioBolsa.focus()"
+                                                      id="Codigo"
+                                                      placeholder="--Seleccione--"
+                                                      ref="Codigo">
                                             </v-select>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
-                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Artículo:</label>
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">F. Pedido:</label>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
-                                            <input v-model="objBolsa.Codigo"
-                                                   class="form-control"
-                                                   id="Codigo"
-                                                   ref="Codigo">
-                                            />
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
-                                            <button type="button" v-on:click.prevent="BuscarArticulo()" class="btn waves-effect waves-light btn-inverse">...</button>
+                                            <input v-model="objBolsa.FechaInicio"
+                                                   class="dt-picker form-control"
+                                                   id="FechaInicioBolsa"
+                                                   ref="FechaInicioBolsa"
+                                                   @@keydown.13.native.prevent="$refs.Cantidad.focus()"
+                                                   @@blur="objBolsa.FechaInicio = $event.target.value; objBolsa.FechaInicio = validateDateFormat($event.target.value) || _FechaActual"
+                                                   placeholder="Fecha Inicio"
+                                                   type="text">
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
@@ -42,15 +58,16 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
                                             <input v-model="objBolsa.Cantidad"
                                                    class="form-control"
-                                                      id="Cantidad"
-                                                      ref="CodAlmacen">
-                                            />
+                                                   @@keydown.13.native.prevent="$refs.btnGuardarBolsa.focus()"
+                                                   id="Cantidad"
+                                                   ref="CodAlmacen">
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
                                         <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">_</label>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
-                                            <button type="button" v-on:click.prevent="" class="btn waves-effect waves-light btn-inverse">GUARDAR</button>
+                                            <button type="button" v-bind:disabled="!FullBolsa" ref="btnGuardarBolsa" v-on:click.prevent="InsertBolsa()" class="btn waves-effect waves-light btn-inverse">GUARDAR</button>
+                                            <button type="button" v-bind:disabled="!FullAgregarBolsas" v-on:click.prevent="AgregarBolsas" class="btn waves-effect waves-light btn-inverse">AGREGAR BOLSA</button>
                                         </div>
                                     </div>
                                 </div>
@@ -66,29 +83,20 @@
                                         <td>Repuesto</td>
                                         <td>Cantidad</td>
                                         <td>Consumo</td>
-                                        <td>Solicitado</td>
-                                        <td>Saldo</td>
-                                        <td>Tipo</td>
-                                        <td>Almacén</td>
                                         <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="header" v-for="Bolsa in list.Bolsas">
-                                        <td width="5%" align="center">{{ Bolsa.Fecha }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Codigo }}</td>
-                                        <td width="10%" align="center">{{ Bolsa.Original }}</td>
-                                        <td width="35%" align="center">{{ Bolsa.Descripcion }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Cantidad }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Consumo }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Solicitado }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Saldo }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Tipo }}</td>
-                                        <td width="5%" align="center">{{ Bolsa.Almacen }}</td>
+                                        <td width="10%" align="center">{{ Bolsa.ODM_FechMovimiento }}</td>
+                                        <td width="10%" align="center">{{ Bolsa.Mer_Codigo }}</td>
+                                        <td width="15%" align="center">{{ Bolsa.Mer_CodOriginal }}</td>
+                                        <td width="40%" align="center">{{ Bolsa.Mer_Nombre }}</td>
+                                        <td width="10%" align="center">{{ Bolsa.ODMd_Cantidad }}</td>
+                                        <td width="10%" align="center">{{ Bolsa.Atendida }}</td>
                                         <td width="5%"><a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="DeleteBolsa(Bolsa)">Del</a></td>
                                     </tr>
                                 </tbody>
-
                             </table>
 
                         </div>

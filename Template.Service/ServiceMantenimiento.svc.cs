@@ -79,6 +79,11 @@ namespace Mantenimiento.Service
             return BaseLogic.ListAlmacenesAutocomplete(value);
         }
 
+        public Response<BaseResponse> ListArticulosAutocomplete(string idEmpresa, string idAlmacen, string value)
+        {
+            return BaseLogic.ListArticulosAutocomplete(idEmpresa, idAlmacen, value);
+        }
+
         #endregion
 
         #region LOGIN
@@ -429,6 +434,11 @@ namespace Mantenimiento.Service
             return FallasDLogic.ObtenerUltimaRevisionChofer(CodChofer);
         }
 
+        public async Task<Response<FallasDResponse>> AnularSolicitudRevision(string IdSolicitudRevision)
+        {
+            return await FallasDLogic.AnularSolicitudRevision(IdSolicitudRevision);
+        }
+
         #endregion
 
         #region AUXLIOMECANICO
@@ -532,9 +542,14 @@ namespace Mantenimiento.Service
             return InformeLogic.ListInformeTareas(IdInforme);
         }
 
-        public async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea)
+        public async Task<Response<InformeResponse>> AnularInforme(int IdInforme)
         {
-            return await InformeLogic.DeleteInformeTareas(IdInforme, IdTarea);
+            return await InformeLogic.AnularInforme(IdInforme);
+        }
+
+        public async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo)
+        {
+            return await InformeLogic.DeleteInformeTareas(IdInforme, IdTarea, IdTipMan, AreCodigo);
         }
 
         public async Task<Response<InformeResponse>> InsertInformeTareas(InformeRequest request)
@@ -587,14 +602,24 @@ namespace Mantenimiento.Service
             return InformeLogic.BusquedaArticulo(CodEmpresa, CodAlmacen);
         }
 
-        public async Task<Response<InformeResponse>> InsertBolsas(InformeRequest request)
+        public Response<InformeResponse> InsertBolsa(InformeRequest request)
         {
-            return await InformeLogic.InsertBolsas(request);
+            return InformeLogic.InsertBolsa(request);
         }
 
-        public Response<InformeResponse> AgregarBolsas(string CodAlmacen, int IdTarea, int IdInforme)
+        public Response<InformeResponse> AgregarBolsas(InformeRequest request)
         {
-            return InformeLogic.AgregarBolsas(CodAlmacen, IdTarea, IdInforme);
+            return InformeLogic.AgregarBolsas(request);
+        }
+
+        public Response<InformeResponse> ListBolsas(decimal IdInforme, string Ben_Codigo)
+        {
+            return InformeLogic.ListBolsas(IdInforme, Ben_Codigo);
+        }
+
+        public async Task<Response<InformeResponse>> DeleteBolsa(InformeRequest request)
+        {
+            return await InformeLogic.DeleteBolsa(request);
         }
 
         #endregion

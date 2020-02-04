@@ -221,5 +221,43 @@ namespace Mantenimiento.DataAccess
             return null;
         }
 
+        public static List<ArticuloTEntity> ListTraerBolsaRepuestos(int IdTarea)
+        {
+            List<ArticuloTEntity> List = new List<ArticuloTEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_tb_ArticuloTareas_TraerBolsaRepuestos", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pIdTarea", SqlDbType.Int).Value = IdTarea;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new ArticuloTEntity
+                            {
+                                IdArtTar = DataReader.GetIntValue(dr, "IdArtTar"),
+                                IdTarea = DataReader.GetIntValue(dr, "IdTarea"),
+                                Cod_Mer = DataReader.GetIntValue(dr, "Cod_Mer"),
+                                Cantidad = DataReader.GetIntValue(dr, "Cantidad"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
     }
 }

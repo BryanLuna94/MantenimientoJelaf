@@ -188,4 +188,3 @@ D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.WebApp\obj\Debug\Manteni
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.WebApp\obj\Debug\Mantenimiento.WebApp.csproj.CopyComplete
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.WebApp\obj\Debug\Template.WebApp.dll
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.WebApp\obj\Debug\Template.WebApp.pdb
-D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.WebApp\obj\Debug\Mantenimiento.WebApp.csprojAssemblyReference.cache

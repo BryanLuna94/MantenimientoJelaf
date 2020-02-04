@@ -27,7 +27,7 @@ namespace Mantenimiento.DataAccess
                     cmd.Parameters.Add("@Id", SqlDbType.Int).Value = IdInforme;
                     cmd.Parameters.Add("@idtarea", SqlDbType.Int).Value = IdTarea;
                     cmd.Parameters.Add("@idmeca", SqlDbType.VarChar).Value = IdMecanico;
-                    cmd.Parameters.Add("@estado", SqlDbType.Int).Value = 99;
+                    cmd.Parameters.Add("@estado", SqlDbType.Int).Value = 1;
 
                     bool openConn = (con.State == ConnectionState.Open);
                     if (!openConn) { con.Open(); }
