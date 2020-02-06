@@ -48,7 +48,9 @@
                                     <tr class="header" v-for="Ayudante in list.Ayudantes">
                                         <td width="15%" align="center">{{ Ayudante.CodMecanico }}</td>
                                         <td width="80%" align="center">{{ Ayudante.Observacion }}</td>
-                                        <td width="5%"><a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="DeleteAyudante(Ayudante)">Del</a></td>
+                                        <td width="5%">
+                                            <button type="button" v-on:click.prevent="DeleteAyudante(Ayudante)" title="Eliminar" class="btn btn-danger btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
+                                        </td>
                                     </tr>
                                 </tbody>
 

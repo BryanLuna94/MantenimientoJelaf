@@ -29,7 +29,8 @@
             IdTarea: '',
             IdTipMan: '',
             Observacion: '',
-            FechaInicio: ''
+            FechaInicio: '',
+            Sistema: ''
         },
 
         objODM: {
@@ -47,7 +48,8 @@
             IdTarea: '',
             CodMecanico: '',
             FechaInicio: '',
-            FechaTermino: ''
+            FechaTermino: '',
+            Observacion: ''
         },
 
         objAyudante: {
@@ -314,8 +316,10 @@
                             if (res.data.Estado) {
                                 Notifications.Messages.success('Se eliminó registro exitosamente');
                                 _this.ClearInforme();
-                                _this.ClearMantenimiento();
-                                _this.ClearMecanico();
+                                //_this.ClearMantenimiento();
+                                _this.objMecanico = [];
+                                _this.objMantenimiento = [];
+                                //_this.ClearMecanico();
                                 _this.list.Mecanicos = [];
                                 _this.list.Mantenimientos = [];
                             }
@@ -568,7 +572,8 @@
                 .then(res => {
                     if (res.data.Estado) {
                         Notifications.Messages.success('Se grabó información exitosamente');
-                        this.ListInformeTareas();
+                        _this.ListInformeTareas();
+                        _this.ClearMantenimiento()
                     } else if (res.data.tipoNotificacion) {
                         ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
                     } else if (res.data.tip) {
@@ -632,8 +637,17 @@
             let _this = this;
             _this.objMecanico.IdTarea = itemMantenimiento.IdTarea;
             _this.objMecanico.IdTipMan = itemMantenimiento.IdTipMan;
+            _this.objMantenimiento.Sistema = itemMantenimiento.Mantenimiento;
             _this.ListMecanicos(itemMantenimiento.IdTarea);
             _this.getBeneficiarios('');
+        },
+
+        NuevoMantenimiento: async function () {
+
+            var _this = this;
+
+            _this.ClearMantenimiento();
+            _this.$refs.IdTarea.$refs.search.focus();
         },
 
         ClearMantenimiento: async function () {
@@ -644,7 +658,7 @@
             _this.objMantenimiento.IdTarea = '';
             _this.objMantenimiento.IdTipMan = '';
             _this.objMantenimiento.Observacion = '';
-            _this.objMantenimiento.FechaInicio = '';
+            
         },
 
         //FIN MANTENIMIENTO
@@ -721,7 +735,8 @@
                 .then(res => {
                     if (res.data.Estado) {
                         Notifications.Messages.success('Se grabó información exitosamente');
-                        this.ListMecanicos(_this.objMecanico.IdTarea);
+                        _this.ListMecanicos(_this.objMecanico.IdTarea);
+                        _this.ClearMecanico();
                     } else if (res.data.tipoNotificacion) {
                         ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
                     } else if (res.data.tip) {
@@ -775,11 +790,18 @@
 
             var _this = this;
 
-            _this.objMecanico.IdInforme = '';
-            _this.objMecanico.IdTarea = '';
             _this.objMecanico.CodMecanico = '';
             _this.objMecanico.FechaInicio = '';
             _this.objMecanico.FechaTermino = '';
+            _this.objMecanico.Observacion = '';
+        },
+
+        NuevoMecanico: async function () {
+
+            var _this = this;
+
+            _this.ClearMecanico();
+            _this.$refs.CodMecanico.$refs.search.focus();
         },
 
         //FIN MECANICO

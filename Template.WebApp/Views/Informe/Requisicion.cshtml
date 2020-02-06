@@ -94,7 +94,9 @@
                                         <td width="40%" align="center">{{ Bolsa.Mer_Nombre }}</td>
                                         <td width="10%" align="center">{{ Bolsa.ODMd_Cantidad }}</td>
                                         <td width="10%" align="center">{{ Bolsa.Atendida }}</td>
-                                        <td width="5%"><a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="DeleteBolsa(Bolsa)">Del</a></td>
+                                        <td width="5%">
+                                            <button type="button" v-on:click.prevent="DeleteBolsa(Bolsa)" title="Eliminar" class="btn btn-danger btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
