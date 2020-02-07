@@ -32,3 +32,9 @@ D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\bin\Debug\Mante
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\bin\Debug\Mantenimiento.Entities.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\bin\Debug\Mantenimiento.Entities.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Debug\Mantenimiento.Entities.pdb

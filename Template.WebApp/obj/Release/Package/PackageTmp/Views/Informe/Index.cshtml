@@ -1,0 +1,381 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    /**/
+
+    ViewBag.Navigation = "Informes";
+    ViewBag.Title = "Informes";
+    var UsuarioActual = DataSession.UserLoggedIn;
+    string FechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+}
+
+
+<!-- .row -->
+<div class="col-sm-12" id="app">
+    <div style="padding:1px;">
+        <!-- Modal -->
+        @Html.Partial("Buscador")
+        @Html.Partial("Ayudantes")
+        @Html.Partial("Requisicion")
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bg-theme white-box m-b-0">
+                <div class="row text-white">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="">
+
+                                <div class="form-group" style="margin-bottom:0px !important">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>N° Informe</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.NumeroInforme"
+                                                   v-mask="'#####'"
+                                                   readonly="readonly"
+                                                   id="NumeroInforme"
+                                                   ref="NumeroInforme">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>ID</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.IdInforme"
+                                                   v-mask="'#####'"
+                                                   readonly="readonly"
+                                                   id="IdInforme"
+                                                   ref="IdInforme">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>N° Orden</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.NumeroInforme"
+                                                   v-mask="'#####'"
+                                                   readonly="readonly"
+                                                   id="NumeroOrden"
+                                                   ref="NumeroOrden">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Tipo Informe</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.TipoInformeDesc"
+                                                   readonly="readonly"
+                                                   id="TipoInformeDesc"
+                                                   ref="TipoInformeDesc">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Unidad</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.Are_Nombre"
+                                                   readonly="readonly"
+                                                   id="Are_Nombre"
+                                                   ref="Are_Nombre">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Oficina</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.Oficina"
+                                                   readonly="readonly"
+                                                   id="Oficina"
+                                                   ref="Oficina">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group" style="margin-bottom:0px !important">
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Chofer</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.Chofer"
+                                                   readonly="readonly"
+                                                   id="Chofer"
+                                                   ref="Chofer">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Kmt</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.KmUnidad"
+                                                   readonly="readonly"
+                                                   id="KmUnidad"
+                                                   ref="KmUnidad">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Solicitante</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.Solicitante"
+                                                   readonly="readonly"
+                                                   id="Solicitante"
+                                                   ref="Solicitante">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Fecha</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.FechaStr"
+                                                   readonly="readonly"
+                                                   id="Fecha"
+                                                   ref="Fecha">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Hora</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.Hora"
+                                                   readonly="readonly"
+                                                   id="Hora"
+                                                   ref="Hora">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Odómetro(KM)</label>
+                                            <input class="form-control"
+                                                   v-model="objInforme.Kilometraje"
+                                                   readonly="readonly"
+                                                   id="Kilometraje"
+                                                   ref="Kilometraje">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group" style="margin-bottom:0px !important">
+                                    <div class="col-md-12">
+                                        <button type="button" v-on:click.prevent="ShowBuscador()" class="btn waves-effect waves-light btn-inverse">BUSCAR INFORME</button>
+                                        <button type="button" id="btnTractoCarreta" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarTractoCarreta()" class="btn waves-effect waves-light btn-inverse">IR A CARRETA</button>
+                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarCorrectivoPreventivo()" class="btn waves-effect waves-light btn-inverse">IR A PREVENTIVO</button>
+                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="AnularInforme()" class="btn waves-effect waves-light btn-inverse">ANULAR</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="white-box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="box-title">Mantenimiento</h3>
+                        <form class="form-horizontal">
+                            <div class="form-group m-b-0">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Sistema:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <v-select v-model="objMantenimiento.IdTarea"
+                                                      :options="list.Sistemas"
+                                                      index="Codigo"
+                                                      label="Descripcion"
+                                                      @@search="getSistemas($event.target.value)"
+                                                      @@keydown.13.native.prevent="$refs.FechaInicioMantenimiento.focus()"
+                                                      id="IdTarea"
+                                                      placeholder="--Seleccione--"
+                                                      ref="IdTarea">
+                                            </v-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Fecha Inicio:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <input v-model="objMantenimiento.FechaInicio"
+                                                   class="dt-picker form-control"
+                                                   id="FechaInicio"
+                                                   ref="FechaInicioMantenimiento"
+                                                   @@keydown.13.native.prevent="$refs.ObservacionMantenimiento.focus()"
+                                                   @@blur="objMantenimiento.FechaInicio = $event.target.value; objMantenimiento.FechaInicio = validateDateFormat($event.target.value) || _FechaActual"
+                                                   placeholder="Fecha Inicio"
+                                                   type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">_</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <button type="button" v-on:click.prevent="NuevoMantenimiento()" v-bind:disabled="!FullInforme" class="btn waves-effect waves-light btn-inverse">NUEVO</button>
+                                            <button type="button" v-on:click.prevent="saveMantenimiento()" v-bind:disabled="!FullMantenimiento" class="btn waves-effect waves-light btn-inverse">GUARDAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+                                    <div class="col-xs-6 col-sm-2 col-md-8 col-lg-8" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Observación:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <textarea class="form-control" ref="ObservacionMantenimiento" v-model="objMantenimiento.Observacion" rows="2"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                        <div class="table-responsive">
+                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableMantenimientos" ref="#tableMantenimientos">
+                                <thead>
+                                    <tr class="advanced-table active">
+                                        <td>Sistema</td>
+                                        <td>Tarea</td>
+                                        <td>Observacion</td>
+                                        <td>F. Inicio</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="header" v-for="Mantenimiento in list.Mantenimientos">
+                                        <td width="20%" align="center">
+                                            <a href="#" v-on:click.prevent="SelectMantenimiento(Mantenimiento)">{{ Mantenimiento.Mantenimiento }}</a>
+                                        </td>
+                                        <td width="15%" align="center">{{ Mantenimiento.Tarea }}</td>
+                                        <td width="40%" align="center">{{ Mantenimiento.Observacion }}</td>
+                                        <td width="10%" align="center">{{ Mantenimiento.FechaInicio }}</td>
+                                        <td width="5%">
+                                            <button type="button" v-on:click.prevent="DeleteMantenimiento(Mantenimiento)" title="Eliminar" class="btn btn-danger btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="box-title">Mecánicos : {{ objMantenimiento.Sistema }}</h3>
+                        <form class="form-horizontal">
+                            <div class="form-group m-b-0">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Mecánico:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <v-select v-model="objMecanico.CodMecanico"
+                                                      :options="list.Beneficiarios"
+                                                      index="Codigo"
+                                                      label="Descripcion"
+                                                      @@search="getBeneficiarios"
+                                                      @@keydown.13.native.prevent="$refs.FechaInicioMecanico.focus()"
+                                                      id="CodMecanico"
+                                                      placeholder="--Seleccione--"
+                                                      ref="CodMecanico">
+                                            </v-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Fecha Inicio:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <input v-model="objMecanico.FechaInicio"
+                                                   class="dtm-picker form-control"
+                                                   id="FechaInicioMecanico"
+                                                   ref="FechaInicioMecanico"
+                                                   @@keydown.13.native.prevent="$refs.FechaTermino.focus()"
+                                                   @@blur="objMecanico.FechaInicio = $event.target.value; objMecanico.FechaInicio = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                                   placeholder="Fecha Inicio"
+                                                   type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Fecha Término:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <input v-model="objMecanico.FechaTermino"
+                                                   class="dtm-picker form-control"
+                                                   id="FechaTermino"
+                                                   ref="FechaTermino"
+                                                   @@keydown.13.native.prevent="$refs.ObservacionMecanico.focus()"
+                                                   @@blur="objMecanico.FechaTermino = $event.target.value; objMecanico.FechaTermino = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                                   placeholder="Fecha Termino"
+                                                   type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+                                    <div class="col-xs-6 col-sm-2 col-md-8 col-lg-8" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Observación:</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <textarea class="form-control" ref="ObservacionMecanico" v-model="objMecanico.Observacion" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                        <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">_</label>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                            <button type="button" v-on:click.prevent="NuevoMecanico()" v-bind:disabled="!FullNuevoMecanico" class="btn waves-effect waves-light btn-inverse">NUEVO</button>
+                                            <button type="button" v-on:click.prevent="saveMecanico()" ref="GuardarMecanico" v-bind:disabled="!FullMecanico" class="btn waves-effect waves-light btn-inverse">GUARDAR</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                        <div class="table-responsive">
+                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableMecanico" ref="#tableMecanico">
+                                <thead>
+                                    <tr class="advanced-table active">
+                                        <td>Mecánico</td>
+                                        <td>F. Inicio</td>
+                                        <td>F. Termino</td>
+                                        <td>Observación</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="header" v-for="Mecanico in list.Mecanicos">
+                                        <td width="15%" align="center">
+                                            <a href="#">{{ Mecanico.Mecanico }}</a>
+                                        </td>
+                                        <td width="10%" align="center">{{ Mecanico.FechaInicio }}</td>
+                                        <td width="10%" align="center">{{ Mecanico.FechaTermino }}</td>
+                                        <td width="40%" align="center">{{ Mecanico.Observacion }}</td>
+                                        <td width="20%">
+                                            <button type="button" v-on:click.prevent="DeleteMecanico(Mecanico)" title="Eliminar" class="btn btn-danger btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
+                                            <button type="button" v-on:click.prevent="ShowAyudantes(Mecanico)" title="Ayudantes" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-user"></i></button>
+                                            <button type="button" v-on:click.prevent="ShowRequisicion(Mecanico)" title="Requisición" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-pencil-alt"></i></button>                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+
+</div>
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+
+    <script>
+        let _FechaActual = '@FechaActual'
+        let _Sucursal = '@UsuarioActual.Sucursal'
+    </script>
+    <script src="~/wwwroot/js/Vue/Views/Informe.js"></script>
+
+}

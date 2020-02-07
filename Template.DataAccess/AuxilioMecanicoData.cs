@@ -147,6 +147,7 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@pCausa", SqlDbType.VarChar).Value = objEntidad.Causa;
                         cmd.Parameters.Add("@pIdPlan", SqlDbType.Int).Value = objEntidad.IdPlan;
                         cmd.Parameters.Add("@pID_Tb_AuxilioMecanico", SqlDbType.Int).Value = 0;
+                        cmd.Parameters["@pID_Tb_AuxilioMecanico"].Direction = ParameterDirection.Output;
                         await cmd.ExecuteNonQueryAsync();
                         nuevoId = Convert.ToInt32(cmd.Parameters["@pID_Tb_AuxilioMecanico"].Value);
                         cmd.Dispose();

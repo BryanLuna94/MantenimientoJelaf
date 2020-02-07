@@ -45,7 +45,8 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@ODM_Informe", SqlDbType.Decimal).Value = objEntidad.ODM_Informe;
                         cmd.Parameters.Add("@ODM_Estado", SqlDbType.VarChar).Value = objEntidad.ODM_Estado;
                         cmd.Parameters.Add("@IdTareaMecanicos", SqlDbType.Int).Value = objEntidad.IdTareaMecanicos;
-                        cmd.Parameters.Add("@ODM_Codigo", SqlDbType.VarChar).Value = 0;
+                        cmd.Parameters.Add("@ODM_Codigo", SqlDbType.Decimal).Value = 0;
+                        cmd.Parameters["@ODM_Codigo"].Direction = ParameterDirection.Output;
                         cmd.ExecuteNonQuery();
                         nuevoId = Convert.ToDecimal(cmd.Parameters["@ODM_Codigo"].Value);
                         cmd.Dispose();

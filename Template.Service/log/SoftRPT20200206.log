@@ -1,0 +1,238 @@
+2020-02-06 11:17:43,463 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-06 11:17:45,531 [25] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 30
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-06 11:17:53,264 [29] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: Error al convertir el valor del parámetro de String a Int32. ---> System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   en System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   en System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   en System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   en System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   en System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Int32 startCount, Boolean inSchema, SqlParameterCollection parameters)
+   en System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader()
+   en Mantenimiento.DataAccess.InformeData.ListInformeSoloMiUsuario(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 88
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 33
+2020-02-06 11:17:56,258 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:17:57,244 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:17:57,414 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:17:57,612 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:07,418 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:41,176 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:41,850 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:42,010 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:42,136 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:42,476 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:42,632 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:42,793 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:18:56,884 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:19:03,091 [13] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error de conversión al convertir una cadena de caracteres al tipo de datos smalldatetime.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 38
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+ClientConnectionId:290f142e-ab87-45b4-bfde-2ea208a4bcbf
+Error Number:295,State:3,Class:16
+2020-02-06 11:51:10,467 [94] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-06 11:54:11,238 [91] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-06 11:55:47,229 [88] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-06 11:59:24,582 [71] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39

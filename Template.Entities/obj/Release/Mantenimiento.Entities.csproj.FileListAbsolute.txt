@@ -9,3 +9,9 @@ D:\BryanLuna\MANTENIMIENTO\Template.Entities\bin\Release\Mantenimiento.Entities.
 D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Release\Mantenimiento.Entities.csprojAssemblyReference.cache
 D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Release\Mantenimiento.Entities.dll
 D:\BryanLuna\MANTENIMIENTO\Template.Entities\obj\Release\Mantenimiento.Entities.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\bin\Release\Mantenimiento.Entities.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\bin\Release\Mantenimiento.Entities.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Release\Mantenimiento.Entities.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Release\Mantenimiento.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Release\Mantenimiento.Entities.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Entities\obj\Release\Mantenimiento.Entities.pdb

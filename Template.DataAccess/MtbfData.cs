@@ -107,6 +107,7 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@pFechaHoraRegistro", SqlDbType.DateTime).Value = objEntidad.FechaHoraRegistro;
                         cmd.Parameters.Add("@pUsuarioRegistro", SqlDbType.VarChar).Value = objEntidad.UsuarioRegistro;
                         cmd.Parameters.Add("@pIdMtbf", SqlDbType.Int).Value = 0;
+                        cmd.Parameters["@pIdMtbf"].Direction = ParameterDirection.Output;
                         await cmd.ExecuteNonQueryAsync();
                         nuevoId = Convert.ToInt32(cmd.Parameters["@pIdMtbf"].Value);
                         cmd.Dispose();
