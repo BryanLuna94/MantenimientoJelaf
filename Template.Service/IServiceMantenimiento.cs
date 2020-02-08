@@ -453,6 +453,10 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "POST", UriTemplate = "AnularPreventivo", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<OrdenMasivaResponse>> AnularPreventivo(OrdenMasivaRequest request);
 
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectInformePorNumero", ResponseFormat = WebMessageFormat.Json)]
+        Response<OrdenMasivaResponse> SelectInformePorNumero(decimal NumeroInforme, string Tipo);
+
         #endregion
 
         #region INFORME

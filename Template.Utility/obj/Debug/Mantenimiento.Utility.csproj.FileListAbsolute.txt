@@ -56,4 +56,3 @@ D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Manten
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Template.Utility.dll
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Template.Utility.pdb
-D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache

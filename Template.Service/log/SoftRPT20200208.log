@@ -1,0 +1,69 @@
+2020-02-08 00:30:18,682 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-08 00:41:54,553 [37] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-08 01:16:20,821 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): El procedimiento o la función 'Usp_Tb_Infome_Find_' esperaba el parámetro '@id', que no se ha especificado.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader()
+   en Mantenimiento.DataAccess.InformeData.SelectInformePorNumero(Decimal NumeroInforme, String Tipo) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 458
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.SelectInformePorNumero(Decimal NumeroInforme, String Tipo) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 368
+ClientConnectionId:bf5482a8-cff2-4941-a3af-fcebbafd0034
+Error Number:201,State:4,Class:16
+2020-02-08 01:38:59,565 [12] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:39:45,818 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:40:23,325 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:42:54,197 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:44:11,620 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:45:58,305 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:46:24,826 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:46:38,395 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:46:59,093 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:51:46,214 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72
+2020-02-08 01:51:52,047 [52] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-08 02:01:36,819 [48] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 72

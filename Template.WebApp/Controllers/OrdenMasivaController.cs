@@ -113,5 +113,24 @@ namespace Mantenimiento.WebApp.Controllers
                 return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
             }
         }
+
+        public async Task<ActionResult> SelectInformePorNumero(decimal NumeroInforme, string Tipo)
+        {
+            try
+            {
+                var res = await _ServiceMantenimiento.SelectInformePorNumeroAsync(NumeroInforme, Tipo);
+                Session["IdInforme"] = res.Valor.Informe.IdInforme;
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

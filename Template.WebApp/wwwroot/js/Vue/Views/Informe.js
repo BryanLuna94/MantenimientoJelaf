@@ -86,6 +86,10 @@
             IdTipMan: ''
         },
 
+        buttonCorrectivoPreventivo: {
+            text: 'IR A PREVENTIVO'
+        },
+
         list: {
             Informes: [],
             Usuarios: [],
@@ -102,11 +106,12 @@
 
     },
     created: async function () {
-        //await this.ListOrdenMasiva();
-        //await this.getFlotas('');
-        //await this.getBeneficiarios('');
-        //await this.getOrigenes('');
-        //await this.getDestinos('');
+        
+        let _this = this;
+
+        if (_IdInformeSesion !== '') {
+            _this.SelectInforme(_IdInformeSesion);
+        }
     },
     mounted: async function () {
         /*this.$nextTick(() => {
@@ -406,10 +411,10 @@
             return existe;
         },
 
-        SelectInforme: async function (itemInforme) {
+        SelectInforme: async function (idInforme) {
 
             let _this = this;
-            let _idInforme = itemInforme.IdInforme;
+            let _idInforme = parseInt(idInforme);
 
             //_this.createAuxilioMecanico = false;
 
@@ -433,16 +438,23 @@
                         _this.objInforme.NumeroInforme = res.data.Valor.Informe.NumeroInforme;
                         _this.objInforme.Solicitante = res.data.Valor.Informe.Solicitante;
                         _this.objInforme.Kilometraje = res.data.Valor.Informe.Kilometraje;
-                        _this.objInforme.TipoInformeDesc = (res.data.Valor.Informe.TipoInforme === "1") ? "Correctivo" : "Preventivo";
-                        _this.objInforme.TipoU = itemInforme.TIPOU;
+                        _this.objInforme.TipoU = res.data.Valor.Informe.TIPOU;
+
+                        if (_this.objInforme.TipoInforme === "1") {
+                            _this.buttonCorrectivoPreventivo.text = "IR A PREVENTIVO";
+                            _this.objInforme.TipoInformeDesc = "Correctivo";
+                        } else {
+                            _this.buttonCorrectivoPreventivo.text = "IR A CORRECTIVO";
+                            _this.objInforme.TipoInformeDesc = "Preventivo";
+                        }
+
+                        _this.getSistemas('');
+                        _this.ListInformeTareas();
+                        _this.close(1);
                     }
                 }).catch(error => {
-                    Notifications.Messages.error('Ocurrió una excepción en el metodo ObtenerInforme');
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo SelectInforme');
                 });
-
-            _this.getSistemas('');
-            _this.ListInformeTareas(_idInforme);
-            _this.close(1);
         },
 
         CambiarTractoCarreta: async function () {
@@ -479,16 +491,13 @@
 
             if (existe === true) {
                 if (tipoInforme === "1") { //CORRECTIVO
-                    $('#btnCorrectivoPreventivo').text('IR A CORRECTIVO');
+                    _this.buttonCorrectivoPreventivo.text = 'IR A CORRECTIVO';
                 } else {
-                    $('#btnCorrectivoPreventivo').text('IR A PREVENTIVO');
+                    _this.buttonCorrectivoPreventivo.text = 'IR A PREVENTIVO';
                 }
             } else {
                 Notifications.Messages.warning("No se encontró registros");
             }
-
-
-
         },
 
         //INICIO MANTENIMIENTO
@@ -600,7 +609,6 @@
             }).then((result) => {
                 if (result.value) {
 
-                    debugger;
                     //swal-end
                     axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/DeleteInformeTarea'),
                         {

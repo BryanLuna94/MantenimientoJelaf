@@ -29,5 +29,6 @@
         public string Solicitante { get; set; }
         public string IdSolicitudRevision { get; set; }
         public decimal Kilometraje { get; set; }
+        public int TIPOU { get; set; }
     }
 }

@@ -58,7 +58,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
                                     <input class="form-control"
                                            v-model="objAuxilioMecanico.Kmt_unidad"
-                                           v-mask="'#####'"
+                                           v-mask="'###########'"
                                            id="Kmt_unidad"
                                            required
                                            ref="Kmt_unidad"
@@ -160,21 +160,23 @@
                                     </v-select>
                                 </div>
                             </div>
+
                             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
-                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Falla:</label>
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Servicio:</label>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
                                     <input class="form-control"
-                                           v-model="objAuxilioMecanico.Falla"
-                                           id="Falla"
-                                           ref="Falla"
+                                           v-model="objAuxilioMecanico.Servicio"
+                                           id="Servicio"
+                                           ref="Servicio"
                                            @@keydown.13.prevent="$refs.Ben_codigo.$refs.search.focus()">
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
 
-                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
                                 <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Mecánico:</label>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
                                     <v-select v-model="objAuxilioMecanico.Ben_codigo"
@@ -190,28 +192,34 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
-                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Servicio:</label>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Falla:</label>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
                                     <input class="form-control"
-                                           v-model="objAuxilioMecanico.Servicio"
-                                           id="Servicio"
-                                           ref="Servicio"
+                                           v-model="objAuxilioMecanico.Falla"
+                                           id="Falla"
+                                           ref="Falla"
                                            @@keydown.13.prevent="$refs.Kmt_Perdido.focus()">
                                 </div>
                             </div>
+
+                            
 
                             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
                                 <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Km. Perdido:</label>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
                                     <input class="form-control text-right"
                                            v-model="objAuxilioMecanico.Kmt_Perdido"
-                                           v-mask="'#####'"
+                                           v-mask="'###########'"
                                            id="Kmt_Perdido"
                                            ref="Kmt_Perdido"
                                            @@keydown.13.prevent="$refs.CambioTracto.focus()">
                                 </div>
                             </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
 
                             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
                                 <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Cambio Tracto:</label>
@@ -252,10 +260,6 @@
                                     </v-select>
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
 
                             <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
                                 <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Causa:</label>

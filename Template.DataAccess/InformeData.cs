@@ -204,7 +204,8 @@ namespace Mantenimiento.DataAccess
                                 Are_Observacion = DataReader.GetStringValue(dr, "are_observacion"),
                                 IdUndAlerta = DataReader.GetIntValue(dr, "IdUndAlerta"),
                                 NumeroInforme = DataReader.GetIntValue(dr, "NumeroInforme"),
-                                Solicitante = DataReader.GetStringValue(dr, "Solicitante")
+                                Solicitante = DataReader.GetStringValue(dr, "Solicitante"),
+                                TIPOU = DataReader.GetIntValue(dr, "TIPOU")
                             };
                         }
 
@@ -442,5 +443,40 @@ namespace Mantenimiento.DataAccess
             return null;
 
         }
+
+        public static InformeEntity SelectInformePorNumero(decimal NumeroInforme, string Tipo)
+        {
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_SEL_tb_Informe_BuscarPorNumero", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pNumeroInforme", SqlDbType.Decimal).Value = NumeroInforme;
+                    cmd.Parameters.Add("@pTipo", SqlDbType.VarChar).Value = Tipo;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            return new InformeEntity
+                            {
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme")
+                            };
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return null;
+        }
+
     }
 }

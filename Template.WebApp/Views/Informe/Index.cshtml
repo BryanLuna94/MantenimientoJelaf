@@ -161,7 +161,7 @@
                                     <div class="col-md-12">
                                         <button type="button" v-on:click.prevent="ShowBuscador()" class="btn waves-effect waves-light btn-inverse">BUSCAR INFORME</button>
                                         <button type="button" id="btnTractoCarreta" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarTractoCarreta()" class="btn waves-effect waves-light btn-inverse">IR A CARRETA</button>
-                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarCorrectivoPreventivo()" class="btn waves-effect waves-light btn-inverse">IR A PREVENTIVO</button>
+                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarCorrectivoPreventivo()" class="btn waves-effect waves-light btn-inverse">{{ buttonCorrectivoPreventivo.text }}</button>
                                         <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="AnularInforme()" class="btn waves-effect waves-light btn-inverse">ANULAR</button>
                                     </div>
                                 </div>
@@ -375,6 +375,7 @@
     <script>
         let _FechaActual = '@FechaActual'
         let _Sucursal = '@UsuarioActual.Sucursal'
+        let _IdInformeSesion = '@Session["IdInforme"]'
     </script>
     <script src="~/wwwroot/js/Vue/Views/Informe.js"></script>
 

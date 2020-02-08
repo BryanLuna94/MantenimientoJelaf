@@ -41,8 +41,21 @@ namespace Mantenimiento.WebApp.Controllers
 
         public async Task<ActionResult> SelectInforme(int IdInforme)
         {
-            var res = await _ServiceMantenimiento.SelectInformeAsync(IdInforme);
-            return Json(res, JsonRequestBehavior.AllowGet);
+            try
+            {
+                var res = await _ServiceMantenimiento.SelectInformeAsync(IdInforme);
+                Session.Remove("IdInforme");
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
         }
 
         public async Task<ActionResult> SelectInformeCambiar(decimal NumeroInforme, string TipoInforme, int TipoU)

@@ -517,6 +517,11 @@ namespace Mantenimiento.Service
             return await OrdenMasivaLogic.AnularPreventivo(request);
         }
 
+        public Response<OrdenMasivaResponse> SelectInformePorNumero(decimal NumeroInforme, string Tipo)
+        {
+            return OrdenMasivaLogic.SelectInformePorNumero(NumeroInforme, Tipo);
+        }
+
 
         #endregion
 
