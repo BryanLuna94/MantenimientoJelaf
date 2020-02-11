@@ -334,6 +334,43 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
+        public static List<BaseEntity> ListTareasPreventivoAutocomplete(string cod_bus, string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_Tb_Tareas_Preventivo_Listar_Autocomplete", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@codbus", SqlDbType.VarChar, 10).Value = cod_bus;
+                    cmd.Parameters.Add("@descripcion", SqlDbType.VarChar, 100).Value = (value != null) ? value : string.Empty;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "Descripcion"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
         public static List<BaseEntity> ListBeneficiarioAutocomplete(string value)
         {
             List<BaseEntity> List = new List<BaseEntity>();

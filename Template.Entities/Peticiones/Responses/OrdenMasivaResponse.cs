@@ -10,5 +10,7 @@ namespace Mantenimiento.Entities.Peticiones.Responses
     {
         [DataMember]
         public List<OrdenMasivaList> List { get; set; }
+        [DataMember]
+        public InformeEntity Informe { get; set; }
     }
 }

@@ -52,6 +52,10 @@ namespace Mantenimiento.Service
         Response<BaseResponse> ListTareasAutocomplete(string value);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareasPreventivoAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListTareasPreventivoAutocomplete(string cod_bus, string value);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListBeneficiarioAutocomplete", ResponseFormat = WebMessageFormat.Json)]
         Response<BaseResponse> ListBeneficiarioAutocomplete(string value);
 
@@ -452,6 +456,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "AnularPreventivo", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<OrdenMasivaResponse>> AnularPreventivo(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectInformePorNumero", ResponseFormat = WebMessageFormat.Json)]
+        Response<OrdenMasivaResponse> SelectInformePorNumero(decimal NumeroInforme, string Tipo);
 
         #endregion
 

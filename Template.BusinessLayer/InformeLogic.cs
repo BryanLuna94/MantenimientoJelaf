@@ -438,6 +438,16 @@ namespace Mantenimiento.BusinessLayer
             {
                 objTareaMecanico = request.TareaMecanico;
 
+                var fechaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortDateString();
+                var fechaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortDateString();
+                var horaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortTimeString();
+                var horaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortTimeString();
+
+                objTareaMecanico.FechaTermino = fechaTermino;
+                objTareaMecanico.FechaInicio = fechaTermino;
+                objTareaMecanico.HoraInicio = horaInicio;
+                objTareaMecanico.HoraTermino = horaTermino;
+
                 await TareaMecanicoData.UpdateTareaMecanico(objTareaMecanico);
 
                 response = new Response<InformeResponse>

@@ -66,7 +66,22 @@
             }
         },
 
-        updateCheckall: function () {
+        updateCheckall: function (ordenMasiva) {
+
+            let lstIguales = this.list.OrdenMasiva.filter(function (item) {
+                return item.CODI_PROGRAMACION_REAL === ordenMasiva.CODI_PROGRAMACION_REAL;
+            });
+
+            for (var key in lstIguales) {
+                let existe = this.list.Seleccionados.filter(function (itemSelec) {
+                    return itemSelec === lstIguales[key];
+                });
+
+                if (existe.length === 0) {
+                    this.list.Seleccionados.push(lstIguales[key]);
+                }
+            }
+
             if (this.list.Seleccionados.length === this.list.OrdenMasiva.length) {
                 this.isCheckAll = true;
             } else {
@@ -326,6 +341,31 @@
 
 
             })
+        },
+
+        RedirectInforme: async function (numero, tipo) {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/SelectInformePorNumero'), {
+                params:
+                {
+                    NumeroInforme: numero,
+                    Tipo: tipo
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        window.location.href = _rutaInforme;
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo RedirectInforme');
+                });
+           
         },
     },
 

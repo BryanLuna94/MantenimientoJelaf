@@ -176,7 +176,7 @@
                         <tbody>
                             <tr class="header" v-for="OrdenMasiva in list.OrdenMasiva">
                                 <td width="2%" align="center">
-                                    <input type="checkbox" v-bind:value='OrdenMasiva' v-model="list.Seleccionados" @@change='updateCheckall()'>
+                                    <input type="checkbox" v-bind:value='OrdenMasiva' v-model="list.Seleccionados" @@change='updateCheckall(OrdenMasiva)'>
                                 </td>
                                 <td width="4%" align="center">{{ OrdenMasiva.BusPlaca }}</td>
                                 <td width="5%" align="center">{{ OrdenMasiva.Origen }}</td>
@@ -188,8 +188,8 @@
                                 <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="OrdenMasiva.Generado" /></td>
                                 <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="OrdenMasiva.Correctivo" /></td>
                                 <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="OrdenMasiva.Preventivo" /></td>
-                                <td width="5%" align="center">{{ OrdenMasiva.NumeroOrden }}</td>
-                                <td width="5%" align="center">{{ OrdenMasiva.NumeroMantenimiento }}</td>
+                                <td width="5%" align="center"><a href="javascript:void(0);" v-on:click.prevent="RedirectInforme(OrdenMasiva.NumeroOrden, 1)" /> {{ OrdenMasiva.NumeroOrden }}</a> </td>
+                                <td width="5%" align="center"><a href="javascript:void(0);" v-on:click.prevent="RedirectInforme(OrdenMasiva.NumeroMantenimiento, 0)" />{{ OrdenMasiva.NumeroMantenimiento }}</a> </td>
                                 <td width="5%">{{ OrdenMasiva.Empresa }}</td>
                                 <td width="13%">{{ OrdenMasiva.Glosa }}</td>
                                 <td width="5%" align="center">{{ OrdenMasiva.Odometro }}</td>
@@ -219,6 +219,7 @@
 
     <script>
         let _FechaActual = '@FechaActual'
+        let _rutaInforme = '@Url.Action("Index", "Informe")'
     </script>
     <script src="~/wwwroot/js/Vue/Views/OrdenMasiva.js"></script>
 

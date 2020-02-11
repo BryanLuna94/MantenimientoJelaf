@@ -44,6 +44,7 @@
         },
 
         objMecanico: {
+            IdTareaMecanicos: 0,
             IdInforme: '',
             IdTarea: '',
             CodMecanico: '',
@@ -86,6 +87,10 @@
             IdTipMan: ''
         },
 
+        buttonCorrectivoPreventivo: {
+            text: 'IR A PREVENTIVO'
+        },
+
         list: {
             Informes: [],
             Usuarios: [],
@@ -102,11 +107,12 @@
 
     },
     created: async function () {
-        //await this.ListOrdenMasiva();
-        //await this.getFlotas('');
-        //await this.getBeneficiarios('');
-        //await this.getOrigenes('');
-        //await this.getDestinos('');
+
+        let _this = this;
+
+        if (_IdInformeSesion !== '') {
+            _this.SelectInforme(_IdInformeSesion);
+        }
     },
     mounted: async function () {
         /*this.$nextTick(() => {
@@ -189,14 +195,39 @@
         getSistemas: async function (value) {
 
             let _this = this;
-            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
-                .then(res => {
-                    if (res.data.Estado) {
-                        _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
+
+            if (_this.objInforme.TipoInforme === "1") {
+
+                await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
+                    .then(res => {
+                        if (res.data.Estado) {
+                            _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
+                        }
+                    }).catch(error => {
+                        Notifications.Messages.error('Ocurrió una excepción en el metodo ListSistemas');
+                    });
+
+            } else {
+
+                let codBus = _this.objInforme.Are_Codigo;
+
+                await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasPreventivoAutocompleteAsync'), {
+                    params: {
+                        cod_bus: codBus,
+                        value: value
                     }
-                }).catch(error => {
-                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListSistemas');
-                });
+                })
+                    .then(res => {
+                        if (res.data.Estado) {
+                            _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
+                        }
+                    }).catch(error => {
+                        Notifications.Messages.error('Ocurrió una excepción en el metodo ListSistemas');
+                    });
+
+            }
+
+            
         },
 
         getAlmacenes: async function () {
@@ -394,7 +425,12 @@
                             _this.objInforme.TipoInformeDesc = (res.data.Valor.Informe.TipoInforme === "1") ? "Correctivo" : "Preventivo";
                             _this.objInforme.TipoU = res.data.Valor.Informe.Tipo;
                             existe = true;
+                            _this.objMecanico = [];
+                            _this.objMantenimiento = [];
+                            _this.list.Mecanicos = [];
+                            _this.list.Mantenimientos = [];
                             _this.ListInformeTareas();
+                            _this.getSistemas();
                         }
 
                     }
@@ -406,10 +442,10 @@
             return existe;
         },
 
-        SelectInforme: async function (itemInforme) {
+        SelectInforme: async function (idInforme) {
 
             let _this = this;
-            let _idInforme = itemInforme.IdInforme;
+            let _idInforme = parseInt(idInforme);
 
             //_this.createAuxilioMecanico = false;
 
@@ -433,16 +469,23 @@
                         _this.objInforme.NumeroInforme = res.data.Valor.Informe.NumeroInforme;
                         _this.objInforme.Solicitante = res.data.Valor.Informe.Solicitante;
                         _this.objInforme.Kilometraje = res.data.Valor.Informe.Kilometraje;
-                        _this.objInforme.TipoInformeDesc = (res.data.Valor.Informe.TipoInforme === "1") ? "Correctivo" : "Preventivo";
-                        _this.objInforme.TipoU = itemInforme.TIPOU;
+                        _this.objInforme.TipoU = res.data.Valor.Informe.TIPOU;
+
+                        if (_this.objInforme.TipoInforme === "1") {
+                            _this.buttonCorrectivoPreventivo.text = "IR A PREVENTIVO";
+                            _this.objInforme.TipoInformeDesc = "Correctivo";
+                        } else {
+                            _this.buttonCorrectivoPreventivo.text = "IR A CORRECTIVO";
+                            _this.objInforme.TipoInformeDesc = "Preventivo";
+                        }
+
+                        _this.getSistemas('');
+                        _this.ListInformeTareas();
+                        _this.close(1);
                     }
                 }).catch(error => {
-                    Notifications.Messages.error('Ocurrió una excepción en el metodo ObtenerInforme');
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo SelectInforme');
                 });
-
-            _this.getSistemas('');
-            _this.ListInformeTareas(_idInforme);
-            _this.close(1);
         },
 
         CambiarTractoCarreta: async function () {
@@ -479,16 +522,13 @@
 
             if (existe === true) {
                 if (tipoInforme === "1") { //CORRECTIVO
-                    $('#btnCorrectivoPreventivo').text('IR A CORRECTIVO');
+                    _this.buttonCorrectivoPreventivo.text = 'IR A CORRECTIVO';
                 } else {
-                    $('#btnCorrectivoPreventivo').text('IR A PREVENTIVO');
+                    _this.buttonCorrectivoPreventivo.text = 'IR A PREVENTIVO';
                 }
             } else {
                 Notifications.Messages.warning("No se encontró registros");
             }
-
-
-
         },
 
         //INICIO MANTENIMIENTO
@@ -600,7 +640,6 @@
             }).then((result) => {
                 if (result.value) {
 
-                    debugger;
                     //swal-end
                     axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/DeleteInformeTarea'),
                         {
@@ -636,6 +675,7 @@
 
             let _this = this;
             _this.objMecanico.IdTarea = itemMantenimiento.IdTarea;
+            _this.objMantenimiento.IdTarea = itemMantenimiento.IdTarea;
             _this.objMecanico.IdTipMan = itemMantenimiento.IdTipMan;
             _this.objMantenimiento.Sistema = itemMantenimiento.Mantenimiento;
             _this.ListMecanicos(itemMantenimiento.IdTarea);
@@ -658,7 +698,7 @@
             _this.objMantenimiento.IdTarea = '';
             _this.objMantenimiento.IdTipMan = '';
             _this.objMantenimiento.Observacion = '';
-            
+
         },
 
         //FIN MANTENIMIENTO
@@ -703,16 +743,41 @@
                 return;
             }
 
-            await _this.InsertMecanico();
+            if (_this.objMecanico.IdTareaMecanicos !== 0) {
+                await _this.UpdateMecanico();
+            } else {
+                await _this.InsertMecanico();
+            }
 
-            //if (this.createAuxilioMecanico) {
-            //    await this.InsertAuxilioMecanico();
-            //} else {
-            //    await this.UpdateAuxilioMecanico();
-            //}
         },
 
         UpdateMecanico: async function () {
+
+            let _this = this;
+
+            let data = {
+                TareaMecanico: _this.objMecanico
+            };
+
+            var json = JSON.stringify(data);
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/UpdateTareaMecanico'), {
+                json: json
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        _this.ListMecanicos(_this.objMecanico.IdTarea);
+                        _this.ClearMecanico();
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo InsertMantenimiento');
+                });
 
         },
 
@@ -790,6 +855,7 @@
 
             var _this = this;
 
+            _this.objMecanico.IdTareaMecanicos = 0;
             _this.objMecanico.CodMecanico = '';
             _this.objMecanico.FechaInicio = '';
             _this.objMecanico.FechaTermino = '';
@@ -802,6 +868,20 @@
 
             _this.ClearMecanico();
             _this.$refs.CodMecanico.$refs.search.focus();
+        },
+
+        SelectMecanico: async function (itemMecanico) {
+
+            let _this = this;
+
+            _this.objMecanico.IdTareaMecanicos = itemMecanico.IdTareaMecanicos;
+            _this.objMecanico.IdInforme = _this.objInforme.IdInforme;
+            _this.objMecanico.IdTarea = _this.objMantenimiento.IdTarea;
+            _this.objMecanico.IdTarea = _this.objMantenimiento.IdTarea;
+            _this.objMecanico.CodMecanico = itemMecanico.CodMecanico;
+            _this.objMecanico.FechaInicio = itemMecanico.FechaInicio;
+            _this.objMecanico.FechaTermino = itemMecanico.FechaTermino;
+            _this.objMecanico.Observacion = itemMecanico.Observacion;
         },
 
         //FIN MECANICO

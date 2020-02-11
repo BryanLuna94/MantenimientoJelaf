@@ -1,0 +1,50 @@
+2020-02-09 22:04:32,284 [30] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-09 22:04:48,674 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-09 22:06:01,434 [6] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-09 22:09:09,006 [36] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-09 22:21:39,093 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-09 22:25:41,965 [42] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39
+2020-02-09 22:26:06,432 [19] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Exception: El procedimiento o la función 'Usp_Tb_Tareamecanicos_Update' esperaba el parámetro '@Id', que no se ha especificado.
+   en Mantenimiento.DataAccess.TareaMecanicoData.<UpdateTareaMecanico>d__2.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\TareaMecanicoData.cs:línea 139
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en Mantenimiento.BusinessLayer.InformeLogic.<UpdateTareaMecanico>d__12.MoveNext() en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 452
+2020-02-09 22:29:39,149 [24] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39

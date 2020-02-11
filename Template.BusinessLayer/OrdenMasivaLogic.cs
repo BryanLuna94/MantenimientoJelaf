@@ -357,5 +357,35 @@ namespace Mantenimiento.BusinessLayer
                 return new Response<OrdenMasivaResponse>(false, null, Functions.MessageError(ex), false);
             }
         }
+
+        public static Response<OrdenMasivaResponse> SelectInformePorNumero(decimal NumeroInforme, string Tipo)
+        {
+            try
+            {
+                Response<OrdenMasivaResponse> response;
+                InformeEntity List;
+
+                List = InformeData.SelectInformePorNumero(NumeroInforme, Tipo);
+
+                if (List == null)
+                {
+                    BusinessException.Generar("No se encontró orden ó ésta ha sido anulada");
+                }
+
+                response = new Response<OrdenMasivaResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new OrdenMasivaResponse { Informe = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }
