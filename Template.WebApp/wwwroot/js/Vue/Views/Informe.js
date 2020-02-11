@@ -44,6 +44,7 @@
         },
 
         objMecanico: {
+            IdTareaMecanicos: 0,
             IdInforme: '',
             IdTarea: '',
             CodMecanico: '',
@@ -106,7 +107,7 @@
 
     },
     created: async function () {
-        
+
         let _this = this;
 
         if (_IdInformeSesion !== '') {
@@ -194,14 +195,39 @@
         getSistemas: async function (value) {
 
             let _this = this;
-            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
-                .then(res => {
-                    if (res.data.Estado) {
-                        _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
+
+            if (_this.objInforme.TipoInforme === "1") {
+
+                await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
+                    .then(res => {
+                        if (res.data.Estado) {
+                            _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
+                        }
+                    }).catch(error => {
+                        Notifications.Messages.error('Ocurrió una excepción en el metodo ListSistemas');
+                    });
+
+            } else {
+
+                let codBus = _this.objInforme.Are_Codigo;
+
+                await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasPreventivoAutocompleteAsync'), {
+                    params: {
+                        cod_bus: codBus,
+                        value: value
                     }
-                }).catch(error => {
-                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListSistemas');
-                });
+                })
+                    .then(res => {
+                        if (res.data.Estado) {
+                            _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
+                        }
+                    }).catch(error => {
+                        Notifications.Messages.error('Ocurrió una excepción en el metodo ListSistemas');
+                    });
+
+            }
+
+            
         },
 
         getAlmacenes: async function () {
@@ -399,7 +425,12 @@
                             _this.objInforme.TipoInformeDesc = (res.data.Valor.Informe.TipoInforme === "1") ? "Correctivo" : "Preventivo";
                             _this.objInforme.TipoU = res.data.Valor.Informe.Tipo;
                             existe = true;
+                            _this.objMecanico = [];
+                            _this.objMantenimiento = [];
+                            _this.list.Mecanicos = [];
+                            _this.list.Mantenimientos = [];
                             _this.ListInformeTareas();
+                            _this.getSistemas();
                         }
 
                     }
@@ -644,6 +675,7 @@
 
             let _this = this;
             _this.objMecanico.IdTarea = itemMantenimiento.IdTarea;
+            _this.objMantenimiento.IdTarea = itemMantenimiento.IdTarea;
             _this.objMecanico.IdTipMan = itemMantenimiento.IdTipMan;
             _this.objMantenimiento.Sistema = itemMantenimiento.Mantenimiento;
             _this.ListMecanicos(itemMantenimiento.IdTarea);
@@ -666,7 +698,7 @@
             _this.objMantenimiento.IdTarea = '';
             _this.objMantenimiento.IdTipMan = '';
             _this.objMantenimiento.Observacion = '';
-            
+
         },
 
         //FIN MANTENIMIENTO
@@ -711,16 +743,41 @@
                 return;
             }
 
-            await _this.InsertMecanico();
+            if (_this.objMecanico.IdTareaMecanicos !== 0) {
+                await _this.UpdateMecanico();
+            } else {
+                await _this.InsertMecanico();
+            }
 
-            //if (this.createAuxilioMecanico) {
-            //    await this.InsertAuxilioMecanico();
-            //} else {
-            //    await this.UpdateAuxilioMecanico();
-            //}
         },
 
         UpdateMecanico: async function () {
+
+            let _this = this;
+
+            let data = {
+                TareaMecanico: _this.objMecanico
+            };
+
+            var json = JSON.stringify(data);
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/UpdateTareaMecanico'), {
+                json: json
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        _this.ListMecanicos(_this.objMecanico.IdTarea);
+                        _this.ClearMecanico();
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo InsertMantenimiento');
+                });
 
         },
 
@@ -798,6 +855,7 @@
 
             var _this = this;
 
+            _this.objMecanico.IdTareaMecanicos = 0;
             _this.objMecanico.CodMecanico = '';
             _this.objMecanico.FechaInicio = '';
             _this.objMecanico.FechaTermino = '';
@@ -810,6 +868,20 @@
 
             _this.ClearMecanico();
             _this.$refs.CodMecanico.$refs.search.focus();
+        },
+
+        SelectMecanico: async function (itemMecanico) {
+
+            let _this = this;
+
+            _this.objMecanico.IdTareaMecanicos = itemMecanico.IdTareaMecanicos;
+            _this.objMecanico.IdInforme = _this.objInforme.IdInforme;
+            _this.objMecanico.IdTarea = _this.objMantenimiento.IdTarea;
+            _this.objMecanico.IdTarea = _this.objMantenimiento.IdTarea;
+            _this.objMecanico.CodMecanico = itemMecanico.CodMecanico;
+            _this.objMecanico.FechaInicio = itemMecanico.FechaInicio;
+            _this.objMecanico.FechaTermino = itemMecanico.FechaTermino;
+            _this.objMecanico.Observacion = itemMecanico.Observacion;
         },
 
         //FIN MECANICO

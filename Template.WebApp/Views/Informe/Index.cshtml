@@ -186,7 +186,7 @@
                                                       :options="list.Sistemas"
                                                       index="Codigo"
                                                       label="Descripcion"
-                                                      @@search="getSistemas($event.target.value)"
+                                                      @@search="getSistemas"
                                                       @@keydown.13.native.prevent="$refs.FechaInicioMantenimiento.focus()"
                                                       id="IdTarea"
                                                       placeholder="--Seleccione--"
@@ -337,7 +337,7 @@
                                 <tbody>
                                     <tr class="header" v-for="Mecanico in list.Mecanicos">
                                         <td width="15%" align="center">
-                                            <a href="#">{{ Mecanico.Mecanico }}</a>
+                                            <a href="#" v-on:click.prevent="SelectMecanico(Mecanico)">{{ Mecanico.Mecanico }}</a>
                                         </td>
                                         <td width="10%" align="center">{{ Mecanico.FechaInicio }}</td>
                                         <td width="10%" align="center">{{ Mecanico.FechaTermino }}</td>

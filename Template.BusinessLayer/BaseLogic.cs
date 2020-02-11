@@ -234,6 +234,31 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+        public static Response<BaseResponse> ListTareasPreventivoAutocomplete(string cod_bus, string value)
+        {
+            try
+            {
+                Response<BaseResponse> response;
+                List<BaseEntity> List;
+
+                List = BaseData.ListTareasPreventivoAutocomplete(cod_bus, value);
+
+                response = new Response<BaseResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new BaseResponse { List = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<BaseResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
         public static Response<BaseResponse> ListBeneficiarioAutocomplete(string value)
         {
             try

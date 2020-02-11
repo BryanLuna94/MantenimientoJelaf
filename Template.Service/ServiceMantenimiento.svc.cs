@@ -55,6 +55,11 @@ namespace Mantenimiento.Service
             return BaseLogic.ListTareasAutocomplete(value);
         }
 
+        public Response<BaseResponse> ListTareasPreventivoAutocomplete(string cod_bus, string value)
+        {
+            return BaseLogic.ListTareasPreventivoAutocomplete(cod_bus, value);
+        }
+
         public Response<BaseResponse> ListBeneficiarioAutocomplete(string value)
         {
             return BaseLogic.ListBeneficiarioAutocomplete(value);

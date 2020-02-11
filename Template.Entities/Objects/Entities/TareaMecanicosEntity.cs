@@ -11,5 +11,6 @@
         public string CodMecanico { get; set; }
         public string Observacion { get; set; }
         public int UsuarioRegistro { get; set; }
+        public int IdTareaMecanicos { get; set; }
     }
 }

@@ -87,6 +87,13 @@ namespace Mantenimiento.WebApp.Controllers
         }
 
         [HttpGet]
+        public async Task<ActionResult> ListTareasPreventivoAutocompleteAsync(string cod_bus,string value)
+        {
+            var res = await _ServiceMantenimiento.ListTareasPreventivoAutocompleteAsync(cod_bus, value);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
         public async Task<ActionResult> ListPuntoAtencionAutocomplete(string value)
         {
             var res = await _ServiceMantenimiento.ListPuntoAtencionAutocompleteAsync(value);

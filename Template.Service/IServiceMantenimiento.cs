@@ -52,6 +52,10 @@ namespace Mantenimiento.Service
         Response<BaseResponse> ListTareasAutocomplete(string value);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareasPreventivoAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListTareasPreventivoAutocomplete(string cod_bus, string value);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListBeneficiarioAutocomplete", ResponseFormat = WebMessageFormat.Json)]
         Response<BaseResponse> ListBeneficiarioAutocomplete(string value);
 

@@ -133,6 +133,8 @@
       <xs:element minOccurs="0" name="FechaTermino" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HoraInicio" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HoraTermino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
       <xs:element minOccurs="0" name="IdTareaMecanicos" type="xs:int" />
       <xs:element minOccurs="0" name="Mecanico" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />

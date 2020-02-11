@@ -36,16 +36,21 @@ namespace Mantenimiento.DataAccess
                     {
                         while (dr.Read())
                         {
+                            var fechaInicio = Convert.ToDateTime(DataReader.GetDateTimeValue(dr, "FechaInicio").Value.ToShortDateString() + " " + DataReader.GetStringValue(dr, "HoraInicio"));
+                            var fechaFin = Convert.ToDateTime(DataReader.GetDateTimeValue(dr, "FechaTermino").Value.ToShortDateString() + " " + DataReader.GetStringValue(dr, "HoraTermino"));
+
                             List.Add(new TareaMecanicoList
                             {
                                 CodMecanico = DataReader.GetStringValue(dr, "CodMecanico"),
-                                FechaInicio= DataReader.GetDateTimeValue(dr, "FechaInicio").Value.ToShortDateString(),
-                                FechaTermino = DataReader.GetDateTimeValue(dr, "FechaTermino").Value.ToShortDateString(),
+                                FechaInicio= fechaInicio.ToString("MM/dd/yyyy H:mm"),
+                                FechaTermino = fechaFin.ToString("MM/dd/yyyy H:mm"),
                                 HoraInicio = DataReader.GetStringValue(dr, "HoraInicio"),
                                 HoraTermino = DataReader.GetStringValue(dr, "HoraTermino"),
                                 IdTareaMecanicos = DataReader.GetIntValue(dr, "IdTareaMecanicos"),
                                 Mecanico = DataReader.GetStringValue(dr, "Mecanico"),
-                                Observacion = DataReader.GetStringValue(dr, "Observacion")
+                                Observacion = DataReader.GetStringValue(dr, "Observacion"),
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme"),
+                                IdTarea = DataReader.GetIntValue(dr, "IdTarea")
                             });
                         }
 
@@ -124,6 +129,7 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@UsuarioRegistro", SqlDbType.Int).Value = objEntidad.UsuarioRegistro;
                         cmd.Parameters.Add("@CostoInterno", SqlDbType.Decimal).Value = 0;
                         cmd.Parameters.Add("@CostoExterno", SqlDbType.Decimal).Value = 0;
+                        cmd.Parameters.Add("@Id", SqlDbType.Int).Value = objEntidad.IdTareaMecanicos;
                         await cmd.ExecuteNonQueryAsync();
                         cmd.Dispose();
                     }

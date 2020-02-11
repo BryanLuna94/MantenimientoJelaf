@@ -2697,6 +2697,9 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private int IdTareaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaMecanicosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ObservacionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2799,6 +2802,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((this.IdTareaField.Equals(value) != true)) {
                     this.IdTareaField = value;
                     this.RaisePropertyChanged("IdTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTareaMecanicos {
+            get {
+                return this.IdTareaMecanicosField;
+            }
+            set {
+                if ((this.IdTareaMecanicosField.Equals(value) != true)) {
+                    this.IdTareaMecanicosField = value;
+                    this.RaisePropertyChanged("IdTareaMecanicos");
                 }
             }
         }
@@ -3916,6 +3932,12 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private string HoraTerminoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdTareaMecanicosField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -3995,6 +4017,32 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.HoraTerminoField, value) != true)) {
                     this.HoraTerminoField = value;
                     this.RaisePropertyChanged("HoraTermino");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarea {
+            get {
+                return this.IdTareaField;
+            }
+            set {
+                if ((this.IdTareaField.Equals(value) != true)) {
+                    this.IdTareaField = value;
+                    this.RaisePropertyChanged("IdTarea");
                 }
             }
         }
@@ -10285,6 +10333,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceMantenimiento.IServiceMantenimiento")]
     public interface IServiceMantenimiento {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListOrdenMasivaAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoServiceErrorResponseFaul" +
             "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -10586,6 +10643,17 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocompleteResponse" +
+            "")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocompleteServiceE" +
+            "rrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasPreventivoAutocomplete(string cod_bus, string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocompleteResponse" +
+            "")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasPreventivoAutocompleteAsync(string cod_bus, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListBeneficiarioAutocompleteServiceError" +
@@ -11213,15 +11281,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaServiceErrorResponseFault" +
-            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListOrdenMasivaAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -11249,6 +11308,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public ServiceMantenimientoClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
+            return base.Channel.ListOrdenMasiva(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListOrdenMasivaAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
+            return base.Channel.ListOrdenMasivaAsync(request);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
@@ -11521,6 +11588,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string value) {
             return base.Channel.ListTareasAutocompleteAsync(value);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasPreventivoAutocomplete(string cod_bus, string value) {
+            return base.Channel.ListTareasPreventivoAutocomplete(cod_bus, value);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasPreventivoAutocompleteAsync(string cod_bus, string value) {
+            return base.Channel.ListTareasPreventivoAutocompleteAsync(cod_bus, value);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListBeneficiarioAutocomplete(string value) {
@@ -12121,14 +12196,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request) {
             return base.Channel.InsertMtbfAsync(request);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
-            return base.Channel.ListOrdenMasiva(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListOrdenMasivaAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
-            return base.Channel.ListOrdenMasivaAsync(request);
         }
     }
 }
