@@ -23,3 +23,16 @@ D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAcc
 D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CopyComplete
 D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.dll
 D:\BryanLuna\MANTENIMIENTO\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.Entities.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\Template.Utility.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\JBLV.Log.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\log4net.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.Entities.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Release\Template.Utility.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.pdb

@@ -1,0 +1,72 @@
+﻿<!-- sample modal content -->
+<div id="appBuscadorSolicitudes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(1)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Buscar Solicitudes :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="white-box">
+                            <div class="table-responsive">
+                                <table class="table editable-table table-bordered table-striped m-b-0" id="tableSolicitud" ref="#tableSolicitud">
+                                    <thead>
+                                        <tr class="advanced-table active">
+                                            <td>Correlativo</td>
+                                            <td>Fecha</td>
+                                            <td>Hora</td>
+                                            <td>Chofer</td>
+                                            <td>Placa</td>
+                                            <td>Origen</td>
+                                            <td>Destino</td>
+                                            <td>Usuario</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" v-model="objFiltro.correlativo" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Fecha" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Hora" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Chofer" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Placa" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Origen" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Destino" class="form-control" /></td>
+                                            <td><input type="text" v-model="objFiltro.Usuario" class="form-control" /></td>
+                                        </tr>
+                                        <tr class="header" v-for="Solicitud in SolicitudesFiltradas2">
+                                            <td width="10%" align="center">
+                                                <a href="#" v-on:click.prevent="SelectSolicitud(Solicitud)">{{ Solicitud.correlativo }}</a>
+                                            </td>
+                                            <td width="10%" align="center">{{ Solicitud.Fecha }}</td>
+                                            <td width="10%" align="center">{{ Solicitud.Hora }}</td>
+                                            <td width="20%" align="center">{{ Solicitud.Chofer }}</td>
+                                            <td width="10%" align="center">{{ Solicitud.Placa }}</td>
+                                            <td width="10%">{{ Solicitud.Origen }}</td>
+                                            <td width="10%" align="center">{{ Solicitud.Destino }}</td>
+                                            <td width="10%" align="center">{{ Solicitud.Usuario }}</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-inverse waves-effect waves-light text-left" @@click="close(1)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->

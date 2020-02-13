@@ -1055,7 +1055,7 @@
                         Notifications.Messages.success('Se grabó información exitosamente');
                         _this.ListBolsas();
                         _this.ClearBolsa();
-                        _this.objBolsa.CodiAlmacen.$refs.search.focus();
+                        _this.$refs.CodiAlmacen.$refs.search.focus();
                     } else if (res.data.tipoNotificacion) {
                         ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
                     } else if (res.data.tip) {
@@ -1104,7 +1104,7 @@
                         Notifications.Messages.warning(res.data.Mensaje);
                     }
                 }).catch(error => {
-                    Notifications.Messages.error('Ocurrió una excepción en el metodo InsertBolsa');
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo AgregarBolsas');
                 });
         },
 
@@ -1169,7 +1169,6 @@
             _this.objBolsa.Consumo = 0;
             _this.objBolsa.Pendiente = 0;
             _this.objBolsa.Tipo = '';
-            _this.objBolsa.CodiAlmacen = '';
         },
 
         //FIN REQUISICION

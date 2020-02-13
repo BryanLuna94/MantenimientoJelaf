@@ -76,3 +76,16 @@ D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Man
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\Template.Utility.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\JBLV.Log.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\log4net.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\bin\Debug\Template.Utility.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb

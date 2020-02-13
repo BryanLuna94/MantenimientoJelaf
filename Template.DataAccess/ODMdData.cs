@@ -53,6 +53,7 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@COD_OFI", SqlDbType.VarChar).Value = objEntidad.COD_OFI;
                         cmd.Parameters.Add("@Id_CtrlBolsaRepInforme", SqlDbType.Int).Value = objEntidad.Id_CtrlBolsaRepInforme;
                         cmd.Parameters.Add("@ODMd_Codigo", SqlDbType.Decimal).Value = 0;
+                        cmd.Parameters["@ODMd_Codigo"].Direction = ParameterDirection.Output;
                         cmd.ExecuteNonQuery();
                         nuevoId = Convert.ToDecimal(cmd.Parameters["@ODMd_Codigo"].Value);
                         cmd.Dispose();

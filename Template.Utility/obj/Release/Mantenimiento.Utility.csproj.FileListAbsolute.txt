@@ -15,3 +15,12 @@ D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Mantenimiento.Utility.cs
 D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CopyComplete
 D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Template.Utility.dll
 D:\BryanLuna\MANTENIMIENTO\Template.Utility\obj\Release\Template.Utility.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\bin\Release\Template.Utility.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\bin\Release\Template.Utility.pdb
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\bin\Release\JBLV.Log.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\bin\Release\log4net.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Release\Mantenimiento.Utility.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Release\Template.Utility.dll
+C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Release\Template.Utility.pdb

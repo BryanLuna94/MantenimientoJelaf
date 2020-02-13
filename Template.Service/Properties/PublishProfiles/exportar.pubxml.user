@@ -12,28 +12,28 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JBLV.Log.dll">
-      <publishTime>08/22/2019 18:43:06</publishTime>
+      <publishTime>02/05/2020 08:45:27</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>08/22/2019 18:43:06</publishTime>
+      <publishTime>02/05/2020 08:45:27</publishTime>
     </File>
     <File Include="bin/Mantenimiento.BusinessLayer.dll">
-      <publishTime>12/17/2019 17:13:59</publishTime>
+      <publishTime>02/06/2020 14:23:09</publishTime>
     </File>
     <File Include="bin/Mantenimiento.BusinessLayer.pdb">
-      <publishTime>12/17/2019 17:13:59</publishTime>
+      <publishTime>02/06/2020 14:23:09</publishTime>
     </File>
     <File Include="bin/Mantenimiento.DataAccess.dll">
-      <publishTime>12/17/2019 17:13:58</publishTime>
+      <publishTime>02/06/2020 14:23:08</publishTime>
     </File>
     <File Include="bin/Mantenimiento.DataAccess.pdb">
-      <publishTime>12/17/2019 17:13:58</publishTime>
+      <publishTime>02/06/2020 14:23:08</publishTime>
     </File>
     <File Include="bin/Mantenimiento.Entities.dll">
-      <publishTime>12/17/2019 17:13:57</publishTime>
+      <publishTime>02/06/2020 14:23:07</publishTime>
     </File>
     <File Include="bin/Mantenimiento.Entities.pdb">
-      <publishTime>12/17/2019 17:13:57</publishTime>
+      <publishTime>02/06/2020 14:23:07</publishTime>
     </File>
     <File Include="bin/SeguridadJelaf.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -48,25 +48,25 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Template.Service.dll">
-      <publishTime>12/17/2019 19:16:23</publishTime>
+      <publishTime>02/06/2020 14:23:10</publishTime>
     </File>
     <File Include="bin/Template.Service.pdb">
-      <publishTime>12/17/2019 19:16:23</publishTime>
+      <publishTime>02/06/2020 14:23:10</publishTime>
     </File>
     <File Include="bin/Template.Utility.dll">
-      <publishTime>12/17/2019 17:13:57</publishTime>
+      <publishTime>02/06/2020 14:23:07</publishTime>
     </File>
     <File Include="bin/Template.Utility.pdb">
-      <publishTime>12/17/2019 17:13:57</publishTime>
+      <publishTime>02/06/2020 14:23:07</publishTime>
     </File>
     <File Include="ServiceMantenimiento.svc">
-      <publishTime>10/11/2019 13:00:56</publishTime>
+      <publishTime>02/05/2020 08:45:41</publishTime>
     </File>
     <File Include="ServiceTemplate.svc">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/17/2019 17:14:00</publishTime>
+      <publishTime>02/06/2020 14:23:13</publishTime>
     </File>
   </ItemGroup>
 </Project>
