@@ -44,6 +44,31 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+        public static Response<OrdenMasivaResponse> ListTareasPendientes(string are_codigo)
+        {
+            try
+            {
+                Response<OrdenMasivaResponse> response;
+                List<TareasPendientesList> List;
+
+                List = TipoMantenimientoData.ListTareasPendientes(are_codigo);
+
+                response = new Response<OrdenMasivaResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new OrdenMasivaResponse { ListTareasPendientes = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<OrdenMasivaResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
         public static async Task<Response<OrdenMasivaResponse>> InsertCorrectivo(OrdenMasivaRequest request)
         {
             Response<OrdenMasivaResponse> response;
@@ -219,9 +244,10 @@ namespace Mantenimiento.BusinessLayer
             int idMaxRevision;
             int idMaxInforme;
             decimal idNumInforme;
-            SolicitudRevisionTecnica_CEntity objSolicitudRevision;
             InformeEntity objInforme;
             ProgramacionEntity objProgramacion;
+            List<TareasPendientesList> listTareasPendientes;
+            InformeTareasEntity objInformeTareas;
 
             ListInsertar = request.ListInsertar;
             FechaGenerar = request.FechaGenerar;
@@ -238,27 +264,6 @@ namespace Mantenimiento.BusinessLayer
                     are_codigo = item.IdUnidad;
                     klm_acumulado = AreData.SelectAre(are_codigo).Klm_Acumulados;
                     idMaxRevision = SolicitudRevisionTecnicaData.ObtenerUltimoId();
-
-                    /*
-                    objSolicitudRevision = new SolicitudRevisionTecnica_CEntity
-                    {
-                        IdSolicitudRevision = idMaxRevision.ToString(),
-                        FechaDoc = Convert.ToDateTime(FechaGenerar),
-                        HorasDoc = fechaRegistro.ToShortTimeString(),
-                        IdUnidad = item.IdUnidad,
-                        IdChofer = item.IDChofer,
-                        CodOrigen = Convert.ToInt32(item.CodOrigen).ToString("00#"),
-                        CodDestino = Convert.ToInt32(item.CodDestino).ToString("00#"),
-                        Kilometraje = klm_acumulado,
-                        UsuarioRegistro = Convert.ToInt32(usuarioRegistro).ToString("000#"),
-                        HoraRegistro = fechaRegistro.ToShortTimeString(),
-                        FechaRegistro = fechaRegistro,
-                        FechaViaje = Convert.ToDateTime(item.FechaViaje),
-                        HoraViahe = item.HoraViaje,
-                        Estado = 1
-                    };
-                    await SolicitudRevisionTecnicaData.InsertSolicitudRevisionTecnica_C(objSolicitudRevision);
-                    */
 
                     objInforme = new InformeEntity
                     {
@@ -287,8 +292,25 @@ namespace Mantenimiento.BusinessLayer
                     };
 
                     await InformeData.UpdateInforme_NumInforme(idMaxInforme, idNumInforme);
-                    //await SolicitudRevisionTecnicaData.UpdateSolicitudRevisionTecnica_C_Correctivo(idMaxRevision.ToString(), klm_acumulado, idNumInforme);
                     await ProgramacionData.UpdateProgramacionOrdenPreventivoGeneracion(objProgramacion);
+
+                    //Tareas pendientes
+                    listTareasPendientes = TipoMantenimientoData.ListTareasPendientes(are_codigo);
+
+                    foreach (var itemTareasPendientes in listTareasPendientes)
+                    {
+                        objInformeTareas = new InformeTareasEntity
+                        {
+                            FechaInicio = null,
+                            IdInforme = idMaxInforme,
+                            IdTarea = itemTareasPendientes.IdTarea,
+                            Observacion = "",
+                            UsuarioRegistro = Convert.ToInt32(usuarioRegistro)
+                        };
+
+                        await InformeTareasData.InsertInformeTareas(objInformeTareas);
+                        await InformeTareasData.UpdateInformeTareasKilometraje(idMaxInforme, itemTareasPendientes.IdTarea, itemTareasPendientes.KmtActual);
+                    }
                 }
 
                 response = new Response<OrdenMasivaResponse>

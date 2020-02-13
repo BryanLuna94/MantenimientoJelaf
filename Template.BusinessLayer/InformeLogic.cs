@@ -296,7 +296,7 @@ namespace Mantenimiento.BusinessLayer
             try
             {
                 objInformeTareas = request.InformeTareas;
-                int idAuxilioMecanico = await InformeTareasData.UpdateInformeTareas(objInformeTareas);
+                //int idAuxilioMecanico = await InformeTareasData.UpdateInformeTareas(objInformeTareas);
 
                 response = new Response<InformeResponse>
                 {

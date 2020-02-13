@@ -278,6 +278,8 @@
             _this.getListasEstaticas('');
             if (itemAuxilioMecanico !== undefined) {
                 _this.ObtenerAuxilioMecanico(itemAuxilioMecanico);
+            } else {
+                _this.createAuxilioMecanico = true;
             }
             $('#appEditAuxilioMecanico').modal('show');
         },

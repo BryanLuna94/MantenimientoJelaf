@@ -12,6 +12,10 @@
 
 <!-- .row -->
 <div class="col-sm-12" id="app">
+    <div style="padding:1px;">
+        <!-- Modal -->
+        @Html.Partial("TareasPendientes")
+    </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="bg-theme white-box m-b-0">
@@ -137,6 +141,7 @@
                                         <button type="button" v-on:click.prevent="AnularCorrectivo()" class="btn btn-default waves-effect waves-light m-r-10">Anular Correctivo</button>
                                         <button type="button" v-on:click.prevent="GenerarPreventivo()" class="btn btn-default waves-effect waves-light m-r-10">Generar Preventivo</button>
                                         <button type="button" v-on:click.prevent="AnularPreventivo()" class="btn btn-default waves-effect waves-light m-r-10">Anular Preventivo</button>
+                                        <button type="button" v-on:click.prevent="VerPreventivos()" class="btn btn-default waves-effect waves-light m-r-10">Ver Preventivos</button>
                                     </div>
 
                                 </div>

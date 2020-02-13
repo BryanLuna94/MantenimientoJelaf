@@ -12,5 +12,7 @@ namespace Mantenimiento.Entities.Peticiones.Responses
         public List<OrdenMasivaList> List { get; set; }
         [DataMember]
         public InformeEntity Informe { get; set; }
+        [DataMember]
+        public List<TareasPendientesList> ListTareasPendientes { get; set; }
     }
 }

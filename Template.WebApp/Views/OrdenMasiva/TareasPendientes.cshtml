@@ -1,0 +1,71 @@
+﻿<!-- sample modal content -->
+<div id="appTareasPendientes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:50%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(1)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Tareas Pendientes :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="table-responsive">
+                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableBus" ref="#tableBus">
+                                <thead>
+                                    <tr class="advanced-table active">
+                                        <td>Código</td>
+                                        <td>Placa</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="header" v-for="Bus in list.Buses">
+                                        <td width="50%" align="center">
+                                            <a href="#" v-on:click.prevent="ListTareasPendientes(Bus.IdUnidad)">{{ Bus.IdUnidad }}</a> 
+                                        </td>
+                                        <td width="50%" align="center">{{ Bus.BusPlaca }}</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="table-responsive">
+                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableTareas" ref="#tableTareas">
+                                <thead>
+                                    <tr class="advanced-table active">
+                                        <td>Mantenimiento</td>
+                                        <td>Tarea</td>
+                                        <td>km. Aviso</td>
+                                        <td>Km. Recorrido</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="header" v-for="TareaPendiente in list.TareasPendientes">
+                                        <td width="20%" align="center">{{ TareaPendiente.Descripcion }}</td>
+                                        <td width="40%" align="center">{{ TareaPendiente.DescripcionTarea }}</td>
+                                        <td width="20%" align="center">{{ TareaPendiente.KmtAviso }}</td>
+                                        <td width="20%" align="center">{{ TareaPendiente.KmtActual }}</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default waves-effect waves-light text-left" @@click="close(1)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->

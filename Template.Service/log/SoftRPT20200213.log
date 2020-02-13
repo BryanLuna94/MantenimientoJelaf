@@ -1,0 +1,6 @@
+2020-02-13 00:13:25,906 [56] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Mantenimiento.DataAccess.InformeData.ListInformeAdmin(InformeFilter objFiltro) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\InformeData.cs:línea 29
+   en Mantenimiento.BusinessLayer.InformeLogic.ListInforme(InformeRequest request) en D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.BusinessLayer\InformeLogic.cs:línea 39

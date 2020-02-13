@@ -25,7 +25,8 @@
             Beneficiarios: [],
             Flotas: [],
             Seleccionados: [],
-
+            TareasPendientes: [],
+            Buses: [],
         },
         isCheckAll: false,
         createOrdenMasiva: true,
@@ -68,9 +69,12 @@
 
         updateCheckall: function (ordenMasiva) {
 
+            //si esta seleccionado quitarlo
+
             let lstIguales = this.list.OrdenMasiva.filter(function (item) {
                 return item.CODI_PROGRAMACION_REAL === ordenMasiva.CODI_PROGRAMACION_REAL;
             });
+
 
             for (var key in lstIguales) {
                 let existe = this.list.Seleccionados.filter(function (itemSelec) {
@@ -81,6 +85,8 @@
                     this.list.Seleccionados.push(lstIguales[key]);
                 }
             }
+
+
 
             if (this.list.Seleccionados.length === this.list.OrdenMasiva.length) {
                 this.isCheckAll = true;
@@ -117,6 +123,25 @@
                     }
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo ListOrdenMasiva');
+                });
+        },
+
+        ListTareasPendientes: async function (areCodigo) {
+
+            let _this = this;
+
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/ListTareasPendientes'), {
+                params: {
+                    are_codigo: areCodigo
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.TareasPendientes = (res.data.Valor.ListTareasPendientes) ? res.data.Valor.ListTareasPendientes : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListTareasPendientes');
                 });
         },
 
@@ -205,6 +230,23 @@
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo GenerarCorrectivo');
                 });
+        },
+
+        VerPreventivos: async function () {
+
+            let _this = this;
+
+            _this.list.Buses = [];
+            _this.list.TareasPendientes = [];
+            for (var key in _this.list.Seleccionados) {
+                _this.list.Buses.push(_this.list.OrdenMasiva[key]);
+            }
+
+            if (_this.list.Buses.length === 0) {
+                _this.ListTareasPendientes('');
+            }
+            
+            $('#appTareasPendientes').modal('show');
         },
 
         AnularCorrectivo: async function () {
@@ -367,6 +409,15 @@
                 });
            
         },
+
+        close: function (code) {
+            if (code === 1) {
+                $('#appTareasPendientes').modal('hide');
+                this.$nextTick(() => {
+
+                });
+            }
+        }
     },
 
     computed: {

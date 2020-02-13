@@ -172,7 +172,6 @@ namespace Mantenimiento.Service
 
         #endregion
 
-
         #region SubSistemas
         public Response<SubSistemasResponse> ListSubSistemas()
         {
@@ -344,7 +343,6 @@ namespace Mantenimiento.Service
         }
         #endregion
 
-
         #region ARTICULOT
         public Response<ArticuloTResponse> ListArticuloT(short idTarea)
         {
@@ -387,7 +385,6 @@ namespace Mantenimiento.Service
         }
 
         #endregion
-
 
         #region MarcaModelo
         public Response<MarcaModeloResponse> ListMarcaModelo()
@@ -500,6 +497,11 @@ namespace Mantenimiento.Service
         public Response<OrdenMasivaResponse> ListOrdenMasiva(OrdenMasivaRequest request)
         {
             return OrdenMasivaLogic.ListOrdenMasiva(request);
+        }
+
+        public Response<OrdenMasivaResponse> ListTareasPendientes(string are_codigo)
+        {
+            return OrdenMasivaLogic.ListTareasPendientes(are_codigo);
         }
 
         public async Task<Response<OrdenMasivaResponse>> InsertCorrectivo(OrdenMasivaRequest request)

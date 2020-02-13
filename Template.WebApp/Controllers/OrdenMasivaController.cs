@@ -27,7 +27,14 @@ namespace Mantenimiento.WebApp.Controllers
             var res = await _ServiceMantenimiento.ListOrdenMasivaAsync(request);
             return Json(res, JsonRequestBehavior.AllowGet);
         }
-        
+
+        [HttpGet]
+        public async Task<ActionResult> ListTareasPendientes(string are_codigo)
+        {
+            var res = await _ServiceMantenimiento.ListTareasPendientesAsync(are_codigo);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
         public async Task<ActionResult> GenerarCorrectivo(string json)
         {
             try

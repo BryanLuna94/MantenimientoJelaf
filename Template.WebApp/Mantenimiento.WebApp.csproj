@@ -1135,6 +1135,7 @@
     <Content Include="Views\Informe\Ayudantes.cshtml" />
     <Content Include="Views\Informe\Requisicion.cshtml" />
     <Content Include="Views\Fallas\Buscador.cshtml" />
+    <Content Include="Views\OrdenMasiva\TareasPendientes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

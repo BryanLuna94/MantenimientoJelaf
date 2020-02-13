@@ -38,6 +38,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="OrdenMasivaList" nillable="true" type="tns:OrdenMasivaList" />
+  <xs:complexType name="ArrayOfTareasPendientesList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TareasPendientesList" nillable="true" type="tns:TareasPendientesList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTareasPendientesList" nillable="true" type="tns:ArrayOfTareasPendientesList" />
+  <xs:complexType name="TareasPendientesList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionTarea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
+      <xs:element minOccurs="0" name="KmtActual" type="xs:decimal" />
+      <xs:element minOccurs="0" name="KmtAviso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="UnidadId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechainforme" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idtipman" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TareasPendientesList" nillable="true" type="tns:TareasPendientesList" />
   <xs:complexType name="ArrayOfInformeList">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="InformeList" nillable="true" type="tns:InformeList" />

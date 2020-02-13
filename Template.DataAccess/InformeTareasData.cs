@@ -94,7 +94,7 @@ namespace Mantenimiento.DataAccess
             return nuevoId;
         }
 
-        public static async Task<int> UpdateInformeTareas(InformeTareasEntity objEntidad)
+        public static async Task<int> UpdateInformeTareasKilometraje(int IdInforme, int IdTarea, decimal Kilometraje)
         {
             int nuevoId = 0;
             try
@@ -104,17 +104,12 @@ namespace Mantenimiento.DataAccess
                     bool openConn = (con.State == ConnectionState.Open);
                     if (!openConn) { con.Open(); }
 
-                    using (SqlCommand cmd = new SqlCommand("Usp_Tb_InformeTareas_Update", con))
+                    using (SqlCommand cmd = new SqlCommand("Usp_Tb_InformeTareas_Update_Kilometraje", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@IdInforme", SqlDbType.Int).Value = objEntidad.IdInforme;
-                        cmd.Parameters.Add("@IdTarea", SqlDbType.Int).Value = objEntidad.IdTarea;
-                        cmd.Parameters.Add("@Observacion", SqlDbType.VarChar).Value = objEntidad.Observacion;
-                        cmd.Parameters.Add("@ServTerceros_Codigo", SqlDbType.VarChar).Value = "";
-                        cmd.Parameters.Add("@pKmt_recorrido", SqlDbType.VarChar).Value = "";
-                        cmd.Parameters.Add("@UsuarioRegistro", SqlDbType.Int).Value = objEntidad.UsuarioRegistro;
-                        cmd.Parameters.Add("@FInicio", SqlDbType.DateTime).Value = Convert.ToDateTime(objEntidad.FechaInicio);
-                        cmd.Parameters.Add("@IdPlanEjecucionTareas", SqlDbType.VarChar).Value = "";
+                        cmd.Parameters.Add("@IdInforme", SqlDbType.Int).Value = IdInforme;
+                        cmd.Parameters.Add("@IdTarea", SqlDbType.Int).Value = IdTarea;
+                        cmd.Parameters.Add("@Kilometraje", SqlDbType.Decimal).Value = Kilometraje;
                         await cmd.ExecuteNonQueryAsync();
                         cmd.Dispose();
                     }

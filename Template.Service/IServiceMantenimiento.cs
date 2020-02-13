@@ -92,7 +92,6 @@ namespace Mantenimiento.Service
         Task<Response<PwdResponse>> Actualizapwd(string codiUsuario, string Password);
         #endregion
 
-
         #region SISTEMAS
 
 
@@ -122,7 +121,6 @@ namespace Mantenimiento.Service
         Task<Response<SistemasResponse>> UpdateSistemas(short ID_tb_Sistema_Mant,string Descripcion);
 
         #endregion
-
 
         #region CLASEM
 
@@ -436,10 +434,13 @@ namespace Mantenimiento.Service
 
         #region ORDEN MASIVA
 
-
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListOrdenMasiva", ResponseFormat = WebMessageFormat.Json)]
         Response<OrdenMasivaResponse> ListOrdenMasiva(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareasPendientes", ResponseFormat = WebMessageFormat.Json)]
+        Response<OrdenMasivaResponse> ListTareasPendientes(string are_codigo);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "InsertCorrectivo", ResponseFormat = WebMessageFormat.Json)]

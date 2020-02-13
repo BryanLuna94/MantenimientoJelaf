@@ -65,6 +65,7 @@
     <Compile Include="TareaMecanicosAyudanteData.cs" />
     <Compile Include="TareaMPData.cs" />
     <Compile Include="Tb_CtrlBolsaRepInformeData.cs" />
+    <Compile Include="TipoMantenimientoData.cs" />
     <Compile Include="TipoMData.cs" />
     <Compile Include="SubSistemasData.cs" />
     <Compile Include="Connection\GetConnection.cs" />

@@ -6,6 +6,7 @@
     <xs:sequence>
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Informe" nillable="true" type="q1:InformeEntity" />
       <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q2:ArrayOfOrdenMasivaList" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareasPendientes" nillable="true" type="q3:ArrayOfTareasPendientesList" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="OrdenMasivaResponse" nillable="true" type="tns:OrdenMasivaResponse" />
@@ -44,20 +45,20 @@
   <xs:element name="ServiceErrorResponse" nillable="true" type="tns:ServiceErrorResponse" />
   <xs:complexType name="InformeResponse">
     <xs:sequence>
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Informe" nillable="true" type="q3:InformeEntity" />
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q4:ArrayOfInformeList" />
-      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBolsas" nillable="true" type="q5:ArrayOfODMdList" />
-      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBusquedaArticulo" nillable="true" type="q6:ArrayOfBusquedaArticuloList" />
-      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInformeTareas" nillable="true" type="q7:ArrayOfInformeTareasList" />
-      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanico" nillable="true" type="q8:ArrayOfTareaMecanicoList" />
-      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanicosAyudante" nillable="true" type="q9:ArrayOfTareaMecanicosAyudanteList" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Informe" nillable="true" type="q4:InformeEntity" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q5:ArrayOfInformeList" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBolsas" nillable="true" type="q6:ArrayOfODMdList" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBusquedaArticulo" nillable="true" type="q7:ArrayOfBusquedaArticuloList" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInformeTareas" nillable="true" type="q8:ArrayOfInformeTareasList" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanico" nillable="true" type="q9:ArrayOfTareaMecanicoList" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanicosAyudante" nillable="true" type="q10:ArrayOfTareaMecanicosAyudanteList" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="InformeResponse" nillable="true" type="tns:InformeResponse" />
   <xs:complexType name="AuxilioMecanicoResponse">
     <xs:sequence>
-      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="AuxilioMecanico" nillable="true" type="q10:AuxilioMecanicoEntity" />
-      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q11:ArrayOfAuxilioMecanicoList" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="AuxilioMecanico" nillable="true" type="q11:AuxilioMecanicoEntity" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q12:ArrayOfAuxilioMecanicoList" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AuxilioMecanicoResponse" nillable="true" type="tns:AuxilioMecanicoResponse" />
@@ -65,8 +66,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Bam" type="xs:decimal" />
       <xs:element minOccurs="0" name="HorasDia" type="xs:unsignedByte" />
-      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q12:ArrayOfMTBFEntity" />
-      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Mtbf" nillable="true" type="q13:MTBFEntity" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q13:ArrayOfMTBFEntity" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Mtbf" nillable="true" type="q14:MTBFEntity" />
       <xs:element minOccurs="0" name="ViajeEnHoras" type="xs:short" />
     </xs:sequence>
   </xs:complexType>
