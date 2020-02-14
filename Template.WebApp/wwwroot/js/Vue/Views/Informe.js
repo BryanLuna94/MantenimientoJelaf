@@ -196,6 +196,8 @@
 
             let _this = this;
 
+            debugger;
+
             if (_this.objInforme.TipoInforme === "1") {
 
                 await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
@@ -347,10 +349,8 @@
                             if (res.data.Estado) {
                                 Notifications.Messages.success('Se eliminó registro exitosamente');
                                 _this.ClearInforme();
-                                //_this.ClearMantenimiento();
-                                _this.objMecanico = [];
-                                _this.objMantenimiento = [];
-                                //_this.ClearMecanico();
+                                _this.ClearMantenimiento();
+                                _this.ClearMecanico();
                                 _this.list.Mecanicos = [];
                                 _this.list.Mantenimientos = [];
                             }
@@ -425,8 +425,8 @@
                             _this.objInforme.TipoInformeDesc = (res.data.Valor.Informe.TipoInforme === "1") ? "Correctivo" : "Preventivo";
                             _this.objInforme.TipoU = res.data.Valor.Informe.Tipo;
                             existe = true;
-                            _this.objMecanico = [];
-                            _this.objMantenimiento = [];
+                            _this.ClearMecanico();
+                            _this.ClearMantenimiento();
                             _this.list.Mecanicos = [];
                             _this.list.Mantenimientos = [];
                             _this.ListInformeTareas();
