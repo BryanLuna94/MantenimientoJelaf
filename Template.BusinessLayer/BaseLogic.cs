@@ -191,7 +191,7 @@ namespace Mantenimiento.BusinessLayer
                 Response<BaseResponse> response;
                 List<BaseEntity> List;
 
-                List = BaseData.ListTareasAutocomplete(value);
+                List = BaseData.ListTareasCAutocomplete(value);
 
                 response = new Response<BaseResponse>
                 {
@@ -209,14 +209,14 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
-        public static Response<BaseResponse> ListTareasAutocomplete(string value)
+        public static Response<BaseResponse> ListTareasAutocomplete(string cod_bus, string value)
         {
             try
             {
                 Response<BaseResponse> response;
                 List<BaseEntity> List;
 
-                List = BaseData.ListTareasAutocomplete(value);
+                List = BaseData.ListTareasAutocomplete(cod_bus, value);
 
                 response = new Response<BaseResponse>
                 {

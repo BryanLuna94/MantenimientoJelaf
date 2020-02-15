@@ -125,6 +125,37 @@ namespace Mantenimiento.DataAccess
             return nuevoId;
         }
 
+        public static async Task<int> UpdateInformeTareasEstado(int IdInforme, int IdTarea, byte Estado)
+        {
+            int nuevoId = 0;
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("usp_tb_InformeTareas_CambiarEstado", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@pIdInforme", SqlDbType.Int).Value = IdInforme;
+                        cmd.Parameters.Add("@pIdTarea", SqlDbType.Int).Value = IdTarea;
+                        cmd.Parameters.Add("@pEstado", SqlDbType.TinyInt).Value = Estado;
+                        await cmd.ExecuteNonQueryAsync();
+                        cmd.Dispose();
+                    }
+
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return nuevoId;
+        }
+
         public static async Task<int> DeleteInformeTareas(int IdInforme, int IdTarea, int Estado = 0, string Observacion = "")
         {
             int nuevoId = 0;

@@ -50,9 +50,9 @@ namespace Mantenimiento.Service
             return BaseLogic.ListTareasCAutocomplete(value);
         }
 
-        public Response<BaseResponse> ListTareasAutocomplete(string value)
+        public Response<BaseResponse> ListTareasAutocomplete(string cod_bus, string value)
         {
-            return BaseLogic.ListTareasAutocomplete(value);
+            return BaseLogic.ListTareasAutocomplete(cod_bus, value);
         }
 
         public Response<BaseResponse> ListTareasPreventivoAutocomplete(string cod_bus, string value)
@@ -572,6 +572,11 @@ namespace Mantenimiento.Service
         public async Task<Response<InformeResponse>> UpdateInformeTareas(InformeRequest request)
         {
             return await InformeLogic.UpdateInformeTareas(request);
+        }
+
+        public async Task<Response<InformeResponse>> UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado)
+        {
+            return await InformeLogic.UpdateInformeTareasEstado(IdInforme, IdTarea, Estado);
         }
 
         public Response<InformeResponse> ListTareaMecanico(int IdInforme, int IdTarea)

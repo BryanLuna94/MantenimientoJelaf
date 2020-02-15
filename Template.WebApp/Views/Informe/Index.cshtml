@@ -237,6 +237,7 @@
                                         <td>Observacion</td>
                                         <td>F. Inicio</td>
                                         <td></td>
+                                        <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -249,6 +250,20 @@
                                         <td width="10%" align="center">{{ Mantenimiento.FechaInicio }}</td>
                                         <td width="5%">
                                             <button type="button" v-on:click.prevent="DeleteMantenimiento(Mantenimiento)" title="Eliminar" class="btn btn-danger btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
+                                        </td>
+                                        <td class="col-md-4">
+                                            <div class="dropdown">
+                                                <button class="btn btn-info dropdown-toggle" v-on:click.prevent="EditarEstiloFila($event.target)"  type="button" data-toggle="dropdown">
+                                                    Cambiar Estado
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a v-on:click.prevent="CambiarEstadoMantenimiento(Mantenimiento, 0, $event.target)" href="#">Anulado</a></li>
+                                                    <li><a v-on:click.prevent="CambiarEstadoMantenimiento(Mantenimiento, 1, $event.target)" href="#">Activo</a></li>
+                                                    <li><a v-on:click.prevent="CambiarEstadoMantenimiento(Mantenimiento, 2, $event.target)" href="#">Cerrado</a></li>
+                                                    <li><a v-on:click.prevent="CambiarEstadoMantenimiento(Mantenimiento, 3, $event.target)" href="#">Backlog</a></li>
+                                                </ul>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>

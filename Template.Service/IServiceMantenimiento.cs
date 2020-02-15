@@ -49,7 +49,7 @@ namespace Mantenimiento.Service
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListTareasAutocomplete", ResponseFormat = WebMessageFormat.Json)]
-        Response<BaseResponse> ListTareasAutocomplete(string value);
+        Response<BaseResponse> ListTareasAutocomplete(string cod_bus, string value);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListTareasPreventivoAutocomplete", ResponseFormat = WebMessageFormat.Json)]
@@ -498,6 +498,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "UpdateInformeTareas", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<InformeResponse>> UpdateInformeTareas(InformeRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateInformeTareasEstado", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<InformeResponse>> UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListTareaMecanico", ResponseFormat = WebMessageFormat.Json)]

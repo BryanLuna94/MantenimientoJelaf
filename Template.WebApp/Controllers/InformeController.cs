@@ -162,6 +162,25 @@ namespace Mantenimiento.WebApp.Controllers
             }
         }
 
+        public async Task<ActionResult> UpdateInformeTareaEstado(int IdInforme, int IdTarea, int Estado)
+        {
+            try
+            {
+                var res = await _ServiceMantenimiento.UpdateInformeTareasEstadoAsync(IdInforme, IdTarea, Estado);
+
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
         #region MECANICOS
 
         [HttpGet]

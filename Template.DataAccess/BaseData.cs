@@ -298,7 +298,7 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
-        public static List<BaseEntity> ListTareasAutocomplete(string value)
+        public static List<BaseEntity> ListTareasAutocomplete(string cod_bus, string value)
         {
             List<BaseEntity> List = new List<BaseEntity>();
 
@@ -307,7 +307,8 @@ namespace Mantenimiento.DataAccess
                 using (var cmd = new SqlCommand("usp_Tb_Tareas_Listar_Autocomplete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@pDescripcion", SqlDbType.VarChar, 30).Value = (value != null) ? value : string.Empty;
+                    cmd.Parameters.Add("@codbus", SqlDbType.VarChar, 10).Value = cod_bus;
+                    cmd.Parameters.Add("@descripcion", SqlDbType.VarChar, 30).Value = (value != null) ? value : string.Empty;
                     bool openConn = (con.State == ConnectionState.Open);
                     if (!openConn) { con.Open(); }
 
@@ -317,7 +318,7 @@ namespace Mantenimiento.DataAccess
                         {
                             List.Add(new BaseEntity
                             {
-                                Codigo = DataReader.GetStringValue(dr, "IdTarea"),
+                                Codigo = DataReader.GetStringValue(dr, "Codigo"),
                                 Descripcion = DataReader.GetStringValue(dr, "Descripcion"),
                             });
                         }

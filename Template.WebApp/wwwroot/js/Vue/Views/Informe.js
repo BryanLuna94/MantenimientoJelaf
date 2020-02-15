@@ -196,11 +196,17 @@
 
             let _this = this;
 
-            debugger;
+            let codBus = _this.objInforme.Are_Codigo;
+
 
             if (_this.objInforme.TipoInforme === "1") {
 
-                await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), { params: { value: value } })
+                await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasAutocomplete'), {
+                    params: {
+                        cod_bus: codBus,
+                        value: value
+                    }
+                })
                     .then(res => {
                         if (res.data.Estado) {
                             _this.list.Sistemas = (res.data.Valor.List) ? res.data.Valor.List : [];
@@ -211,7 +217,7 @@
 
             } else {
 
-                let codBus = _this.objInforme.Are_Codigo;
+
 
                 await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListTareasPreventivoAutocompleteAsync'), {
                     params: {
@@ -229,7 +235,7 @@
 
             }
 
-            
+
         },
 
         getAlmacenes: async function () {
@@ -533,6 +539,15 @@
 
         //INICIO MANTENIMIENTO
 
+        EditarEstiloFila: async function (e) {
+            var div = $(e).closest('div');
+            if ($(div).hasClass("open")) {
+                $(e).closest('tr').css({ 'height': '' });
+            } else {
+                $(e).closest('tr').css({ 'height': '250px' });
+            }
+        },
+
         saveMantenimiento: async function () {
 
             var fecha_vacia = "__/__/____";
@@ -550,6 +565,33 @@
             //} else {
             //    await this.UpdateAuxilioMecanico();
             //}
+        },
+
+        CambiarEstadoMantenimiento: async function (itemMantenimiento, estado, e) {
+
+            let _this = this;
+
+            _this.objMantenimiento.IdInforme = _this.objInforme.IdInforme;
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/UpdateInformeTareaEstado'), {
+                IdInforme: _this.objInforme.IdInforme,
+                IdTarea: itemMantenimiento.IdTarea,
+                Estado: estado
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        $(e).closest('tr').css({ 'height': '' });
+                        _this.ListInformeTareas();
+                    } else if (res.data.tipoNotificacion) {
+                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.tip) {
+                        Notifications.Messages.warning(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo CambiarEstadoMantenimiento');
+                });
         },
 
         UpdateMantenimiento: async function () {
@@ -613,7 +655,7 @@
                     if (res.data.Estado) {
                         Notifications.Messages.success('Se grabó información exitosamente');
                         _this.ListInformeTareas();
-                        _this.ClearMantenimiento()
+                        _this.ClearMantenimiento();
                     } else if (res.data.tipoNotificacion) {
                         ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
                     } else if (res.data.tip) {

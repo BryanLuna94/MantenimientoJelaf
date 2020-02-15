@@ -291,12 +291,41 @@ namespace Mantenimiento.BusinessLayer
         public static async Task<Response<InformeResponse>> UpdateInformeTareas(InformeRequest request)
         {
             Response<InformeResponse> response;
-            InformeTareasEntity objInformeTareas;
 
             try
             {
-                objInformeTareas = request.InformeTareas;
-                //int idAuxilioMecanico = await InformeTareasData.UpdateInformeTareas(objInformeTareas);
+                //await InformeTareasData.UpdateInformeTareasEstado(IdInforme, IdTarea, Convert.ToByte(Estado));
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static async Task<Response<InformeResponse>> UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                await InformeTareasData.UpdateInformeTareasEstado(IdInforme, IdTarea, Convert.ToByte(Estado));
 
                 response = new Response<InformeResponse>
                 {

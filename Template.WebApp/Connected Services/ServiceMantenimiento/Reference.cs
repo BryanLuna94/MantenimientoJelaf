@@ -10658,6 +10658,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareas", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstado", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstadoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstadoServiceErrorRes" +
+            "ponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstado", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstadoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasEstadoAsync(int IdInforme, int IdTarea, int Estado);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoServiceErrorResponseFau" +
             "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -10837,10 +10846,10 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteServiceErrorRespon" +
             "seFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string value);
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string cod_bus, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasAutocompleteResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string value);
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string cod_bus, string value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasPreventivoAutocompleteResponse" +
             "")]
@@ -11628,6 +11637,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.UpdateInformeTareasAsync(request);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado) {
+            return base.Channel.UpdateInformeTareasEstado(IdInforme, IdTarea, Estado);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasEstadoAsync(int IdInforme, int IdTarea, int Estado) {
+            return base.Channel.UpdateInformeTareasEstadoAsync(IdInforme, IdTarea, Estado);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListTareaMecanico(int IdInforme, int IdTarea) {
             return base.Channel.ListTareaMecanico(IdInforme, IdTarea);
         }
@@ -11788,12 +11805,12 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListTareasCAutocompleteAsync(value);
         }
         
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string value) {
-            return base.Channel.ListTareasAutocomplete(value);
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasAutocomplete(string cod_bus, string value) {
+            return base.Channel.ListTareasAutocomplete(cod_bus, value);
         }
         
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string value) {
-            return base.Channel.ListTareasAutocompleteAsync(value);
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTareasAutocompleteAsync(string cod_bus, string value) {
+            return base.Channel.ListTareasAutocompleteAsync(cod_bus, value);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTareasPreventivoAutocomplete(string cod_bus, string value) {
