@@ -121,31 +121,6 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
-        public static Response<InformeResponse> ListInformeTareas(int IdInforme)
-        {
-            try
-            {
-                Response<InformeResponse> response;
-                List<InformeTareasList> List;
-
-                List = InformeTareasData.ListInformeTareas(IdInforme);
-
-                response = new Response<InformeResponse>
-                {
-                    EsCorrecto = true,
-                    Valor = new InformeResponse { ListInformeTareas = List },
-                    Mensaje = "OK",
-                    Estado = true,
-                };
-
-                return response;
-            }
-            catch (Exception ex)
-            {
-                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
-            }
-        }
-
         public static async Task<Response<InformeResponse>> DeleteInforme(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo)
         {
             Response<InformeResponse> response;
@@ -210,6 +185,67 @@ namespace Mantenimiento.BusinessLayer
         }
 
         #region INFORME TAREAS
+
+        public static Response<InformeResponse> ListInformeTareas(int IdInforme)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<InformeTareasList> List;
+
+                List = InformeTareasData.ListInformeTareas(IdInforme);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListInformeTareas = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<InformeResponse> ListInformeTareasBackLog(string IdUnidad, string Tipo)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<InformeTareasList> List;
+
+                List = new List<InformeTareasList>();
+
+                if (Tipo == Constants.TipoInforme.CORRECTIVO)
+                {
+                    List = InformeTareasData.ListInformeTareasBackLogCorrectivo(IdUnidad);
+                }
+                else
+                {
+                    List = InformeTareasData.ListInformeTareasBackLogPreventivo(IdUnidad);
+                }
+
+                
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListInformeTareas = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
 
         public static async Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo)
         {
@@ -350,6 +386,39 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+        public static async Task<Response<InformeResponse>> UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea)
+        {
+            Response<InformeResponse> response;
+
+            try
+            {
+                byte estadoActivo = Constants.EstadosInforme.ACTIVO;
+
+                await InformeTareasData.UpdateInformeTareasReasignarInforme(IdInformeNuevo,IdInformeAnterior, IdTarea, estadoActivo);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse
+                    {
+                        Informe = new InformeEntity()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
         #endregion
 
         #region MECANICOS
@@ -427,10 +496,10 @@ namespace Mantenimiento.BusinessLayer
                     BusinessException.Generar(Constants.YA_EXISTE);
                 }
 
-                var fechaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortDateString();
-                var fechaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortDateString();
-                var horaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortTimeString();
-                var horaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortTimeString();
+                var fechaInicio = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaInicio)).ToShortDateString();
+                var fechaTermino = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaTermino)).ToShortDateString();
+                var horaInicio = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaInicio)).ToShortTimeString();
+                var horaTermino = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaTermino)).ToShortTimeString();
 
                 objTareaMecanico.FechaTermino = fechaTermino;
                 objTareaMecanico.FechaInicio = fechaTermino;
@@ -452,9 +521,13 @@ namespace Mantenimiento.BusinessLayer
 
                 return response;
             }
-            catch (Exception ex)
+            catch (FaultException<ServiceError>)
             {
                 throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
             }
         }
 
@@ -467,10 +540,10 @@ namespace Mantenimiento.BusinessLayer
             {
                 objTareaMecanico = request.TareaMecanico;
 
-                var fechaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortDateString();
-                var fechaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortDateString();
-                var horaInicio = Convert.ToDateTime(objTareaMecanico.FechaInicio).ToShortTimeString();
-                var horaTermino = Convert.ToDateTime(objTareaMecanico.FechaTermino).ToShortTimeString();
+                var fechaInicio = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaInicio)).ToShortDateString();
+                var fechaTermino = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaTermino)).ToShortDateString();
+                var horaInicio = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaInicio)).ToShortTimeString();
+                var horaTermino = Convert.ToDateTime(Functions.ValidarDatetime(objTareaMecanico.FechaTermino)).ToShortTimeString();
 
                 objTareaMecanico.FechaTermino = fechaTermino;
                 objTareaMecanico.FechaInicio = fechaTermino;

@@ -17,6 +17,7 @@
         @Html.Partial("Buscador")
         @Html.Partial("Ayudantes")
         @Html.Partial("Requisicion")
+        @Html.Partial("InformeTareasPendientes")
     </div>
     <div class="row">
         <div class="col-lg-12">
@@ -161,8 +162,9 @@
                                     <div class="col-md-12">
                                         <button type="button" v-on:click.prevent="ShowBuscador()" class="btn waves-effect waves-light btn-inverse">BUSCAR INFORME</button>
                                         <button type="button" id="btnTractoCarreta" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarTractoCarreta()" class="btn waves-effect waves-light btn-inverse">IR A CARRETA</button>
-                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarCorrectivoPreventivo()" class="btn waves-effect waves-light btn-inverse">{{ buttonCorrectivoPreventivo.text }}</button>
-                                        <button type="button" id="btnCorrectivoPreventivo" v-bind:disabled="!FullInforme" v-on:click.prevent="AnularInforme()" class="btn waves-effect waves-light btn-inverse">ANULAR</button>
+                                        <button type="button" v-bind:disabled="!FullInforme" v-on:click.prevent="CambiarCorrectivoPreventivo()" class="btn waves-effect waves-light btn-inverse">{{ buttonCorrectivoPreventivo.text }}</button>
+                                        <button type="button" v-bind:disabled="!FullInforme" v-on:click.prevent="AnularInforme()" class="btn waves-effect waves-light btn-inverse">ANULAR</button>
+                                        <button type="button" v-bind:disabled="!FullInforme" v-on:click.prevent="ShowTareasPendientes()" class="btn waves-effect waves-light btn-inverse">VER TAREAS</button>
                                     </div>
                                 </div>
                             </form>

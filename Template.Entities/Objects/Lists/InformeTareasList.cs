@@ -9,5 +9,7 @@
         public int IdTipMan { get; set; }
         public string FechaInicio { get; set; }
         public int Estado { get; set; }
+        public string Are_Codigo { get; set; }
+        public int IdInforme { get; set; }
     }
 }

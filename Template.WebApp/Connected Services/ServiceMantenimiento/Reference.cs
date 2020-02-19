@@ -3965,10 +3965,16 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FechaInicioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdInformeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdTareaField;
@@ -3996,6 +4002,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Codigo {
+            get {
+                return this.Are_CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_CodigoField, value) != true)) {
+                    this.Are_CodigoField = value;
+                    this.RaisePropertyChanged("Are_Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Estado {
             get {
                 return this.EstadoField;
@@ -4017,6 +4036,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
                     this.FechaInicioField = value;
                     this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdInforme {
+            get {
+                return this.IdInformeField;
+            }
+            set {
+                if ((this.IdInformeField.Equals(value) != true)) {
+                    this.IdInformeField = value;
+                    this.RaisePropertyChanged("IdInforme");
                 }
             }
         }
@@ -10593,6 +10625,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeAsync(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareasBackLog", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeTareasBackLogResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareasBackLogServiceErrorResp" +
+            "onseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListInformeTareasBackLog(string IdUnidad, string Tipo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareasBackLog", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListInformeTareasBackLogResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeTareasBackLogAsync(string IdUnidad, string Tipo);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectInformeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectInformeServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
@@ -10666,6 +10707,17 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstado", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasEstadoResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasEstadoAsync(int IdInforme, int IdTarea, int Estado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasReasignarInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasReasignarInformeRespo" +
+            "nse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasReasignarInformeServi" +
+            "ceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasReasignarInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateInformeTareasReasignarInformeRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasReasignarInformeAsync(int IdInformeNuevo, int IdInformeAnterior, int IdTarea);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMecanicoServiceErrorResponseFau" +
@@ -11581,6 +11633,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListInformeAsync(request);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListInformeTareasBackLog(string IdUnidad, string Tipo) {
+            return base.Channel.ListInformeTareasBackLog(IdUnidad, Tipo);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListInformeTareasBackLogAsync(string IdUnidad, string Tipo) {
+            return base.Channel.ListInformeTareasBackLogAsync(IdUnidad, Tipo);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc SelectInforme(int IdInforme) {
             return base.Channel.SelectInforme(IdInforme);
         }
@@ -11643,6 +11703,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasEstadoAsync(int IdInforme, int IdTarea, int Estado) {
             return base.Channel.UpdateInformeTareasEstadoAsync(IdInforme, IdTarea, Estado);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea) {
+            return base.Channel.UpdateInformeTareasReasignarInforme(IdInformeNuevo, IdInformeAnterior, IdTarea);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> UpdateInformeTareasReasignarInformeAsync(int IdInformeNuevo, int IdInformeAnterior, int IdTarea) {
+            return base.Channel.UpdateInformeTareasReasignarInformeAsync(IdInformeNuevo, IdInformeAnterior, IdTarea);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListTareaMecanico(int IdInforme, int IdTarea) {

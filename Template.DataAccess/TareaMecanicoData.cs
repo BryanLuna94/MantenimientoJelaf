@@ -42,8 +42,8 @@ namespace Mantenimiento.DataAccess
                             List.Add(new TareaMecanicoList
                             {
                                 CodMecanico = DataReader.GetStringValue(dr, "CodMecanico"),
-                                FechaInicio= fechaInicio.ToString("MM/dd/yyyy H:mm"),
-                                FechaTermino = fechaFin.ToString("MM/dd/yyyy H:mm"),
+                                FechaInicio= fechaInicio.ToString("dd/MM/yyyy H:mm"),
+                                FechaTermino = fechaFin.ToString("dd/MM/yyyy H:mm"),
                                 HoraInicio = DataReader.GetStringValue(dr, "HoraInicio"),
                                 HoraTermino = DataReader.GetStringValue(dr, "HoraTermino"),
                                 IdTareaMecanicos = DataReader.GetIntValue(dr, "IdTareaMecanicos"),

@@ -130,8 +130,10 @@
   <xs:element name="ArrayOfInformeTareasList" nillable="true" type="tns:ArrayOfInformeTareasList" />
   <xs:complexType name="InformeTareasList">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Are_Codigo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Estado" type="xs:int" />
       <xs:element minOccurs="0" name="FechaInicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
       <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
       <xs:element minOccurs="0" name="IdTipMan" type="xs:int" />
       <xs:element minOccurs="0" name="Mantenimiento" nillable="true" type="xs:string" />

@@ -31,5 +31,19 @@ namespace Mantenimiento.Utility
             public const int CODIGO_MAXIMO_ODOMETRO_FALLAS = 1;
             public const int CODIGO_MINIMO_ODOMETRO_FALLAS = 1;
         }
+
+        public class EstadosInforme
+        {
+            public const byte ANULADO = 0;
+            public const byte ACTIVO = 1;
+            public const byte CERRADO = 2;
+            public const byte BACK_LOG = 3;
+        }
+
+        public class TipoInforme
+        {
+            public const string CORRECTIVO = "1";
+            public const string PREVENTIVO = "0";
+        }
     }
 }

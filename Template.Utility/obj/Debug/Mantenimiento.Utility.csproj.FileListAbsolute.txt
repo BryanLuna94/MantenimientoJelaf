@@ -65,3 +65,4 @@ C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Debug\Man
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Debug\Template.Utility.dll
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.Utility\obj\Debug\Template.Utility.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Debug\Mantenimiento.Utility.csprojAssemblyReference.cache

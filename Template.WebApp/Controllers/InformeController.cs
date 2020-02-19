@@ -99,6 +99,22 @@ namespace Mantenimiento.WebApp.Controllers
 
         }
 
+        [HttpGet]
+        public async Task<ActionResult> ListInformeTareasBackLog(string IdUnidad, string Tipo)
+        {
+            try
+            {
+                var res = await _ServiceMantenimiento.ListInformeTareasBackLogAsync(IdUnidad, Tipo);
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
+
         public async Task<ActionResult> InsertInformeTarea(string json)
         {
             try
@@ -167,6 +183,25 @@ namespace Mantenimiento.WebApp.Controllers
             try
             {
                 var res = await _ServiceMantenimiento.UpdateInformeTareasEstadoAsync(IdInforme, IdTarea, Estado);
+
+                return Json(res, JsonRequestBehavior.AllowGet);
+            }
+            catch (FaultException<ServiceErrorResponse> ex)
+            {
+                //Como existe excepción de lógica de negocio, lo enviamos al Vehiculo para ser procesado por este
+                return Json(NotifyJson.BuildJson(KindOfNotify.Warning, ex.Detail.Message), JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(NotifyJson.BuildJson(KindOfNotify.Danger, ex.Message), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public async Task<ActionResult> UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea)
+        {
+            try
+            {
+                var res = await _ServiceMantenimiento.UpdateInformeTareasReasignarInformeAsync(IdInformeNuevo, IdInformeAnterior, IdTarea);
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }

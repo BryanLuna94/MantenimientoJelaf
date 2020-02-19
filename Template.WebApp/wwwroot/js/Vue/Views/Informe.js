@@ -101,6 +101,7 @@
             Beneficiarios: [],
             Mecanicos: [],
             MecanicosAyudantes: [],
+            TareasPendientes: [],
             Ayudantes: [],
             Bolsas: []
         },
@@ -282,6 +283,13 @@
             $('#appBuscadorInforme').modal('show');
         },
 
+        ShowTareasPendientes: async function () {
+
+            var _this = this;
+            _this.ListTareasPendientes();
+            $('#appInformeTareasPendientes').modal('show');
+        },
+
         ListInforme: async function () {
 
             let _this = this;
@@ -389,6 +397,25 @@
                 .then(res => {
                     if (res.data.Estado) {
                         _this.list.Mantenimientos = (res.data.Valor.ListInformeTareas) ? res.data.Valor.ListInformeTareas : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListInforme');
+                });
+        },
+
+        ListTareasPendientes: async function () {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Informe/ListInformeTareasBackLog'), {
+                params: {
+                    IdUnidad: _this.objInforme.Are_Codigo,
+                    Tipo: _this.objInforme.TipoInforme
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.TareasPendientes = (res.data.Valor.ListInformeTareas) ? res.data.Valor.ListInformeTareas : [];
                     }
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo ListInforme');
@@ -635,6 +662,28 @@
                 });
         },
 
+        ReasignarTarea: async function (itemTarea) {
+
+            let _this = this;
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('Informe/UpdateInformeTareasReasignarInforme'), {
+                IdInformeNuevo: _this.objInforme.IdInforme,
+                IdInformeAnterior: itemTarea.IdInforme,
+                IdTarea: itemTarea.IdTarea
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        _this.ListTareasPendientes();
+                        _this.ListInformeTareas();
+                    } else if (res.data.Estado === false) {
+                        Notifications.Messages.error(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ReasignarTarea');
+                });
+        },
+
         InsertMantenimiento: async function () {
 
             let _this = this;
@@ -666,9 +715,10 @@
                 });
         },
 
-        DeleteMantenimiento: async function (itemMantenimiento) {
+        DeleteMantenimiento: async function (itemMantenimiento, pendientes) {
 
             let _this = this;
+            if (pendientes === undefined) pendientes = false;
             //this.processing = true;
 
             Swal.fire({
@@ -693,8 +743,12 @@
                         .then(res => {
                             if (res.data.Estado) {
                                 Notifications.Messages.success('Se eliminó registro exitosamente');
-                                this.ListInformeTareas();
-
+                                if (!pendientes) {
+                                    _this.ListInformeTareas();
+                                }
+                                else {
+                                    _this.ListTareasPendientes();
+                                }
                             }
                             if (res.data.Estado === false) {
                                 Notifications.Messages.warning("esta registro no se pudo eliminar");
@@ -844,8 +898,8 @@
                         Notifications.Messages.success('Se grabó información exitosamente');
                         _this.ListMecanicos(_this.objMecanico.IdTarea);
                         _this.ClearMecanico();
-                    } else if (res.data.tipoNotificacion) {
-                        ProcessMessage(res.data.tipoNotificacion, res.data.mensaje);
+                    } else if (res.data.Mensaje !== '') {
+                        Notifications.Messages.warning(res.data.Mensaje);
                     } else if (res.data.tip) {
                         Notifications.Messages.warning(res.data.Mensaje);
                     }
@@ -1228,6 +1282,11 @@
                 });
             } else if (code === 3) {
                 $('#appRequisicion').modal('hide');
+                this.$nextTick(() => {
+
+                });
+            } else if (code === 4) {
+                $('#appInformeTareasPendientes').modal('hide');
                 this.$nextTick(() => {
 
                 });

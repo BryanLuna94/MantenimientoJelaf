@@ -433,6 +433,11 @@ namespace Mantenimiento.Utility
             }
         }
 
+        public static string ValidarDatetime(string datetime)
+        {
+            return datetime.Replace(".", "");
+        }
+
         public static List<GenericoListaDto> ListaMeses()
         {
             List<GenericoListaDto> listaMeses = new List<GenericoListaDto>

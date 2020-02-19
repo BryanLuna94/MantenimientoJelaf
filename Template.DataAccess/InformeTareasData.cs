@@ -58,6 +58,92 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
+        public static List<InformeTareasList> ListInformeTareasBackLogCorrectivo(string IdUnidad)
+        {
+            List<InformeTareasList> List = new List<InformeTareasList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("vw_List_tareas_backlog", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Unidad", SqlDbType.VarChar).Value = IdUnidad;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new InformeTareasList
+                            {
+                                FechaInicio = DataReader.GetDateTimeValue(dr, "fecha").Value.ToShortDateString(),
+                                IdTarea = DataReader.GetIntValue(dr, "IdTarea"),
+                                IdTipMan = DataReader.GetIntValue(dr, "IdTipMan"),
+                                Mantenimiento = DataReader.GetStringValue(dr, "Descripcion"),
+                                Observacion = DataReader.GetStringValue(dr, "Observacion"),
+                                Tarea = DataReader.GetStringValue(dr, "DescripcionTarea"),
+                                Estado = DataReader.GetIntValue(dr, "estado"),
+                                Are_Codigo = DataReader.GetStringValue(dr, "Are_Codigo"),
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme")
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<InformeTareasList> ListInformeTareasBackLogPreventivo(string IdUnidad)
+        {
+            List<InformeTareasList> List = new List<InformeTareasList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("vw_List_tareas_backlog_prev", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Unidad", SqlDbType.VarChar).Value = IdUnidad;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new InformeTareasList
+                            {
+                                FechaInicio = DataReader.GetDateTimeValue(dr, "fecha").Value.ToShortDateString(),
+                                IdTarea = DataReader.GetIntValue(dr, "IdTarea"),
+                                IdTipMan = DataReader.GetIntValue(dr, "IdTipMan"),
+                                Mantenimiento = DataReader.GetStringValue(dr, "Descripcion"),
+                                Observacion = DataReader.GetStringValue(dr, "Observacion"),
+                                Tarea = DataReader.GetStringValue(dr, "DescripcionTarea"),
+                                Estado = DataReader.GetIntValue(dr, "estado"),
+                                Are_Codigo = DataReader.GetStringValue(dr, "Are_Codigo"),
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme")
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
         public static async Task<int> InsertInformeTareas(InformeTareasEntity objEntidad)
         {
             int nuevoId = 0;
@@ -139,6 +225,38 @@ namespace Mantenimiento.DataAccess
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("@pIdInforme", SqlDbType.Int).Value = IdInforme;
+                        cmd.Parameters.Add("@pIdTarea", SqlDbType.Int).Value = IdTarea;
+                        cmd.Parameters.Add("@pEstado", SqlDbType.TinyInt).Value = Estado;
+                        await cmd.ExecuteNonQueryAsync();
+                        cmd.Dispose();
+                    }
+
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return nuevoId;
+        }
+
+        public static async Task<int> UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea, byte Estado)
+        {
+            int nuevoId = 0;
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("usp_tb_InformeTareas_ReasignarAInforme", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@pIdInformeNuevo", SqlDbType.Int).Value = IdInformeNuevo;
+                        cmd.Parameters.Add("@pIdInformeAnterior", SqlDbType.Int).Value = IdInformeAnterior;
                         cmd.Parameters.Add("@pIdTarea", SqlDbType.Int).Value = IdTarea;
                         cmd.Parameters.Add("@pEstado", SqlDbType.TinyInt).Value = Estado;
                         await cmd.ExecuteNonQueryAsync();

@@ -36,3 +36,16 @@ C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Releas
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.dll
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.DataAccess.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.Entities.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\Template.Utility.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\JBLV.Log.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\log4net.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\Mantenimiento.Entities.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\bin\Release\Template.Utility.pdb
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CoreCompileInputs.cache
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.dll
+D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.DataAccess\obj\Release\Mantenimiento.DataAccess.pdb

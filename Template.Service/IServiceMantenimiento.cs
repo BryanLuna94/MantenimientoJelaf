@@ -472,6 +472,10 @@ namespace Mantenimiento.Service
         Response<InformeResponse> ListInforme(InformeRequest request);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListInformeTareasBackLog", ResponseFormat = WebMessageFormat.Json)]
+        Response<InformeResponse> ListInformeTareasBackLog(string IdUnidad, string Tipo);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "SelectInforme", ResponseFormat = WebMessageFormat.Json)]
         Response<InformeResponse> SelectInforme(int IdInforme);
 
@@ -502,6 +506,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "UpdateInformeTareasEstado", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<InformeResponse>> UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "POST", UriTemplate = "UpdateInformeTareasReasignarInforme", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<InformeResponse>> UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListTareaMecanico", ResponseFormat = WebMessageFormat.Json)]

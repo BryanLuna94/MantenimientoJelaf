@@ -554,6 +554,11 @@ namespace Mantenimiento.Service
             return InformeLogic.ListInformeTareas(IdInforme);
         }
 
+        public Response<InformeResponse> ListInformeTareasBackLog(string IdUnidad, string Tipo)
+        {
+            return InformeLogic.ListInformeTareasBackLog(IdUnidad, Tipo);
+        }
+
         public async Task<Response<InformeResponse>> AnularInforme(int IdInforme)
         {
             return await InformeLogic.AnularInforme(IdInforme);
@@ -577,6 +582,11 @@ namespace Mantenimiento.Service
         public async Task<Response<InformeResponse>> UpdateInformeTareasEstado(int IdInforme, int IdTarea, int Estado)
         {
             return await InformeLogic.UpdateInformeTareasEstado(IdInforme, IdTarea, Estado);
+        }
+
+        public async Task<Response<InformeResponse>> UpdateInformeTareasReasignarInforme(int IdInformeNuevo, int IdInformeAnterior, int IdTarea)
+        {
+            return await InformeLogic.UpdateInformeTareasReasignarInforme(IdInformeNuevo, IdInformeAnterior, IdTarea);
         }
 
         public Response<InformeResponse> ListTareaMecanico(int IdInforme, int IdTarea)
