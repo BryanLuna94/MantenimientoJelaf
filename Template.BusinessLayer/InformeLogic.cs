@@ -362,6 +362,12 @@ namespace Mantenimiento.BusinessLayer
             try
             {
                 await InformeTareasData.UpdateInformeTareasEstado(IdInforme, IdTarea, Convert.ToByte(Estado));
+                if (Estado == Constants.EstadosInforme.ANULADO)
+                {
+                    var objInformeTarea = InformeTareasData.ListInformeTareas(IdInforme, IdTarea, 99)[0];
+                    var objInforme = InformeData.SelectInforme(IdInforme);
+                    await ControlUnidadTipoMantenimientoData.AnularControlUnidadMantenimiento(objInformeTarea.IdTipMan, objInforme.Are_Codigo);
+                }
 
                 response = new Response<InformeResponse>
                 {
