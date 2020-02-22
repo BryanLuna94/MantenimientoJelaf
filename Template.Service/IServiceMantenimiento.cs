@@ -488,6 +488,10 @@ namespace Mantenimiento.Service
         Response<InformeResponse> ListInformeTareas(int IdInforme);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListInformeOrdenMantenimiento", ResponseFormat = WebMessageFormat.Json)]
+        Response<InformeResponse> ListInformeOrdenMantenimiento(int IdInforme);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "DeleteInformeTareas", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<InformeResponse>> DeleteInformeTareas(int IdInforme, int IdTarea, int IdTipMan, string AreCodigo);
 

@@ -58,6 +58,55 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
+        public static List<InformeOrdenMantenimientoList> ListInformeOrdenMantenimiento(int IdInforme)
+        {
+            List<InformeOrdenMantenimientoList> List = new List<InformeOrdenMantenimientoList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_Rpt_Informe_Orden_Mantenimiento_web_gen", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@IdInforme", SqlDbType.Int).Value = IdInforme;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new InformeOrdenMantenimientoList
+                            {
+                                IdInforme = DataReader.GetIntValue(dr, "IdInforme"),
+                                NumeroInforme = DataReader.GetIntValue(dr, "NumeroInforme"),
+                                FechaRegistro = DataReader.GetDateTimeValue(dr, "FechaRegistro").Value.ToShortDateString(),
+                                Fecha = DataReader.GetDateTimeValue(dr, "Fecha").Value.ToShortDateString(),
+                                BusPlaca = DataReader.GetStringValue(dr, "BusPlaca"),
+                                Ben_Nombre = DataReader.GetStringValue(dr, "Ben_Nombre"),
+                                Ofi_Nombre = DataReader.GetStringValue(dr, "Ofi_Nombre"),
+                                KmUnidad = DataReader.GetIntValue(dr, "KmUnidad"),
+                                IdTarea = DataReader.GetIntValue(dr, "IdTarea"),
+                                Tarea = DataReader.GetStringValue(dr, "Tarea"),
+                                Mecanico = DataReader.GetStringValue(dr, "Mecanico"),
+                                Observacion = DataReader.GetStringValue(dr, "Observacion"),
+                                Estado = DataReader.GetIntValue(dr, "Estado"),
+                                Dia = DataReader.GetStringValue(dr, "Dia"),
+
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
         public static List<InformeTareasList> ListInformeTareasBackLogCorrectivo(string IdUnidad)
         {
             List<InformeTareasList> List = new List<InformeTareasList>();

@@ -121,6 +121,15 @@
   <wsdl:message name="IServiceMantenimiento_ListInformeTareas_ServiceErrorResponseFault_FaultMessage">
     <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q12:ServiceErrorResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListInformeOrdenMantenimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListInformeOrdenMantenimiento" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListInformeOrdenMantenimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListInformeOrdenMantenimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMantenimiento_ListInformeOrdenMantenimiento_ServiceErrorResponseFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q13:ServiceErrorResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteInformeTareas_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteInformeTareas" />
   </wsdl:message>
@@ -128,7 +137,7 @@
     <wsdl:part name="parameters" element="tns:DeleteInformeTareasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteInformeTareas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q13:ServiceErrorResponse" />
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q14:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_AnularInforme_InputMessage">
     <wsdl:part name="parameters" element="tns:AnularInforme" />
@@ -137,7 +146,7 @@
     <wsdl:part name="parameters" element="tns:AnularInformeResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_AnularInforme_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q14:ServiceErrorResponse" />
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q15:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertInformeTareas_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertInformeTareas" />
@@ -146,7 +155,7 @@
     <wsdl:part name="parameters" element="tns:InsertInformeTareasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertInformeTareas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q15:ServiceErrorResponse" />
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q16:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateInformeTareas_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateInformeTareas" />
@@ -155,7 +164,7 @@
     <wsdl:part name="parameters" element="tns:UpdateInformeTareasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateInformeTareas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q16:ServiceErrorResponse" />
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q17:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateInformeTareasEstado_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateInformeTareasEstado" />
@@ -164,7 +173,7 @@
     <wsdl:part name="parameters" element="tns:UpdateInformeTareasEstadoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateInformeTareasEstado_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q17:ServiceErrorResponse" />
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q18:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateInformeTareasReasignarInforme_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateInformeTareasReasignarInforme" />
@@ -173,7 +182,7 @@
     <wsdl:part name="parameters" element="tns:UpdateInformeTareasReasignarInformeResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateInformeTareasReasignarInforme_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q18:ServiceErrorResponse" />
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q19:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareaMecanico" />
@@ -182,7 +191,7 @@
     <wsdl:part name="parameters" element="tns:ListTareaMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q19:ServiceErrorResponse" />
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q20:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteTareaMecanico" />
@@ -191,7 +200,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTareaMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q20:ServiceErrorResponse" />
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q21:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertTareaMecanico" />
@@ -200,7 +209,7 @@
     <wsdl:part name="parameters" element="tns:InsertTareaMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q21:ServiceErrorResponse" />
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q22:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTareaMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTareaMecanico" />
@@ -209,7 +218,7 @@
     <wsdl:part name="parameters" element="tns:UpdateTareaMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTareaMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q22:ServiceErrorResponse" />
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q23:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaMecanicosAyudante_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareaMecanicosAyudante" />
@@ -218,7 +227,7 @@
     <wsdl:part name="parameters" element="tns:ListTareaMecanicosAyudanteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaMecanicosAyudante_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q23:ServiceErrorResponse" />
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q24:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaMecanicosAyudante_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteTareaMecanicosAyudante" />
@@ -227,7 +236,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTareaMecanicosAyudanteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaMecanicosAyudante_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q24:ServiceErrorResponse" />
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q25:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaMecanicosAyudante_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertTareaMecanicosAyudante" />
@@ -236,7 +245,7 @@
     <wsdl:part name="parameters" element="tns:InsertTareaMecanicosAyudanteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaMecanicosAyudante_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q25:ServiceErrorResponse" />
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q26:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_BusquedaArticulo_InputMessage">
     <wsdl:part name="parameters" element="tns:BusquedaArticulo" />
@@ -245,7 +254,7 @@
     <wsdl:part name="parameters" element="tns:BusquedaArticuloResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_BusquedaArticulo_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q26:ServiceErrorResponse" />
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q27:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertBolsa_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertBolsa" />
@@ -254,7 +263,7 @@
     <wsdl:part name="parameters" element="tns:InsertBolsaResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertBolsa_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q27:ServiceErrorResponse" />
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q28:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_AgregarBolsas_InputMessage">
     <wsdl:part name="parameters" element="tns:AgregarBolsas" />
@@ -263,7 +272,7 @@
     <wsdl:part name="parameters" element="tns:AgregarBolsasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_AgregarBolsas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q28:ServiceErrorResponse" />
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q29:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListBolsas_InputMessage">
     <wsdl:part name="parameters" element="tns:ListBolsas" />
@@ -272,7 +281,7 @@
     <wsdl:part name="parameters" element="tns:ListBolsasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListBolsas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q29:ServiceErrorResponse" />
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q30:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteBolsa_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteBolsa" />
@@ -281,7 +290,7 @@
     <wsdl:part name="parameters" element="tns:DeleteBolsaResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteBolsa_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q30:ServiceErrorResponse" />
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q31:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListUsuariosAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListUsuariosAutocomplete" />
@@ -290,7 +299,7 @@
     <wsdl:part name="parameters" element="tns:ListUsuariosAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListUsuariosAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q31:ServiceErrorResponse" />
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q32:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSistemasAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListSistemasAutocomplete" />
@@ -299,7 +308,7 @@
     <wsdl:part name="parameters" element="tns:ListSistemasAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSistemasAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q32:ServiceErrorResponse" />
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q33:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSubSistemasAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListSubSistemasAutocomplete" />
@@ -308,7 +317,7 @@
     <wsdl:part name="parameters" element="tns:ListSubSistemasAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSubSistemasAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q33:ServiceErrorResponse" />
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q34:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTipoMAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTipoMAutocomplete" />
@@ -317,7 +326,7 @@
     <wsdl:part name="parameters" element="tns:ListTipoMAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTipoMAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q34:ServiceErrorResponse" />
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q35:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListEmpresa_InputMessage">
     <wsdl:part name="parameters" element="tns:ListEmpresa" />
@@ -326,7 +335,7 @@
     <wsdl:part name="parameters" element="tns:ListEmpresaResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListEmpresa_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q35:ServiceErrorResponse" />
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q36:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListFlotaAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListFlotaAutocomplete" />
@@ -335,7 +344,7 @@
     <wsdl:part name="parameters" element="tns:ListFlotaAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListFlotaAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q36:ServiceErrorResponse" />
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q37:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListPlataformaAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListPlataformaAutocomplete" />
@@ -344,7 +353,7 @@
     <wsdl:part name="parameters" element="tns:ListPlataformaAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListPlataformaAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q37:ServiceErrorResponse" />
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q38:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareasCAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareasCAutocomplete" />
@@ -353,7 +362,7 @@
     <wsdl:part name="parameters" element="tns:ListTareasCAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareasCAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q38:ServiceErrorResponse" />
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q39:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareasAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareasAutocomplete" />
@@ -362,7 +371,7 @@
     <wsdl:part name="parameters" element="tns:ListTareasAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareasAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q39:ServiceErrorResponse" />
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q40:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareasPreventivoAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareasPreventivoAutocomplete" />
@@ -371,7 +380,7 @@
     <wsdl:part name="parameters" element="tns:ListTareasPreventivoAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareasPreventivoAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q40:ServiceErrorResponse" />
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q41:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListBeneficiarioAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListBeneficiarioAutocomplete" />
@@ -380,7 +389,7 @@
     <wsdl:part name="parameters" element="tns:ListBeneficiarioAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListBeneficiarioAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q41:ServiceErrorResponse" />
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q42:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListPlanAccionAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListPlanAccionAutocomplete" />
@@ -389,7 +398,7 @@
     <wsdl:part name="parameters" element="tns:ListPlanAccionAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListPlanAccionAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q42:ServiceErrorResponse" />
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q43:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListPuntoAtencionAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListPuntoAtencionAutocomplete" />
@@ -398,7 +407,7 @@
     <wsdl:part name="parameters" element="tns:ListPuntoAtencionAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListPuntoAtencionAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q43:ServiceErrorResponse" />
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q44:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMecanicosAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListMecanicosAutocomplete" />
@@ -407,7 +416,7 @@
     <wsdl:part name="parameters" element="tns:ListMecanicosAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMecanicosAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q44:ServiceErrorResponse" />
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q45:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListAlmacenesAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListAlmacenesAutocomplete" />
@@ -416,7 +425,7 @@
     <wsdl:part name="parameters" element="tns:ListAlmacenesAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListAlmacenesAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q45:ServiceErrorResponse" />
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q46:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListArticulosAutocomplete_InputMessage">
     <wsdl:part name="parameters" element="tns:ListArticulosAutocomplete" />
@@ -425,7 +434,7 @@
     <wsdl:part name="parameters" element="tns:ListArticulosAutocompleteResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListArticulosAutocomplete_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q46:ServiceErrorResponse" />
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q47:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_Login_InputMessage">
     <wsdl:part name="parameters" element="tns:Login" />
@@ -434,7 +443,7 @@
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_Login_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q47:ServiceErrorResponse" />
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q48:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_Actualizapwd_InputMessage">
     <wsdl:part name="parameters" element="tns:Actualizapwd" />
@@ -443,7 +452,7 @@
     <wsdl:part name="parameters" element="tns:ActualizapwdResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_Actualizapwd_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q48:ServiceErrorResponse" />
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q49:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:ListSistemas" />
@@ -452,7 +461,7 @@
     <wsdl:part name="parameters" element="tns:ListSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q49:ServiceErrorResponse" />
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q50:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteSistemas" />
@@ -461,7 +470,7 @@
     <wsdl:part name="parameters" element="tns:DeleteSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q50:ServiceErrorResponse" />
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q51:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectSistemas" />
@@ -470,7 +479,7 @@
     <wsdl:part name="parameters" element="tns:SelectSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q51:ServiceErrorResponse" />
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q52:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:IdSistemas" />
@@ -479,7 +488,7 @@
     <wsdl:part name="parameters" element="tns:IdSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q52:ServiceErrorResponse" />
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q53:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertSistemas" />
@@ -488,7 +497,7 @@
     <wsdl:part name="parameters" element="tns:InsertSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q53:ServiceErrorResponse" />
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q54:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateSistemas" />
@@ -497,7 +506,7 @@
     <wsdl:part name="parameters" element="tns:UpdateSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q54:ServiceErrorResponse" />
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q55:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListClaseM_InputMessage">
     <wsdl:part name="parameters" element="tns:ListClaseM" />
@@ -506,7 +515,7 @@
     <wsdl:part name="parameters" element="tns:ListClaseMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListClaseM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q55:ServiceErrorResponse" />
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q56:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListClaseMP_InputMessage">
     <wsdl:part name="parameters" element="tns:ListClaseMP" />
@@ -515,7 +524,7 @@
     <wsdl:part name="parameters" element="tns:ListClaseMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListClaseMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q56:ServiceErrorResponse" />
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q57:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectClaseM_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectClaseM" />
@@ -524,7 +533,7 @@
     <wsdl:part name="parameters" element="tns:SelectClaseMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectClaseM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q57:ServiceErrorResponse" />
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q58:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteClaseM_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteClaseM" />
@@ -533,7 +542,7 @@
     <wsdl:part name="parameters" element="tns:DeleteClaseMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteClaseM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q58:ServiceErrorResponse" />
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q59:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertClaseM_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertClaseM" />
@@ -542,7 +551,7 @@
     <wsdl:part name="parameters" element="tns:InsertClaseMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertClaseM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q59:ServiceErrorResponse" />
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q60:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateClaseM_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateClaseM" />
@@ -551,7 +560,7 @@
     <wsdl:part name="parameters" element="tns:UpdateClaseMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateClaseM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q60:ServiceErrorResponse" />
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q61:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSubSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:ListSubSistemas" />
@@ -560,7 +569,7 @@
     <wsdl:part name="parameters" element="tns:ListSubSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListSubSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q61:ServiceErrorResponse" />
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q62:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectSubSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectSubSistemas" />
@@ -569,7 +578,7 @@
     <wsdl:part name="parameters" element="tns:SelectSubSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectSubSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q62:ServiceErrorResponse" />
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q63:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdSubSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:IdSubSistemas" />
@@ -578,7 +587,7 @@
     <wsdl:part name="parameters" element="tns:IdSubSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdSubSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q63:ServiceErrorResponse" />
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q64:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteSubSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteSubSistemas" />
@@ -587,7 +596,7 @@
     <wsdl:part name="parameters" element="tns:DeleteSubSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteSubSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q64:ServiceErrorResponse" />
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q65:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertSubSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertSubSistemas" />
@@ -596,7 +605,7 @@
     <wsdl:part name="parameters" element="tns:InsertSubSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertSubSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q65:ServiceErrorResponse" />
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q66:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateSubSistemas_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateSubSistemas" />
@@ -605,7 +614,7 @@
     <wsdl:part name="parameters" element="tns:UpdateSubSistemasResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateSubSistemas_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q66:ServiceErrorResponse" />
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q67:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTipoM_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTipoM" />
@@ -614,7 +623,7 @@
     <wsdl:part name="parameters" element="tns:ListTipoMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTipoM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q67:ServiceErrorResponse" />
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q68:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTipoM_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectTipoM" />
@@ -623,7 +632,7 @@
     <wsdl:part name="parameters" element="tns:SelectTipoMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTipoM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q68:ServiceErrorResponse" />
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q69:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTipoM_InputMessage">
     <wsdl:part name="parameters" element="tns:IdTipoM" />
@@ -632,7 +641,7 @@
     <wsdl:part name="parameters" element="tns:IdTipoMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTipoM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q69:ServiceErrorResponse" />
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q70:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTipoM_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteTipoM" />
@@ -641,7 +650,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTipoMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTipoM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q70:ServiceErrorResponse" />
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q71:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTipoM_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertTipoM" />
@@ -650,7 +659,7 @@
     <wsdl:part name="parameters" element="tns:InsertTipoMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTipoM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q71:ServiceErrorResponse" />
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q72:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTipoM_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTipoM" />
@@ -659,7 +668,7 @@
     <wsdl:part name="parameters" element="tns:UpdateTipoMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTipoM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q72:ServiceErrorResponse" />
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q73:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTipoMP_InputMessage">
     <wsdl:part name="parameters" element="tns:IdTipoMP" />
@@ -668,7 +677,7 @@
     <wsdl:part name="parameters" element="tns:IdTipoMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTipoMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q73:ServiceErrorResponse" />
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q74:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTipoMP_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTipoMP" />
@@ -677,7 +686,7 @@
     <wsdl:part name="parameters" element="tns:ListTipoMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTipoMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q74:ServiceErrorResponse" />
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q75:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTipoMP_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectTipoMP" />
@@ -686,7 +695,7 @@
     <wsdl:part name="parameters" element="tns:SelectTipoMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTipoMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q75:ServiceErrorResponse" />
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q76:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTipoMP_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteTipoMP" />
@@ -695,7 +704,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTipoMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTipoMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q76:ServiceErrorResponse" />
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q77:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTipoMP_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertTipoMP" />
@@ -704,7 +713,7 @@
     <wsdl:part name="parameters" element="tns:InsertTipoMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTipoMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q77:ServiceErrorResponse" />
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q78:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTipoMP_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTipoMP" />
@@ -713,7 +722,7 @@
     <wsdl:part name="parameters" element="tns:UpdateTipoMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTipoMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q78:ServiceErrorResponse" />
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q79:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaM_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareaM" />
@@ -722,7 +731,7 @@
     <wsdl:part name="parameters" element="tns:ListTareaMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q79:ServiceErrorResponse" />
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q80:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTareaM_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectTareaM" />
@@ -731,7 +740,7 @@
     <wsdl:part name="parameters" element="tns:SelectTareaMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTareaM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q80:ServiceErrorResponse" />
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q81:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTareaM_InputMessage">
     <wsdl:part name="parameters" element="tns:IdTareaM" />
@@ -740,7 +749,7 @@
     <wsdl:part name="parameters" element="tns:IdTareaMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTareaM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q81:ServiceErrorResponse" />
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q82:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaM_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteTareaM" />
@@ -749,7 +758,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTareaMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q82:ServiceErrorResponse" />
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q83:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaM_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertTareaM" />
@@ -758,7 +767,7 @@
     <wsdl:part name="parameters" element="tns:InsertTareaMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q83:ServiceErrorResponse" />
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q84:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTareaM_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTareaM" />
@@ -767,7 +776,7 @@
     <wsdl:part name="parameters" element="tns:UpdateTareaMResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTareaM_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q84:ServiceErrorResponse" />
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q85:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTareaMP_InputMessage">
     <wsdl:part name="parameters" element="tns:IdTareaMP" />
@@ -776,7 +785,7 @@
     <wsdl:part name="parameters" element="tns:IdTareaMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdTareaMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q85:ServiceErrorResponse" />
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q86:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaMP_InputMessage">
     <wsdl:part name="parameters" element="tns:ListTareaMP" />
@@ -785,7 +794,7 @@
     <wsdl:part name="parameters" element="tns:ListTareaMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListTareaMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q86:ServiceErrorResponse" />
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q87:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTareaMP_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectTareaMP" />
@@ -794,7 +803,7 @@
     <wsdl:part name="parameters" element="tns:SelectTareaMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectTareaMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q87:ServiceErrorResponse" />
+    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q88:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaMP_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertTareaMP" />
@@ -803,7 +812,7 @@
     <wsdl:part name="parameters" element="tns:InsertTareaMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertTareaMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q88:ServiceErrorResponse" />
+    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q89:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTareaMP_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTareaMP" />
@@ -812,7 +821,7 @@
     <wsdl:part name="parameters" element="tns:UpdateTareaMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateTareaMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q89:ServiceErrorResponse" />
+    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q90:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaMP_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteTareaMP" />
@@ -821,7 +830,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTareaMPResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteTareaMP_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q90:ServiceErrorResponse" />
+    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q91:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdArticuloT_InputMessage">
     <wsdl:part name="parameters" element="tns:IdArticuloT" />
@@ -830,7 +839,7 @@
     <wsdl:part name="parameters" element="tns:IdArticuloTResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdArticuloT_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q91:ServiceErrorResponse" />
+    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q92:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListArticuloT_InputMessage">
     <wsdl:part name="parameters" element="tns:ListArticuloT" />
@@ -839,7 +848,7 @@
     <wsdl:part name="parameters" element="tns:ListArticuloTResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListArticuloT_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q92:ServiceErrorResponse" />
+    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q93:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectArticuloT_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectArticuloT" />
@@ -848,7 +857,7 @@
     <wsdl:part name="parameters" element="tns:SelectArticuloTResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectArticuloT_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q93:ServiceErrorResponse" />
+    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q94:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertArticuloT_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertArticuloT" />
@@ -857,7 +866,7 @@
     <wsdl:part name="parameters" element="tns:InsertArticuloTResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertArticuloT_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q94:ServiceErrorResponse" />
+    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q95:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateArticuloT_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateArticuloT" />
@@ -866,7 +875,7 @@
     <wsdl:part name="parameters" element="tns:UpdateArticuloTResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateArticuloT_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q95:ServiceErrorResponse" />
+    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q96:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteArticuloT_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteArticuloT" />
@@ -875,7 +884,7 @@
     <wsdl:part name="parameters" element="tns:DeleteArticuloTResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteArticuloT_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q96:ServiceErrorResponse" />
+    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q97:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListProducto_InputMessage">
     <wsdl:part name="parameters" element="tns:ListProducto" />
@@ -884,7 +893,7 @@
     <wsdl:part name="parameters" element="tns:ListProductoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListProducto_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q97:ServiceErrorResponse" />
+    <wsdl:part xmlns:q98="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q98:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMarcaModelo_InputMessage">
     <wsdl:part name="parameters" element="tns:ListMarcaModelo" />
@@ -893,7 +902,7 @@
     <wsdl:part name="parameters" element="tns:ListMarcaModeloResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMarcaModelo_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q98="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q98:ServiceErrorResponse" />
+    <wsdl:part xmlns:q99="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q99:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectFallasD_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectFallasD" />
@@ -902,7 +911,7 @@
     <wsdl:part name="parameters" element="tns:SelectFallasDResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectFallasD_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q99="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q99:ServiceErrorResponse" />
+    <wsdl:part xmlns:q100="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q100:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdFallasD_InputMessage">
     <wsdl:part name="parameters" element="tns:IdFallasD" />
@@ -911,7 +920,7 @@
     <wsdl:part name="parameters" element="tns:IdFallasDResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_IdFallasD_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q100="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q100:ServiceErrorResponse" />
+    <wsdl:part xmlns:q101="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q101:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteFallasD_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteFallasD" />
@@ -920,7 +929,7 @@
     <wsdl:part name="parameters" element="tns:DeleteFallasDResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteFallasD_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q101="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q101:ServiceErrorResponse" />
+    <wsdl:part xmlns:q102="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q102:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertFallasD_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertFallasD" />
@@ -929,7 +938,7 @@
     <wsdl:part name="parameters" element="tns:InsertFallasDResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertFallasD_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q102="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q102:ServiceErrorResponse" />
+    <wsdl:part xmlns:q103="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q103:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SolicitudRevisionBusqueda_InputMessage">
     <wsdl:part name="parameters" element="tns:SolicitudRevisionBusqueda" />
@@ -938,7 +947,7 @@
     <wsdl:part name="parameters" element="tns:SolicitudRevisionBusquedaResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SolicitudRevisionBusqueda_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q103="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q103:ServiceErrorResponse" />
+    <wsdl:part xmlns:q104="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q104:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectSolicitudRevision_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectSolicitudRevision" />
@@ -947,7 +956,7 @@
     <wsdl:part name="parameters" element="tns:SelectSolicitudRevisionResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectSolicitudRevision_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q104="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q104:ServiceErrorResponse" />
+    <wsdl:part xmlns:q105="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q105:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateSolicitudRevision_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateSolicitudRevision" />
@@ -956,7 +965,7 @@
     <wsdl:part name="parameters" element="tns:UpdateSolicitudRevisionResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateSolicitudRevision_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q105="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q105:ServiceErrorResponse" />
+    <wsdl:part xmlns:q106="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q106:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ObtenerUltimaRevisionChofer_InputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerUltimaRevisionChofer" />
@@ -965,7 +974,7 @@
     <wsdl:part name="parameters" element="tns:ObtenerUltimaRevisionChoferResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ObtenerUltimaRevisionChofer_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q106="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q106:ServiceErrorResponse" />
+    <wsdl:part xmlns:q107="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q107:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_AnularSolicitudRevision_InputMessage">
     <wsdl:part name="parameters" element="tns:AnularSolicitudRevision" />
@@ -974,7 +983,7 @@
     <wsdl:part name="parameters" element="tns:AnularSolicitudRevisionResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_AnularSolicitudRevision_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q107="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q107:ServiceErrorResponse" />
+    <wsdl:part xmlns:q108="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q108:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListAuxilioMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:ListAuxilioMecanico" />
@@ -983,7 +992,7 @@
     <wsdl:part name="parameters" element="tns:ListAuxilioMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListAuxilioMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q108="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q108:ServiceErrorResponse" />
+    <wsdl:part xmlns:q109="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q109:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectAuxilioMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectAuxilioMecanico" />
@@ -992,7 +1001,7 @@
     <wsdl:part name="parameters" element="tns:SelectAuxilioMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_SelectAuxilioMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q109="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q109:ServiceErrorResponse" />
+    <wsdl:part xmlns:q110="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q110:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteAuxilioMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteAuxilioMecanico" />
@@ -1001,7 +1010,7 @@
     <wsdl:part name="parameters" element="tns:DeleteAuxilioMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_DeleteAuxilioMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q110="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q110:ServiceErrorResponse" />
+    <wsdl:part xmlns:q111="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q111:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertAuxilioMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertAuxilioMecanico" />
@@ -1010,7 +1019,7 @@
     <wsdl:part name="parameters" element="tns:InsertAuxilioMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertAuxilioMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q111="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q111:ServiceErrorResponse" />
+    <wsdl:part xmlns:q112="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q112:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateAuxilioMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateAuxilioMecanico" />
@@ -1019,7 +1028,7 @@
     <wsdl:part name="parameters" element="tns:UpdateAuxilioMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_UpdateAuxilioMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q112="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q112:ServiceErrorResponse" />
+    <wsdl:part xmlns:q113="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q113:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMtbf_AuxilioMecanico_InputMessage">
     <wsdl:part name="parameters" element="tns:ListMtbf_AuxilioMecanico" />
@@ -1028,7 +1037,7 @@
     <wsdl:part name="parameters" element="tns:ListMtbf_AuxilioMecanicoResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMtbf_AuxilioMecanico_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q113="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q113:ServiceErrorResponse" />
+    <wsdl:part xmlns:q114="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q114:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMtbf_InputMessage">
     <wsdl:part name="parameters" element="tns:ListMtbf" />
@@ -1037,7 +1046,7 @@
     <wsdl:part name="parameters" element="tns:ListMtbfResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_ListMtbf_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q114="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q114:ServiceErrorResponse" />
+    <wsdl:part xmlns:q115="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q115:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertMtbf_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertMtbf" />
@@ -1046,7 +1055,7 @@
     <wsdl:part name="parameters" element="tns:InsertMtbfResponse" />
   </wsdl:message>
   <wsdl:message name="IServiceMantenimiento_InsertMtbf_ServiceErrorResponseFault_FaultMessage">
-    <wsdl:part xmlns:q115="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q115:ServiceErrorResponse" />
+    <wsdl:part xmlns:q116="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" name="detail" element="q116:ServiceErrorResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceMantenimiento">
     <wsdl:operation name="ListOrdenMasiva">
@@ -1108,6 +1117,11 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareas" message="tns:IServiceMantenimiento_ListInformeTareas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareasResponse" message="tns:IServiceMantenimiento_ListInformeTareas_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListInformeTareasServiceErrorResponseFault" name="ServiceErrorResponseFault" message="tns:IServiceMantenimiento_ListInformeTareas_ServiceErrorResponseFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListInformeOrdenMantenimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListInformeOrdenMantenimiento" message="tns:IServiceMantenimiento_ListInformeOrdenMantenimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListInformeOrdenMantenimientoResponse" message="tns:IServiceMantenimiento_ListInformeOrdenMantenimiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMantenimiento/ListInformeOrdenMantenimientoServiceErrorResponseFault" name="ServiceErrorResponseFault" message="tns:IServiceMantenimiento_ListInformeOrdenMantenimiento_ServiceErrorResponseFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteInformeTareas">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceMantenimiento/DeleteInformeTareas" message="tns:IServiceMantenimiento_DeleteInformeTareas_InputMessage" />
@@ -1761,6 +1775,18 @@
     </wsdl:operation>
     <wsdl:operation name="ListInformeTareas">
       <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListInformeTareas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceErrorResponseFault">
+        <soap:fault use="literal" name="ServiceErrorResponseFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListInformeOrdenMantenimiento">
+      <soap:operation soapAction="http://tempuri.org/IServiceMantenimiento/ListInformeOrdenMantenimiento" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

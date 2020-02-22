@@ -61,8 +61,8 @@
         },
 
         objFiltro: {
-            Fech_ini: '',
-            Fech_fin: '',
+            Fech_ini: _FechaActual,
+            Fech_fin: _FechaActual,
             NInforme: '',
             TipoU: '2',
             UsrCodigo: '',
@@ -401,6 +401,43 @@
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo ListInforme');
                 });
+        },
+
+
+        RedirectReport: async function () {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Informe/ReportTemp'), {
+                params: {
+                    IdInforme: _this.objInforme.IdInforme
+                }
+            })
+                .then(res => {
+                    window.open(_rutaReporte);
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo RedirectReport');
+                });
+
+        },
+
+
+        RedirectReportTarea: async function (itemMantenimiento) {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('Informe/ReportTempTarea'), {
+                params: {
+                    IdInforme: _this.objInforme.IdInforme,
+                    IdTarea: itemMantenimiento.IdTarea
+                }
+            })
+                .then(res => {
+                    window.open(_rutaReporteTarea);
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo RedirectReport');
+                });
+
         },
 
         ListTareasPendientes: async function () {

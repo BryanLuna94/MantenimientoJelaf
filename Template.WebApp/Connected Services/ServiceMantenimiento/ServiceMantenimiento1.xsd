@@ -48,6 +48,10 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="DescripcionTarea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dias" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasRecorrido" type="xs:int" />
+      <xs:element minOccurs="0" name="Horas" type="xs:int" />
+      <xs:element minOccurs="0" name="HorasRecorrido" type="xs:int" />
       <xs:element minOccurs="0" name="IdTarea" type="xs:short" />
       <xs:element minOccurs="0" name="KmtActual" type="xs:decimal" />
       <xs:element minOccurs="0" name="KmtAviso" type="xs:decimal" />
@@ -122,6 +126,31 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BusquedaArticuloList" nillable="true" type="tns:BusquedaArticuloList" />
+  <xs:complexType name="ArrayOfInformeOrdenMantenimientoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InformeOrdenMantenimientoList" nillable="true" type="tns:InformeOrdenMantenimientoList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformeOrdenMantenimientoList" nillable="true" type="tns:ArrayOfInformeOrdenMantenimientoList" />
+  <xs:complexType name="InformeOrdenMantenimientoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ben_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusPlaca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTarea" type="xs:int" />
+      <xs:element minOccurs="0" name="KmUnidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mecanico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroInforme" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ofi_Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tarea" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformeOrdenMantenimientoList" nillable="true" type="tns:InformeOrdenMantenimientoList" />
   <xs:complexType name="ArrayOfInformeTareasList">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="InformeTareasList" nillable="true" type="tns:InformeTareasList" />

@@ -1,7 +1,10 @@
 ﻿using Mantenimiento.WebApp.Helpers;
+using Mantenimiento.WebApp.Reports;
 using Mantenimiento.WebApp.ServiceMantenimiento;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -98,6 +101,44 @@ namespace Mantenimiento.WebApp.Controllers
             }
 
         }
+
+        public ActionResult ReportTemp(int IdInforme)
+        {
+            Session["IdInformetemp"] = IdInforme;
+            return RedirectToAction("Report", "Informe");
+        }
+
+        public ActionResult Report()
+        {
+            int IdInformeTemp = Convert.ToInt32(Session["IdInformetemp"]);
+            List<InformeOrdenMantenimientoList> InformeOrdenMantenimientoList = new List<InformeOrdenMantenimientoList>();
+            InformeOrdenMantenimientoList = _ServiceMantenimiento.ListInformeOrdenMantenimiento(IdInformeTemp).Valor.ListInformeOrdenMantenimiento;
+            InformeOrdenMantenimientoReport informeOrdenMantenimientoReport = new InformeOrdenMantenimientoReport();
+            byte[] abytes = informeOrdenMantenimientoReport.PrepareReport(InformeOrdenMantenimientoList);
+
+            return File(abytes, "application/pdf");
+        }
+
+        public ActionResult ReportTempTarea(int IdInforme, int IdTarea)
+        {
+            Session["IdInformetemp"] = IdInforme;
+            Session["IdTareatemp"] = IdTarea;
+
+            return RedirectToAction("ReportTarea", "Informe");
+        }
+
+        public ActionResult ReportTarea()
+        {
+            int IdInformeTemp = Convert.ToInt32(Session["IdInformetemp"]);
+            int IdTareatemp = Convert.ToInt32(Session["IdTareatemp"]);
+            List<InformeOrdenMantenimientoList> InformeOrdenMantenimientoList = new List<InformeOrdenMantenimientoList>();
+            InformeOrdenMantenimientoList = _ServiceMantenimiento.ListInformeOrdenMantenimiento(IdInformeTemp).Valor.ListInformeOrdenMantenimiento;
+            InformeOrdenMantenimientoReport informeOrdenMantenimientoReport = new InformeOrdenMantenimientoReport();
+            byte[] abytes = informeOrdenMantenimientoReport.PrepareReport(InformeOrdenMantenimientoList.Where(s => s.IdTarea == IdTareatemp).ToList());
+
+            return File(abytes, "application/pdf");
+        }
+
 
         [HttpGet]
         public async Task<ActionResult> ListInformeTareasBackLog(string IdUnidad, string Tipo)

@@ -8,8 +8,8 @@
         },
 
         objFiltro: {
-            FecIni: '',
-            FecFin: '',
+            FecIni: _FechaActual,
+            FecFin: _FechaActual,
             Origen: '',
             Destino: '',
             Unidad: '',
@@ -417,7 +417,23 @@
 
                 });
             }
+        },
+
+        RedirectReport: async function () {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/Report'), {
+                params: {}
+            })
+                .then(res => {
+                    window.open(_rutaReporte);
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo RedirectReport');
+                });
+
         }
+
     },
 
     computed: {

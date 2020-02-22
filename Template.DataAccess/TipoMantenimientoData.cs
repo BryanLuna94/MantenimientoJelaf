@@ -42,7 +42,13 @@ namespace Mantenimiento.DataAccess
                                 KmtActual = DataReader.GetDecimalValue(dr, "KmtActual"),
                                 KmtAviso = DataReader.GetDecimalValue(dr, "KmtAviso"),
                                 NroInforme = DataReader.GetIntValue(dr, "NroInforme"),
-                                UnidadId = DataReader.GetStringValue(dr, "UnidadId")
+                                UnidadId = DataReader.GetStringValue(dr, "UnidadId"),
+                                // 20200218 - INICIO
+                                Horas = DataReader.GetIntValue(dr, "Horas"),
+                                HorasRecorrido = DataReader.GetIntValue(dr, "HorasRecorrido"),
+                                Dias = DataReader.GetIntValue(dr, "Dias"),
+                                DiasRecorrido = DataReader.GetIntValue(dr, "DiasRecorrido"),
+                                // 20200218 - FIN
                             });
                         }
 

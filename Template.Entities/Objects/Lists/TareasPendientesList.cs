@@ -17,5 +17,11 @@ namespace Mantenimiento.Entities.Objects.Lists
         public decimal KmtActual { get; set; }
         public DateTime fechainforme { get; set; }
         public int NroInforme { get; set; }
+        // 20200218 INICIO
+        public int Horas { get; set; }
+        public int HorasRecorrido { get; set; }
+        public int Dias { get; set; }
+        public int DiasRecorrido { get; set; }
+        // 20200218 FIN
     }
 }

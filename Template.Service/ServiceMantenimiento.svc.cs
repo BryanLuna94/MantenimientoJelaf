@@ -554,6 +554,11 @@ namespace Mantenimiento.Service
             return InformeLogic.ListInformeTareas(IdInforme);
         }
 
+        public Response<InformeResponse> ListInformeOrdenMantenimiento(int IdInforme)
+        {
+            return InformeLogic.ListInformeOrdenMantenimiento(IdInforme);
+        }
+
         public Response<InformeResponse> ListInformeTareasBackLog(string IdUnidad, string Tipo)
         {
             return InformeLogic.ListInformeTareasBackLog(IdUnidad, Tipo);

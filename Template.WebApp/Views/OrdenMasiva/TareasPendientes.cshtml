@@ -1,6 +1,6 @@
 ﻿<!-- sample modal content -->
 <div id="appTareasPendientes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-lg" style="width:50%;">
+    <div class="modal-dialog modal-lg" style="width:80%;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" @@click="close(1)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
@@ -39,6 +39,10 @@
                                         <td>Tarea</td>
                                         <td>km. Aviso</td>
                                         <td>Km. Recorrido</td>
+                                        <td>Horas</td>
+                                        <td>Horas Recorrido</td>
+                                        <td>Dias</td>
+                                        <td>Dias Recorrido</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -47,6 +51,10 @@
                                         <td width="40%" align="center">{{ TareaPendiente.DescripcionTarea }}</td>
                                         <td width="20%" align="center">{{ TareaPendiente.KmtAviso }}</td>
                                         <td width="20%" align="center">{{ TareaPendiente.KmtActual }}</td>
+                                        <td width="40%" align="center">{{ TareaPendiente.Horas }}</td>
+                                        <td width="40%" align="center">{{ TareaPendiente.HorasRecorrido }}</td>
+                                        <td width="40%" align="center">{{ TareaPendiente.Dias }}</td>
+                                        <td width="40%" align="center">{{ TareaPendiente.DiasRecorrido }}</td>
                                     </tr>
                                 </tbody>
 
@@ -57,6 +65,9 @@
                 </div>
             </div>
             <div class="modal-footer">
+                <button class="btn btn-danger waves-effect waves-light text-left" @@click="RedirectReport()">
+                    <span class="glyphicon glyphicon-print fa-fw"></span>Imprimir
+                </button>
                 <button class="btn btn-default waves-effect waves-light text-left" @@click="close(1)">
                     <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
                 </button>

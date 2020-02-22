@@ -211,6 +211,31 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+        public static Response<InformeResponse> ListInformeOrdenMantenimiento(int IdInforme)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<InformeOrdenMantenimientoList> List;
+
+                List = InformeTareasData.ListInformeOrdenMantenimiento(IdInforme);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListInformeOrdenMantenimiento = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
         public static Response<InformeResponse> ListInformeTareasBackLog(string IdUnidad, string Tipo)
         {
             try

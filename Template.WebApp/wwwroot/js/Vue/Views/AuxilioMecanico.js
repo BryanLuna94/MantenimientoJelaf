@@ -27,8 +27,8 @@
         },
 
         objFiltro: {
-            FechaInicio: '',
-            FechaFin: '',
+            FechaInicio: _FechaActual,
+            FechaFin: _FechaActual,
             Are_Codigo: '',
             Ben_codigo: '',
 
