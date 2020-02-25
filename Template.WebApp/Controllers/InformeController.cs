@@ -12,6 +12,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("Informe")]
+    [SessionExpire]
     public class InformeController : Controller
     {
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();

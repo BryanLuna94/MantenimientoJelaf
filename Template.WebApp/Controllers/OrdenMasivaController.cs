@@ -11,6 +11,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("OrdenMasiva")]
+    [SessionExpire]
     public class OrdenMasivaController : Controller
     {
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();

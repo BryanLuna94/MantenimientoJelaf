@@ -8,6 +8,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("ArticuloT")]
+    [SessionExpire]
     public class ArticuloTController : Controller
     {           // Servicio WCF
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();

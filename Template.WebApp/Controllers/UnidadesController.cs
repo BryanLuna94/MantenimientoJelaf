@@ -8,6 +8,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("Unidades")]
+    [SessionExpire]
     public class UnidadesController : Controller
     {           // Servicio WCF
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();

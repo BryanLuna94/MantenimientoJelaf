@@ -8,6 +8,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("ClaseMP")]
+    [SessionExpire]
     public class ClaseMPController : Controller
     {
         // Servicio WCF
