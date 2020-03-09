@@ -11,6 +11,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("Mtbf")]
+    [SessionExpire]
     public class MtbfController : Controller
     {
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();
