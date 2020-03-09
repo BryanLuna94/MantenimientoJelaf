@@ -10,7 +10,9 @@ namespace Mantenimiento.Entities.Requests.Responses
         [DataMember]
         public List<ClaseMEntity> List { get; set; }
         public ClaseMEntity ClaseM { get; set; }
- 
+
+        [DataMember]
+        public List<ClaseMEntity> Filtro { get; set; }
 
 
 

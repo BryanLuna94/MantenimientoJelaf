@@ -1,76 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" />
-  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" />
-  <xs:complexType name="OrdenMasivaResponse">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" />
+  <xs:complexType name="AuxilioMecanicoRequest">
     <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Informe" nillable="true" type="q1:InformeEntity" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q2:ArrayOfOrdenMasivaList" />
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareasPendientes" nillable="true" type="q3:ArrayOfTareasPendientesList" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="AuxilioMecanico" nillable="true" type="q1:AuxilioMecanicoEntity" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" minOccurs="0" name="Filtro" nillable="true" type="q2:AuxilioMecanicoFilter" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="OrdenMasivaResponse" nillable="true" type="tns:OrdenMasivaResponse" />
-  <xs:complexType name="ServiceErrorResponse">
+  <xs:element name="AuxilioMecanicoRequest" nillable="true" type="tns:AuxilioMecanicoRequest" />
+  <xs:complexType name="MtbfRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string">
-        <xs:annotation>
-          <xs:appinfo>
-            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string">
-        <xs:annotation>
-          <xs:appinfo>
-            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
-        <xs:annotation>
-          <xs:appinfo>
-            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="SubCode" nillable="true" type="xs:string">
-        <xs:annotation>
-          <xs:appinfo>
-            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ServiceErrorResponse" nillable="true" type="tns:ServiceErrorResponse" />
-  <xs:complexType name="InformeResponse">
-    <xs:sequence>
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Informe" nillable="true" type="q4:InformeEntity" />
-      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q5:ArrayOfInformeList" />
-      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBolsas" nillable="true" type="q6:ArrayOfODMdList" />
-      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBusquedaArticulo" nillable="true" type="q7:ArrayOfBusquedaArticuloList" />
-      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInformeOrdenMantenimiento" nillable="true" type="q8:ArrayOfInformeOrdenMantenimientoList" />
-      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInformeTareas" nillable="true" type="q9:ArrayOfInformeTareasList" />
-      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanico" nillable="true" type="q10:ArrayOfTareaMecanicoList" />
-      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListTareaMecanicosAyudante" nillable="true" type="q11:ArrayOfTareaMecanicosAyudanteList" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="InformeResponse" nillable="true" type="tns:InformeResponse" />
-  <xs:complexType name="AuxilioMecanicoResponse">
-    <xs:sequence>
-      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="AuxilioMecanico" nillable="true" type="q12:AuxilioMecanicoEntity" />
-      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="List" nillable="true" type="q13:ArrayOfAuxilioMecanicoList" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="AuxilioMecanicoResponse" nillable="true" type="tns:AuxilioMecanicoResponse" />
-  <xs:complexType name="MtbfResponse">
-    <xs:sequence>
+      <xs:element minOccurs="0" name="Anio" type="xs:short" />
       <xs:element minOccurs="0" name="Bam" type="xs:decimal" />
       <xs:element minOccurs="0" name="HorasDia" type="xs:unsignedByte" />
-      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q14:ArrayOfMTBFEntity" />
-      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Mtbf" nillable="true" type="q15:MTBFEntity" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ListMtbf" nillable="true" type="q3:ArrayOfMTBFEntity" />
       <xs:element minOccurs="0" name="ViajeEnHoras" type="xs:short" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="MtbfResponse" nillable="true" type="tns:MtbfResponse" />
+  <xs:element name="MtbfRequest" nillable="true" type="tns:MtbfRequest" />
+  <xs:complexType name="OrdenMasivaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaGenerar" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" minOccurs="0" name="Filtro" nillable="true" type="q4:OrdenMasivaFilter" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInsertar" nillable="true" type="q5:ArrayOfOrdenMasivaList" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdenMasivaRequest" nillable="true" type="tns:OrdenMasivaRequest" />
+  <xs:complexType name="InformeRequest">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Bolsa" nillable="true" type="q6:Tb_CtrlBolsaRepInformeEntity" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" minOccurs="0" name="Filtro" nillable="true" type="q7:InformeFilter" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="InformeTareas" nillable="true" type="q8:InformeTareasEntity" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ODM" nillable="true" type="q9:ODMEntity" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ODMd" nillable="true" type="q10:ODMdEntity" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="TareaMecanico" nillable="true" type="q11:TareaMecanicosEntity" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="TareaMecanicosAyudante" nillable="true" type="q12:TareaMecanicosAyudanteEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformeRequest" nillable="true" type="tns:InformeRequest" />
+  <xs:complexType name="FallasDRequest">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="SolicitudRevision" nillable="true" type="q13:SolicitudRevisionList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FallasDRequest" nillable="true" type="tns:FallasDRequest" />
 </xs:schema>

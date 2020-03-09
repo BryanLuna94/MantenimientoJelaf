@@ -79,6 +79,7 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "GET", UriTemplate = "ListArticulosAutocomplete", ResponseFormat = WebMessageFormat.Json)]
         Response<BaseResponse> ListArticulosAutocomplete(string idEmpresa, string idAlmacen, string value);
 
+
         #endregion
 
         #region LOGIN
@@ -132,6 +133,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListClaseMP", ResponseFormat = WebMessageFormat.Json)]
         Response<ClaseMResponse> ListClaseMP();
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListClaseMPFiltro", ResponseFormat = WebMessageFormat.Json)]
+        Response<ClaseMResponse> ListClaseMPFiltro(ClaseMResponse request);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "SelectClaseM", ResponseFormat = WebMessageFormat.Json)]
@@ -225,6 +230,10 @@ namespace Mantenimiento.Service
         Response<TipoMPResponse> ListTipoMP();
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTipoMPFiltro", ResponseFormat = WebMessageFormat.Json)]
+        Response<TipoMPResponse> ListTipoMPFiltro(TipoMPResponse request);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "SelectTipoMP", ResponseFormat = WebMessageFormat.Json)]
         Response<TipoMPResponse> SelectTipoMP(short IdTipMan);
 
@@ -237,12 +246,12 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "POST", UriTemplate = "InsertTipoMP", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<TipoMPResponse>> InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros,
             decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso,
-            short Horas, short HorasAviso, string cod_marca, int cod_modelo);
+            short Horas, short HorasAviso, string cod_marca, int cod_modelo,short Meses, short MesesAviso);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "UpdateTipoMP", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<TipoMPResponse>> UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias,
-            short DiasAviso, short Horas, short HorasAviso);
+            short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso);
 
         #endregion
 
@@ -346,6 +355,18 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "GET", UriTemplate = "ListMarcaModelo", ResponseFormat = WebMessageFormat.Json)]
         Response<MarcaModeloResponse> ListMarcaModelo();
 
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListMarcaModeloFiltro", ResponseFormat = WebMessageFormat.Json)]
+        Response<MarcaModeloResponse> ListMarcaModeloFiltro(MarcaModeloResponse request);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListModeloBuses", ResponseFormat = WebMessageFormat.Json)]
+        Response<MarcaModeloResponse> ListModeloBuses();
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListMarcaBuses", ResponseFormat = WebMessageFormat.Json)]
+        Response<MarcaModeloResponse> ListMarcaBuses();
+
         #endregion
 
         #region FALLASD
@@ -353,6 +374,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "SelectFallasD", ResponseFormat = WebMessageFormat.Json)]
         Response<FallasDResponse> SelectFallasD(string ID);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "SelectFallasPorInforme", ResponseFormat = WebMessageFormat.Json)]
+        Response<FallasDResponse> SelectFallasPorInforme(decimal IdInforme);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "IdFallasD", ResponseFormat = WebMessageFormat.Json)]
@@ -558,6 +583,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListBolsas", ResponseFormat = WebMessageFormat.Json)]
         Response<InformeResponse> ListBolsas(decimal IdInforme, string Ben_Codigo);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListBolsasPorInforme", ResponseFormat = WebMessageFormat.Json)]
+        Response<InformeResponse> ListBolsasPorInforme(decimal IdInforme);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "DeleteBolsa", ResponseFormat = WebMessageFormat.Json)]

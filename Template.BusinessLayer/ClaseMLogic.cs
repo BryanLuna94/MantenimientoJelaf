@@ -7,6 +7,7 @@ using Mantenimiento.Entities.Objects.Entities;
 using Mantenimiento.Entities.Objects.Others;
 using Mantenimiento.Entities.Requests.Responses;
 using Mantenimiento.Utility;
+using System.Linq;
 
 namespace Mantenimiento.BusinessLayer
 {
@@ -61,6 +62,39 @@ namespace Mantenimiento.BusinessLayer
                 return new Response<ClaseMResponse>(false, null, Functions.MessageError(ex), false);
             }
         }
+
+        public static Response<ClaseMResponse> ListClaseMP(ClaseMResponse request)
+        {
+            try
+            {
+                Response<ClaseMResponse> response;
+                List<ClaseMEntity> List;
+                List<ClaseMEntity> ListRequest;
+                List<ClaseMEntity> ListFilter;
+
+                List = ClaseMData.ListClaseMP();
+                ListRequest = (request.Filtro.Count > 0) ? request.Filtro : List;
+
+                ListFilter = List
+                            .Where(x => ListRequest.Any(z => x.IdClaseMantenimiento == z.IdClaseMantenimiento))
+                            .ToList();
+
+                response = new Response<ClaseMResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new ClaseMResponse { List = ListFilter },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<ClaseMResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
 
         public static Response<ClaseMResponse> SelectClaseM(string IdClaseMantenimiento)
         {

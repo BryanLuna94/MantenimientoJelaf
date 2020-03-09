@@ -89,6 +89,49 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
+        public static List<FallasDEntity> SelectFallasPorInforme(decimal IdInforme)
+        {
+            List<FallasDEntity> List = new List<FallasDEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("Usp_tb_SolicitudRevisionTecnica_DSelect_Por_Informe", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@IdInforme", SqlDbType.Decimal).Value = IdInforme;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new FallasDEntity
+                            {
+                                IdSolicitudRevisionD = DataReader.GetStringValue(dr, "IdSolicitudRevisionD"),
+                                IdSolicitudRevision = DataReader.GetStringValue(dr, "IdSolicitudRevision"),
+                                Observacion = DataReader.GetStringValue(dr, "Observacion"),
+                                UsuarioRegistro = DataReader.GetStringValue(dr, "UsuarioRegistro"),
+                                Fecharegistro = DataReader.GetStringValue(dr, "Fecharegistro"),
+                                HoraRegistro = DataReader.GetStringValue(dr, "HoraRegistro"),
+                                Estado = DataReader.GetIntValue(dr, "Estado"),
+                                IdSistema = DataReader.GetIntValue(dr, "IdSistema"),
+                                IdObservacion = DataReader.GetIntValue(dr, "IdObservacion"),
+
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
 
         public static async Task<FallasDEntity> InsertFallasD(string IdSolicitudRevisionD, string IdSolicitudRevision, string Observacion,
             string UsuarioRegistro, string FechaRegistro, string HoraRegistro, int Estado, int IdSistema, int IdObservacion)

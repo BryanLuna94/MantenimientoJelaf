@@ -63,6 +63,32 @@ namespace Mantenimiento.BusinessLayer
                 return new Response<FallasDResponse>(false, null, Functions.MessageError(ex), false);
             }
         }
+
+        public static Response<FallasDResponse> SelectFallasPorInforme(decimal IdInforme)
+        {
+            try
+            {
+                Response<FallasDResponse> response;
+                List<FallasDEntity> List;
+
+                List = FallasDData.SelectFallasPorInforme(IdInforme);
+
+                response = new Response<FallasDResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new FallasDResponse { List = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<FallasDResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
         public static async Task<Response<FallasDResponse>> DeleteFallasD(string ID)
         {
             Response<FallasDResponse> response;

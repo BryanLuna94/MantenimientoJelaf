@@ -16,7 +16,7 @@ namespace Mantenimiento.DataAccess
 
             using (var con = GetConnection.BDALMACEN())
             {
-                using (var cmd = new SqlCommand("", con))
+                using (var cmd = new SqlCommand("usp_EXC_Tb_Emp_Autocomplete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     bool openConn = (con.State == ConnectionState.Open);
@@ -28,9 +28,9 @@ namespace Mantenimiento.DataAccess
                         {
                             List.Add(new BaseEntity
                             {
-                                Codigo = DataReader.GetStringValue(dr, "IdEmpresa"),
-                                Descripcion = DataReader.GetStringValue(dr, "Empresa"),
-                                Ruc = DataReader.GetStringValue(dr, "RUC")
+                                Codigo = DataReader.GetStringValue(dr, "Emp_Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "EMP_NOMBRE"),
+                                Ruc = DataReader.GetStringValue(dr, "Emp_Ruc")
                             });
                         }
 
@@ -589,5 +589,7 @@ namespace Mantenimiento.DataAccess
 
             return List;
         }
+
+        
     }
 }

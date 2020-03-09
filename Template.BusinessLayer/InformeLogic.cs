@@ -836,6 +836,31 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+        public static Response<InformeResponse> ListBolsasPorInforme(decimal IdInforme)
+        {
+            try
+            {
+                Response<InformeResponse> response;
+                List<ODMdList> List;
+
+                List = ODMdData.ListBolsasPorInforme(IdInforme);
+
+                response = new Response<InformeResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new InformeResponse { ListBolsasPorInforme = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<InformeResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
         public static Response<InformeResponse> InsertBolsa(InformeRequest request)
         {
             Response<InformeResponse> response;

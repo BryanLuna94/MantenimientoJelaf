@@ -75,7 +75,8 @@ namespace Mantenimiento.DataAccess
                                 DiasAviso = DataReader.GetIntValue(dr, "DiasAviso"),
                                 Horas = DataReader.GetIntValue(dr, "Horas"),
                                 HorasAviso = DataReader.GetIntValue(dr, "HorasAviso"),
-
+                                Meses = DataReader.GetIntValue(dr, "Meses"),
+                                MesesAviso = DataReader.GetIntValue(dr, "MesesAviso"),
                             });
                         }
 
@@ -125,7 +126,8 @@ namespace Mantenimiento.DataAccess
                                 DiasAviso = DataReader.GetIntValue(dr, "DiasAviso"),
                                 Horas = DataReader.GetIntValue(dr, "Horas"),
                                 HorasAviso = DataReader.GetIntValue(dr, "HorasAviso"),
-
+                                Meses = DataReader.GetIntValue(dr, "Meses"),
+                                MesesAviso = DataReader.GetIntValue(dr, "MesesAviso"),
                             });
                         }
 
@@ -143,7 +145,7 @@ namespace Mantenimiento.DataAccess
 
 
         public static async Task<TipoMPEntity> InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso,
-            short UsuarioRegistro, DateTime FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo)
+            short UsuarioRegistro, DateTime FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo,short Meses, short MesesAviso)
         {
 
 
@@ -169,6 +171,8 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@HorasAviso", SqlDbType.Int).Value = HorasAviso;
                         cmd.Parameters.Add("@Cod_Marca", SqlDbType.VarChar).Value = cod_marca;
                         cmd.Parameters.Add("@cod_Modelo", SqlDbType.Int).Value = cod_modelo;
+                        cmd.Parameters.Add("@Meses", SqlDbType.Int).Value = Meses;
+                        cmd.Parameters.Add("@MesesAviso", SqlDbType.Int).Value = MesesAviso;
                         await cmd.ExecuteNonQueryAsync();
                         cmd.Dispose();
                     }
@@ -185,7 +189,7 @@ namespace Mantenimiento.DataAccess
         }
 
         public static async Task<TipoMPEntity> UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias,
-            short DiasAviso, short Horas, short HorasAviso)
+            short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso)
         {
 
 
@@ -207,6 +211,8 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@DiasAviso", SqlDbType.Int).Value = DiasAviso;
                         cmd.Parameters.Add("@Horas", SqlDbType.Int).Value = Horas;
                         cmd.Parameters.Add("@HorasAviso", SqlDbType.Int).Value = HorasAviso;
+                        cmd.Parameters.Add("@Meses", SqlDbType.Int).Value = Meses;
+                        cmd.Parameters.Add("@MesesAviso", SqlDbType.Int).Value = MesesAviso;
                         await cmd.ExecuteNonQueryAsync();
                         cmd.Dispose();
                     }

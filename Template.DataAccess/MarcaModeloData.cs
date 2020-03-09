@@ -50,5 +50,77 @@ namespace Mantenimiento.DataAccess
 
             return List;
         }
+
+        public static List<MarcaModeloEntity> ListModeloBuses()
+        {
+            List<MarcaModeloEntity> List = new List<MarcaModeloEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_LIS_Tb_ModeloBuses", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new MarcaModeloEntity
+                            {
+                                cod_modelo = DataReader.GetStringValue(dr, "cod_modelo"),
+                                modelo = DataReader.GetStringValue(dr, "modelo"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<MarcaModeloEntity> ListMarcaBuses()
+        {
+            List<MarcaModeloEntity> List = new List<MarcaModeloEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_LIS_Tb_MarcaBuses", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new MarcaModeloEntity
+                            {
+                                cod_marca = DataReader.GetStringValue(dr, "cod_marca"),
+                                marca = DataReader.GetStringValue(dr, "marca"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
     }
 }

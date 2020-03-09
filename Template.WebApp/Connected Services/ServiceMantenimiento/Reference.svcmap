@@ -24,8 +24,8 @@
     <MetadataSource Address="http://localhost:51922/ServiceMantenimiento.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceMantenimiento61.xsd" MetadataType="Schema" ID="cde6ffea-c751-423c-b71c-fea8d2e042c4" SourceId="1" SourceUrl="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd8" />
     <MetadataFile FileName="ServiceMantenimiento6.xsd" MetadataType="Schema" ID="39ea83d6-cc22-4cd4-b0cf-c2b69802cc3e" SourceId="1" SourceUrl="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd6" />
+    <MetadataFile FileName="ServiceMantenimiento61.xsd" MetadataType="Schema" ID="cde6ffea-c751-423c-b71c-fea8d2e042c4" SourceId="1" SourceUrl="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd8" />
     <MetadataFile FileName="ServiceMantenimiento1.xsd" MetadataType="Schema" ID="93af62a6-b11f-42ee-a382-79114d848d37" SourceId="1" SourceUrl="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd4" />
     <MetadataFile FileName="ServiceMantenimiento3.xsd" MetadataType="Schema" ID="d212dffa-ede3-4706-acb0-83a14fce4e55" SourceId="1" SourceUrl="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd3" />
     <MetadataFile FileName="ServiceMantenimiento.xsd" MetadataType="Schema" ID="e619fc4d-cc30-4782-b556-71ad07f0cf08" SourceId="1" SourceUrl="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd1" />

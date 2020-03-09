@@ -111,11 +111,28 @@ namespace Mantenimiento.WebApp.Controllers
         public ActionResult Report()
         {
             int IdInformeTemp = Convert.ToInt32(Session["IdInformetemp"]);
+ 
+
+
+            List<BaseEntity> listEmpresas = _ServiceMantenimiento.ListEmpresa().Valor.List;
             List<InformeOrdenMantenimientoList> InformeOrdenMantenimientoList = new List<InformeOrdenMantenimientoList>();
             InformeOrdenMantenimientoList = _ServiceMantenimiento.ListInformeOrdenMantenimiento(IdInformeTemp).Valor.ListInformeOrdenMantenimiento;
-            InformeOrdenMantenimientoReport informeOrdenMantenimientoReport = new InformeOrdenMantenimientoReport();
-            byte[] abytes = informeOrdenMantenimientoReport.PrepareReport(InformeOrdenMantenimientoList);
+            decimal numeroInforme = ((InformeOrdenMantenimientoList.Count>0)? InformeOrdenMantenimientoList[0].NumeroInforme : 0);
+            #region Fallas
+            List<FallasDEntity> fallasDEntityList = new List<FallasDEntity>();
+            fallasDEntityList = _ServiceMantenimiento.SelectFallasPorInforme(numeroInforme).Valor.List;
+            #endregion
 
+            #region Repuestos
+            List<ODMdList> oDMdList = new List<ODMdList>();
+            oDMdList = _ServiceMantenimiento.ListBolsasPorInforme(IdInformeTemp).Valor.ListBolsasPorInforme;
+            #endregion
+            byte[] abytes;
+            InformeOrdenMantenimientoReport informeOrdenMantenimientoReport = new InformeOrdenMantenimientoReport();
+            
+            abytes = informeOrdenMantenimientoReport.PrepareReportInforme(InformeOrdenMantenimientoList, listEmpresas, fallasDEntityList, oDMdList);
+            
+            
             return File(abytes, "application/pdf");
         }
 
@@ -131,10 +148,14 @@ namespace Mantenimiento.WebApp.Controllers
         {
             int IdInformeTemp = Convert.ToInt32(Session["IdInformetemp"]);
             int IdTareatemp = Convert.ToInt32(Session["IdTareatemp"]);
+            List<BaseEntity> listEmpresas = _ServiceMantenimiento.ListEmpresa().Valor.List;
             List<InformeOrdenMantenimientoList> InformeOrdenMantenimientoList = new List<InformeOrdenMantenimientoList>();
             InformeOrdenMantenimientoList = _ServiceMantenimiento.ListInformeOrdenMantenimiento(IdInformeTemp).Valor.ListInformeOrdenMantenimiento;
+            decimal numeroInforme = InformeOrdenMantenimientoList[0].NumeroInforme;
+
+
             InformeOrdenMantenimientoReport informeOrdenMantenimientoReport = new InformeOrdenMantenimientoReport();
-            byte[] abytes = informeOrdenMantenimientoReport.PrepareReport(InformeOrdenMantenimientoList.Where(s => s.IdTarea == IdTareatemp).ToList());
+            byte[] abytes = informeOrdenMantenimientoReport.PrepareReport(InformeOrdenMantenimientoList.Where(s => s.IdTarea == IdTareatemp).ToList(), listEmpresas);
 
             return File(abytes, "application/pdf");
         }

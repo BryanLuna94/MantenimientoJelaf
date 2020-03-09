@@ -18,11 +18,13 @@ namespace Mantenimiento.WebApp.Reports
         MemoryStream _memorystream = new MemoryStream();
 
         List<TareasPendientesList> tareasPendientesList = new List<TareasPendientesList>();
+        List<BaseEntity> empresasList = new List<BaseEntity>();
         #endregion
 
-        public byte[] PrepareReport(List<TareasPendientesList> tareasPendientes)
+        public byte[] PrepareReport(List<TareasPendientesList> tareasPendientes, List<BaseEntity> listEmpresas)
         {
             tareasPendientesList = tareasPendientes;
+            empresasList = listEmpresas;
 
             _document = new Document(PageSize.A4, 0f, 0f, 0f, 0f);
             _document.SetPageSize(PageSize.A4);
@@ -52,7 +54,7 @@ namespace Mantenimiento.WebApp.Reports
         private void ReportHeader()
         {
             _fontstyle = FontFactory.GetFont("Tahoma", 15f, 1);
-            _pdfPCell = new PdfPCell(new Phrase("ALLINBUS", _fontstyle));
+            _pdfPCell = new PdfPCell(new Phrase(empresasList[0].Descripcion, _fontstyle));
             _pdfPCell.Colspan = 5;
             _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
             _pdfPCell.Border = 0;

@@ -23,6 +23,8 @@ namespace Mantenimiento.Entities.Peticiones.Responses
         [DataMember]
         public List<ODMdList> ListBolsas { get; set; }
         [DataMember]
+        public List<ODMdList> ListBolsasPorInforme { get; set; }
+        [DataMember]
         public List<InformeOrdenMantenimientoList> ListInformeOrdenMantenimiento { get; set; }
     }
 }

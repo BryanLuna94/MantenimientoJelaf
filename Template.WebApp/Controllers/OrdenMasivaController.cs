@@ -22,10 +22,11 @@ namespace Mantenimiento.WebApp.Controllers
 
         public ActionResult Report()
         {
+            List<BaseEntity> listEmpresas = _ServiceMantenimiento.ListEmpresa().Valor.List;
             List<TareasPendientesList> TareasPendientesList = new List<TareasPendientesList>();
             TareasPendientesList = _ServiceMantenimiento.ListTareasPendientes("").Valor.ListTareasPendientes;
             PreventivosPendientesReport preventivosPendientesReport = new PreventivosPendientesReport();
-            byte[] abytes = preventivosPendientesReport.PrepareReport(TareasPendientesList);
+            byte[] abytes = preventivosPendientesReport.PrepareReport(TareasPendientesList, listEmpresas);
 
             return File(abytes, "application/pdf");
         }

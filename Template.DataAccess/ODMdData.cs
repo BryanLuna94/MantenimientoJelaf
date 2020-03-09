@@ -145,5 +145,53 @@ namespace Mantenimiento.DataAccess
 
             return List;
         }
+
+        public static List<ODMdList> ListBolsasPorInforme(decimal IdInforme)
+        {
+            List<ODMdList> List = new List<ODMdList>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_LIS_VW_ODMs_Por_Informe", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pnumeroinforme", SqlDbType.Decimal).Value = IdInforme;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new ODMdList
+                            {
+                                Atendida = DataReader.GetDecimalValue(dr, "Atendida"),
+                                BenNombreSolicitante = DataReader.GetStringValue(dr, "BenNombreSolicitante"),
+                                Ben_Codigo_Solicitante = DataReader.GetStringValue(dr, "Ben_Codigo_Solicitante"),
+                                Cod_Componente = DataReader.GetStringValue(dr, "Cod_Componente"),
+                                Cod_Sistema = DataReader.GetStringValue(dr, "Cod_Sistema"),
+                                Id_CtrlBolsaRepInforme = DataReader.GetStringValue(dr, "Id_CtrlBolsaRepInforme"),
+                                Mer_Codigo = DataReader.GetStringValue(dr, "Mer_Codigo"),
+                                Mer_CodOriginal = DataReader.GetStringValue(dr, "Mer_CodOriginal"),
+                                Mer_Nombre = DataReader.GetStringValue(dr, "Mer_Nombre"),
+                                ODMd_Cantidad = DataReader.GetDecimalValue(dr, "ODMd_Cantidad"),
+                                ODMd_Codigo = DataReader.GetStringValue(dr, "ODMd_Codigo"),
+                                ODM_Codigo = DataReader.GetStringValue(dr, "ODM_Codigo"),
+                                ODM_FechMovimiento = DataReader.GetDateTimeValue(dr, "ODM_FechMovimiento").Value.ToShortDateString()
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
     }
 }
