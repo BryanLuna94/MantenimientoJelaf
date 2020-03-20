@@ -89,3 +89,15 @@ C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
 C:\Users\User\Documents\GitHub\MantenimientoJelaf\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.dll
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\Mantenimiento.DataAccess.pdb
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\Mantenimiento.Entities.dll
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\Template.Utility.dll
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\JBLV.Log.dll
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\log4net.dll
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\Mantenimiento.Entities.pdb
+D:\BRYAN\Proyectos\Template.DataAccess\bin\Debug\Template.Utility.pdb
+D:\BRYAN\Proyectos\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csprojAssemblyReference.cache
+D:\BRYAN\Proyectos\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.csproj.CopyComplete
+D:\BRYAN\Proyectos\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.dll
+D:\BRYAN\Proyectos\Template.DataAccess\obj\Debug\Mantenimiento.DataAccess.pdb

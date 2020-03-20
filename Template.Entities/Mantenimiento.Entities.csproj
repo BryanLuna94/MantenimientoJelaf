@@ -75,6 +75,7 @@
     <Compile Include="Objects\Lists\AuxilioMecanicoList.cs" />
     <Compile Include="Objects\Lists\BusquedaArticuloList.cs" />
     <Compile Include="Objects\Lists\InformeList.cs" />
+    <Compile Include="Objects\Lists\InformeOrdenMantenimientoList.cs" />
     <Compile Include="Objects\Lists\ODMdList.cs" />
     <Compile Include="Objects\Lists\SolicitudRevisionBusquedaList.cs" />
     <Compile Include="Objects\Lists\SolicitudRevisionList.cs" />
