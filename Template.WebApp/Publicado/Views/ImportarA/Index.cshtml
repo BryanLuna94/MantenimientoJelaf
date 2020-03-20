@@ -1,0 +1,43 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Importar Análisis de Aceite";
+    ViewBag.Title = "Importar Análisis de Aceite";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+<!--Dropify CSS -->
+<link href="~/wwwroot/AmpleAdmin/plugins/bower_components/dropify/dist/css/dropify.min.css" rel="stylesheet" />
+
+
+<!-- .row -->
+<div class="col-sm-12" id="app">
+
+    <div class="row">
+        <div class="col-sm-12 ol-md-12 col-xs-12">
+            <div class="white-box">
+                <h3 class="box-title">Importar Archivo XLS</h3>
+                <label for="input-file-now">arrastre o haga clic sobre este espacio para importar su archivo</label>
+                <input type="file" id="input-file-now" class="dropify" />
+            </div>
+        </div>
+
+    </div>
+
+    <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+</div>
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+
+
+    <script src="~/wwwroot/js/Vue/Views/Fallas.js"></script>
+    <!-- jQuery file upload -->
+    <script src="~/wwwroot/AmpleAdmin/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
+}

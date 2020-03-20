@@ -1,0 +1,234 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    /**/
+
+    ViewBag.Navigation = "Órdenes Masivas";
+    ViewBag.Title = "Órdenes Masivas";
+    var UsuarioActual = DataSession.UserLoggedIn;
+    string FechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+}
+
+
+<!-- .row -->
+<div class="col-sm-12" id="app">
+    <div style="padding:1px;">
+        <!-- Modal -->
+        @Html.Partial("TareasPendientes")
+        @Html.Partial("ImprimirPreventivo")
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bg-theme white-box m-b-0">
+                <div class="row text-white">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="form-horizontal">
+
+                                <div class="form-group" style="margin-bottom:0px !important">
+                                    <div class="col-md-2">
+                                        <input v-model="objFiltro.FecIni"
+                                               class="dt-picker form-control"
+                                               id="FecIni"
+                                               ref="FecIni"
+                                               @@blur="objFiltro.FecIni = $event.target.value; objFiltro.FecIni = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                               placeholder="Fecha Inicio"
+                                               type="text">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input v-model="objFiltro.FecFin"
+                                               class="dt-picker form-control"
+                                               id="FecFin"
+                                               ref="FecFin"
+                                               @@blur="objFiltro.FecFin = $event.target.value; objFiltro.FecFin = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                               placeholder="Fecha Fin"
+                                               type="text">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <v-select v-model="objFiltro.Origen"
+                                                  :options="list.Origenes"
+                                                  index="Codigo"
+                                                  label="Descripcion"
+                                                  @@search="getOrigenes"
+                                                  id="SelOrigen"
+                                                  ref="SelOrigen"
+                                                  @*@@keyup.native.prevent="!($event.target.value) ? getFlotas('') : ''"*@
+                                                  placeholder="--Origen--">
+                                        </v-select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <v-select v-model="objFiltro.Destino"
+                                                  :options="list.Destinos"
+                                                  index="Codigo"
+                                                  label="Descripcion"
+                                                  @@search="getDestinos"
+                                                  id="SelDestino"
+                                                  ref="SelDestino"
+                                                  @*@@keyup.native.prevent="!($event.target.value) ? getFlotas('') : ''"*@
+                                                  placeholder="--Destino--">
+                                        </v-select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <v-select v-model="objFiltro.Unidad"
+                                                  :options="list.Flotas"
+                                                  index="Descripcion"
+                                                  label="Descripcion"
+                                                  @@search="getFlotas"
+                                                  id="SelUnidad"
+                                                  ref="SelUnidad"
+                                                  @*@@keyup.native.prevent="!($event.target.value) ? getFlotas('') : ''"*@
+                                                  placeholder="--Unidades--">
+                                        </v-select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <v-select v-model="objFiltro.Chofer"
+                                                  :options="list.Beneficiarios"
+                                                  index="Codigo"
+                                                  label="Descripcion"
+                                                  @@search="getBeneficiarios"
+                                                  id="SelChofer"
+                                                  ref="SelChofer"
+                                                  @*@@keyup.native.prevent="!($event.target.value) ? getFlotas('') : ''"*@
+                                                  placeholder="--Chofer--">
+                                        </v-select>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom:0px !important">
+                                    <div class="col-md-4">
+                                        <div class="form-group text-center">
+                                            <label class="control-label col-md-3">Ordenar Por: </label>
+                                            <div class="col-md-9">
+                                                <div class="radio-list">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" v-model="objFiltro.Orden" value="O"> Informe
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" v-model="objFiltro.Orden" value="B" checked=""> Unidad
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" v-model="objFiltro.Orden" value="P" checked=""> Programacion
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group text-center">
+                                            <div class="checkbox checkbox-single">
+                                                <input v-model="objFiltro.Generado" id="checkbox1" type="checkbox">
+                                                <label for="checkbox1"> Mostrar Solo sin ordenes de mantenimiento </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group text-center">
+                                            <label class="col-sm-6 control-label" for="example-input-normal">Fecha Generación</label>
+                                            <div class="col-sm-6">
+                                                <input v-model="objOrdenMasiva.FechaGenerar"
+                                                       class="dt-picker form-control"
+                                                       id="FechaGenerar"
+                                                       ref="FechaGenerar"
+                                                       @@blur="objOrdenMasiva.FechaGenerar = $event.target.value; objOrdenMasiva.FechaGenerar = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                                       placeholder="Fecha"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom:0px !important">
+                                    <div class="col-md-12">
+                                        <button type="button" v-on:click.prevent="ListOrdenMasiva()" class="btn btn-default waves-effect waves-light m-r-10">Cargar Ordenes</button>
+                                        <button type="button" v-on:click.prevent="GenerarCorrectivo()" class="btn btn-default waves-effect waves-light m-r-10">Generar Correctivo</button>
+                                        <button type="button" v-on:click.prevent="AnularCorrectivo()" class="btn btn-default waves-effect waves-light m-r-10">Anular Correctivo</button>
+                                        <button type="button" v-on:click.prevent="GenerarPreventivo()" class="btn btn-default waves-effect waves-light m-r-10">Generar Preventivo</button>
+                                        <button type="button" v-on:click.prevent="AnularPreventivo()" class="btn btn-default waves-effect waves-light m-r-10">Anular Preventivo</button>
+                                        <button type="button" v-on:click.prevent="VerPreventivos()" class="btn btn-default waves-effect waves-light m-r-10">Ver Preventivos</button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="white-box">
+                <div class="table-responsive">
+                    <table class="table editable-table table-bordered table-striped m-b-0" id="tableMtbf" ref="#tableMtbf">
+                        <thead>
+                            <tr class="advanced-table active">
+                                <td> <input type="checkbox" @@click='checkAll()' v-model='isCheckAll'></td>
+                                <td>Unidad</td>
+                                <td>Origen</td>
+                                <td>Destino</td>
+                                <td>Fecha</td>
+                                <td>Hora</td>
+                                <td>Chofer</td>
+                                <td>Km</td>
+                                <td>G</td>
+                                <td>C</td>
+                                <td>P</td>
+                                <td>I.Tec.Via.</td>
+                                <td>Info Mtm.</td>
+                                <td>Empresa</td>
+                                <td>Glosa</td>
+                                <td>Odómetro</td>
+                                <td>Ruta</td>
+                                <td>Tipo</td>
+                                <td>Cod. Viaje</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="header" v-for="OrdenMasiva in list.OrdenMasiva">
+                                <td width="2%" align="center">
+                                    <input type="checkbox" v-bind:value='OrdenMasiva' v-model="list.Seleccionados" @@change='updateCheckall(OrdenMasiva)'>
+                                </td>
+                                <td width="4%" align="center">{{ OrdenMasiva.BusPlaca }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.Origen }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.Destino }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.FechaViaje }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.HoraViaje }}</td>
+                                <td width="10%">{{ OrdenMasiva.Ben_Nombre }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.KILOMETRAJE }}</td>
+                                <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="OrdenMasiva.Generado" /></td>
+                                <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="OrdenMasiva.Correctivo" /></td>
+                                <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="OrdenMasiva.Preventivo" /></td>
+                                <td width="5%" align="center"><a href="javascript:void(0);" v-on:click.prevent="RedirectInforme(OrdenMasiva.NumeroOrden, 1)" /> {{ OrdenMasiva.NumeroOrden }}</a> </td>
+                                <td width="5%" align="center"><a href="javascript:void(0);" v-on:click.prevent="RedirectInforme(OrdenMasiva.NumeroMantenimiento, 0)" />{{ OrdenMasiva.NumeroMantenimiento }}</a> </td>
+                                <td width="5%">{{ OrdenMasiva.Empresa }}</td>
+                                <td width="13%">{{ OrdenMasiva.Glosa }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.Odometro }}</td>
+                                <td width="10%">{{ OrdenMasiva.RUTAVIAJE }}</td>
+                                <td width="2%" align="center">{{ OrdenMasiva.tipo }}</td>
+                                <td width="5%" align="center">{{ OrdenMasiva.CODI_PROGRAMACION_REAL }}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+</div>
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+
+    <script>
+        let _FechaActual = '@FechaActual'
+        let _rutaInforme = '@Url.Action("Index", "Informe")'
+        let _rutaReporte = '@Url.Action("Report", "OrdenMasiva")'
+        let _rutaReportePlantillaTemp = '@Url.Action("ReportPlantilla", "OrdenMasiva")'
+    </script>
+    <script src="~/wwwroot/js/Vue/Views/OrdenMasiva.js"></script>
+
+}

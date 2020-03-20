@@ -1,0 +1,106 @@
+﻿<!-- sample modal content -->
+<div id="appImprimirPreventivo" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:50%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(2)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Imprimir Preventivo :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table class="table table-hover" >
+                            <thead v-for="ABus in list.AreBus">
+                                <tr class="header" >
+                                    <td width="50%">BUS: {{ ABus.Are_Nombre }}</td>
+                                    <td width="50%">OPERADOR : {{ ABus.Ben_Nombre }}</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">OPERACION : </td>
+                                    <td width="50%">
+                                        <input id="txtOperacion" v-model="objOperacion.Operacion" type="text" class="form-control" required> <span class="highlight"></span> <span class="bar"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="80%" colspan="2">
+                                        <v-select v-model="objFiltro.ClaseM"
+                                                  :options="list.ClaseM"
+                                                  index="IdClaseMantenimiento"
+                                                  label="Descripcion"
+                                                  @@search="ListClaseM"
+                                                  id="SelClaseM"
+                                                  ref="SelClaseM"
+                                                  placeholder="--CLASE MANTENIMIENTO--">
+                                        </v-select>
+                                    </td>
+                                    <td width="20%">
+                                        <button class="btn btn-info waves-effect waves-light text-center" @@click="ListTareaSistema(ABus.Are_Codigo,objFiltro.ClaseM)">
+                                            <span class="glyphicon glyphicon-search fa-fw"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="header" v-for="ABus in list.AreBus">
+                                    <td width="100%" colspan="2" align="center">
+                                        RUTINA DE MANTENIMIENTO PREVENTIVO PARA "{{ ABus.tbg_Descripcion }}"
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%"><button type="button" v-on:click.prevent="ImprimirPlantilla(ABus.Are_Codigo,ABus.CODI_PROGRAMACION_REAL,objFiltro.ClaseM)" class="btn btn-warning waves-effect waves-light m-r-10">Imprimir</button></td>
+                                    <td width="50%"><button type="button" v-on:click.prevent="GuardarTareas(ABus.Are_Codigo,objFiltro.ClaseM,objOperacion.Operacion)" class="btn btn-default waves-effect waves-light m-r-10">Guardar</button></td>
+                                </tr>
+                            </thead>
+                        
+                        </table>
+
+              
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableTareas" ref="#tableTareas">
+                                <thead>
+                                    <tr class="advanced-table active">
+                                        <td hidden="hidden">Sistema</td>
+                                        <td width="30%">IdTarea</td>
+                                        <td width="68%">Tarea</td>
+                                        <td width="2%">Seleccion Anterior</td>
+                                        <td> 
+                                            <input type="checkbox" @@click='checkAllTS()' v-model='isCheckAllTS'>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="header" v-for="TareaSistema in list.ListTareaSistema">
+                                        <td hidden="hidden">{{ TareaSistema.Sistema_Descripcion }}</td>
+                                        <td width="30%" align="center">{{ TareaSistema.IdTarea }}</td>
+                                        <td width="66%" align="center">{{ TareaSistema.Tarea_Descripcion }}</td>
+                                        <td width="2%" align="center"><input type="checkbox" disabled="disabled" v-model="TareaSistema.Activo" /></td>
+                                        <td width="2%" align="center">
+                                            <input type="checkbox" v-bind:value='TareaSistema' v-model="list.SeleccionadosTS" v-bind:true-value="TareaSistema.Activo">
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                @*<button class="btn btn-danger waves-effect waves-light text-left" @@click="RedirectReport()">
+                    <span class="glyphicon glyphicon-print fa-fw"></span>Imprimir
+                </button>*@
+                
+                <button class="btn btn-default waves-effect waves-light text-left" @@click="close(2)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->

@@ -1,0 +1,50 @@
+﻿<!-- sample modal content -->
+<div id="appInformeTareasPendientes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:50%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(4)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Tareas Pendientes :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table editable-table table-bordered table-striped m-b-0" id="tableTareas" ref="#tableTareas">
+                            <thead>
+                                <tr class="advanced-table active">
+                                    <td>Mantenimiento</td>
+                                    <td>Tarea</td>
+                                    <td>Observación</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="header" v-for="TareaPendiente in list.TareasPendientes">
+                                    <td width="30%" align="center">{{ TareaPendiente.Mantenimiento }}</td>
+                                    <td width="20%" align="center">{{ TareaPendiente.Tarea }}</td>
+                                    <td width="40%" align="center">{{ TareaPendiente.Observacion }}</td>
+                                    <td width="10%">
+                                        <button type="button" v-on:click.prevent="DeleteMantenimiento(TareaPendiente)" title="Eliminar" class="btn btn-danger btn-outline btn-circle btn-sm m-r-5"><i class="ti-trash"></i></button>
+                                        <button type="button" v-on:click.prevent="ReasignarTarea(TareaPendiente)" title="ReasignarTarea" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-back-left"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default waves-effect waves-light text-left" @@click="close(4)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->
