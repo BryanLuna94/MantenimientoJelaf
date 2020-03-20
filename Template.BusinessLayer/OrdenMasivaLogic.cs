@@ -328,7 +328,7 @@ namespace Mantenimiento.BusinessLayer
                     {
                         objInformeTareas = new InformeTareasEntity
                         {
-                            FechaInicio = null,
+                            FechaInicio = FechaGenerar,
                             IdInforme = idMaxInforme,
                             IdTarea = itemTareasPendientes.IdTarea,
                             Observacion = "",
