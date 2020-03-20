@@ -56,7 +56,7 @@
                                 <div class="col-md-12 p-0">
                                     <input class="form-control text-right input-sm"
                                            v-model="objTipoMP.Kilometros"
-                                           v-mask="'#####'"
+                                           v-mask="'#######'"
                                            id="Kilometros"
                                            ref="Kilometros"
                                            placeholder="Kilometros">
@@ -130,6 +130,34 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-xs-12 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Meses:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.Meses"
+                                           v-mask="'##'"
+                                           id="Meses"
+                                           ref="Meses"
+                                           placeholder="Meses">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-2" style="padding-left:1px; padding-right:2px;">
+                            <div class="form-group m-b-0">
+                                <label class="col-md-12 p-0">Meses Aviso:</label>
+                                <div class="col-md-12 p-0">
+                                    <input class="form-control text-right input-sm"
+                                           v-model="objTipoMP.MesesAviso"
+                                           id="MesesAviso"
+                                           v-mask="'##'"
+                                           ref="MesesAviso"
+                                           placeholder="Meses Aviso">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

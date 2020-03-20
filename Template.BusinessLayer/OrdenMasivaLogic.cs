@@ -11,6 +11,8 @@ using Mantenimiento.Entities.Objects.Filters;
 using Mantenimiento.Entities.Peticiones.Requests;
 using Mantenimiento.Entities.Objects.Lists;
 using System.Transactions;
+using System.Xml.Linq;
+using System.Linq;
 
 namespace Mantenimiento.BusinessLayer
 {
@@ -57,6 +59,31 @@ namespace Mantenimiento.BusinessLayer
                 {
                     EsCorrecto = true,
                     Valor = new OrdenMasivaResponse { ListTareasPendientes = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<OrdenMasivaResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<OrdenMasivaResponse> ListAreBus(string are_codigo, string codigo_programacion_real)
+        {
+            try
+            {
+                Response<OrdenMasivaResponse> response;
+                List<AreEntity> List;
+
+                List = TipoMantenimientoData.ListAreBus(are_codigo, codigo_programacion_real);
+
+                response = new Response<OrdenMasivaResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new OrdenMasivaResponse { ListAreEntity = List },
                     Mensaje = "OK",
                     Estado = true,
                 };
@@ -409,5 +436,42 @@ namespace Mantenimiento.BusinessLayer
                 throw;
             }
         }
+
+        public static async Task<Response<OrdenMasivaResponse>> InsertTareasSistemas(TareaSistemaRequest request)
+        {
+            Response<OrdenMasivaResponse> response;
+            
+            try
+            {
+                XElement xmlElements = new XElement("Root",
+                    request.ListInsertar.Select(i => new XElement("Tareas",
+                    new XAttribute("IdTarea", i.IdTarea),i.IdTarea))
+                    );
+              
+                await InformeTareasData.InsertTareasSistemas(request.Are_Codigo, request.IdClaseMantenimiento, request.Operacion, xmlElements.ToString());
+
+                response = new Response<OrdenMasivaResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new OrdenMasivaResponse
+                    {
+                        List = new List<OrdenMasivaList>()
+                    },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (FaultException<ServiceError>)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                return new Response<OrdenMasivaResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
     }
 }

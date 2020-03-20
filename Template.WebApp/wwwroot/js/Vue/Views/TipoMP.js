@@ -14,8 +14,16 @@
             Horas: 0,
             HorasAviso: 0,
             cod_marca: '',
-            cod_modelo: 0
+            cod_modelo: 0,
+            Meses: 0,
+            MesesAviso: 0
         },
+        objFiltro: {
+            Marca: [],
+            Modelo: [],
+            ClaseMP:[]
+        },
+
         objTarea: {
             IdTarea: '',
             IdTipoMan: '',
@@ -34,6 +42,9 @@
         },
         list: {
             MarcaModelo: [],
+            Modelos: [],
+            Marcas: [],
+            Seleccionados: [],
             TipoMP: [],
             Sistemas: [],
             Repuestos: [],
@@ -41,7 +52,12 @@
             SubSistemas: [],
             ClaseMP: [],
             TareaMP: [],
-            Id: []
+            Id: [],
+
+            
+            MarcasF: [],
+            ModelosF: [],
+            ClaseMPF: []
         },
         createKilometraje: true,
         createTarea: true,
@@ -55,7 +71,9 @@
 
 
     created: async function () {
-
+        await this.getModeloBuses();
+        await this.getMarcaBuses();
+        await this.getClaseMP();
     },
 
     mounted: async function () {
@@ -85,6 +103,33 @@
                 });
         },
 
+        ListTipoMPFiltro: async function () {
+            let _this = this;
+
+            _this.list.Seleccionados = [];
+            let data = {
+                FiltroMarca: _this.objFiltro.Marca,
+                FiltroModelo: _this.objFiltro.Modelo
+
+            };
+
+            var json = JSON.stringify(data);
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('TipoMP/ListTipoMPFiltro'), {
+                params: {
+                    json: json
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.TipoMP = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListTipoMPFiltro');
+                });
+        },
+
+
         ListClaseMP: async function () {
             let _this = this;
             await axios.get(getBaseUrl.obtenerUrlAbsoluta('ClaseMP/ListClaseMP'))
@@ -97,6 +142,30 @@
                 });
         },
 
+        ListClaseMPFiltro: async function () {
+            let _this = this;
+            _this.list.Seleccionados = [];
+            let data = {
+                Filtro: _this.objFiltro.ClaseMP
+            };
+
+            var json = JSON.stringify(data);
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('ClaseMP/ListClaseMPFiltro'),{
+                    params: {
+                        json: json
+                    }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.ClaseMP = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListClaseMPFiltro');
+                });
+        },
+
+
         ListarMarcaModelo: async function () {
             let _this = this;
             await axios.get(getBaseUrl.obtenerUrlAbsoluta('MarcaModelo/ListMarcaModelo'))
@@ -107,6 +176,74 @@
                     }
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo ListMarcaModelo');
+                });
+        },
+
+        ListarMarcaModeloFiltro: async function () {
+
+            let _this = this;
+            _this.list.Seleccionados = [];
+
+            let data = {
+                FiltroModelo: _this.objFiltro.Modelo,
+                FiltroMarca: _this.objFiltro.Marca
+            };
+
+            var json = JSON.stringify(data);
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('MarcaModelo/ListMarcaModeloFiltro'), {
+                params: {
+                    json: json
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.MarcaModelo = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListarMarcaModeloFiltro');
+                });
+        },
+
+
+
+
+        getModeloBuses: async function () {
+            let _this = this;
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('MarcaModelo/ListModeloBuses'))
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.ModelosF = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getModeloBuses');
+                });
+        },
+
+        getMarcaBuses: async function () {
+            let _this = this;
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('MarcaModelo/ListMarcaBuses'))
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.MarcasF = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getMarcaBuses');
+                });
+        },
+
+        getClaseMP: async function () {
+            let _this = this;
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('ClaseMP/ListClaseMP'))
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.ClaseMPF = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getClaseMP');
                 });
         },
 
@@ -163,6 +300,13 @@
             await this.ListClaseMP();
             await this.ListTipoMP();
             await this.ListarMarcaModelo();
+        },
+
+        CrearTablaFiltro: async function () {
+            await this.ListClaseMPFiltro();
+            await this.ListTipoMPFiltro();
+            await this.ListarMarcaModeloFiltro();
+   
         },
 
         FormatearTabla: async function () {
@@ -251,6 +395,8 @@
             this.objTipoMP.DiasAviso = '';
             this.objTipoMP.Horas = '';
             this.objTipoMP.HorasAviso = '';
+            this.objTipoMP.Meses = '';
+            this.objTipoMP.MesesAviso = '';
         },
 
         ObtenerKilometraje: async function (itemMarcaModelo, itemClaseMP) {
@@ -286,6 +432,8 @@
                         _this.objTipoMP.DiasAviso = (!_this.createKilometraje) ? res.data.Valor.List[0].DiasAviso : '';
                         _this.objTipoMP.Horas = (!_this.createKilometraje) ? res.data.Valor.List[0].Horas : '';
                         _this.objTipoMP.HorasAviso = (!_this.createKilometraje) ? res.data.Valor.List[0].HorasAviso : '';
+                        _this.objTipoMP.Meses = (!_this.createKilometraje) ? res.data.Valor.List[0].Meses : '';
+                        _this.objTipoMP.MesesAviso = (!_this.createKilometraje) ? res.data.Valor.List[0].MesesAviso : '';
                     }
                 }).catch(error => {
                     Notifications.Messages.error('Ocurrió una excepción en el metodo ListTipoMP');
@@ -312,7 +460,9 @@
                 Dias: _this.objTipoMP.Dias,
                 DiasAviso: _this.objTipoMP.DiasAviso,
                 Horas: _this.objTipoMP.Horas,
-                HorasAviso: _this.objTipoMP.HorasAviso
+                HorasAviso: _this.objTipoMP.HorasAviso,
+                Meses: _this.objTipoMP.Meses,
+                MesesAviso: _this.objTipoMP.MesesAviso
             })
                 .then(res => {
                     if (res.data.Estado) {
@@ -342,7 +492,9 @@
                 Horas: _this.objTipoMP.Horas,
                 HorasAviso: _this.objTipoMP.HorasAviso,
                 cod_marca: _this.objTipoMP.cod_marca,
-                cod_modelo: _this.objTipoMP.cod_modelo
+                cod_modelo: _this.objTipoMP.cod_modelo,
+                Meses: _this.objTipoMP.Meses,
+                MesesAviso: _this.objTipoMP.MesesAviso
             })
                 .then(res => {
                     if (res.data.Estado) {

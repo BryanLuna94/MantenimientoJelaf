@@ -20,9 +20,15 @@
                                 <tbody>
                                     <tr class="header" v-for="Bus in list.Buses">
                                         <td width="50%" align="center">
-                                            <a href="#" v-on:click.prevent="ListTareasPendientes(Bus.IdUnidad)">{{ Bus.IdUnidad }}</a> 
+                                            <a href="#" v-on:click.prevent="ListTareasPendientes(Bus.IdUnidad)">{{ Bus.IdUnidad }}</a>
                                         </td>
                                         <td width="50%" align="center">{{ Bus.BusPlaca }}</td>
+                                        <td width="50%" align="center" hidden="hidden">{{ Bus.CODI_PROGRAMACION_REAL }}</td>
+                                        <td width="50%" align="center">
+                                            <button class="btn btn-info waves-effect waves-light text-center" @@click="VerImprimirPreventivo(Bus.IdUnidad,Bus.CODI_PROGRAMACION_REAL)">
+                                                <span class="glyphicon glyphicon-print fa-fw"></span>
+                                            </button>
+                                        </td>
                                     </tr>
                                 </tbody>
 

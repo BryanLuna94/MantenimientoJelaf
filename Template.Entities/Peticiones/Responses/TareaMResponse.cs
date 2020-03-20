@@ -10,7 +10,9 @@ namespace Mantenimiento.Entities.Requests.Responses
         [DataMember]
         public List<TareaMEntity> List { get; set; }
         public TareaMEntity TareaM { get; set; }
- 
+        [DataMember]
+        public List<TareaSistemaEntity> ListTareaSistemaEntity { get; set; }
+
 
 
 

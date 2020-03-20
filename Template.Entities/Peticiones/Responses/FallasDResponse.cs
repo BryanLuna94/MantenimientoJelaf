@@ -11,6 +11,7 @@ namespace Mantenimiento.Entities.Requests.Responses
         [DataMember]
         public List<FallasDEntity> List { get; set; }
         public FallasDEntity FallasD { get; set; }
+
         [DataMember]
         public List<SolicitudRevisionBusquedaList> ListBusqueda { get; set; }
         [DataMember]

@@ -354,5 +354,39 @@ namespace Mantenimiento.DataAccess
 
             return nuevoId;
         }
+
+
+        public static async Task<int> InsertTareasSistemas(string AreCodigo,string IdClaseMantenimiento, string Operacion, string xmlData)
+        {
+            int nuevoId = 0;
+            try
+            {
+                using (SqlConnection con = GetConnection.BDALMACEN())
+                {
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (SqlCommand cmd = new SqlCommand("proc_InsertarTareaSistema", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@Are_Codigo", SqlDbType.VarChar).Value = AreCodigo;
+                        cmd.Parameters.Add("@IdClaseMantenimiento", SqlDbType.VarChar).Value = IdClaseMantenimiento;
+                        cmd.Parameters.Add("@Operacion", SqlDbType.VarChar).Value = Operacion;
+                        cmd.Parameters.Add("@XMLData", SqlDbType.Xml).Value = xmlData;
+                        await cmd.ExecuteNonQueryAsync();
+                        cmd.Dispose();
+                    }
+
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return nuevoId;
+        }
+
     }
 }

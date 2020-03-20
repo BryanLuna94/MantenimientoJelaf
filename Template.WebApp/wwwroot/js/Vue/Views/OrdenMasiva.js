@@ -7,6 +7,10 @@
             IdOrdenMasiva: ''
         },
 
+        objOperacion: {
+            Operacion:''
+        },
+
         objFiltro: {
             FecIni: _FechaActual,
             FecFin: _FechaActual,
@@ -15,7 +19,9 @@
             Unidad: '',
             Chofer: '',
             Generado: false,
-            Orden: 'P'
+            Orden: 'P',
+            TipoUnidad: '',
+            ClaseM:''
         },
 
         list: {
@@ -27,10 +33,16 @@
             Seleccionados: [],
             TareasPendientes: [],
             Buses: [],
+            TiposUnidades: [],
+            ClaseM: [],
+            AreBus: [],
+            ListTareaSistema: [],
+            SeleccionadosTS:[]
         },
         isCheckAll: false,
         createOrdenMasiva: true,
         selectedlang: "",
+        isCheckAllTS: false
     },
     created: async function () {
         await this.ListOrdenMasiva();
@@ -38,6 +50,9 @@
         await this.getBeneficiarios('');
         await this.getOrigenes('');
         await this.getDestinos('');
+        await this.getTiposUnidad('');
+        await this.ListClaseM();
+        
     },
     mounted: async function () {
         /*this.$nextTick(() => {
@@ -63,6 +78,17 @@
             if (this.isCheckAll) { // Check all
                 for (var key in this.list.OrdenMasiva) {
                     this.list.Seleccionados.push(this.list.OrdenMasiva[key]);
+                }
+            }
+        },
+
+        checkAllTS: function () {
+
+            this.isCheckAllTS = !this.isCheckAllTS;
+            this.list.SeleccionadosTS = [];
+            if (this.isCheckAllTS) { // Check all
+                for (var key in this.list.ListTareaSistema) {
+                    this.list.SeleccionadosTS.push(this.list.ListTareaSistema[key]);
                 }
             }
         },
@@ -145,6 +171,67 @@
                 });
         },
 
+        ImprimirPlantilla: async function (areCodigo, codigoProgramacionReal, idClaseMantenimiento) {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/ReportPlantillaTemp'), {
+                params: {
+                    are_codigo: areCodigo,
+                    codigo_programacion_real: codigoProgramacionReal,
+                    Id_ClaseMantenimiento: idClaseMantenimiento
+                }
+            })
+                .then(res => {
+                    window.open(_rutaReportePlantillaTemp);
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ImprimirPlantilla');
+                });
+
+        },
+
+
+        ListTareaSistema: async function (areCodigo, IdClaseMantenimiento) {
+
+            let _this = this;
+
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('TareaM/ListTareaSistema'), {
+                params: {
+                    are_codigo: areCodigo,
+                    IdClaseMantenimiento: IdClaseMantenimiento
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.ListTareaSistema = (res.data.Valor.ListTareaSistemaEntity) ? res.data.Valor.ListTareaSistemaEntity : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListTareaSistema');
+                });
+        },
+
+
+        ListAreBus: async function (areCodigo,codigoProgramacionReal) {
+
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/ListAreBus'), {
+                params: {
+                    are_codigo: areCodigo,
+                    codigo_programacion_real: codigoProgramacionReal
+                }
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        
+                        _this.list.AreBus = (res.data.Valor.ListAreEntity) ? res.data.Valor.ListAreEntity : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListAreBus');
+                });
+        },
+
         getFlotas: async function (value) {
             let _this = this;
             await axios.get(getBaseUrl.obtenerUrlAbsoluta('Base/ListFlotaAutocomplete'), { params: { value: value } })
@@ -198,6 +285,20 @@
                 });
         },
 
+        getTiposUnidad: async function (value) {
+            let _this = this;
+
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/ListTipoUnidad'), { params: { tbg_codigo: '28' } })
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.TiposUnidades = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo getTiposUnidad');
+                });
+        },
+
         GenerarCorrectivo: async function () {
 
             let _this = this;
@@ -232,6 +333,47 @@
                 });
         },
 
+        GuardarTareas: async function (are_codigo, idClaseMantenimiento, operacion) {
+
+            let _this = this;
+
+            //if (_this.objOrdenMasiva.FechaGenerar === "") {
+            //    Notifications.Messages.warning('Primero debe seleccionar una fecha');
+            //    _this.$refs.FechaGenerar.focus();
+            //    return;
+            //}
+
+            let data = {
+                //FechaGenerar: _this.objOrdenMasiva.FechaGenerar,
+                Are_Codigo: are_codigo,
+                IdClaseMantenimiento: idClaseMantenimiento,
+                Operacion: operacion,
+                //ListInsertar: _this.TareaSistema
+                ListInsertar: _this.list.SeleccionadosTS
+            };
+
+            var json = JSON.stringify(data);
+
+            //this.processing = true;
+            await axios.post(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/GuardarTareas'), {
+                json: json
+            })
+                .then(res => {
+                    if (res.data.Estado) {
+                        Notifications.Messages.success('Se grabó información exitosamente');
+                        
+                        _this.ListTareaSistema(are_codigo, idClaseMantenimiento);
+                    } else if (res.data.Estado === false) {
+                        //this.processing = false;
+                        Notifications.Messages.error(res.data.Mensaje);
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo GuardarTareas');
+                });
+        },
+
+
+
         VerPreventivos: async function () {
 
             let _this = this;
@@ -247,6 +389,23 @@
             }
             
             $('#appTareasPendientes').modal('show');
+        },
+
+        VerImprimirPreventivo: async function (areCodigo, codigoProgramacionReal) {
+
+            let _this = this;
+
+            //_this.list.Buses = [];
+            _this.list.AreBus = [];
+            //for (var key in _this.list.Seleccionados) {
+            //    _this.list.Buses.push(_this.list.OrdenMasiva[key]);
+            //}
+
+            if (_this.list.AreBus.length === 0) {
+                _this.ListAreBus(areCodigo, codigoProgramacionReal);
+            }
+
+            $('#appImprimirPreventivo').modal('show');
         },
 
         AnularCorrectivo: async function () {
@@ -417,6 +576,12 @@
 
                 });
             }
+            if (code === 2) {
+                $('#appImprimirPreventivo').modal('hide');
+                this.$nextTick(() => {
+
+                });
+            }
         },
 
         RedirectReport: async function () {
@@ -432,6 +597,20 @@
                     Notifications.Messages.error('Ocurrió una excepción en el metodo RedirectReport');
                 });
 
+        },
+
+        ListClaseM: async function () {
+
+
+            let _this = this;
+            await axios.get(getBaseUrl.obtenerUrlAbsoluta('ClaseM/ListClaseM'))
+                .then(res => {
+                    if (res.data.Estado) {
+                        _this.list.ClaseM = (res.data.Valor.List) ? res.data.Valor.List : [];
+                    }
+                }).catch(error => {
+                    Notifications.Messages.error('Ocurrió una excepción en el metodo ListClaseM');
+                });
         }
 
     },

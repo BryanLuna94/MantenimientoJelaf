@@ -15,6 +15,1589 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
+        "s")]
+    [System.SerializableAttribute()]
+    public partial class AuxilioMecanicoRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoFilter FiltroField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanico {
+            get {
+                return this.AuxilioMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuxilioMecanicoField, value) != true)) {
+                    this.AuxilioMecanicoField = value;
+                    this.RaisePropertyChanged("AuxilioMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoFilter Filtro {
+            get {
+                return this.FiltroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroField, value) != true)) {
+                    this.FiltroField = value;
+                    this.RaisePropertyChanged("Filtro");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoList))]
+    public partial class AuxilioMecanicoEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_Codigo2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AtencionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ben_codigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short CambioTractoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CargaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CausaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ControlableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FallaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Fechahora_finField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Fechahora_iniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ID_Tb_AuxilioMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdPlanField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Id_plataformaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short Idtarea_cField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Kmt_PerdidoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Kmt_recorridoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Kmt_unidadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MMGField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ResponsableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ServicioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Codigo {
+            get {
+                return this.Are_CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_CodigoField, value) != true)) {
+                    this.Are_CodigoField = value;
+                    this.RaisePropertyChanged("Are_Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Codigo2 {
+            get {
+                return this.Are_Codigo2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_Codigo2Field, value) != true)) {
+                    this.Are_Codigo2Field = value;
+                    this.RaisePropertyChanged("Are_Codigo2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Atencion {
+            get {
+                return this.AtencionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AtencionField, value) != true)) {
+                    this.AtencionField = value;
+                    this.RaisePropertyChanged("Atencion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ben_codigo {
+            get {
+                return this.Ben_codigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ben_codigoField, value) != true)) {
+                    this.Ben_codigoField = value;
+                    this.RaisePropertyChanged("Ben_codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short CambioTracto {
+            get {
+                return this.CambioTractoField;
+            }
+            set {
+                if ((this.CambioTractoField.Equals(value) != true)) {
+                    this.CambioTractoField = value;
+                    this.RaisePropertyChanged("CambioTracto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Carga {
+            get {
+                return this.CargaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CargaField, value) != true)) {
+                    this.CargaField = value;
+                    this.RaisePropertyChanged("Carga");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Causa {
+            get {
+                return this.CausaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CausaField, value) != true)) {
+                    this.CausaField = value;
+                    this.RaisePropertyChanged("Causa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Controlable {
+            get {
+                return this.ControlableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ControlableField, value) != true)) {
+                    this.ControlableField = value;
+                    this.RaisePropertyChanged("Controlable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Falla {
+            get {
+                return this.FallaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FallaField, value) != true)) {
+                    this.FallaField = value;
+                    this.RaisePropertyChanged("Falla");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fechahora_fin {
+            get {
+                return this.Fechahora_finField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Fechahora_finField, value) != true)) {
+                    this.Fechahora_finField = value;
+                    this.RaisePropertyChanged("Fechahora_fin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fechahora_ini {
+            get {
+                return this.Fechahora_iniField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Fechahora_iniField, value) != true)) {
+                    this.Fechahora_iniField = value;
+                    this.RaisePropertyChanged("Fechahora_ini");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_Tb_AuxilioMecanico {
+            get {
+                return this.ID_Tb_AuxilioMecanicoField;
+            }
+            set {
+                if ((this.ID_Tb_AuxilioMecanicoField.Equals(value) != true)) {
+                    this.ID_Tb_AuxilioMecanicoField = value;
+                    this.RaisePropertyChanged("ID_Tb_AuxilioMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdPlan {
+            get {
+                return this.IdPlanField;
+            }
+            set {
+                if ((this.IdPlanField.Equals(value) != true)) {
+                    this.IdPlanField = value;
+                    this.RaisePropertyChanged("IdPlan");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Id_plataforma {
+            get {
+                return this.Id_plataformaField;
+            }
+            set {
+                if ((this.Id_plataformaField.Equals(value) != true)) {
+                    this.Id_plataformaField = value;
+                    this.RaisePropertyChanged("Id_plataforma");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Idtarea_c {
+            get {
+                return this.Idtarea_cField;
+            }
+            set {
+                if ((this.Idtarea_cField.Equals(value) != true)) {
+                    this.Idtarea_cField = value;
+                    this.RaisePropertyChanged("Idtarea_c");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Kmt_Perdido {
+            get {
+                return this.Kmt_PerdidoField;
+            }
+            set {
+                if ((this.Kmt_PerdidoField.Equals(value) != true)) {
+                    this.Kmt_PerdidoField = value;
+                    this.RaisePropertyChanged("Kmt_Perdido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Kmt_recorrido {
+            get {
+                return this.Kmt_recorridoField;
+            }
+            set {
+                if ((this.Kmt_recorridoField.Equals(value) != true)) {
+                    this.Kmt_recorridoField = value;
+                    this.RaisePropertyChanged("Kmt_recorrido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Kmt_unidad {
+            get {
+                return this.Kmt_unidadField;
+            }
+            set {
+                if ((this.Kmt_unidadField.Equals(value) != true)) {
+                    this.Kmt_unidadField = value;
+                    this.RaisePropertyChanged("Kmt_unidad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MMG {
+            get {
+                return this.MMGField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MMGField, value) != true)) {
+                    this.MMGField = value;
+                    this.RaisePropertyChanged("MMG");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Responsable {
+            get {
+                return this.ResponsableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResponsableField, value) != true)) {
+                    this.ResponsableField = value;
+                    this.RaisePropertyChanged("Responsable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Servicio {
+            get {
+                return this.ServicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ServicioField, value) != true)) {
+                    this.ServicioField = value;
+                    this.RaisePropertyChanged("Servicio");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoFilter", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters")]
+    [System.SerializableAttribute()]
+    public partial class AuxilioMecanicoFilter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_codigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ben_codigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaInicioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_codigo {
+            get {
+                return this.Are_codigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_codigoField, value) != true)) {
+                    this.Are_codigoField = value;
+                    this.RaisePropertyChanged("Are_codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ben_codigo {
+            get {
+                return this.Ben_codigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ben_codigoField, value) != true)) {
+                    this.Ben_codigoField = value;
+                    this.RaisePropertyChanged("Ben_codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaFin {
+            get {
+                return this.FechaFinField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaFinField, value) != true)) {
+                    this.FechaFinField = value;
+                    this.RaisePropertyChanged("FechaFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaInicio {
+            get {
+                return this.FechaInicioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
+                    this.FechaInicioField = value;
+                    this.RaisePropertyChanged("FechaInicio");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
+    [System.SerializableAttribute()]
+    public partial class AuxilioMecanicoList : Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BeneficiarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarretaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StrFechaFinField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StrFechaIniField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Beneficiario {
+            get {
+                return this.BeneficiarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BeneficiarioField, value) != true)) {
+                    this.BeneficiarioField = value;
+                    this.RaisePropertyChanged("Beneficiario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Bus {
+            get {
+                return this.BusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BusField, value) != true)) {
+                    this.BusField = value;
+                    this.RaisePropertyChanged("Bus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Carreta {
+            get {
+                return this.CarretaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarretaField, value) != true)) {
+                    this.CarretaField = value;
+                    this.RaisePropertyChanged("Carreta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StrFechaFin {
+            get {
+                return this.StrFechaFinField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StrFechaFinField, value) != true)) {
+                    this.StrFechaFinField = value;
+                    this.RaisePropertyChanged("StrFechaFin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StrFechaIni {
+            get {
+                return this.StrFechaIniField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StrFechaIniField, value) != true)) {
+                    this.StrFechaIniField = value;
+                    this.RaisePropertyChanged("StrFechaIni");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfAuxilioMecanicoResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
+    [System.SerializableAttribute()]
+    public partial class ResponseOfAuxilioMecanicoResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EsCorrectoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoResponse ValorField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EsCorrecto {
+            get {
+                return this.EsCorrectoField;
+            }
+            set {
+                if ((this.EsCorrectoField.Equals(value) != true)) {
+                    this.EsCorrectoField = value;
+                    this.RaisePropertyChanged("EsCorrecto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mensaje {
+            get {
+                return this.MensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
+                    this.MensajeField = value;
+                    this.RaisePropertyChanged("Mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoResponse Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+        "es")]
+    [System.SerializableAttribute()]
+    public partial class AuxilioMecanicoResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanicoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoList> ListField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanico {
+            get {
+                return this.AuxilioMecanicoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuxilioMecanicoField, value) != true)) {
+                    this.AuxilioMecanicoField = value;
+                    this.RaisePropertyChanged("AuxilioMecanico");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoList> List {
+            get {
+                return this.ListField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListField, value) != true)) {
+                    this.ListField = value;
+                    this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+        "es")]
+    [System.SerializableAttribute()]
+    public partial class ServiceErrorResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SubCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string SubCode {
+            get {
+                return this.SubCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SubCodeField, value) != true)) {
+                    this.SubCodeField = value;
+                    this.RaisePropertyChanged("SubCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfMtbfResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
+    [System.SerializableAttribute()]
+    public partial class ResponseOfMtbfResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EsCorrectoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.MtbfResponse ValorField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool EsCorrecto {
+            get {
+                return this.EsCorrectoField;
+            }
+            set {
+                if ((this.EsCorrectoField.Equals(value) != true)) {
+                    this.EsCorrectoField = value;
+                    this.RaisePropertyChanged("EsCorrecto");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mensaje {
+            get {
+                return this.MensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
+                    this.MensajeField = value;
+                    this.RaisePropertyChanged("Mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.MtbfResponse Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MtbfResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+        "es")]
+    [System.SerializableAttribute()]
+    public partial class MtbfResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal BamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte HorasDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> ListField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity MtbfField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short ViajeEnHorasField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Bam {
+            get {
+                return this.BamField;
+            }
+            set {
+                if ((this.BamField.Equals(value) != true)) {
+                    this.BamField = value;
+                    this.RaisePropertyChanged("Bam");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte HorasDia {
+            get {
+                return this.HorasDiaField;
+            }
+            set {
+                if ((this.HorasDiaField.Equals(value) != true)) {
+                    this.HorasDiaField = value;
+                    this.RaisePropertyChanged("HorasDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> List {
+            get {
+                return this.ListField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListField, value) != true)) {
+                    this.ListField = value;
+                    this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity Mtbf {
+            get {
+                return this.MtbfField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MtbfField, value) != true)) {
+                    this.MtbfField = value;
+                    this.RaisePropertyChanged("Mtbf");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short ViajeEnHoras {
+            get {
+                return this.ViajeEnHorasField;
+            }
+            set {
+                if ((this.ViajeEnHorasField.Equals(value) != true)) {
+                    this.ViajeEnHorasField = value;
+                    this.RaisePropertyChanged("ViajeEnHoras");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MTBFEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class MTBFEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short AnioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal BamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte CambioTractosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte DiasMesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal DisponibilidadFlotaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal DisponibilidadMecanicaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal EficienciaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short FallasMecanicasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaHoraRegistroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte HorasDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdMtbfField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int KmPerdidosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short MTBFDiarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short MTBFHorasTotalesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short MTBFViajesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MTTRField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal MetaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short MetaMTBFField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreMesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte NumMesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TotalHorasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioRegistroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short ViajeEnHorasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short ViajesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Anio {
+            get {
+                return this.AnioField;
+            }
+            set {
+                if ((this.AnioField.Equals(value) != true)) {
+                    this.AnioField = value;
+                    this.RaisePropertyChanged("Anio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Bam {
+            get {
+                return this.BamField;
+            }
+            set {
+                if ((this.BamField.Equals(value) != true)) {
+                    this.BamField = value;
+                    this.RaisePropertyChanged("Bam");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte CambioTractos {
+            get {
+                return this.CambioTractosField;
+            }
+            set {
+                if ((this.CambioTractosField.Equals(value) != true)) {
+                    this.CambioTractosField = value;
+                    this.RaisePropertyChanged("CambioTractos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte DiasMes {
+            get {
+                return this.DiasMesField;
+            }
+            set {
+                if ((this.DiasMesField.Equals(value) != true)) {
+                    this.DiasMesField = value;
+                    this.RaisePropertyChanged("DiasMes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal DisponibilidadFlota {
+            get {
+                return this.DisponibilidadFlotaField;
+            }
+            set {
+                if ((this.DisponibilidadFlotaField.Equals(value) != true)) {
+                    this.DisponibilidadFlotaField = value;
+                    this.RaisePropertyChanged("DisponibilidadFlota");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal DisponibilidadMecanica {
+            get {
+                return this.DisponibilidadMecanicaField;
+            }
+            set {
+                if ((this.DisponibilidadMecanicaField.Equals(value) != true)) {
+                    this.DisponibilidadMecanicaField = value;
+                    this.RaisePropertyChanged("DisponibilidadMecanica");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Eficiencia {
+            get {
+                return this.EficienciaField;
+            }
+            set {
+                if ((this.EficienciaField.Equals(value) != true)) {
+                    this.EficienciaField = value;
+                    this.RaisePropertyChanged("Eficiencia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short FallasMecanicas {
+            get {
+                return this.FallasMecanicasField;
+            }
+            set {
+                if ((this.FallasMecanicasField.Equals(value) != true)) {
+                    this.FallasMecanicasField = value;
+                    this.RaisePropertyChanged("FallasMecanicas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaHoraRegistro {
+            get {
+                return this.FechaHoraRegistroField;
+            }
+            set {
+                if ((this.FechaHoraRegistroField.Equals(value) != true)) {
+                    this.FechaHoraRegistroField = value;
+                    this.RaisePropertyChanged("FechaHoraRegistro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte HorasDia {
+            get {
+                return this.HorasDiaField;
+            }
+            set {
+                if ((this.HorasDiaField.Equals(value) != true)) {
+                    this.HorasDiaField = value;
+                    this.RaisePropertyChanged("HorasDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdMtbf {
+            get {
+                return this.IdMtbfField;
+            }
+            set {
+                if ((this.IdMtbfField.Equals(value) != true)) {
+                    this.IdMtbfField = value;
+                    this.RaisePropertyChanged("IdMtbf");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int KmPerdidos {
+            get {
+                return this.KmPerdidosField;
+            }
+            set {
+                if ((this.KmPerdidosField.Equals(value) != true)) {
+                    this.KmPerdidosField = value;
+                    this.RaisePropertyChanged("KmPerdidos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short MTBFDiario {
+            get {
+                return this.MTBFDiarioField;
+            }
+            set {
+                if ((this.MTBFDiarioField.Equals(value) != true)) {
+                    this.MTBFDiarioField = value;
+                    this.RaisePropertyChanged("MTBFDiario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short MTBFHorasTotales {
+            get {
+                return this.MTBFHorasTotalesField;
+            }
+            set {
+                if ((this.MTBFHorasTotalesField.Equals(value) != true)) {
+                    this.MTBFHorasTotalesField = value;
+                    this.RaisePropertyChanged("MTBFHorasTotales");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short MTBFViajes {
+            get {
+                return this.MTBFViajesField;
+            }
+            set {
+                if ((this.MTBFViajesField.Equals(value) != true)) {
+                    this.MTBFViajesField = value;
+                    this.RaisePropertyChanged("MTBFViajes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MTTR {
+            get {
+                return this.MTTRField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MTTRField, value) != true)) {
+                    this.MTTRField = value;
+                    this.RaisePropertyChanged("MTTR");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Meta {
+            get {
+                return this.MetaField;
+            }
+            set {
+                if ((this.MetaField.Equals(value) != true)) {
+                    this.MetaField = value;
+                    this.RaisePropertyChanged("Meta");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short MetaMTBF {
+            get {
+                return this.MetaMTBFField;
+            }
+            set {
+                if ((this.MetaMTBFField.Equals(value) != true)) {
+                    this.MetaMTBFField = value;
+                    this.RaisePropertyChanged("MetaMTBF");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NombreMes {
+            get {
+                return this.NombreMesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreMesField, value) != true)) {
+                    this.NombreMesField = value;
+                    this.RaisePropertyChanged("NombreMes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte NumMes {
+            get {
+                return this.NumMesField;
+            }
+            set {
+                if ((this.NumMesField.Equals(value) != true)) {
+                    this.NumMesField = value;
+                    this.RaisePropertyChanged("NumMes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TotalHoras {
+            get {
+                return this.TotalHorasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TotalHorasField, value) != true)) {
+                    this.TotalHorasField = value;
+                    this.RaisePropertyChanged("TotalHoras");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UsuarioRegistro {
+            get {
+                return this.UsuarioRegistroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioRegistroField, value) != true)) {
+                    this.UsuarioRegistroField = value;
+                    this.RaisePropertyChanged("UsuarioRegistro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short ViajeEnHoras {
+            get {
+                return this.ViajeEnHorasField;
+            }
+            set {
+                if ((this.ViajeEnHorasField.Equals(value) != true)) {
+                    this.ViajeEnHorasField = value;
+                    this.RaisePropertyChanged("ViajeEnHoras");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Viajes {
+            get {
+                return this.ViajesField;
+            }
+            set {
+                if ((this.ViajesField.Equals(value) != true)) {
+                    this.ViajesField = value;
+                    this.RaisePropertyChanged("Viajes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MtbfRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
+        "s")]
+    [System.SerializableAttribute()]
+    public partial class MtbfRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short AnioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal BamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte HorasDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> ListMtbfField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short ViajeEnHorasField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short Anio {
+            get {
+                return this.AnioField;
+            }
+            set {
+                if ((this.AnioField.Equals(value) != true)) {
+                    this.AnioField = value;
+                    this.RaisePropertyChanged("Anio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Bam {
+            get {
+                return this.BamField;
+            }
+            set {
+                if ((this.BamField.Equals(value) != true)) {
+                    this.BamField = value;
+                    this.RaisePropertyChanged("Bam");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte HorasDia {
+            get {
+                return this.HorasDiaField;
+            }
+            set {
+                if ((this.HorasDiaField.Equals(value) != true)) {
+                    this.HorasDiaField = value;
+                    this.RaisePropertyChanged("HorasDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> ListMtbf {
+            get {
+                return this.ListMtbfField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListMtbfField, value) != true)) {
+                    this.ListMtbfField = value;
+                    this.RaisePropertyChanged("ListMtbf");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short ViajeEnHoras {
+            get {
+                return this.ViajeEnHorasField;
+            }
+            set {
+                if ((this.ViajeEnHorasField.Equals(value) != true)) {
+                    this.ViajeEnHorasField = value;
+                    this.RaisePropertyChanged("ViajeEnHoras");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OrdenMasivaRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
         "s")]
     [System.SerializableAttribute()]
@@ -819,6 +2402,9 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaList> ListField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.AreEntity> ListAreEntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareasPendientesList> ListTareasPendientesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -853,6 +2439,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.ListField, value) != true)) {
                     this.ListField = value;
                     this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.AreEntity> ListAreEntity {
+            get {
+                return this.ListAreEntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListAreEntityField, value) != true)) {
+                    this.ListAreEntityField = value;
+                    this.RaisePropertyChanged("ListAreEntity");
                 }
             }
         }
@@ -1359,6 +2958,227 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AreEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class AreEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_CodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Are_NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Ben_NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CODI_PROGRAMACION_REALField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FechaViajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal KilometrajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Klm_AcumuladosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MarcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModeloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OrdenTrabajoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UbicacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tbg_DescripcionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Codigo {
+            get {
+                return this.Are_CodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_CodigoField, value) != true)) {
+                    this.Are_CodigoField = value;
+                    this.RaisePropertyChanged("Are_Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Nombre {
+            get {
+                return this.Are_NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Are_NombreField, value) != true)) {
+                    this.Are_NombreField = value;
+                    this.RaisePropertyChanged("Are_Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ben_Nombre {
+            get {
+                return this.Ben_NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Ben_NombreField, value) != true)) {
+                    this.Ben_NombreField = value;
+                    this.RaisePropertyChanged("Ben_Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CODI_PROGRAMACION_REAL {
+            get {
+                return this.CODI_PROGRAMACION_REALField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CODI_PROGRAMACION_REALField, value) != true)) {
+                    this.CODI_PROGRAMACION_REALField = value;
+                    this.RaisePropertyChanged("CODI_PROGRAMACION_REAL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FechaViaje {
+            get {
+                return this.FechaViajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FechaViajeField, value) != true)) {
+                    this.FechaViajeField = value;
+                    this.RaisePropertyChanged("FechaViaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Kilometraje {
+            get {
+                return this.KilometrajeField;
+            }
+            set {
+                if ((this.KilometrajeField.Equals(value) != true)) {
+                    this.KilometrajeField = value;
+                    this.RaisePropertyChanged("Kilometraje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Klm_Acumulados {
+            get {
+                return this.Klm_AcumuladosField;
+            }
+            set {
+                if ((this.Klm_AcumuladosField.Equals(value) != true)) {
+                    this.Klm_AcumuladosField = value;
+                    this.RaisePropertyChanged("Klm_Acumulados");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Marca {
+            get {
+                return this.MarcaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MarcaField, value) != true)) {
+                    this.MarcaField = value;
+                    this.RaisePropertyChanged("Marca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Modelo {
+            get {
+                return this.ModeloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModeloField, value) != true)) {
+                    this.ModeloField = value;
+                    this.RaisePropertyChanged("Modelo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OrdenTrabajo {
+            get {
+                return this.OrdenTrabajoField;
+            }
+            set {
+                if ((this.OrdenTrabajoField.Equals(value) != true)) {
+                    this.OrdenTrabajoField = value;
+                    this.RaisePropertyChanged("OrdenTrabajo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ubicacion {
+            get {
+                return this.UbicacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UbicacionField, value) != true)) {
+                    this.UbicacionField = value;
+                    this.RaisePropertyChanged("Ubicacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tbg_Descripcion {
+            get {
+                return this.tbg_DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tbg_DescripcionField, value) != true)) {
+                    this.tbg_DescripcionField = value;
+                    this.RaisePropertyChanged("tbg_Descripcion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TareasPendientesList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
     [System.SerializableAttribute()]
     public partial class TareasPendientesList : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1596,25 +3416,25 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-        "es")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TareaSistemaRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
+        "s")]
     [System.SerializableAttribute()]
-    public partial class ServiceErrorResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class TareaSistemaRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodeField;
+        private string Are_CodigoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
+        private string IdClaseMantenimientoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MessageField;
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaEntity> ListInsertarField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SubCodeField;
+        private string OperacionField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1626,54 +3446,179 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Code {
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Are_Codigo {
             get {
-                return this.CodeField;
+                return this.Are_CodigoField;
             }
             set {
-                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
-                    this.CodeField = value;
-                    this.RaisePropertyChanged("Code");
+                if ((object.ReferenceEquals(this.Are_CodigoField, value) != true)) {
+                    this.Are_CodigoField = value;
+                    this.RaisePropertyChanged("Are_Codigo");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Description {
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdClaseMantenimiento {
             get {
-                return this.DescriptionField;
+                return this.IdClaseMantenimientoField;
             }
             set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
+                if ((object.ReferenceEquals(this.IdClaseMantenimientoField, value) != true)) {
+                    this.IdClaseMantenimientoField = value;
+                    this.RaisePropertyChanged("IdClaseMantenimiento");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Message {
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaEntity> ListInsertar {
             get {
-                return this.MessageField;
+                return this.ListInsertarField;
             }
             set {
-                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
-                    this.MessageField = value;
-                    this.RaisePropertyChanged("Message");
+                if ((object.ReferenceEquals(this.ListInsertarField, value) != true)) {
+                    this.ListInsertarField = value;
+                    this.RaisePropertyChanged("ListInsertar");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SubCode {
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Operacion {
             get {
-                return this.SubCodeField;
+                return this.OperacionField;
             }
             set {
-                if ((object.ReferenceEquals(this.SubCodeField, value) != true)) {
-                    this.SubCodeField = value;
-                    this.RaisePropertyChanged("SubCode");
+                if ((object.ReferenceEquals(this.OperacionField, value) != true)) {
+                    this.OperacionField = value;
+                    this.RaisePropertyChanged("Operacion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TareaSistemaEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class TareaSistemaEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ActivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ID_tb_Sistema_MantField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdTareaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OperacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Sistema_DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Tarea_DescripcionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Activo {
+            get {
+                return this.ActivoField;
+            }
+            set {
+                if ((this.ActivoField.Equals(value) != true)) {
+                    this.ActivoField = value;
+                    this.RaisePropertyChanged("Activo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_tb_Sistema_Mant {
+            get {
+                return this.ID_tb_Sistema_MantField;
+            }
+            set {
+                if ((this.ID_tb_Sistema_MantField.Equals(value) != true)) {
+                    this.ID_tb_Sistema_MantField = value;
+                    this.RaisePropertyChanged("ID_tb_Sistema_Mant");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdTarea {
+            get {
+                return this.IdTareaField;
+            }
+            set {
+                if ((this.IdTareaField.Equals(value) != true)) {
+                    this.IdTareaField = value;
+                    this.RaisePropertyChanged("IdTarea");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Operacion {
+            get {
+                return this.OperacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OperacionField, value) != true)) {
+                    this.OperacionField = value;
+                    this.RaisePropertyChanged("Operacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sistema_Descripcion {
+            get {
+                return this.Sistema_DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Sistema_DescripcionField, value) != true)) {
+                    this.Sistema_DescripcionField = value;
+                    this.RaisePropertyChanged("Sistema_Descripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Tarea_Descripcion {
+            get {
+                return this.Tarea_DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Tarea_DescripcionField, value) != true)) {
+                    this.Tarea_DescripcionField = value;
+                    this.RaisePropertyChanged("Tarea_Descripcion");
                 }
             }
         }
@@ -3314,6 +5259,9 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.ODMdList> ListBolsasField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.ODMdList> ListBolsasPorInformeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.BusquedaArticuloList> ListBusquedaArticuloField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -3373,6 +5321,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.ListBolsasField, value) != true)) {
                     this.ListBolsasField = value;
                     this.RaisePropertyChanged("ListBolsas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.ODMdList> ListBolsasPorInforme {
+            get {
+                return this.ListBolsasPorInformeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListBolsasPorInformeField, value) != true)) {
+                    this.ListBolsasPorInformeField = value;
+                    this.RaisePropertyChanged("ListBolsasPorInforme");
                 }
             }
         }
@@ -5746,6 +7707,9 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.ClaseMEntity> FiltroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.ClaseMEntity> ListField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -5755,6 +7719,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.ClaseMEntity> Filtro {
+            get {
+                return this.FiltroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroField, value) != true)) {
+                    this.FiltroField = value;
+                    this.RaisePropertyChanged("Filtro");
+                }
             }
         }
         
@@ -6570,6 +8547,12 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroMarcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroModeloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TipoMPEntity> ListField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -6583,6 +8566,32 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroMarca {
+            get {
+                return this.FiltroMarcaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroMarcaField, value) != true)) {
+                    this.FiltroMarcaField = value;
+                    this.RaisePropertyChanged("FiltroMarca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroModelo {
+            get {
+                return this.FiltroModeloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroModeloField, value) != true)) {
+                    this.FiltroModeloField = value;
+                    this.RaisePropertyChanged("FiltroModelo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TipoMPEntity> List {
             get {
                 return this.ListField;
@@ -6591,6 +8600,147 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.ListField, value) != true)) {
                     this.ListField = value;
                     this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MarcaModeloEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
+    [System.SerializableAttribute()]
+    public partial class MarcaModeloEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string are_codigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string are_nombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string are_observacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cod_marcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cod_modeloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string marcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string modeloField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string are_codigo {
+            get {
+                return this.are_codigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.are_codigoField, value) != true)) {
+                    this.are_codigoField = value;
+                    this.RaisePropertyChanged("are_codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string are_nombre {
+            get {
+                return this.are_nombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.are_nombreField, value) != true)) {
+                    this.are_nombreField = value;
+                    this.RaisePropertyChanged("are_nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string are_observacion {
+            get {
+                return this.are_observacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.are_observacionField, value) != true)) {
+                    this.are_observacionField = value;
+                    this.RaisePropertyChanged("are_observacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string cod_marca {
+            get {
+                return this.cod_marcaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cod_marcaField, value) != true)) {
+                    this.cod_marcaField = value;
+                    this.RaisePropertyChanged("cod_marca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string cod_modelo {
+            get {
+                return this.cod_modeloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cod_modeloField, value) != true)) {
+                    this.cod_modeloField = value;
+                    this.RaisePropertyChanged("cod_modelo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string marca {
+            get {
+                return this.marcaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.marcaField, value) != true)) {
+                    this.marcaField = value;
+                    this.RaisePropertyChanged("marca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string modelo {
+            get {
+                return this.modeloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.modeloField, value) != true)) {
+                    this.modeloField = value;
+                    this.RaisePropertyChanged("modelo");
                 }
             }
         }
@@ -6655,6 +8805,12 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MarcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MesesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MesesAvisoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ModeloField;
@@ -6855,6 +9011,32 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Meses {
+            get {
+                return this.MesesField;
+            }
+            set {
+                if ((this.MesesField.Equals(value) != true)) {
+                    this.MesesField = value;
+                    this.RaisePropertyChanged("Meses");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MesesAviso {
+            get {
+                return this.MesesAvisoField;
+            }
+            set {
+                if ((this.MesesAvisoField.Equals(value) != true)) {
+                    this.MesesAvisoField = value;
+                    this.RaisePropertyChanged("MesesAviso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Modelo {
             get {
                 return this.ModeloField;
@@ -6996,6 +9178,9 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaMEntity> ListField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaEntity> ListTareaSistemaEntityField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -7015,6 +9200,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.ListField, value) != true)) {
                     this.ListField = value;
                     this.RaisePropertyChanged("List");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaEntity> ListTareaSistemaEntity {
+            get {
+                return this.ListTareaSistemaEntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListTareaSistemaEntityField, value) != true)) {
+                    this.ListTareaSistemaEntityField = value;
+                    this.RaisePropertyChanged("ListTareaSistemaEntity");
                 }
             }
         }
@@ -8386,6 +10584,12 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroMarcaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroModeloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> ListField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -8399,6 +10603,32 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroMarca {
+            get {
+                return this.FiltroMarcaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroMarcaField, value) != true)) {
+                    this.FiltroMarcaField = value;
+                    this.RaisePropertyChanged("FiltroMarca");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> FiltroModelo {
+            get {
+                return this.FiltroModeloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FiltroModeloField, value) != true)) {
+                    this.FiltroModeloField = value;
+                    this.RaisePropertyChanged("FiltroModelo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloEntity> List {
             get {
                 return this.ListField;
@@ -8407,147 +10637,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.ListField, value) != true)) {
                     this.ListField = value;
                     this.RaisePropertyChanged("List");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MarcaModeloEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
-    [System.SerializableAttribute()]
-    public partial class MarcaModeloEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string are_codigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string are_nombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string are_observacionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string cod_marcaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string cod_modeloField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string marcaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string modeloField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string are_codigo {
-            get {
-                return this.are_codigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.are_codigoField, value) != true)) {
-                    this.are_codigoField = value;
-                    this.RaisePropertyChanged("are_codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string are_nombre {
-            get {
-                return this.are_nombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.are_nombreField, value) != true)) {
-                    this.are_nombreField = value;
-                    this.RaisePropertyChanged("are_nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string are_observacion {
-            get {
-                return this.are_observacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.are_observacionField, value) != true)) {
-                    this.are_observacionField = value;
-                    this.RaisePropertyChanged("are_observacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string cod_marca {
-            get {
-                return this.cod_marcaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.cod_marcaField, value) != true)) {
-                    this.cod_marcaField = value;
-                    this.RaisePropertyChanged("cod_marca");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string cod_modelo {
-            get {
-                return this.cod_modeloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.cod_modeloField, value) != true)) {
-                    this.cod_modeloField = value;
-                    this.RaisePropertyChanged("cod_modelo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string marca {
-            get {
-                return this.marcaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.marcaField, value) != true)) {
-                    this.marcaField = value;
-                    this.RaisePropertyChanged("marca");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string modelo {
-            get {
-                return this.modeloField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.modeloField, value) != true)) {
-                    this.modeloField = value;
-                    this.RaisePropertyChanged("modelo");
                 }
             }
         }
@@ -9394,1498 +11483,79 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
-        "s")]
-    [System.SerializableAttribute()]
-    public partial class AuxilioMecanicoRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanicoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoFilter FiltroField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanico {
-            get {
-                return this.AuxilioMecanicoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AuxilioMecanicoField, value) != true)) {
-                    this.AuxilioMecanicoField = value;
-                    this.RaisePropertyChanged("AuxilioMecanico");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoFilter Filtro {
-            get {
-                return this.FiltroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FiltroField, value) != true)) {
-                    this.FiltroField = value;
-                    this.RaisePropertyChanged("Filtro");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoList))]
-    public partial class AuxilioMecanicoEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Are_CodigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Are_Codigo2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AtencionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Ben_codigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short CambioTractoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CargaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CausaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ControlableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FallaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Fechahora_finField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Fechahora_iniField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ID_Tb_AuxilioMecanicoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdPlanField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal Id_plataformaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short Idtarea_cField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal Kmt_PerdidoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal Kmt_recorridoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal Kmt_unidadField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MMGField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ResponsableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ServicioField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Are_Codigo {
-            get {
-                return this.Are_CodigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Are_CodigoField, value) != true)) {
-                    this.Are_CodigoField = value;
-                    this.RaisePropertyChanged("Are_Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Are_Codigo2 {
-            get {
-                return this.Are_Codigo2Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Are_Codigo2Field, value) != true)) {
-                    this.Are_Codigo2Field = value;
-                    this.RaisePropertyChanged("Are_Codigo2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Atencion {
-            get {
-                return this.AtencionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AtencionField, value) != true)) {
-                    this.AtencionField = value;
-                    this.RaisePropertyChanged("Atencion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Ben_codigo {
-            get {
-                return this.Ben_codigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Ben_codigoField, value) != true)) {
-                    this.Ben_codigoField = value;
-                    this.RaisePropertyChanged("Ben_codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short CambioTracto {
-            get {
-                return this.CambioTractoField;
-            }
-            set {
-                if ((this.CambioTractoField.Equals(value) != true)) {
-                    this.CambioTractoField = value;
-                    this.RaisePropertyChanged("CambioTracto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Carga {
-            get {
-                return this.CargaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CargaField, value) != true)) {
-                    this.CargaField = value;
-                    this.RaisePropertyChanged("Carga");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Causa {
-            get {
-                return this.CausaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CausaField, value) != true)) {
-                    this.CausaField = value;
-                    this.RaisePropertyChanged("Causa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Controlable {
-            get {
-                return this.ControlableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ControlableField, value) != true)) {
-                    this.ControlableField = value;
-                    this.RaisePropertyChanged("Controlable");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Falla {
-            get {
-                return this.FallaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FallaField, value) != true)) {
-                    this.FallaField = value;
-                    this.RaisePropertyChanged("Falla");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Fechahora_fin {
-            get {
-                return this.Fechahora_finField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Fechahora_finField, value) != true)) {
-                    this.Fechahora_finField = value;
-                    this.RaisePropertyChanged("Fechahora_fin");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Fechahora_ini {
-            get {
-                return this.Fechahora_iniField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Fechahora_iniField, value) != true)) {
-                    this.Fechahora_iniField = value;
-                    this.RaisePropertyChanged("Fechahora_ini");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID_Tb_AuxilioMecanico {
-            get {
-                return this.ID_Tb_AuxilioMecanicoField;
-            }
-            set {
-                if ((this.ID_Tb_AuxilioMecanicoField.Equals(value) != true)) {
-                    this.ID_Tb_AuxilioMecanicoField = value;
-                    this.RaisePropertyChanged("ID_Tb_AuxilioMecanico");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IdPlan {
-            get {
-                return this.IdPlanField;
-            }
-            set {
-                if ((this.IdPlanField.Equals(value) != true)) {
-                    this.IdPlanField = value;
-                    this.RaisePropertyChanged("IdPlan");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Id_plataforma {
-            get {
-                return this.Id_plataformaField;
-            }
-            set {
-                if ((this.Id_plataformaField.Equals(value) != true)) {
-                    this.Id_plataformaField = value;
-                    this.RaisePropertyChanged("Id_plataforma");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Idtarea_c {
-            get {
-                return this.Idtarea_cField;
-            }
-            set {
-                if ((this.Idtarea_cField.Equals(value) != true)) {
-                    this.Idtarea_cField = value;
-                    this.RaisePropertyChanged("Idtarea_c");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Kmt_Perdido {
-            get {
-                return this.Kmt_PerdidoField;
-            }
-            set {
-                if ((this.Kmt_PerdidoField.Equals(value) != true)) {
-                    this.Kmt_PerdidoField = value;
-                    this.RaisePropertyChanged("Kmt_Perdido");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Kmt_recorrido {
-            get {
-                return this.Kmt_recorridoField;
-            }
-            set {
-                if ((this.Kmt_recorridoField.Equals(value) != true)) {
-                    this.Kmt_recorridoField = value;
-                    this.RaisePropertyChanged("Kmt_recorrido");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Kmt_unidad {
-            get {
-                return this.Kmt_unidadField;
-            }
-            set {
-                if ((this.Kmt_unidadField.Equals(value) != true)) {
-                    this.Kmt_unidadField = value;
-                    this.RaisePropertyChanged("Kmt_unidad");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MMG {
-            get {
-                return this.MMGField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MMGField, value) != true)) {
-                    this.MMGField = value;
-                    this.RaisePropertyChanged("MMG");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Responsable {
-            get {
-                return this.ResponsableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ResponsableField, value) != true)) {
-                    this.ResponsableField = value;
-                    this.RaisePropertyChanged("Responsable");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Servicio {
-            get {
-                return this.ServicioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ServicioField, value) != true)) {
-                    this.ServicioField = value;
-                    this.RaisePropertyChanged("Servicio");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoFilter", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters")]
-    [System.SerializableAttribute()]
-    public partial class AuxilioMecanicoFilter : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Are_codigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Ben_codigoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FechaFinField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FechaInicioField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Are_codigo {
-            get {
-                return this.Are_codigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Are_codigoField, value) != true)) {
-                    this.Are_codigoField = value;
-                    this.RaisePropertyChanged("Are_codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Ben_codigo {
-            get {
-                return this.Ben_codigoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Ben_codigoField, value) != true)) {
-                    this.Ben_codigoField = value;
-                    this.RaisePropertyChanged("Ben_codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FechaFin {
-            get {
-                return this.FechaFinField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FechaFinField, value) != true)) {
-                    this.FechaFinField = value;
-                    this.RaisePropertyChanged("FechaFin");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FechaInicio {
-            get {
-                return this.FechaInicioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FechaInicioField, value) != true)) {
-                    this.FechaInicioField = value;
-                    this.RaisePropertyChanged("FechaInicio");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoList", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists")]
-    [System.SerializableAttribute()]
-    public partial class AuxilioMecanicoList : Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BeneficiarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CarretaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StrFechaFinField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StrFechaIniField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Beneficiario {
-            get {
-                return this.BeneficiarioField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BeneficiarioField, value) != true)) {
-                    this.BeneficiarioField = value;
-                    this.RaisePropertyChanged("Beneficiario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bus {
-            get {
-                return this.BusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BusField, value) != true)) {
-                    this.BusField = value;
-                    this.RaisePropertyChanged("Bus");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Carreta {
-            get {
-                return this.CarretaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CarretaField, value) != true)) {
-                    this.CarretaField = value;
-                    this.RaisePropertyChanged("Carreta");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StrFechaFin {
-            get {
-                return this.StrFechaFinField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StrFechaFinField, value) != true)) {
-                    this.StrFechaFinField = value;
-                    this.RaisePropertyChanged("StrFechaFin");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StrFechaIni {
-            get {
-                return this.StrFechaIniField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StrFechaIniField, value) != true)) {
-                    this.StrFechaIniField = value;
-                    this.RaisePropertyChanged("StrFechaIni");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfAuxilioMecanicoResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
-    [System.SerializableAttribute()]
-    public partial class ResponseOfAuxilioMecanicoResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EsCorrectoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MensajeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoResponse ValorField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EsCorrecto {
-            get {
-                return this.EsCorrectoField;
-            }
-            set {
-                if ((this.EsCorrectoField.Equals(value) != true)) {
-                    this.EsCorrectoField = value;
-                    this.RaisePropertyChanged("EsCorrecto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mensaje {
-            get {
-                return this.MensajeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
-                    this.MensajeField = value;
-                    this.RaisePropertyChanged("Mensaje");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoResponse Valor {
-            get {
-                return this.ValorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
-                    this.ValorField = value;
-                    this.RaisePropertyChanged("Valor");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AuxilioMecanicoResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-        "es")]
-    [System.SerializableAttribute()]
-    public partial class AuxilioMecanicoResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanicoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoList> ListField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoEntity AuxilioMecanico {
-            get {
-                return this.AuxilioMecanicoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AuxilioMecanicoField, value) != true)) {
-                    this.AuxilioMecanicoField = value;
-                    this.RaisePropertyChanged("AuxilioMecanico");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoList> List {
-            get {
-                return this.ListField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListField, value) != true)) {
-                    this.ListField = value;
-                    this.RaisePropertyChanged("List");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ResponseOfMtbfResponseH6V5Udoc", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others")]
-    [System.SerializableAttribute()]
-    public partial class ResponseOfMtbfResponseH6V5Udoc : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EsCorrectoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool EstadoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MensajeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.MtbfResponse ValorField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EsCorrecto {
-            get {
-                return this.EsCorrectoField;
-            }
-            set {
-                if ((this.EsCorrectoField.Equals(value) != true)) {
-                    this.EsCorrectoField = value;
-                    this.RaisePropertyChanged("EsCorrecto");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Estado {
-            get {
-                return this.EstadoField;
-            }
-            set {
-                if ((this.EstadoField.Equals(value) != true)) {
-                    this.EstadoField = value;
-                    this.RaisePropertyChanged("Estado");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mensaje {
-            get {
-                return this.MensajeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
-                    this.MensajeField = value;
-                    this.RaisePropertyChanged("Mensaje");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.MtbfResponse Valor {
-            get {
-                return this.ValorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ValorField, value) != true)) {
-                    this.ValorField = value;
-                    this.RaisePropertyChanged("Valor");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MtbfResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-        "es")]
-    [System.SerializableAttribute()]
-    public partial class MtbfResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal BamField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte HorasDiaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> ListField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity MtbfField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short ViajeEnHorasField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Bam {
-            get {
-                return this.BamField;
-            }
-            set {
-                if ((this.BamField.Equals(value) != true)) {
-                    this.BamField = value;
-                    this.RaisePropertyChanged("Bam");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte HorasDia {
-            get {
-                return this.HorasDiaField;
-            }
-            set {
-                if ((this.HorasDiaField.Equals(value) != true)) {
-                    this.HorasDiaField = value;
-                    this.RaisePropertyChanged("HorasDia");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> List {
-            get {
-                return this.ListField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListField, value) != true)) {
-                    this.ListField = value;
-                    this.RaisePropertyChanged("List");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity Mtbf {
-            get {
-                return this.MtbfField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MtbfField, value) != true)) {
-                    this.MtbfField = value;
-                    this.RaisePropertyChanged("Mtbf");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short ViajeEnHoras {
-            get {
-                return this.ViajeEnHorasField;
-            }
-            set {
-                if ((this.ViajeEnHorasField.Equals(value) != true)) {
-                    this.ViajeEnHorasField = value;
-                    this.RaisePropertyChanged("ViajeEnHoras");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MTBFEntity", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities")]
-    [System.SerializableAttribute()]
-    public partial class MTBFEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short AnioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal BamField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte CambioTractosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte DiasMesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal DisponibilidadFlotaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal DisponibilidadMecanicaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal EficienciaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short FallasMecanicasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaHoraRegistroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte HorasDiaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdMtbfField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int KmPerdidosField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short MTBFDiarioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short MTBFHorasTotalesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short MTBFViajesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MTTRField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal MetaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short MetaMTBFField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreMesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte NumMesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TotalHorasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsuarioRegistroField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short ViajeEnHorasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short ViajesField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Anio {
-            get {
-                return this.AnioField;
-            }
-            set {
-                if ((this.AnioField.Equals(value) != true)) {
-                    this.AnioField = value;
-                    this.RaisePropertyChanged("Anio");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Bam {
-            get {
-                return this.BamField;
-            }
-            set {
-                if ((this.BamField.Equals(value) != true)) {
-                    this.BamField = value;
-                    this.RaisePropertyChanged("Bam");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte CambioTractos {
-            get {
-                return this.CambioTractosField;
-            }
-            set {
-                if ((this.CambioTractosField.Equals(value) != true)) {
-                    this.CambioTractosField = value;
-                    this.RaisePropertyChanged("CambioTractos");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte DiasMes {
-            get {
-                return this.DiasMesField;
-            }
-            set {
-                if ((this.DiasMesField.Equals(value) != true)) {
-                    this.DiasMesField = value;
-                    this.RaisePropertyChanged("DiasMes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal DisponibilidadFlota {
-            get {
-                return this.DisponibilidadFlotaField;
-            }
-            set {
-                if ((this.DisponibilidadFlotaField.Equals(value) != true)) {
-                    this.DisponibilidadFlotaField = value;
-                    this.RaisePropertyChanged("DisponibilidadFlota");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal DisponibilidadMecanica {
-            get {
-                return this.DisponibilidadMecanicaField;
-            }
-            set {
-                if ((this.DisponibilidadMecanicaField.Equals(value) != true)) {
-                    this.DisponibilidadMecanicaField = value;
-                    this.RaisePropertyChanged("DisponibilidadMecanica");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Eficiencia {
-            get {
-                return this.EficienciaField;
-            }
-            set {
-                if ((this.EficienciaField.Equals(value) != true)) {
-                    this.EficienciaField = value;
-                    this.RaisePropertyChanged("Eficiencia");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short FallasMecanicas {
-            get {
-                return this.FallasMecanicasField;
-            }
-            set {
-                if ((this.FallasMecanicasField.Equals(value) != true)) {
-                    this.FallasMecanicasField = value;
-                    this.RaisePropertyChanged("FallasMecanicas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaHoraRegistro {
-            get {
-                return this.FechaHoraRegistroField;
-            }
-            set {
-                if ((this.FechaHoraRegistroField.Equals(value) != true)) {
-                    this.FechaHoraRegistroField = value;
-                    this.RaisePropertyChanged("FechaHoraRegistro");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte HorasDia {
-            get {
-                return this.HorasDiaField;
-            }
-            set {
-                if ((this.HorasDiaField.Equals(value) != true)) {
-                    this.HorasDiaField = value;
-                    this.RaisePropertyChanged("HorasDia");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IdMtbf {
-            get {
-                return this.IdMtbfField;
-            }
-            set {
-                if ((this.IdMtbfField.Equals(value) != true)) {
-                    this.IdMtbfField = value;
-                    this.RaisePropertyChanged("IdMtbf");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int KmPerdidos {
-            get {
-                return this.KmPerdidosField;
-            }
-            set {
-                if ((this.KmPerdidosField.Equals(value) != true)) {
-                    this.KmPerdidosField = value;
-                    this.RaisePropertyChanged("KmPerdidos");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short MTBFDiario {
-            get {
-                return this.MTBFDiarioField;
-            }
-            set {
-                if ((this.MTBFDiarioField.Equals(value) != true)) {
-                    this.MTBFDiarioField = value;
-                    this.RaisePropertyChanged("MTBFDiario");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short MTBFHorasTotales {
-            get {
-                return this.MTBFHorasTotalesField;
-            }
-            set {
-                if ((this.MTBFHorasTotalesField.Equals(value) != true)) {
-                    this.MTBFHorasTotalesField = value;
-                    this.RaisePropertyChanged("MTBFHorasTotales");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short MTBFViajes {
-            get {
-                return this.MTBFViajesField;
-            }
-            set {
-                if ((this.MTBFViajesField.Equals(value) != true)) {
-                    this.MTBFViajesField = value;
-                    this.RaisePropertyChanged("MTBFViajes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MTTR {
-            get {
-                return this.MTTRField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MTTRField, value) != true)) {
-                    this.MTTRField = value;
-                    this.RaisePropertyChanged("MTTR");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Meta {
-            get {
-                return this.MetaField;
-            }
-            set {
-                if ((this.MetaField.Equals(value) != true)) {
-                    this.MetaField = value;
-                    this.RaisePropertyChanged("Meta");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short MetaMTBF {
-            get {
-                return this.MetaMTBFField;
-            }
-            set {
-                if ((this.MetaMTBFField.Equals(value) != true)) {
-                    this.MetaMTBFField = value;
-                    this.RaisePropertyChanged("MetaMTBF");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NombreMes {
-            get {
-                return this.NombreMesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NombreMesField, value) != true)) {
-                    this.NombreMesField = value;
-                    this.RaisePropertyChanged("NombreMes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte NumMes {
-            get {
-                return this.NumMesField;
-            }
-            set {
-                if ((this.NumMesField.Equals(value) != true)) {
-                    this.NumMesField = value;
-                    this.RaisePropertyChanged("NumMes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TotalHoras {
-            get {
-                return this.TotalHorasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TotalHorasField, value) != true)) {
-                    this.TotalHorasField = value;
-                    this.RaisePropertyChanged("TotalHoras");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UsuarioRegistro {
-            get {
-                return this.UsuarioRegistroField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsuarioRegistroField, value) != true)) {
-                    this.UsuarioRegistroField = value;
-                    this.RaisePropertyChanged("UsuarioRegistro");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short ViajeEnHoras {
-            get {
-                return this.ViajeEnHorasField;
-            }
-            set {
-                if ((this.ViajeEnHorasField.Equals(value) != true)) {
-                    this.ViajeEnHorasField = value;
-                    this.RaisePropertyChanged("ViajeEnHoras");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Viajes {
-            get {
-                return this.ViajesField;
-            }
-            set {
-                if ((this.ViajesField.Equals(value) != true)) {
-                    this.ViajesField = value;
-                    this.RaisePropertyChanged("Viajes");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MtbfRequest", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Request" +
-        "s")]
-    [System.SerializableAttribute()]
-    public partial class MtbfRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short AnioField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal BamField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte HorasDiaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> ListMtbfField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private short ViajeEnHorasField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short Anio {
-            get {
-                return this.AnioField;
-            }
-            set {
-                if ((this.AnioField.Equals(value) != true)) {
-                    this.AnioField = value;
-                    this.RaisePropertyChanged("Anio");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Bam {
-            get {
-                return this.BamField;
-            }
-            set {
-                if ((this.BamField.Equals(value) != true)) {
-                    this.BamField = value;
-                    this.RaisePropertyChanged("Bam");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte HorasDia {
-            get {
-                return this.HorasDiaField;
-            }
-            set {
-                if ((this.HorasDiaField.Equals(value) != true)) {
-                    this.HorasDiaField = value;
-                    this.RaisePropertyChanged("HorasDia");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<Mantenimiento.WebApp.ServiceMantenimiento.MTBFEntity> ListMtbf {
-            get {
-                return this.ListMtbfField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ListMtbfField, value) != true)) {
-                    this.ListMtbfField = value;
-                    this.RaisePropertyChanged("ListMtbf");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public short ViajeEnHoras {
-            get {
-                return this.ViajeEnHorasField;
-            }
-            set {
-                if ((this.ViajeEnHorasField.Equals(value) != true)) {
-                    this.ViajeEnHorasField = value;
-                    this.RaisePropertyChanged("ViajeEnHoras");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceMantenimiento.IServiceMantenimiento")]
     public interface IServiceMantenimiento {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoServiceErrorResponseF" +
+            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> ListAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc SelectAuxilioMecanico(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> SelectAuxilioMecanicoAsync(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc DeleteAuxilioMecanico(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> DeleteAuxilioMecanicoAsync(int IdAuxilioMecanico);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc InsertAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> InsertAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc UpdateAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> UpdateAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoServiceErrorResp" +
+            "onseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf_AuxilioMecanico(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbf_AuxilioMecanicoAsync(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMtbfServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbfAsync(short anio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertMtbfServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc InsertMtbf(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasiva", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListOrdenMasivaServiceErrorResponseFault" +
@@ -10905,6 +11575,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareasPendientes", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareasPendientesResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListTareasPendientesAsync(string are_codigo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAreBus", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAreBusResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListAreBusServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListAreBus(string are_codigo, string codigo_programacion_real);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAreBus", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAreBusResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListAreBusAsync(string are_codigo, string codigo_programacion_real);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoServiceErrorResponseFaul" +
             "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -10913,6 +11591,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertCorrectivoResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareasSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareasSistemasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTareasSistemasServiceErrorResponse" +
+            "Fault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertTareasSistemas(Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTareasSistemas", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTareasSistemasResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertTareasSistemasAsync(Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivo", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/AnularCorrectivoServiceErrorResponseFaul" +
@@ -11157,6 +11844,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBolsas", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBolsasResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListBolsasAsync(decimal IdInforme, string Ben_Codigo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBolsasPorInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBolsasPorInformeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListBolsasPorInformeServiceErrorResponse" +
+            "Fault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListBolsasPorInforme(decimal IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListBolsasPorInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListBolsasPorInformeResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListBolsasPorInformeAsync(decimal IdInforme);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteBolsa", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteBolsaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteBolsaServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
@@ -11310,6 +12006,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListArticulosAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListArticulosAutocompleteResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListArticulosAutocompleteAsync(string idEmpresa, string idAlmacen, string value);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoUnidadAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoUnidadAutocompleteResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTipoUnidadAutocompleteServiceErrorRe" +
+            "sponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTipoUnidadAutocomplete(string value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoUnidadAutocomplete", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoUnidadAutocompleteResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTipoUnidadAutocompleteAsync(string value);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/Login", ReplyAction="http://tempuri.org/IServiceMantenimiento/LoginResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/LoginServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
@@ -11389,6 +12094,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMPAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPFiltro", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPFiltroResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPFiltroServiceErrorResponseFau" +
+            "lt", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 ListClaseMPFiltro(Mantenimiento.WebApp.ServiceMantenimiento.ClaseMResponse request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListClaseMPFiltro", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListClaseMPFiltroResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMPFiltroAsync(Mantenimiento.WebApp.ServiceMantenimiento.ClaseMResponse request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectClaseM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectClaseMResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectClaseMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -11539,6 +12253,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> ListTipoMPAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPFiltro", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPFiltroResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPFiltroServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 ListTipoMPFiltro(Mantenimiento.WebApp.ServiceMantenimiento.TipoMPResponse request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTipoMPFiltro", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTipoMPFiltroResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> ListTipoMPFiltroAsync(Mantenimiento.WebApp.ServiceMantenimiento.TipoMPResponse request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTipoMPResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
@@ -11558,18 +12281,18 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo);
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo, short Meses, short MesesAviso);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> InsertTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo);
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> InsertTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo, short Meses, short MesesAviso);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateTipoMP", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateTipoMPResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> UpdateTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso);
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> UpdateTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -11578,6 +12301,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaMResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> ListTareaMAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaSistema", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaSistemaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListTareaSistemaServiceErrorResponseFaul" +
+            "t", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 ListTareaSistema(string AreCodigo, string IdClaseMantenimiento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListTareaSistema", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListTareaSistemaResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> ListTareaSistemaAsync(string AreCodigo, string IdClaseMantenimiento);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectTareaM", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectTareaMResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectTareaMServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -11736,6 +12468,32 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModelo", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaModeloAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloFiltro", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloFiltroResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloFiltroServiceErrorRespons" +
+            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListMarcaModeloFiltro(Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloResponse request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloFiltro", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaModeloFiltroResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaModeloFiltroAsync(Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloResponse request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListModeloBuses", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListModeloBusesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListModeloBusesServiceErrorResponseFault" +
+            "", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListModeloBuses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListModeloBuses", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListModeloBusesResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListModeloBusesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaBuses", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaBusesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMarcaBusesServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListMarcaBuses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMarcaBuses", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMarcaBusesResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaBusesAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectFallasDServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
             "es")]
@@ -11743,6 +12501,15 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasDResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectFallasDAsync(string ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasPorInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasPorInformeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectFallasPorInformeServiceErrorRespon" +
+            "seFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
+            "es")]
+        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectFallasPorInforme(decimal IdInforme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectFallasPorInforme", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectFallasPorInformeResponse")]
+        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectFallasPorInformeAsync(decimal IdInforme);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/IdFallasD", ReplyAction="http://tempuri.org/IServiceMantenimiento/IdFallasDResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/IdFallasDServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
@@ -11812,76 +12579,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/AnularSolicitudRevision", ReplyAction="http://tempuri.org/IServiceMantenimiento/AnularSolicitudRevisionResponse")]
         System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> AnularSolicitudRevisionAsync(string IdSolicitudRevision);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoServiceErrorResponseF" +
-            "ault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> ListAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoServiceErrorRespons" +
-            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc SelectAuxilioMecanico(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/SelectAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> SelectAuxilioMecanicoAsync(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoServiceErrorRespons" +
-            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc DeleteAuxilioMecanico(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/DeleteAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> DeleteAuxilioMecanicoAsync(int IdAuxilioMecanico);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoServiceErrorRespons" +
-            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc InsertAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> InsertAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoServiceErrorRespons" +
-            "eFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc UpdateAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/UpdateAuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> UpdateAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoServiceErrorResp" +
-            "onseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf_AuxilioMecanico(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanico", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbf_AuxilioMecanicoResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbf_AuxilioMecanicoAsync(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/ListMtbfServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/ListMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/ListMtbfResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbfAsync(short anio);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Mantenimiento.WebApp.ServiceMantenimiento.ServiceErrorResponse), Action="http://tempuri.org/IServiceMantenimiento/InsertMtbfServiceErrorResponseFault", Name="ServiceErrorResponse", Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Respons" +
-            "es")]
-        Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc InsertMtbf(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMantenimiento/InsertMtbf", ReplyAction="http://tempuri.org/IServiceMantenimiento/InsertMtbfResponse")]
-        System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -11911,6 +12608,70 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 base(binding, remoteAddress) {
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
+            return base.Channel.ListAuxilioMecanico(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> ListAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
+            return base.Channel.ListAuxilioMecanicoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc SelectAuxilioMecanico(int IdAuxilioMecanico) {
+            return base.Channel.SelectAuxilioMecanico(IdAuxilioMecanico);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> SelectAuxilioMecanicoAsync(int IdAuxilioMecanico) {
+            return base.Channel.SelectAuxilioMecanicoAsync(IdAuxilioMecanico);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc DeleteAuxilioMecanico(int IdAuxilioMecanico) {
+            return base.Channel.DeleteAuxilioMecanico(IdAuxilioMecanico);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> DeleteAuxilioMecanicoAsync(int IdAuxilioMecanico) {
+            return base.Channel.DeleteAuxilioMecanicoAsync(IdAuxilioMecanico);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc InsertAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
+            return base.Channel.InsertAuxilioMecanico(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> InsertAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
+            return base.Channel.InsertAuxilioMecanicoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc UpdateAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
+            return base.Channel.UpdateAuxilioMecanico(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> UpdateAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
+            return base.Channel.UpdateAuxilioMecanicoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf_AuxilioMecanico(short anio) {
+            return base.Channel.ListMtbf_AuxilioMecanico(anio);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbf_AuxilioMecanicoAsync(short anio) {
+            return base.Channel.ListMtbf_AuxilioMecanicoAsync(anio);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf(short anio) {
+            return base.Channel.ListMtbf(anio);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbfAsync(short anio) {
+            return base.Channel.ListMtbfAsync(anio);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc InsertMtbf(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request) {
+            return base.Channel.InsertMtbf(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request) {
+            return base.Channel.InsertMtbfAsync(request);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListOrdenMasiva(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
             return base.Channel.ListOrdenMasiva(request);
         }
@@ -11927,12 +12688,28 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListTareasPendientesAsync(are_codigo);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc ListAreBus(string are_codigo, string codigo_programacion_real) {
+            return base.Channel.ListAreBus(are_codigo, codigo_programacion_real);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> ListAreBusAsync(string are_codigo, string codigo_programacion_real) {
+            return base.Channel.ListAreBusAsync(are_codigo, codigo_programacion_real);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
             return base.Channel.InsertCorrectivo(request);
         }
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertCorrectivoAsync(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
             return base.Channel.InsertCorrectivoAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc InsertTareasSistemas(Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaRequest request) {
+            return base.Channel.InsertTareasSistemas(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc> InsertTareasSistemasAsync(Mantenimiento.WebApp.ServiceMantenimiento.TareaSistemaRequest request) {
+            return base.Channel.InsertTareasSistemasAsync(request);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc AnularCorrectivo(Mantenimiento.WebApp.ServiceMantenimiento.OrdenMasivaRequest request) {
@@ -12151,6 +12928,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListBolsasAsync(IdInforme, Ben_Codigo);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc ListBolsasPorInforme(decimal IdInforme) {
+            return base.Channel.ListBolsasPorInforme(IdInforme);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc> ListBolsasPorInformeAsync(decimal IdInforme) {
+            return base.Channel.ListBolsasPorInformeAsync(IdInforme);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc DeleteBolsa(Mantenimiento.WebApp.ServiceMantenimiento.InformeRequest request) {
             return base.Channel.DeleteBolsa(request);
         }
@@ -12287,6 +13072,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListArticulosAutocompleteAsync(idEmpresa, idAlmacen, value);
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5 ListTipoUnidadAutocomplete(string value) {
+            return base.Channel.ListTipoUnidadAutocomplete(value);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5> ListTipoUnidadAutocompleteAsync(string value) {
+            return base.Channel.ListTipoUnidadAutocompleteAsync(value);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5 Login(string codiUsuario, string Password) {
             return base.Channel.Login(codiUsuario, Password);
         }
@@ -12365,6 +13158,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMPAsync() {
             return base.Channel.ListClaseMPAsync();
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 ListClaseMPFiltro(Mantenimiento.WebApp.ServiceMantenimiento.ClaseMResponse request) {
+            return base.Channel.ListClaseMPFiltro(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5> ListClaseMPFiltroAsync(Mantenimiento.WebApp.ServiceMantenimiento.ClaseMResponse request) {
+            return base.Channel.ListClaseMPFiltroAsync(request);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5 SelectClaseM(string IdClaseMantenimiento) {
@@ -12511,6 +13312,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListTipoMPAsync();
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 ListTipoMPFiltro(Mantenimiento.WebApp.ServiceMantenimiento.TipoMPResponse request) {
+            return base.Channel.ListTipoMPFiltro(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> ListTipoMPFiltroAsync(Mantenimiento.WebApp.ServiceMantenimiento.TipoMPResponse request) {
+            return base.Channel.ListTipoMPFiltroAsync(request);
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 SelectTipoMP(short IdTipMan) {
             return base.Channel.SelectTipoMP(IdTipMan);
         }
@@ -12527,20 +13336,20 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.DeleteTipoMPAsync(IdTipMan);
         }
         
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo) {
-            return base.Channel.InsertTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo);
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo, short Meses, short MesesAviso) {
+            return base.Channel.InsertTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo, Meses, MesesAviso);
         }
         
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> InsertTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo) {
-            return base.Channel.InsertTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo);
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> InsertTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo, short Meses, short MesesAviso) {
+            return base.Channel.InsertTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo, Meses, MesesAviso);
         }
         
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso) {
-            return base.Channel.UpdateTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso, Dias, DiasAviso, Horas, HorasAviso);
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5 UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso) {
+            return base.Channel.UpdateTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso, Dias, DiasAviso, Horas, HorasAviso, Meses, MesesAviso);
         }
         
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> UpdateTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso) {
-            return base.Channel.UpdateTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso, Dias, DiasAviso, Horas, HorasAviso);
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH5> UpdateTipoMPAsync(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias, short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso) {
+            return base.Channel.UpdateTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso, Dias, DiasAviso, Horas, HorasAviso, Meses, MesesAviso);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 ListTareaM() {
@@ -12549,6 +13358,14 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> ListTareaMAsync() {
             return base.Channel.ListTareaMAsync();
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 ListTareaSistema(string AreCodigo, string IdClaseMantenimiento) {
+            return base.Channel.ListTareaSistema(AreCodigo, IdClaseMantenimiento);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5> ListTareaSistemaAsync(string AreCodigo, string IdClaseMantenimiento) {
+            return base.Channel.ListTareaSistemaAsync(AreCodigo, IdClaseMantenimiento);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5 SelectTareaM(short IdTarea) {
@@ -12703,12 +13520,44 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
             return base.Channel.ListMarcaModeloAsync();
         }
         
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListMarcaModeloFiltro(Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloResponse request) {
+            return base.Channel.ListMarcaModeloFiltro(request);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaModeloFiltroAsync(Mantenimiento.WebApp.ServiceMantenimiento.MarcaModeloResponse request) {
+            return base.Channel.ListMarcaModeloFiltroAsync(request);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListModeloBuses() {
+            return base.Channel.ListModeloBuses();
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListModeloBusesAsync() {
+            return base.Channel.ListModeloBusesAsync();
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5 ListMarcaBuses() {
+            return base.Channel.ListMarcaBuses();
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH5> ListMarcaBusesAsync() {
+            return base.Channel.ListMarcaBusesAsync();
+        }
+        
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectFallasD(string ID) {
             return base.Channel.SelectFallasD(ID);
         }
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectFallasDAsync(string ID) {
             return base.Channel.SelectFallasDAsync(ID);
+        }
+        
+        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 SelectFallasPorInforme(decimal IdInforme) {
+            return base.Channel.SelectFallasPorInforme(IdInforme);
+        }
+        
+        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> SelectFallasPorInformeAsync(decimal IdInforme) {
+            return base.Channel.SelectFallasPorInformeAsync(IdInforme);
         }
         
         public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5 IdFallasD() {
@@ -12773,70 +13622,6 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         
         public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5> AnularSolicitudRevisionAsync(string IdSolicitudRevision) {
             return base.Channel.AnularSolicitudRevisionAsync(IdSolicitudRevision);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc ListAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
-            return base.Channel.ListAuxilioMecanico(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> ListAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
-            return base.Channel.ListAuxilioMecanicoAsync(request);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc SelectAuxilioMecanico(int IdAuxilioMecanico) {
-            return base.Channel.SelectAuxilioMecanico(IdAuxilioMecanico);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> SelectAuxilioMecanicoAsync(int IdAuxilioMecanico) {
-            return base.Channel.SelectAuxilioMecanicoAsync(IdAuxilioMecanico);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc DeleteAuxilioMecanico(int IdAuxilioMecanico) {
-            return base.Channel.DeleteAuxilioMecanico(IdAuxilioMecanico);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> DeleteAuxilioMecanicoAsync(int IdAuxilioMecanico) {
-            return base.Channel.DeleteAuxilioMecanicoAsync(IdAuxilioMecanico);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc InsertAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
-            return base.Channel.InsertAuxilioMecanico(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> InsertAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
-            return base.Channel.InsertAuxilioMecanicoAsync(request);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc UpdateAuxilioMecanico(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
-            return base.Channel.UpdateAuxilioMecanico(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc> UpdateAuxilioMecanicoAsync(Mantenimiento.WebApp.ServiceMantenimiento.AuxilioMecanicoRequest request) {
-            return base.Channel.UpdateAuxilioMecanicoAsync(request);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf_AuxilioMecanico(short anio) {
-            return base.Channel.ListMtbf_AuxilioMecanico(anio);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbf_AuxilioMecanicoAsync(short anio) {
-            return base.Channel.ListMtbf_AuxilioMecanicoAsync(anio);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc ListMtbf(short anio) {
-            return base.Channel.ListMtbf(anio);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> ListMtbfAsync(short anio) {
-            return base.Channel.ListMtbfAsync(anio);
-        }
-        
-        public Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc InsertMtbf(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request) {
-            return base.Channel.InsertMtbf(request);
-        }
-        
-        public System.Threading.Tasks.Task<Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc> InsertMtbfAsync(Mantenimiento.WebApp.ServiceMantenimiento.MtbfRequest request) {
-            return base.Channel.InsertMtbfAsync(request);
         }
     }
 }

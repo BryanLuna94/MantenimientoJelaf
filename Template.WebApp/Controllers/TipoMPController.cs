@@ -1,5 +1,6 @@
 ﻿using Mantenimiento.WebApp.Helpers;
 using Mantenimiento.WebApp.ServiceMantenimiento;
+using Newtonsoft.Json;
 using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("TipoMP")]
+    [SessionExpire]
     public class TipoMPController : Controller
     {           // Servicio WCF
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();
@@ -23,6 +25,16 @@ namespace Mantenimiento.WebApp.Controllers
             var res = await _ServiceMantenimiento.ListTipoMPAsync();
             return Json(res, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public async Task<ActionResult> ListTipoMPFiltro(string json)
+        {
+            var request = JsonConvert.DeserializeObject<TipoMPResponse>(json);
+
+            var res = await _ServiceMantenimiento.ListTipoMPFiltroAsync(request);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
 
         public async Task<ActionResult> SelectTipoMP(short IdTipMan)
         {
@@ -57,13 +69,13 @@ namespace Mantenimiento.WebApp.Controllers
         }
         [HttpPost]
         public async Task<ActionResult> InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso,
-            short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo)
+            short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo,short Meses, short MesesAviso)
         {
             try
             {
                 short UsuarioRegistro = (short)DataSession.UserLoggedIn.Codigo;
                 string FechaRegistro = System.DateTime.Now.ToShortDateString();
-                var res = await _ServiceMantenimiento.InsertTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo);
+                var res = await _ServiceMantenimiento.InsertTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo,Meses,MesesAviso);
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }
@@ -79,12 +91,12 @@ namespace Mantenimiento.WebApp.Controllers
         }
         [HttpPost]
         public async Task<ActionResult> UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso,
-            short Dias, short DiasAviso, short Horas, short HorasAviso)
+            short Dias, short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso)
         {
             try
             {
                 var res = await _ServiceMantenimiento.UpdateTipoMPAsync(IdTipMan, Descripcion, Kilometros, KilometrosAviso,
-                    Dias, DiasAviso, Horas, HorasAviso);
+                    Dias, DiasAviso, Horas, HorasAviso, Meses, MesesAviso);
 
                 return Json(res, JsonRequestBehavior.AllowGet);
             }

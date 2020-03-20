@@ -21,6 +21,66 @@
         @Html.Partial("_Tarea")
         @Html.Partial("_Tarea.Repuesto")
     </div>
+    <div class="bg-theme white-box m-b-0">
+        <div class="row text-white">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-horizontal">
+                        <div class="form-group" style="margin-bottom:0px !important">
+                            <div class="col-md-3">
+                                <v-multiselect v-model="objFiltro.Marca"
+                                               id="SelMarca"
+                                               ref="SelMarca"
+                                               placeholder="--Marca--"
+                                               label="marca"
+                                               track-by="cod_marca"
+                                               :options="list.MarcasF"
+                                               :multiple="true"
+                                               :taggable="true">
+                                </v-multiselect>
+
+                            </div>
+                            <div class="col-md-3">
+                                <v-multiselect 
+                                               v-model="objFiltro.Modelo"
+                                               id="SelModelo"
+                                               ref="SelModelo"
+                                               placeholder="--Modelo--"
+                                               label="modelo"
+                                               track-by="cod_modelo"
+                                               :options="list.ModelosF"
+                                               :multiple="true"
+                                               :taggable="true">
+                                </v-multiselect>
+
+                            </div>
+                            <div class="col-md-3">
+                                <v-multiselect v-model="objFiltro.ClaseMP"
+                                               id="SelTipoMP"
+                                               ref="SelTipoMP"
+                                               placeholder="--Tipo Mantenimiento--"
+                                               label="IdClaseMantenimiento"
+                                               track-by="IdClaseMantenimiento"
+                                               :options="list.ClaseMPF"
+                                               :multiple="true"
+                                               :taggable="true">
+                                </v-multiselect>
+
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" v-on:click.prevent="CrearTablaFiltro()" class="btn btn-default waves-effect waves-light m-r-10">Buscar</button>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:0px !important">
+                            <div class="col-md-12">
+                                @*<button type="button" v-on:click.prevent="CrearTablaFiltro()" class="btn btn-default waves-effect waves-light m-r-10">Buscar</button>*@
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="white-box p-l-20 p-r-20 " id="Busquedas">
         <div class="bootstrap-table">
             <template>
@@ -103,6 +163,25 @@
                                         {{ TipoMP.HorasAviso }}
                                     </td>
                                 </tr>
+
+                                <tr>
+                                    <td>MESES CAMBIO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.Meses }}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>MESES AVISO:</td>
+                                    <td v-for="TipoMP in list.TipoMP" v-if="TipoMP.Cod_Marca === MarcaModelo.cod_marca
+                                              && TipoMP.Cod_Modelo == MarcaModelo.cod_modelo
+                                              && TipoMP.Descripcion == ClaseMP.IdClaseMantenimiento">
+                                        {{ TipoMP.MesesAviso }}
+                                    </td>
+                                </tr>
+
                             </table>
                         </td>
                     </tr>

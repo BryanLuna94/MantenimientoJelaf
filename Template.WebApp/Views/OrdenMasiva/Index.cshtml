@@ -15,6 +15,7 @@
     <div style="padding:1px;">
         <!-- Modal -->
         @Html.Partial("TareasPendientes")
+        @Html.Partial("ImprimirPreventivo")
     </div>
     <div class="row">
         <div class="col-lg-12">
@@ -226,6 +227,7 @@
         let _FechaActual = '@FechaActual'
         let _rutaInforme = '@Url.Action("Index", "Informe")'
         let _rutaReporte = '@Url.Action("Report", "OrdenMasiva")'
+        let _rutaReportePlantillaTemp = '@Url.Action("ReportPlantilla", "OrdenMasiva")'
     </script>
     <script src="~/wwwroot/js/Vue/Views/OrdenMasiva.js"></script>
 

@@ -14,5 +14,7 @@ namespace Mantenimiento.Entities.Peticiones.Responses
         public InformeEntity Informe { get; set; }
         [DataMember]
         public List<TareasPendientesList> ListTareasPendientes { get; set; }
+        [DataMember]
+        public List<AreEntity> ListAreEntity { get; set; }
     }
 }

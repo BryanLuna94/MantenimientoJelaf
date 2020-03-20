@@ -16,7 +16,7 @@ namespace Mantenimiento.DataAccess
 
             using (var con = GetConnection.BDALMACEN())
             {
-                using (var cmd = new SqlCommand("", con))
+                using (var cmd = new SqlCommand("usp_EXC_Tb_Emp_Autocomplete", con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     bool openConn = (con.State == ConnectionState.Open);
@@ -28,9 +28,9 @@ namespace Mantenimiento.DataAccess
                         {
                             List.Add(new BaseEntity
                             {
-                                Codigo = DataReader.GetStringValue(dr, "IdEmpresa"),
-                                Descripcion = DataReader.GetStringValue(dr, "Empresa"),
-                                Ruc = DataReader.GetStringValue(dr, "RUC")
+                                Codigo = DataReader.GetStringValue(dr, "Emp_Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "EMP_NOMBRE"),
+                                Ruc = DataReader.GetStringValue(dr, "Emp_Ruc")
                             });
                         }
 
@@ -575,6 +575,42 @@ namespace Mantenimiento.DataAccess
                             {
                                 Codigo = DataReader.GetStringValue(dr, "Codigo"),
                                 Descripcion = DataReader.GetStringValue(dr, "Descripcion"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
+        public static List<BaseEntity> ListTipoUnidadAutocomplete(string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("proc_Tbg_ObtenerMaestras", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Tbg_Tabla", SqlDbType.VarChar,6).Value = value;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "Tbg_Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "Tbg_Descripcion"),
                             });
                         }
 

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 namespace Mantenimiento.WebApp.Controllers
 {
     [RoutePrefix("FallasR")]
+    [SessionExpire]
     public class FallasRController : Controller
     {           // Servicio WCF
         ServiceMantenimientoClient _ServiceMantenimiento = new ServiceMantenimientoClient();

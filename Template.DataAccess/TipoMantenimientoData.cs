@@ -63,5 +63,52 @@ namespace Mantenimiento.DataAccess
 
             return List;
         }
+
+        public static List<AreEntity> ListAreBus(string are_codigo,string codigo_programacion_real)
+        {
+            List<AreEntity> List = new List<AreEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("proc_ObtenerEncabezadoPreventivo", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Are_Codigo", SqlDbType.VarChar).Value = (are_codigo != null) ? are_codigo : string.Empty;
+                    cmd.Parameters.Add("@Codigo_Programacion_Real", SqlDbType.VarChar).Value = (codigo_programacion_real != null) ? codigo_programacion_real : string.Empty;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new AreEntity
+                            {
+                                Are_Codigo = DataReader.GetStringValue(dr, "Are_Codigo"),
+                                Are_Nombre = DataReader.GetStringValue(dr, "Are_Nombre"),
+                                Ben_Nombre = DataReader.GetStringValue(dr, "Ben_Nombre"),
+                                tbg_Descripcion = DataReader.GetStringValue(dr, "tbg_Descripcion"),
+
+                                Modelo = DataReader.GetStringValue(dr, "Modelo"),
+                                Kilometraje = DataReader.GetDecimalValue(dr, "Kilometraje"),
+                                FechaViaje = DataReader.GetDateTimeValue(dr, "FechaViaje").Value.ToString("dd/MM/yyyy"),
+                                OrdenTrabajo = DataReader.GetIntValue(dr, "OrdenTrabajo"),
+                                Marca = DataReader.GetStringValue(dr, "Marca"),
+                                Ubicacion = DataReader.GetStringValue(dr, "Ubicacion"),
+                                CODI_PROGRAMACION_REAL = DataReader.GetStringValue(dr, "CODI_PROGRAMACION_REAL"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
     }
 }

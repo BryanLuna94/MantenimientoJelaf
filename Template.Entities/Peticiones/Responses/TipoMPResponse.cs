@@ -10,7 +10,12 @@ namespace Mantenimiento.Entities.Requests.Responses
         [DataMember]
         public List<TipoMPEntity> List { get; set; }
         public TipoMPEntity TipoMP { get; set; }
- 
+
+
+        [DataMember]
+        public List<MarcaModeloEntity> FiltroMarca { get; set; }
+        [DataMember]
+        public List<MarcaModeloEntity> FiltroModelo { get; set; }
 
 
 

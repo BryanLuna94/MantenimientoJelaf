@@ -11,6 +11,10 @@ namespace Mantenimiento.Entities.Requests.Responses
         public List<MarcaModeloEntity> List { get; set; }
         public MarcaModeloEntity MarcaModelo { get; set; }
 
+        [DataMember]
+        public List<MarcaModeloEntity> FiltroMarca { get; set; }
+        [DataMember]
+        public List<MarcaModeloEntity> FiltroModelo { get; set; }
     }
 
 }

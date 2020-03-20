@@ -18,5 +18,7 @@
         public int HorasAviso { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
+        public int Meses { get; set; } // nuevo
+        public int MesesAviso { get; set; } // nuevo
     }
 }

@@ -89,6 +89,12 @@ namespace Mantenimiento.Service
             return BaseLogic.ListArticulosAutocomplete(idEmpresa, idAlmacen, value);
         }
 
+        public Response<BaseResponse> ListTipoUnidadAutocomplete(string value)
+        {
+            return BaseLogic.ListTipoUnidadAutocomplete(value);
+        }
+
+
         #endregion
 
         #region LOGIN
@@ -146,6 +152,12 @@ namespace Mantenimiento.Service
         {
             return ClaseMLogic.ListClaseMP();
         }
+
+        public Response<ClaseMResponse> ListClaseMPFiltro(ClaseMResponse request)
+        {
+            return ClaseMLogic.ListClaseMP(request);
+        }
+
         public Response<ClaseMResponse> SelectClaseM(string IdClaseMantenimiento)
         {
             return ClaseMLogic.SelectClaseM(IdClaseMantenimiento);
@@ -244,6 +256,12 @@ namespace Mantenimiento.Service
         {
             return TipoMPLogic.ListTipoMP();
         }
+
+        public Response<TipoMPResponse> ListTipoMPFiltro(TipoMPResponse request)
+        {
+            return TipoMPLogic.ListTipoMP(request);
+        }
+
         public Response<TipoMPResponse> SelectTipoMP(short IdTipMan)
         {
             return TipoMPLogic.SelectTipoMP(IdTipMan);
@@ -260,16 +278,16 @@ namespace Mantenimiento.Service
 
 
         public async Task<Response<TipoMPResponse>> InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso,
-            short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo)
+            short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo, short Meses, short MesesAviso)
         {
-            return await TipoMPLogic.InsertTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo);
+            return await TipoMPLogic.InsertTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso, UsuarioRegistro, FechaRegistro, Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo,Meses,MesesAviso);
         }
 
         public async Task<Response<TipoMPResponse>> UpdateTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso, short Dias,
-            short DiasAviso, short Horas, short HorasAviso)
+            short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso)
         {
             return await TipoMPLogic.UpdateTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso,
-                    Dias, DiasAviso, Horas, HorasAviso);
+                    Dias, DiasAviso, Horas, HorasAviso, Meses, MesesAviso);
         }
 
         #endregion
@@ -279,6 +297,12 @@ namespace Mantenimiento.Service
         {
             return TareaMLogic.ListTareaM();
         }
+
+        public Response<TareaMResponse> ListTareaSistema(string AreCodigo, string IdClaseMantenimiento)
+        {
+            return TareaMLogic.ListTareaSistema(AreCodigo,IdClaseMantenimiento);
+        }
+
         public Response<TareaMResponse> SelectTareaM(short IdTarea)
         {
             return TareaMLogic.SelectTareaM(IdTarea);
@@ -387,10 +411,27 @@ namespace Mantenimiento.Service
         #endregion
 
         #region MarcaModelo
+
         public Response<MarcaModeloResponse> ListMarcaModelo()
         {
             return MarcaModeloLogic.ListMarcaModelo();
         }
+
+        public Response<MarcaModeloResponse> ListMarcaModeloFiltro(MarcaModeloResponse request)
+        {
+            return MarcaModeloLogic.ListMarcaModelo(request);
+        }
+
+        public Response<MarcaModeloResponse> ListModeloBuses()
+        {
+            return MarcaModeloLogic.ListModeloBuses();
+        }
+
+        public Response<MarcaModeloResponse> ListMarcaBuses()
+        {
+            return MarcaModeloLogic.ListMarcaBuses();
+        }
+
         #endregion
 
         #region FALLASD
@@ -398,6 +439,12 @@ namespace Mantenimiento.Service
         {
             return FallasDLogic.SelectFallasD(ID);
         }
+
+        public Response<FallasDResponse> SelectFallasPorInforme(decimal IdInforme)
+        {
+            return FallasDLogic.SelectFallasPorInforme(IdInforme);
+        }
+
         public Response<FallasDResponse> IdFallasD()
         {
             return FallasDLogic.IdFallasD();
@@ -504,10 +551,21 @@ namespace Mantenimiento.Service
             return OrdenMasivaLogic.ListTareasPendientes(are_codigo);
         }
 
+        public Response<OrdenMasivaResponse> ListAreBus(string are_codigo,string codigo_programacion_real)
+        {
+            return OrdenMasivaLogic.ListAreBus(are_codigo, codigo_programacion_real);
+        }
+
         public async Task<Response<OrdenMasivaResponse>> InsertCorrectivo(OrdenMasivaRequest request)
         {
             return await OrdenMasivaLogic.InsertCorrectivo(request);
         }
+
+        public async Task<Response<OrdenMasivaResponse>> InsertTareasSistemas(TareaSistemaRequest request)
+        {
+            return await OrdenMasivaLogic.InsertTareasSistemas(request);
+        }
+
 
         public async Task<Response<OrdenMasivaResponse>> AnularCorrectivo(OrdenMasivaRequest request)
         {
@@ -647,6 +705,11 @@ namespace Mantenimiento.Service
         public Response<InformeResponse> ListBolsas(decimal IdInforme, string Ben_Codigo)
         {
             return InformeLogic.ListBolsas(IdInforme, Ben_Codigo);
+        }
+
+        public Response<InformeResponse> ListBolsasPorInforme(decimal IdInforme)
+        {
+            return InformeLogic.ListBolsasPorInforme(IdInforme);
         }
 
         public async Task<Response<InformeResponse>> DeleteBolsa(InformeRequest request)

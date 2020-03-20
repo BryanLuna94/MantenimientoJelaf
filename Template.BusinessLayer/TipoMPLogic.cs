@@ -7,6 +7,7 @@ using Mantenimiento.Entities.Objects.Entities;
 using Mantenimiento.Entities.Objects.Others;
 using Mantenimiento.Entities.Requests.Responses;
 using Mantenimiento.Utility;
+using System.Linq;
 
 namespace Mantenimiento.BusinessLayer
 {
@@ -45,6 +46,32 @@ namespace Mantenimiento.BusinessLayer
                 List<TipoMPEntity> List;
 
                 List = TipoMPData.ListTipoMP();
+
+                response = new Response<TipoMPResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new TipoMPResponse { List = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<TipoMPResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+        public static Response<TipoMPResponse> ListTipoMP(TipoMPResponse request)
+        {
+            try
+            {
+                Response<TipoMPResponse> response;
+                List<TipoMPEntity> List;
+            
+                List = TipoMPData.ListTipoMP();
+
 
                 response = new Response<TipoMPResponse>
                 {
@@ -146,7 +173,7 @@ namespace Mantenimiento.BusinessLayer
         }
 
         public static async Task<Response<TipoMPResponse>> InsertTipoMP(short IdTipMan, string Descripcion, decimal Kilometros, decimal KilometrosAviso,
-            short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo)
+            short UsuarioRegistro, string FechaRegistro, short Dias, short DiasAviso, short Horas, short HorasAviso, string cod_marca, int cod_modelo,short Meses, short MesesAviso)
         {
             Response<TipoMPResponse> response;
             TipoMPEntity objTipoMP;
@@ -154,7 +181,7 @@ namespace Mantenimiento.BusinessLayer
             try
             {
                 objTipoMP = await TipoMPData.InsertTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso,
-                    UsuarioRegistro, Convert.ToDateTime(FechaRegistro), Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo);
+                    UsuarioRegistro, Convert.ToDateTime(FechaRegistro), Dias, DiasAviso, Horas, HorasAviso, cod_marca, cod_modelo, Meses, MesesAviso);
 
                 response = new Response<TipoMPResponse>
                 {
@@ -181,7 +208,7 @@ namespace Mantenimiento.BusinessLayer
 
         public static async Task<Response<TipoMPResponse>> UpdateTipoMP(short IdTipMan, string Descripcion,
             decimal Kilometros, decimal KilometrosAviso, short Dias,
-            short DiasAviso, short Horas, short HorasAviso)
+            short DiasAviso, short Horas, short HorasAviso, short Meses, short MesesAviso)
         {
             Response<TipoMPResponse> response;
             TipoMPEntity objTipoMP;
@@ -189,7 +216,7 @@ namespace Mantenimiento.BusinessLayer
             try
             {
                 objTipoMP = await TipoMPData.UpdateTipoMP(IdTipMan, Descripcion, Kilometros, KilometrosAviso,
-                    Dias, DiasAviso, Horas, HorasAviso);
+                    Dias, DiasAviso, Horas, HorasAviso, Meses, MesesAviso);
 
                 response = new Response<TipoMPResponse>
                 {

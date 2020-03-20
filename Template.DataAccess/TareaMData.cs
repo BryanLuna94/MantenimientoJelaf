@@ -89,6 +89,46 @@ namespace Mantenimiento.DataAccess
         }
 
 
+        public static List<TareaSistemaEntity> ListTareaSistema(string areCodigo, string idClaseMantenimiento)
+        {
+            List<TareaSistemaEntity> List = new List<TareaSistemaEntity>();
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("proc_ObtenerTareaSistema", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Are_Codigo", SqlDbType.VarChar).Value = areCodigo;
+                    cmd.Parameters.Add("@IdClaseMantenimiento", SqlDbType.VarChar).Value = idClaseMantenimiento;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new TareaSistemaEntity
+                            {
+                                IdTarea = DataReader.GetIntValue(dr, "IdTarea"),
+                                Tarea_Descripcion = DataReader.GetStringValue(dr, "Tarea_Description"),
+                                ID_tb_Sistema_Mant = DataReader.GetIntValue(dr, "ID_tb_Sistema_Mant"),
+                                Sistema_Descripcion = DataReader.GetStringValue(dr, "Sistema_Descripcion"),
+                                Activo = DataReader.GetIntValue(dr, "Activo"),
+                                Operacion = DataReader.GetStringValue(dr, "Operacion"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
+
         public static List<TareaMEntity> SelectTareaM(short IdTarea)
         {
             List<TareaMEntity> List = new List<TareaMEntity>();
