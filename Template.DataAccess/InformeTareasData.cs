@@ -212,7 +212,7 @@ namespace Mantenimiento.DataAccess
                         cmd.Parameters.Add("@ServTerceros_Codigo", SqlDbType.VarChar).Value = "";
                         cmd.Parameters.Add("@ServTerceros_TbgDocumento", SqlDbType.VarChar).Value = "";
                         cmd.Parameters.Add("@UsuarioRegistro", SqlDbType.Int).Value = objEntidad.UsuarioRegistro;
-                        cmd.Parameters.Add("@FInicio", SqlDbType.DateTime).Value = Convert.ToDateTime(objEntidad.FechaInicio);
+                        cmd.Parameters.Add("@FInicio", SqlDbType.DateTime).Value = Functions.Check.Datetime(objEntidad.FechaInicio);
                         cmd.Parameters.Add("@IdPlanEjecucionTareas", SqlDbType.VarChar).Value = "";
                         await cmd.ExecuteNonQueryAsync();
                         cmd.Dispose();
