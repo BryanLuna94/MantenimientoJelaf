@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" />
-  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" />
   <xs:complexType name="BaseResponse">
     <xs:sequence>
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q1:ArrayOfBaseEntity" />
@@ -57,41 +57,42 @@
   <xs:complexType name="TareaMResponse">
     <xs:sequence>
       <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q12:ArrayOfTareaMEntity" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ListTareaSistemaEntity" nillable="true" type="q13:ArrayOfTareaSistemaEntity" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TareaMResponse" nillable="true" type="tns:TareaMResponse" />
   <xs:complexType name="TareaMPResponse">
     <xs:sequence>
-      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q13:ArrayOfTareaMPEntity" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q14:ArrayOfTareaMPEntity" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TareaMPResponse" nillable="true" type="tns:TareaMPResponse" />
   <xs:complexType name="ArticuloTResponse">
     <xs:sequence>
-      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q14:ArrayOfArticuloTEntity" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q15:ArrayOfArticuloTEntity" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArticuloTResponse" nillable="true" type="tns:ArticuloTResponse" />
   <xs:complexType name="ProductoResponse">
     <xs:sequence>
-      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q15:ArrayOfProductoEntity" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q16:ArrayOfProductoEntity" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ProductoResponse" nillable="true" type="tns:ProductoResponse" />
   <xs:complexType name="MarcaModeloResponse">
     <xs:sequence>
-      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="FiltroMarca" nillable="true" type="q16:ArrayOfMarcaModeloEntity" />
-      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="FiltroModelo" nillable="true" type="q17:ArrayOfMarcaModeloEntity" />
-      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q18:ArrayOfMarcaModeloEntity" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="FiltroMarca" nillable="true" type="q17:ArrayOfMarcaModeloEntity" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="FiltroModelo" nillable="true" type="q18:ArrayOfMarcaModeloEntity" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q19:ArrayOfMarcaModeloEntity" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MarcaModeloResponse" nillable="true" type="tns:MarcaModeloResponse" />
   <xs:complexType name="FallasDResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="IdSolicitud" nillable="true" type="xs:string" />
-      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q19:ArrayOfFallasDEntity" />
-      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBusqueda" nillable="true" type="q20:ArrayOfSolicitudRevisionBusquedaList" />
-      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="SolicitudRevision" nillable="true" type="q21:SolicitudRevisionList" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="List" nillable="true" type="q20:ArrayOfFallasDEntity" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListBusqueda" nillable="true" type="q21:ArrayOfSolicitudRevisionBusquedaList" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="SolicitudRevision" nillable="true" type="q22:SolicitudRevisionList" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="FallasDResponse" nillable="true" type="tns:FallasDResponse" />

@@ -1,293 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" />
-  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-  <xs:complexType name="ResponseOfAuxilioMecanicoResponseH6V5Udoc">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="AuxilioMecanicoResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" />
+  <xs:import schemaLocation="http://localhost:51922/ServiceMantenimiento.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" />
+  <xs:complexType name="AuxilioMecanicoRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" minOccurs="0" name="Valor" nillable="true" type="q1:AuxilioMecanicoResponse" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="AuxilioMecanico" nillable="true" type="q1:AuxilioMecanicoEntity" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" minOccurs="0" name="Filtro" nillable="true" type="q2:AuxilioMecanicoFilter" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ResponseOfAuxilioMecanicoResponseH6V5Udoc" nillable="true" type="tns:ResponseOfAuxilioMecanicoResponseH6V5Udoc" />
-  <xs:complexType name="ResponseOfMtbfResponseH6V5Udoc">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="MtbfResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
+  <xs:element name="AuxilioMecanicoRequest" nillable="true" type="tns:AuxilioMecanicoRequest" />
+  <xs:complexType name="MtbfRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" minOccurs="0" name="Valor" nillable="true" type="q2:MtbfResponse" />
+      <xs:element minOccurs="0" name="Anio" type="xs:short" />
+      <xs:element minOccurs="0" name="Bam" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HorasDia" type="xs:unsignedByte" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ListMtbf" nillable="true" type="q3:ArrayOfMTBFEntity" />
+      <xs:element minOccurs="0" name="ViajeEnHoras" type="xs:short" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ResponseOfMtbfResponseH6V5Udoc" nillable="true" type="tns:ResponseOfMtbfResponseH6V5Udoc" />
-  <xs:complexType name="ResponseOfOrdenMasivaResponseH6V5Udoc">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="OrdenMasivaResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
+  <xs:element name="MtbfRequest" nillable="true" type="tns:MtbfRequest" />
+  <xs:complexType name="OrdenMasivaRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" minOccurs="0" name="Valor" nillable="true" type="q3:OrdenMasivaResponse" />
+      <xs:element minOccurs="0" name="FechaGenerar" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" minOccurs="0" name="Filtro" nillable="true" type="q4:OrdenMasivaFilter" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="ListInsertar" nillable="true" type="q5:ArrayOfOrdenMasivaList" />
+      <xs:element minOccurs="0" name="UsuarioRegistro" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ResponseOfOrdenMasivaResponseH6V5Udoc" nillable="true" type="tns:ResponseOfOrdenMasivaResponseH6V5Udoc" />
-  <xs:complexType name="ResponseOfInformeResponseH6V5Udoc">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="InformeResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
+  <xs:element name="OrdenMasivaRequest" nillable="true" type="tns:OrdenMasivaRequest" />
+  <xs:complexType name="TareaSistemaRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Peticiones.Responses" minOccurs="0" name="Valor" nillable="true" type="q4:InformeResponse" />
+      <xs:element minOccurs="0" name="Are_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdClaseMantenimiento" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ListInsertar" nillable="true" type="q6:ArrayOfTareaSistemaEntity" />
+      <xs:element minOccurs="0" name="Operacion" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ResponseOfInformeResponseH6V5Udoc" nillable="true" type="tns:ResponseOfInformeResponseH6V5Udoc" />
-  <xs:complexType name="ResponseOfBaseResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="BaseResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
+  <xs:element name="TareaSistemaRequest" nillable="true" type="tns:TareaSistemaRequest" />
+  <xs:complexType name="InformeRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q5:BaseResponse" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="Bolsa" nillable="true" type="q7:Tb_CtrlBolsaRepInformeEntity" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Filters" minOccurs="0" name="Filtro" nillable="true" type="q8:InformeFilter" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="InformeTareas" nillable="true" type="q9:InformeTareasEntity" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ODM" nillable="true" type="q10:ODMEntity" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="ODMd" nillable="true" type="q11:ODMdEntity" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="TareaMecanico" nillable="true" type="q12:TareaMecanicosEntity" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Entities" minOccurs="0" name="TareaMecanicosAyudante" nillable="true" type="q13:TareaMecanicosAyudanteEntity" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ResponseOfBaseResponseozx_PhYH5" nillable="true" type="tns:ResponseOfBaseResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfLoginResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="LoginResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
+  <xs:element name="InformeRequest" nillable="true" type="tns:InformeRequest" />
+  <xs:complexType name="FallasDRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q6:LoginResponse" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Lists" minOccurs="0" name="SolicitudRevision" nillable="true" type="q14:SolicitudRevisionList" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ResponseOfLoginResponseozx_PhYH5" nillable="true" type="tns:ResponseOfLoginResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfPwdResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="PwdResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q7:PwdResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfPwdResponseozx_PhYH5" nillable="true" type="tns:ResponseOfPwdResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfSistemasResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SistemasResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q8:SistemasResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfSistemasResponseozx_PhYH5" nillable="true" type="tns:ResponseOfSistemasResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfClaseMResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="ClaseMResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q9:ClaseMResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfClaseMResponseozx_PhYH5" nillable="true" type="tns:ResponseOfClaseMResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfSubSistemasResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="SubSistemasResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q10:SubSistemasResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfSubSistemasResponseozx_PhYH5" nillable="true" type="tns:ResponseOfSubSistemasResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfTipoMResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="TipoMResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q11:TipoMResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfTipoMResponseozx_PhYH5" nillable="true" type="tns:ResponseOfTipoMResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfTipoMPResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="TipoMPResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q12:TipoMPResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfTipoMPResponseozx_PhYH5" nillable="true" type="tns:ResponseOfTipoMPResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfTareaMResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="TareaMResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q13:TareaMResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfTareaMResponseozx_PhYH5" nillable="true" type="tns:ResponseOfTareaMResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfTareaMPResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="TareaMPResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q14:TareaMPResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfTareaMPResponseozx_PhYH5" nillable="true" type="tns:ResponseOfTareaMPResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfArticuloTResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="ArticuloTResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q15:ArticuloTResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfArticuloTResponseozx_PhYH5" nillable="true" type="tns:ResponseOfArticuloTResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfProductoResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="ProductoResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q16:ProductoResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfProductoResponseozx_PhYH5" nillable="true" type="tns:ResponseOfProductoResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfMarcaModeloResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="MarcaModeloResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q17:MarcaModeloResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfMarcaModeloResponseozx_PhYH5" nillable="true" type="tns:ResponseOfMarcaModeloResponseozx_PhYH5" />
-  <xs:complexType name="ResponseOfFallasDResponseozx_PhYH5">
-    <xs:annotation>
-      <xs:appinfo>
-        <GenericType Name="ResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Objects.Others" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
-          <GenericParameter Name="FallasDResponse" Namespace="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" />
-        </GenericType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Estado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
-      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Mantenimiento.Entities.Requests.Responses" minOccurs="0" name="Valor" nillable="true" type="q18:FallasDResponse" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ResponseOfFallasDResponseozx_PhYH5" nillable="true" type="tns:ResponseOfFallasDResponseozx_PhYH5" />
+  <xs:element name="FallasDRequest" nillable="true" type="tns:FallasDRequest" />
 </xs:schema>

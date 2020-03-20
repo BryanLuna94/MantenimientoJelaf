@@ -590,6 +590,40 @@ namespace Mantenimiento.DataAccess
             return List;
         }
 
-        
+        public static List<BaseEntity> ListTipoUnidadAutocomplete(string value)
+        {
+            List<BaseEntity> List = new List<BaseEntity>();
+
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("proc_Tbg_ObtenerMaestras", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@Tbg_Tabla", SqlDbType.VarChar,6).Value = value;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
+
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            List.Add(new BaseEntity
+                            {
+                                Codigo = DataReader.GetStringValue(dr, "Tbg_Codigo"),
+                                Descripcion = DataReader.GetStringValue(dr, "Tbg_Descripcion"),
+                            });
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return List;
+        }
     }
 }

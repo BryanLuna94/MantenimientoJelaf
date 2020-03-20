@@ -159,6 +159,7 @@
     <None Include="Connected Services\ServiceMantenimiento\ServiceMantenimiento.disco" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Images\image_Frenos_Neumaticos.jpg" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="wwwroot\AmpleAdmin\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="wwwroot\AmpleAdmin\bootstrap\dist\css\bootstrap-theme.min.css" />
@@ -728,7 +729,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="wwwroot\AmpleAdmin\bootstrap\CHANGELOG.md" />
     <Content Include="wwwroot\AmpleAdmin\bootstrap\dist\css\bootstrap-theme.css.map" />
     <Content Include="wwwroot\AmpleAdmin\bootstrap\dist\css\bootstrap-theme.min.css.map" />
@@ -1069,6 +1072,7 @@
     <Compile Include="Helpers\SessionExpire.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\InformeOrdenMantenimientoReport.cs" />
+    <Compile Include="Reports\TareasSistemaReport.cs" />
     <Compile Include="Reports\PreventivosPendientesReport.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1142,6 +1146,7 @@
     <Content Include="Views\Fallas\Buscador.cshtml" />
     <Content Include="Views\OrdenMasiva\TareasPendientes.cshtml" />
     <Content Include="Views\Informe\InformeTareasPendientes.cshtml" />
+    <Content Include="Views\OrdenMasiva\ImprimirPreventivo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

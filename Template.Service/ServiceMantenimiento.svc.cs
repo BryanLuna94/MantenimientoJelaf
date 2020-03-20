@@ -89,6 +89,10 @@ namespace Mantenimiento.Service
             return BaseLogic.ListArticulosAutocomplete(idEmpresa, idAlmacen, value);
         }
 
+        public Response<BaseResponse> ListTipoUnidadAutocomplete(string value)
+        {
+            return BaseLogic.ListTipoUnidadAutocomplete(value);
+        }
 
 
         #endregion
@@ -293,6 +297,12 @@ namespace Mantenimiento.Service
         {
             return TareaMLogic.ListTareaM();
         }
+
+        public Response<TareaMResponse> ListTareaSistema(string AreCodigo, string IdClaseMantenimiento)
+        {
+            return TareaMLogic.ListTareaSistema(AreCodigo,IdClaseMantenimiento);
+        }
+
         public Response<TareaMResponse> SelectTareaM(short IdTarea)
         {
             return TareaMLogic.SelectTareaM(IdTarea);
@@ -541,10 +551,21 @@ namespace Mantenimiento.Service
             return OrdenMasivaLogic.ListTareasPendientes(are_codigo);
         }
 
+        public Response<OrdenMasivaResponse> ListAreBus(string are_codigo,string codigo_programacion_real)
+        {
+            return OrdenMasivaLogic.ListAreBus(are_codigo, codigo_programacion_real);
+        }
+
         public async Task<Response<OrdenMasivaResponse>> InsertCorrectivo(OrdenMasivaRequest request)
         {
             return await OrdenMasivaLogic.InsertCorrectivo(request);
         }
+
+        public async Task<Response<OrdenMasivaResponse>> InsertTareasSistemas(TareaSistemaRequest request)
+        {
+            return await OrdenMasivaLogic.InsertTareasSistemas(request);
+        }
+
 
         public async Task<Response<OrdenMasivaResponse>> AnularCorrectivo(OrdenMasivaRequest request)
         {

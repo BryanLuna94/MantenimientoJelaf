@@ -79,6 +79,9 @@ namespace Mantenimiento.Service
         [WebInvoke(Method = "GET", UriTemplate = "ListArticulosAutocomplete", ResponseFormat = WebMessageFormat.Json)]
         Response<BaseResponse> ListArticulosAutocomplete(string idEmpresa, string idAlmacen, string value);
 
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTipoUnidadAutocomplete", ResponseFormat = WebMessageFormat.Json)]
+        Response<BaseResponse> ListTipoUnidadAutocomplete(string value);
 
         #endregion
 
@@ -260,6 +263,10 @@ namespace Mantenimiento.Service
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "ListTareaM", ResponseFormat = WebMessageFormat.Json)]
         Response<TareaMResponse> ListTareaM();
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListTareaSistema", ResponseFormat = WebMessageFormat.Json)]
+        Response<TareaMResponse> ListTareaSistema(string AreCodigo, string IdClaseMantenimiento);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "GET", UriTemplate = "SelectTareaM", ResponseFormat = WebMessageFormat.Json)]
@@ -468,8 +475,16 @@ namespace Mantenimiento.Service
         Response<OrdenMasivaResponse> ListTareasPendientes(string are_codigo);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "GET", UriTemplate = "ListAreBus", ResponseFormat = WebMessageFormat.Json)]
+        Response<OrdenMasivaResponse> ListAreBus(string are_codigo,string codigo_programacion_real);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "InsertCorrectivo", ResponseFormat = WebMessageFormat.Json)]
         Task<Response<OrdenMasivaResponse>> InsertCorrectivo(OrdenMasivaRequest request);
+
+        [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
+        [WebInvoke(Method = "POST", UriTemplate = "InsertTareasSistemas", ResponseFormat = WebMessageFormat.Json)]
+        Task<Response<OrdenMasivaResponse>> InsertTareasSistemas(TareaSistemaRequest request);
 
         [OperationContract, FaultContract(typeof(ServiceErrorResponse))]
         [WebInvoke(Method = "POST", UriTemplate = "AnularCorrectivo", ResponseFormat = WebMessageFormat.Json)]

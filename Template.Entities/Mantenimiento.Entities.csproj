@@ -61,6 +61,7 @@
     <Compile Include="Objects\Entities\SolicitudRevisionTecnica_CEntity.cs" />
     <Compile Include="Objects\Entities\TareaMecanicosAyudanteEntity.cs" />
     <Compile Include="Objects\Entities\TareaMecanicosEntity.cs" />
+    <Compile Include="Objects\Entities\TareaSistemaEntity.cs" />
     <Compile Include="Objects\Entities\TareaMEntity.cs" />
     <Compile Include="Objects\Entities\TareaMPEntity.cs" />
     <Compile Include="Objects\Entities\Tb_CtrlBolsaRepInformeEntity.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Peticiones\Requests\LoginRequest.cs" />
     <Compile Include="Peticiones\Requests\MtbfRequest.cs" />
     <Compile Include="Peticiones\Requests\OrdenMasivaRequest.cs" />
+    <Compile Include="Peticiones\Requests\TareaSistemaRequest.cs" />
     <Compile Include="Peticiones\Responses\ArticuloTResponse.cs" />
     <Compile Include="Peticiones\Responses\AuxilioMecanicoResponse.cs" />
     <Compile Include="Peticiones\Responses\FallasDResponse.cs" />

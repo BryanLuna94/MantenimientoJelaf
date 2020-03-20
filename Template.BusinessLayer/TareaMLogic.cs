@@ -62,6 +62,33 @@ namespace Mantenimiento.BusinessLayer
             }
         }
 
+
+        public static Response<TareaMResponse> ListTareaSistema(string AreCodigo, string IdClaseMantenimiento)
+        {
+            try
+            {
+                Response<TareaMResponse> response;
+                List<TareaSistemaEntity> List;
+
+                List = TareaMData.ListTareaSistema(AreCodigo, IdClaseMantenimiento);
+
+                response = new Response<TareaMResponse>
+                {
+                    EsCorrecto = true,
+                    Valor = new TareaMResponse { ListTareaSistemaEntity = List },
+                    Mensaje = "OK",
+                    Estado = true,
+                };
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new Response<TareaMResponse>(false, null, Functions.MessageError(ex), false);
+            }
+        }
+
+
         public static Response<TareaMResponse> SelectTareaM(short IdTipMan)
         {
             try

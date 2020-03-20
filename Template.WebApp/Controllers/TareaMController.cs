@@ -24,6 +24,15 @@ namespace Mantenimiento.WebApp.Controllers
             var res = await _ServiceMantenimiento.ListTareaMAsync();
             return Json(res, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public async Task<ActionResult> ListTareaSistema(string are_codigo, string IdClaseMantenimiento)
+        {
+            var res = await _ServiceMantenimiento.ListTareaSistemaAsync(are_codigo, IdClaseMantenimiento);
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
+
+
         public async Task<ActionResult> SelectTareaM(short IdTarea)
         {
             var res = await _ServiceMantenimiento.SelectTareaMAsync(IdTarea);
