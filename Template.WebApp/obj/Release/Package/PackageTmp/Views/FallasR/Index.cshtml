@@ -1,0 +1,163 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Fallas en Ruta";
+    ViewBag.Title = "Fallas en Ruta";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+<!-- .row -->
+    <div class="col-sm-12" id="app">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="white-box p-l-20 p-r-20">
+                    <h3 class="box-title m-b-0">Fallas en Ruta</h3>
+                    <p class="text-muted m-b-30 font-13">Chofer: <code>JOSE TORRES</code></p>
+                    <p class="text-muted m-b-30 font-13">Unidad: <code>ABC123</code></p>
+                    <p class="text-muted m-b-30 font-13">Nro Viaje: <code>556</code></p>
+                    <p class="text-muted m-b-30 font-13">Ultimo KMT: <code>123345</code></p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="floating-labels ">
+                                <div class="col-md-2">
+                                    <div class="form-group has-success has-feedback m-b-40">
+                                        <input type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input14">Kmt recorrido</label> <span class="glyphicon glyphicon-ok form-control-feedback t-0"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group has-success has-feedback m-b-40">
+                                        <input type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input14">Hora Inicio</label> <span class="glyphicon glyphicon-ok form-control-feedback t-0"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group has-success has-feedback m-b-40">
+                                        <input type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input14">Hora término</label> <span class="glyphicon glyphicon-ok form-control-feedback t-0"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group has-success has-feedback m-b-40">
+                                        <input type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input14">Tiempo Reparación</label> <span class="glyphicon glyphicon-ok form-control-feedback t-0"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group has-success has-feedback m-b-40">
+                                        <input type="text" class="form-control" id="input14" required><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input14">Días Perdidos</label> <span class="glyphicon glyphicon-ok form-control-feedback t-0"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group m-b-40">
+                                        <select class="form-control p-0" id="input6" required>
+                                            <option></option>
+                                            <option>Controlable</option>
+                                            <option>No controlable</option>
+                                        </select><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input6">C/N</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group m-b-40">
+                                        <select class="form-control p-0" id="input6" required>
+                                            <option></option>
+                                            <option>In Site</option>
+                                            <option>Conguya</option>
+                                            <option>Marquiri</option>
+                                        </select><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input6">Ubicación</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group m-b-40">
+                                        <select class="form-control p-0" id="input6" required>
+                                            <option></option>
+                                            <option>FRENOS</option>
+                                            <option>ELECTRÍCO</option>
+                                            <option>SUSPENSIÓN</option>
+                                            <option>HIDRAÚLICO</option>
+                                            <option>AIRE</option>
+                                            <option>ENGRASE</option>
+                                            <option>ESTRUCTURA</option>
+                                            <option>MOTOR</option>
+                                            <option>TINA</option>
+                                            <option>NEUMÁTICO</option>
+                                        </select><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input6">Tipo de Falla</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group m-b-5">
+                                        <textarea class="form-control" rows="1" id="input7" required></textarea><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input7">Falla</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group m-b-5">
+                                        <textarea class="form-control" rows="1" id="input7" required></textarea><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input7">Detalle</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group m-b-40">
+                                        <select class="form-control p-0" id="input6" required>
+                                            <option></option>
+                                            <option>Wari</option>
+                                            <option>Divemotor</option>
+
+                                        </select><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input6">Resp.</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group m-b-40">
+                                        <select class="form-control p-0" id="input6" required>
+                                            <option></option>
+                                            <option>Wari</option>
+                                            <option>Divemotor</option>
+                                            <option>In House</option>
+                                        </select><span class="highlight"></span> <span class="bar"></span>
+                                        <label for="input6">Atención</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <br><br>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-info">Nuevo</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-info">Buscar</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-info">Modificar</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-info">Grabar</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-info">Anular</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+    </div>
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+ 
+    <script src="~/wwwroot/js/Vue/Views/Fallas.js"></script>
+}

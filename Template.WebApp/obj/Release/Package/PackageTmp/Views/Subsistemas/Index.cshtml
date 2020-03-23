@@ -1,0 +1,139 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "SubSistemas";
+    ViewBag.Title = "SubSistemas de Mantenimiento";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+<!-- .row -->
+<div class="col-sm-12" id="app">
+    <div class="col-sm-12">
+        <div class="form-horizontal">
+            
+
+            <div class="col-md-12">
+                <label id="lblEstadoC" class="hidden">0</label>
+                <span id="spaEstadoD" class="label label-info"></span>
+            </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form class="form-horizontal new-lg-form" ref="frmSistemas" id="frmSistemas" method="get" autocomplete="off">
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <label>Codigo:</label>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <input id="txtCodSubSistemas" type="text" class="form-control" required disabled> <span class="highlight"></span> <span class="bar"></span>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <label>Sistema:</label>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12" id="DivSistemas">
+                                <v-select 
+                                          v-model="objSistemas.ID_tb_Sistema_Mant"
+                                          :options="list.Sistemas"
+                                          index="Codigo"
+                                          label="Descripcion"
+                                          @@search="getSistemas"
+                                          id="txtCodSistema"
+                                          ref="txtCodSistema"
+                                          placeholder="--Seleccione--"
+                                          >
+                                </v-select>
+                          
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <label>Nombre:</label>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <input id="txtDescSubSistemas" class="form-control" required disabled> <span class="highlight"></span> <span class="bar"></span>
+                            </div>
+
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <br><br>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-4">
+                                <button id="btnNuevo" class="btn btn-info" v-on:click.prevent="Nuevo">Nuevo</button>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-4">
+                                <button id="btnGrabar" class="btn btn-success" v-on:click.prevent="Grabar" disabled>Grabar</button>
+                            </div>
+
+                            <div class="col-md-2 col-sm-4 col-xs-4">
+                                <button id="btnCancelar" class="btn btn-warning" v-on:click.prevent="Cancelar">Cancelar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="white-box p-l-20 p-r-20">
+        <div class="col-md-12">
+            <form id="search">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                 <br>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-4">
+                    <input class="form-control" type="text" id="TxtFiltro1" onkeyup="Filtrar1()" placeholder="SubSistema.."><span class="highlight"></span> <span class="bar"></span>
+                    <span class="glyphicon glyphicon-search form-control-feedback t-0"></span>
+                </div>
+
+                <div class="col-md-4 col-sm-8 col-xs-8">
+                    <v-select v-model="objSistemas2.ID_tb_Sistema_Mant"
+                              :options="list.Sistemas2"
+                              index="Codigo"
+                              label="Descripcion"
+                              @@search="getSistemas2"
+                              id="SelFiltro2"
+                              ref="SelFiltro2"
+                              placeholder="--Sistemas--"
+                              @@input="SelFiltro2" >
+
+                    </v-select>
+                </div>
+
+                <input class="invisible" type="text" id="TxtFiltro2" onkeydown="Filtrar2()" placeholder="Sistema..">
+
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <input class="form-control" type="text" id="TxtFiltro3" onkeyup="Filtrar3()" placeholder="Buscar por Nombre.."><span class="highlight"></span> <span class="bar"></span>
+                    <span class="glyphicon glyphicon-search form-control-feedback t-0"></span>
+                </div>
+
+            </form>
+        </div>
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td width="20%">Cod SubSistema</td>
+                    <td width="20%">Sistema</td>
+                    <td width="60%">Descripcion</td>
+                </tr>
+            </thead>
+            </table>
+            <table class="table table-hover" id="tableSubSistemas" ref="#tableSubSistemas">
+                <tbody id="tableSubSistemastbody">
+                    <tr class="header" v-for="SubSistemasMant in list.SubSistemas" :key="list.SubSistemas.ID_tb_SubSistema_Mant">
+                        <td width="20%">{{ SubSistemasMant.ID_tb_SubSistema_Mant }}</td>
+                        <td width="20%">{{ SubSistemasMant.ID_tb_Sistema_Mant }}</td>
+                        <td width="40%">{{ SubSistemasMant.Descripcion }}</td>
+                        <td width="10%">
+                            <a href="#" class="btn btn-warning btn-sm" v-on:click.prevent="SelectSubSistemas(ID_tb_SubSistema_Mant)">Editar</a>
+                        </td>
+                        <td width="10%">
+                            <a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="DelSubSistemas(ID_tb_SubSistema_Mant)">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+</div>
+</div>
+
+@section scripts{
+
+    <script src="~/wwwroot/js/Vue/Views/SubSistemas.js"></script>
+}

@@ -211,7 +211,7 @@ namespace Mantenimiento.BusinessLayer
         public static async Task<Response<OrdenMasivaResponse>> AnularCorrectivo(OrdenMasivaRequest request)
         {
             Response<OrdenMasivaResponse> response;
-            List<OrdenMasivaList> ListInsertar;;
+            List<OrdenMasivaList> ListInsertar;
             decimal numInforme;
 
             ListInsertar = request.ListInsertar;

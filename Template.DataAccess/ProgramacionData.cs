@@ -13,7 +13,7 @@ using Mantenimiento.Entities.Objects.Filters;
 
 namespace Mantenimiento.DataAccess
 {
-    public class ProgramacionData
+    public static class ProgramacionData
     {
         public static List<OrdenMasivaList> ListOrdenMasiva(OrdenMasivaFilter objFiltro)
         {
@@ -217,6 +217,38 @@ namespace Mantenimiento.DataAccess
 
         }
 
+        public static ProgramacionEntity SelectProgramacionPorInforme(string idInforme, int tipo)
+        {
+            using (var con = GetConnection.BDALMACEN())
+            {
+                using (var cmd = new SqlCommand("usp_PROGRAMACION_ObtenerProgramacionPorInforme", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@pNumeroInforme", SqlDbType.VarChar).Value = idInforme;
+                    cmd.Parameters.Add("@pTipoInforme", SqlDbType.Int).Value = tipo;
+                    bool openConn = (con.State == ConnectionState.Open);
+                    if (!openConn) { con.Open(); }
 
+                    using (var dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            return new ProgramacionEntity
+                            {
+                                CODI_PROGRAMACION = DataReader.GetStringValue(dr, "CODI_PROGRAMACION"),
+                            };
+                        }
+
+                        dr.Close();
+                    }
+
+                    cmd.Dispose();
+                }
+
+                if (con.State == ConnectionState.Open) { con.Close(); }
+            }
+
+            return null;
+        }
     }
 }

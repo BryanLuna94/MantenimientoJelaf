@@ -1,0 +1,23 @@
+﻿<div class="table-responsive">
+    <table class="table color-table table-striped inverse-table font-12">
+        <thead>
+            <tr>
+                <th align="center">CODIGO</th>
+                <th align="center">DESCRIPCION</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="header" v-for="itemTarea in list.TareaMP" :key="list.TareaMP.IdTarea">
+                <td><a href="javascript:void(0)" @@click="selectTarea(itemTarea)">{{ itemTarea.IdTarea }}</a></td>
+                <td>{{ itemTarea.Descripcion }}</td>
+                <td width="10%">
+                    <a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="EliminarTarea(itemTarea)">Eliminar</a>
+                </td>
+                <td width="10%">
+                    <a href="#" class="btn btn-info btn-sm" v-on:click.prevent="ShowRepuestos(itemTarea)">Repuestos</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

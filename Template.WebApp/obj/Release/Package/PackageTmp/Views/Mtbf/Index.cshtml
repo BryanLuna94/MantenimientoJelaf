@@ -1,0 +1,362 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    /**/
+
+    ViewBag.Navigation = "MTBF";
+    ViewBag.Title = "MTBF";
+    var UsuarioActual = DataSession.UserLoggedIn;
+    string FechaActual = DateTime.Now.ToString("dd/MM/yyyy H:mm");
+}
+
+
+<!-- .row -->
+<div class="col-sm-12" id="app">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bg-theme white-box m-b-0">
+                <div class="row text-white">
+                    <div class="col-md-2">
+                        <div class="input-group">
+                            <input class="form-control" type="number" ref="Anio" v-model="objMtbf.Anio" placeholder="Año">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" v-on:click.prevent="ListMtbf()" type="button">Cargar</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" ref="Bam" v-model="objMtbf.Bam" placeholder="Bam-99-Bam">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" ref="ViajeHoras" v-model="objMtbf.ViajeEnHoras" placeholder="Viaje en Horas">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" ref="HorasDia" v-model="objMtbf.HorasDia" placeholder="Horas Día">
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="side-icon-text pull-right">
+                            <li><a href="javascript:void(0);" v-on:click.prevent="Recargar()" class="btn btn-block p-10 btn-rounded btn-default"><span>Recargar Info</span><i class="ti-arrow-right m-l-5"></i></a></li>
+                            <li><a href="javascript:void(0);" v-on:click.prevent="Guardar()" class="btn btn-block p-10 btn-rounded btn-default"><span>Guardar Info</span><i class="ti-arrow-right m-l-5"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="white-box">
+                <div class="table-responsive">
+                    <table class="table editable-table table-bordered table-striped m-b-0" id="tableMtbf" ref="#tableMtbf">
+                        <thead>
+                            <tr class="advanced-table active">
+                                <td>Descripción</td>
+                                <td>Enero</td>
+                                <td>Febrero</td>
+                                <td>Marzo</td>
+                                <td>Abril</td>
+                                <td>Mayo</td>
+                                <td>Junio</td>
+                                <td>Julio</td>
+                                <td>Agosto</td>
+                                <td>Setiembre</td>
+                                <td>Octubre</td>
+                                <td>Noviembre</td>
+                                <td>Diciembre</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Días Mes</td>
+                                <td align="right">{{ list.Mtbf[0].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[1].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[2].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[3].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[4].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[5].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[6].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[7].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[8].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[9].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[10].DiasMes }}</td>
+                                <td align="right">{{ list.Mtbf[11].DiasMes }}</td>
+                            </tr>
+                            <tr>
+                                <td>Viajes</td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[0].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[1].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[2].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[3].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[4].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[5].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[6].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[7].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[8].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[9].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[10].Viajes" /></td>
+                                <td align="right"><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[11].Viajes" /></td>
+                            </tr>
+                            <tr>
+                                <td>Fallas Mecánicas</td>
+                                <td align="right" v-text="list.Mtbf[0].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[1].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[2].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[3].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[4].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[5].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[6].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[7].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[8].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[9].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[10].FallasMecanicas"></td>
+                                <td align="right" v-text="list.Mtbf[11].FallasMecanicas"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Horas</td>
+                                <td align="right">{{ list.Mtbf[0].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[1].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[2].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[3].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[4].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[5].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[6].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[7].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[8].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[9].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[10].TotalHoras }}</td>
+                                <td align="right">{{ list.Mtbf[11].TotalHoras }}</td>
+                            </tr>
+                            <tr>
+                                <td>MTTR</td>
+                                <td align="right">{{ list.Mtbf[0].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[1].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[2].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[3].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[4].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[5].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[6].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[7].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[8].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[9].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[10].MTTR }}</td>
+                                <td align="right">{{ list.Mtbf[11].MTTR }}</td>
+                            </tr>
+                            <tr>
+                                <td>Meta MTBF</td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[0].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[1].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[2].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[3].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[4].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[5].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[6].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[7].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[8].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[9].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[10].MetaMTBF" /></td>
+                                <td><input v-mask="'####'" class="form-control" type="text" v-model="list.Mtbf[11].MetaMTBF" /></td>
+                            </tr>
+                            <tr>
+                                <td>MTBF Horas Totales</td>
+                                <td align="right">{{ list.Mtbf[0].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[1].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[2].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[3].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[4].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[5].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[6].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[7].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[8].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[9].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[10].MTBFHorasTotales }}</td>
+                                <td align="right">{{ list.Mtbf[11].MTBFHorasTotales }}</td>
+                            </tr>
+                            <tr>
+                                <td>MTBF Diario</td>
+                                <td align="right">{{ list.Mtbf[0].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[1].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[2].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[3].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[4].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[5].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[6].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[7].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[8].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[9].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[10].MTBFDiario }}</td>
+                                <td align="right">{{ list.Mtbf[11].MTBFDiario }}</td>
+                            </tr>
+                            <tr>
+                                <td>MTBF Viajes</td>
+                                <td align="right">{{ list.Mtbf[0].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[1].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[2].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[3].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[4].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[5].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[6].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[7].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[8].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[9].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[10].MTBFViajes }}</td>
+                                <td align="right">{{ list.Mtbf[11].MTBFViajes }}</td>
+                            </tr>
+                            <tr>
+                                <td>Km Perdidos</td>
+                                <td align="right">{{ list.Mtbf[0].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[1].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[2].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[3].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[4].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[5].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[6].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[7].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[8].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[9].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[10].KmPerdidos }}</td>
+                                <td align="right">{{ list.Mtbf[11].KmPerdidos }}</td>
+                            </tr>
+                            <tr>
+                                <td>Meta</td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[0].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[1].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[2].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[3].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[4].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[5].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[6].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[7].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[8].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[9].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[10].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group">
+                                        <input v-mask="'##.##'" class="form-control" type="text" v-model="list.Mtbf[11].Meta" /><span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Eficiencia</td>
+                                <td align="right">{{ list.Mtbf[0].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[1].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[2].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[3].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[4].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[5].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[6].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[7].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[8].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[9].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[10].Eficiencia }}%</td>
+                                <td align="right">{{ list.Mtbf[11].Eficiencia }}%</td>
+                            </tr>
+                            <tr>
+                                <td>Cambio de Tractos</td>
+                                <td align="right">{{ list.Mtbf[0].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[1].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[2].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[3].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[4].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[5].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[6].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[7].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[8].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[9].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[10].CambioTractos }}</td>
+                                <td align="right">{{ list.Mtbf[11].CambioTractos }}</td>
+                            </tr>
+                            <tr>
+                                <td>Disponibilidad Mecánica</td>
+                                <td align="right">{{ list.Mtbf[0].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[1].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[2].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[3].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[4].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[5].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[6].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[7].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[8].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[9].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[10].DisponibilidadMecanica }}</td>
+                                <td align="right">{{ list.Mtbf[11].DisponibilidadMecanica }}</td>
+                            </tr>
+                            <tr>
+                                <td>Disponibilidad Flota</td>
+                                <td align="right">{{ list.Mtbf[0].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[1].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[2].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[3].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[4].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[5].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[6].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[7].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[8].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[9].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[10].DisponibilidadFlota }}</td>
+                                <td align="right">{{ list.Mtbf[11].DisponibilidadFlota }}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+</div>
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+
+    <script>
+        let _FechaActual = '@FechaActual'
+    </script>
+    <script src="~/wwwroot/js/Vue/Views/Mtbf.js"></script>
+
+}

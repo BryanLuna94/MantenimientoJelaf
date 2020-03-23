@@ -1,0 +1,59 @@
+2020-03-23 12:04:59,031 [7] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: La clave ingresada es incorrecta El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 12:05:04,374 [8] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: La clave ingresada es incorrecta El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 14:20:19,827 [29] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: La clave ingresada es incorrecta El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 14:21:22,557 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:23,778 [19] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:30,549 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:31,281 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:31,431 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:31,600 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:35,706 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:21:42,770 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 14:37:05,459 [11] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.SelectInforme(Int32 IdInforme) en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 73
+2020-03-23 15:46:28,845 [95] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.InvalidOperationException: TransactionScope se debe eliminar en el mismo subproceso en el que se creó.
+   en System.Transactions.TransactionScope.Dispose()
+   en Mantenimiento.BusinessLayer.InformeLogic.<AnularInforme>d__4.MoveNext() en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 182
+2020-03-23 16:27:44,919 [80] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Primero debe anular el informe preventivo El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 16:31:08,769 [64] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Primero debe anular el informe preventivo El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 16:39:29,191 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Primero debe anular el informe preventivo El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 16:40:52,112 [57] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Primero debe anular el informe preventivo El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 16:41:43,750 [56] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Primero debe anular el informe preventivo El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 16:42:02,175 [40] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.<AnularInforme>d__4.MoveNext() en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 169
+2020-03-23 16:43:12,278 [40] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en Mantenimiento.BusinessLayer.InformeLogic.<AnularInforme>d__4.MoveNext() en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 169
+2020-03-23 16:48:29,339 [36] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.ServiceModel.FaultException`1[Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse]: Primero debe anular el informe preventivo El detalle del error es igual a Mantenimiento.Entities.Peticiones.Responses.ServiceErrorResponse.
+2020-03-23 16:49:12,661 [44] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.InvalidOperationException: TransactionScope se debe eliminar en el mismo subproceso en el que se creó.
+   en System.Transactions.TransactionScope.Dispose()
+   en Mantenimiento.BusinessLayer.InformeLogic.<AnularInforme>d__4.MoveNext() en D:\BRYAN\Proyectos\Template.BusinessLayer\InformeLogic.cs:línea 189

@@ -8,32 +8,32 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\PROYECTOS A IMPLEMENTAR\MANTENIMIENTO NUEVO\Template\PUBLICAR\SERVICIO</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\BRYAN\Proyectos\Template.Service\Publicado</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/JBLV.Log.dll">
-      <publishTime>12/19/2019 14:01:06</publishTime>
+      <publishTime>02/24/2020 16:52:27</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>12/19/2019 14:01:06</publishTime>
+      <publishTime>02/24/2020 16:52:28</publishTime>
     </File>
     <File Include="bin/Mantenimiento.BusinessLayer.dll">
-      <publishTime>02/18/2020 21:55:34</publishTime>
+      <publishTime>03/20/2020 18:51:09</publishTime>
     </File>
     <File Include="bin/Mantenimiento.BusinessLayer.pdb">
-      <publishTime>02/18/2020 21:55:34</publishTime>
+      <publishTime>03/20/2020 18:51:09</publishTime>
     </File>
     <File Include="bin/Mantenimiento.DataAccess.dll">
-      <publishTime>02/18/2020 21:55:34</publishTime>
+      <publishTime>03/20/2020 18:44:25</publishTime>
     </File>
     <File Include="bin/Mantenimiento.DataAccess.pdb">
-      <publishTime>02/18/2020 21:55:34</publishTime>
+      <publishTime>03/20/2020 18:44:25</publishTime>
     </File>
     <File Include="bin/Mantenimiento.Entities.dll">
-      <publishTime>02/18/2020 21:31:24</publishTime>
+      <publishTime>03/20/2020 10:15:15</publishTime>
     </File>
     <File Include="bin/Mantenimiento.Entities.pdb">
-      <publishTime>02/18/2020 21:31:24</publishTime>
+      <publishTime>03/20/2020 10:15:15</publishTime>
     </File>
     <File Include="bin/SeguridadJelaf.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -48,25 +48,25 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Template.Service.dll">
-      <publishTime>02/18/2020 21:55:35</publishTime>
+      <publishTime>03/20/2020 18:51:10</publishTime>
     </File>
     <File Include="bin/Template.Service.pdb">
-      <publishTime>02/18/2020 21:55:35</publishTime>
+      <publishTime>03/20/2020 18:51:10</publishTime>
     </File>
     <File Include="bin/Template.Utility.dll">
-      <publishTime>02/18/2020 21:31:24</publishTime>
+      <publishTime>03/20/2020 10:15:14</publishTime>
     </File>
     <File Include="bin/Template.Utility.pdb">
-      <publishTime>02/18/2020 21:31:24</publishTime>
+      <publishTime>03/20/2020 10:15:14</publishTime>
     </File>
     <File Include="ServiceMantenimiento.svc">
-      <publishTime>12/19/2019 14:01:06</publishTime>
+      <publishTime>02/24/2020 16:52:28</publishTime>
     </File>
     <File Include="ServiceTemplate.svc">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/18/2020 21:31:48</publishTime>
+      <publishTime>03/20/2020 10:16:38</publishTime>
     </File>
   </ItemGroup>
 </Project>

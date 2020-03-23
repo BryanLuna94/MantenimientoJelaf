@@ -17,6 +17,7 @@ namespace Mantenimiento.Utility
         public const string DESCRIPCION_VACIA = "Debe ingresar una descripción";
         public const string NO_ELIMINO = "No se ha eliminado el registro";
         public const string YA_EXISTE = "Este registro ya existe";
+        public const string PRIMERO_DEBE_ANULAR_PREVENTIVO = "Primero debe anular el informe preventivo";
         // Estados
         public const Int16 GENERADO = 1;
         public const Int16 PENDIENTE = 2;

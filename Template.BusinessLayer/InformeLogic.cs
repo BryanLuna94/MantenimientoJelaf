@@ -14,7 +14,7 @@ using System.Transactions;
 
 namespace Mantenimiento.BusinessLayer
 {
-    public class InformeLogic
+    public static class InformeLogic
     {
         public static Response<InformeResponse> ListInforme(InformeRequest request)
         {
@@ -156,10 +156,37 @@ namespace Mantenimiento.BusinessLayer
         public static async Task<Response<InformeResponse>> AnularInforme(int IdInforme)
         {
             Response<InformeResponse> response;
+            InformeEntity objInforme;
+            ProgramacionEntity objProgramacionCorrectivo;
+            ProgramacionEntity objProgramacionPreventivo;
+            string codProgramacion;
 
             try
             {
-                await InformeData.AnularInforme(IdInforme);
+                objInforme = InformeData.SelectInforme(IdInforme);
+                objProgramacionCorrectivo = ProgramacionData.SelectProgramacionPorInforme(objInforme.NumeroInforme.ToString(), Convert.ToInt32(Constants.TipoInforme.CORRECTIVO));
+                objProgramacionPreventivo = ProgramacionData.SelectProgramacionPorInforme(objInforme.NumeroInforme.ToString(), Convert.ToInt32(Constants.TipoInforme.PREVENTIVO));
+                codProgramacion = objProgramacionCorrectivo.CODI_PROGRAMACION;
+
+                if (objInforme.TipoInforme == Constants.TipoInforme.CORRECTIVO && objProgramacionPreventivo != null)
+                {
+                    BusinessException.Generar(Constants.PRIMERO_DEBE_ANULAR_PREVENTIVO);
+                }
+
+                //using (TransactionScope tran = new TransactionScope())
+                //{
+                    if (objInforme.TipoInforme == Constants.TipoInforme.CORRECTIVO)
+                    {
+                        await ProgramacionData.UpdateProgramacionOrdenCorrectivoAnulacion(codProgramacion);
+                    }
+                    else if (objInforme.TipoInforme == Constants.TipoInforme.PREVENTIVO)
+                    {
+                        await ProgramacionData.UpdateProgramacionOrdenPreventivoAnulacion(codProgramacion);
+                    }
+                    await InformeData.AnularInforme(IdInforme);
+
+                //    tran.Complete();
+                //}
 
                 response = new Response<InformeResponse>
                 {
@@ -173,10 +200,6 @@ namespace Mantenimiento.BusinessLayer
                 };
 
                 return response;
-            }
-            catch (FaultException<ServiceError>)
-            {
-                throw;
             }
             catch (Exception ex)
             {

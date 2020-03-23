@@ -33,3 +33,11 @@ D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Release\Mant
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CopyComplete
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Release\Template.Utility.dll
 D:\Proyectos\_Mantenimiento\MantenimientoJelaf\Template.Utility\obj\Release\Template.Utility.pdb
+D:\BRYAN\Proyectos\Template.Utility\bin\Release\Template.Utility.dll
+D:\BRYAN\Proyectos\Template.Utility\bin\Release\Template.Utility.pdb
+D:\BRYAN\Proyectos\Template.Utility\bin\Release\JBLV.Log.dll
+D:\BRYAN\Proyectos\Template.Utility\bin\Release\log4net.dll
+D:\BRYAN\Proyectos\Template.Utility\obj\Release\Mantenimiento.Utility.csprojAssemblyReference.cache
+D:\BRYAN\Proyectos\Template.Utility\obj\Release\Mantenimiento.Utility.csproj.CopyComplete
+D:\BRYAN\Proyectos\Template.Utility\obj\Release\Template.Utility.dll
+D:\BRYAN\Proyectos\Template.Utility\obj\Release\Template.Utility.pdb

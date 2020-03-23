@@ -1,0 +1,102 @@
+﻿@using Mantenimiento.WebApp.Helpers;
+
+@{
+    ViewBag.Navigation = "Estado de Unidades";
+    ViewBag.Title = "Estado de Unidades";
+    var UsuarioActual = DataSession.UserLoggedIn;
+}
+
+<!-- .row -->
+    <div class="col-sm-12" id="app">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="white-box">
+
+                    <p class="text-muted">Edite el estado de sus unidades</p>
+                    <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0">
+                        <thead>
+                            <tr>
+                                <th>PLACA</th>
+                                <th>ESTADO</th>
+                                <th>OBS OPERACIONES</th>
+                                <th>OBS MANTENIMIENTO</th>
+                                <th>UBICACIÓN</th>
+                                <th>MECÁNICO</th>
+                                <th>TIEMPO ESTIMADO</th>
+                                <th>PLATAFORMA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AAA111</td>
+                                <td>SINIESTRADO</td>
+                                <td></td>
+                                <td>DERIVADO A TERCERO</td>
+                                <td>KM35</td>
+                                <td>JOSE RAMOS</td>
+                                <td>3 DÍAS</td>
+                                <td>PLATAFORMA BAMBAS</td>
+                            </tr>
+                            <tr>
+                                <td>BBB222</td>
+                                <td>NORMAL</td>
+                                <td></td>
+                                <td>EN MANTENIMIENTO PREVENTIVO</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CCC333</td>
+                                <td>NORMAL</td>
+                                <td></td>
+                                <td>DISPONIBLE</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DDD444</td>
+                                <td>NORMAL</td>
+                                <td>FALTA DOCUMENTACIÓN</td>
+                                <td>DISPONIBLE</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>EEE555</td>
+                                <td>NORMAL</td>
+                                <td></td>
+                                <td>DISPONIBLE</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <label style="display: none;" id="lblcodusuario">@UsuarioActual.Codigo</label><label style="display: none;" id="lbldesusuario">@UsuarioActual.Nombre</label>
+    </div>
+
+
+
+<!-- /.row -->
+<!-- .row -->
+
+
+
+
+@section scripts{
+ 
+    <script src="~/wwwroot/js/Vue/Views/Fallas.js"></script>
+}

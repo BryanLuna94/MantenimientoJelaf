@@ -1,0 +1,312 @@
+﻿<!-- sample modal content -->
+<div id="appEditAuxilioMecanico" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(1)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Auxilio Mecánico :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <form class="form-horizontal">
+                    <div class="form-group m-b-0">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Carga:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Carga"
+                                              :options="list.Cargas"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@keydown.13.native.prevent="$refs.Are_Codigo.$refs.search.focus()"
+                                              id="Carga"
+                                              ref="Carga">
+                                    </v-select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Placa:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Are_Codigo"
+                                              :options="list.Flotas"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@search="getFlotas"
+                                              @@keydown.13.native.prevent="$refs.Are_Codigo2.$refs.search.focus()"
+                                              id="Are_Codigo"
+                                              @*@@keyup.native.prevent="!($event.target.value) ? getFlotas('') : ''"*@
+                                              ref="Are_Codigo">
+                                    </v-select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Carreta:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Are_Codigo2"
+                                              :options="list.Carretas"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@search="getCarretas"
+                                              id="Are_Codigo2"
+                                              @*@@keyup.native.prevent="!($event.target.value) ? getCarretas('') : ''"*@
+                                              @@keydown.13.native.prevent="$refs.Kmt_unidad.focus()"
+                                              ref="Are_Codigo2">
+                                    </v-select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Km:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control"
+                                           v-model="objAuxilioMecanico.Kmt_unidad"
+                                           v-mask="'###########'"
+                                           id="Kmt_unidad"
+                                           required
+                                           ref="Kmt_unidad"
+                                           @@keydown.13.prevent="$refs.Kmt_recorrido.focus()">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Recorrido:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control"
+                                           v-model="objAuxilioMecanico.Kmt_recorrido"
+                                           v-mask="'#####'"
+                                           id="Kmt_recorrido"
+                                           ref="Kmt_recorrido"
+                                           @@keydown.13.prevent="$refs.MMG.$refs.search.focus()">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">MMG:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.MMG"
+                                              :options="list.MMG"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@keydown.13.native.prevent="$refs.Fechahora_ini.focus()"
+                                              id="MMG"
+                                              ref="MMG">
+                                    </v-select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">F/H Inicio:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input v-model="objAuxilioMecanico.Fechahora_ini"
+                                           class="dt-picker form-control"
+                                           id="Fechahora_ini"
+                                           @@blur="objAuxilioMecanico.Fechahora_ini = $event.target.value; objAuxilioMecanico.Fechahora_ini = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                           ref="Fechahora_ini"
+                                           @@keydown.13.prevent="$refs.Fechahora_fin.focus()"
+                                           type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">F/H Termino:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input v-model="objAuxilioMecanico.Fechahora_fin"
+                                           class="dt-picker form-control"
+                                           id="Fechahora_fin"
+                                           @@blur="objAuxilioMecanico.Fechahora_fin = $event.target.value; objAuxilioMecanico.Fechahora_fin = validateDateTimeFormat($event.target.value) || _FechaActual"
+                                           ref="Fechahora_fin"
+                                           @@keydown.13.prevent="$refs.Controlable.$refs.search.focus()"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Controlable:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Controlable"
+                                              :options="list.Controlables"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@keydown.13.native.prevent="$refs.Id_plataforma.$refs.search.focus()"
+                                              id="Controlable"
+                                              ref="Controlable">
+                                    </v-select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Ubicación:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Id_plataforma"
+                                              :options="list.Plataformas"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@search="getPlataformas"
+                                              id="Id_plataforma"
+                                              @*@@keyup.native.prevent="!($event.target.value) ? getPlataformas('') : ''"*@
+                                              @@keydown.13.native.prevent="$refs.Idtarea_c.$refs.search.focus()"
+                                              ref="Id_plataforma">
+                                    </v-select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Tarea:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Idtarea_c"
+                                              :options="list.Tareas"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@search="getTareas"
+                                              id="Idtarea_c"
+                                              @*@@keyup.native.prevent="!($event.target.value) ? getTareas('') : ''"*@
+                                              @@keydown.13.native.prevent="$refs.Servicio.focus()"
+                                              ref="Idtarea_c">
+                                    </v-select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Servicio:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control"
+                                           v-model="objAuxilioMecanico.Servicio"
+                                           id="Servicio"
+                                           ref="Servicio"
+                                           @@keydown.13.prevent="$refs.Ben_codigo.$refs.search.focus()">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+
+                            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Mecánico:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Ben_codigo"
+                                              :options="list.Beneficiarios"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@search="getBeneficiarios"
+                                              id="Ben_codigo"
+                                              @*@@keyup.native.prevent="!($event.target.value) ? getBeneficiarios('') : ''"*@
+                                              @@keydown.13.native.prevent="$refs.Falla.focus()"
+                                              ref="Ben_codigo">
+                                    </v-select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Falla:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control"
+                                           v-model="objAuxilioMecanico.Falla"
+                                           id="Falla"
+                                           ref="Falla"
+                                           @@keydown.13.prevent="$refs.Kmt_Perdido.focus()">
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Km. Perdido:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control text-right"
+                                           v-model="objAuxilioMecanico.Kmt_Perdido"
+                                           v-mask="'###########'"
+                                           id="Kmt_Perdido"
+                                           ref="Kmt_Perdido"
+                                           @@keydown.13.prevent="$refs.CambioTracto.focus()">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-5">
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Cambio Tracto:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control text-right"
+                                           v-model="objAuxilioMecanico.CambioTracto"
+                                           v-mask="'#####'"
+                                           id="CambioTracto"
+                                           ref="CambioTracto"
+                                           @@keydown.13.prevent="$refs.Responsable.$refs.search.focus()">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Responsable:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Responsable"
+                                              :options="list.Responsables"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@keydown.13.native.prevent="$refs.Atencion.$refs.search.focus()"
+                                              id="Responsable"
+                                              ref="Responsable">
+                                    </v-select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Atención:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.Atencion"
+                                              :options="list.Atenciones"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@keydown.13.native.prevent="$refs.Causa.focus()"
+                                              id="Atencion"
+                                              ref="Atencion">
+                                    </v-select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Causa:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <input class="form-control"
+                                           v-model="objAuxilioMecanico.Causa"
+                                           id="Causa"
+                                           ref="Causa"
+                                           @@keydown.13.prevent="$refs.IdPlan.$refs.search.focus()">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="padding-left:1px; padding-right:2px;">
+                                <label class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-0 p-0">Plan Acción:</label>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0">
+                                    <v-select v-model="objAuxilioMecanico.IdPlan"
+                                              :options="list.Planes"
+                                              index="Codigo"
+                                              label="Descripcion"
+                                              @@search="getPlanes"
+                                              id="IdPlan"
+                                              @*@@keyup.native.prevent="!($event.target.value) ? getPlanes('') : ''"*@
+                                              @@keydown.13.native.prevent="$refs.btnGuardar.focus()"
+                                              ref="IdPlan">
+                                    </v-select>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary waves-effect text-left" ref="btnGuardar" v-bind:disabled="!FullAuxilioMecanico" @@click="saveAuxilioMecanico">
+                    <span class="fa fa-save fa-fw"></span>Aceptar
+                </button>
+                <button class="btn btn-inverse waves-effect waves-light text-left" @@click="close(1)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->

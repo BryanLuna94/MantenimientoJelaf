@@ -6,8 +6,8 @@
             Carga: '',
             Are_Codigo: '',
             Are_Codigo2: '',
-            Kmt_unidad: '',
-            Kmt_recorrido: '',
+            Kmt_unidad: 0,
+            Kmt_recorrido: 0,
             MMG: '',
             Fechahora_ini: '',
             Fechahora_fin: '',
@@ -17,7 +17,7 @@
             Falla: '',
             Ben_codigo: '',
             Servicio: '',
-            Kmt_Perdido: '',
+            Kmt_Perdido: 0,
             CambioTracto: '',
             Responsable: '',
             Atencion: '',
@@ -349,6 +349,7 @@
 
         saveAuxilioMecanico: async function () {
 
+            var _this = this;
             var fecha_vacia = "__/__/____ __:__";
             var fechaini = $("#Fechahora_ini").val();
             var fechafin = $("#Fechahora_fin").val();
@@ -364,10 +365,24 @@
                 return;
             }
 
-            if (this.createAuxilioMecanico) {
-                await this.InsertAuxilioMecanico();
+            //validacion km
+
+            if (parseFloat(_this.objAuxilioMecanico.Kmt_Perdido) > parseFloat(_this.objAuxilioMecanico.Kmt_recorrido)) {
+                Notifications.Messages.warning("El kilometraje perdido no puede ser mayor al kilometraje recorrido");
+                _this.$refs.Kmt_Perdido.focus();
+                return;
+            }
+
+            if (parseFloat(_this.objAuxilioMecanico.Kmt_Perdido) > parseFloat(_this.objAuxilioMecanico.Kmt_unidad)) {
+                Notifications.Messages.warning("El kilometraje perdido no puede ser mayor al kilometraje de la unidad");
+                _this.$refs.Kmt_Perdido.focus();
+                return;
+            }
+
+            if (_this.createAuxilioMecanico) {
+                await _this.InsertAuxilioMecanico();
             } else {
-                await this.UpdateAuxilioMecanico();
+                await _this.UpdateAuxilioMecanico();
             }
         },
 

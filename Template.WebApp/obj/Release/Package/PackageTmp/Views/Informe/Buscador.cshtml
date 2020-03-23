@@ -1,0 +1,170 @@
+﻿<!-- sample modal content -->
+<div id="appBuscadorInforme" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="app" data-backdrop="static" data-keyboard="false" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" @@click="close(1)" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title" id="app">.: Buscar Informes :.</h4>
+            </div>
+            <div class="modal-body" style="padding-top:5px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bg-theme white-box m-b-0">
+                            <div class="row text-white">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form-horizontal">
+                                            <div class="form-group" style="margin-bottom:0px !important">
+                                                <div class="col-md-2">
+                                                    <input v-model="objFiltro.Fech_ini"
+                                                           class="dt-picker form-control"
+                                                           id="Fech_ini"
+                                                           ref="Fech_ini"
+                                                           @@blur="objFiltro.Fech_ini = $event.target.value; objFiltro.Fech_ini = validateDateFormat($event.target.value) || _FechaActual"
+                                                           placeholder="Fecha Inicio"
+                                                           type="text">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <input v-model="objFiltro.Fech_fin"
+                                                           class="dt-picker form-control"
+                                                           id="Fech_fin"
+                                                           ref="Fech_fin"
+                                                           @@blur="objFiltro.Fech_fin = $event.target.value; objFiltro.Fech_fin = validateDateFormat($event.target.value) || _FechaActual"
+                                                           placeholder="Fecha Fin"
+                                                           type="text">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <input v-model="objFiltro.NInforme"
+                                                           class="form-control"
+                                                           id="NInforme"
+                                                           ref="NInforme"
+                                                           v-mask="'#####'"
+                                                           placeholder="N° Informe"
+                                                           type="text">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <v-select v-model="objFiltro.UsrCodigo"
+                                                              :options="list.Usuarios"
+                                                              index="Codigo"
+                                                              label="Descripcion"
+                                                              @@search="getUsuarios"
+                                                              id="SelUsrCodigo"
+                                                              ref="SelUsrCodigo"
+                                                              @*@@keyup.native.prevent="!($event.target.value) ? getFlotas('') : ''"*@
+                                                              placeholder="--Usuarios--">
+                                                    </v-select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button type="button" v-on:click.prevent="ListInforme()" class="btn btn-default waves-effect waves-light m-r-10">Filtrar</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-bottom:0px !important">
+                                                <div class="col-md-4">
+                                                    <div class="form-group text-center">
+                                                        <label class="control-label col-md-3">Unidad: </label>
+                                                        <div class="col-md-9">
+                                                            <div class="radio-list">
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" v-model="objFiltro.TipoU" value="2"> Tracto
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" v-model="objFiltro.TipoU" value="1" checked=""> Carreta
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" v-model="objFiltro.TipoU" value="3" checked=""> Todos
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group text-center">
+                                                        <label class="control-label col-md-3">Ordenar Por: </label>
+                                                        <div class="col-md-9">
+                                                            <div class="radio-list">
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" v-model="objFiltro.Orden" value="I"> Informe
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" v-model="objFiltro.Orden" value="B" checked=""> Unidad
+                                                                </label>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" v-model="objFiltro.Orden" value="F" checked=""> Fecha
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group text-center">
+                                                        <div class="checkbox checkbox-single">
+                                                            <input v-model="objFiltro.SoloMiUsuario" id="checkbox1" type="checkbox">
+                                                            <label for="checkbox1"> Ver solo informes de mi usuario </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="white-box">
+                            <div class="table-responsive">
+                                <table class="table editable-table table-bordered table-striped m-b-0" id="tableInforme" ref="#tableInforme">
+                                    <thead>
+                                        <tr class="advanced-table active">
+                                            <td>Id Informe</td>
+                                            <td>N° Informe</td>
+                                            <td>Unidad</td>
+                                            <td>Placa</td>
+                                            <td>Chofer</td>
+                                            <td>Oficina</td>
+                                            <td>Fecha</td>
+                                            <td>Usuario</td>
+                                            <td>Tipo</td>
+                                            <td>Fec. Cierre</td>
+                                            <td>TipoU</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="header" v-for="Informe in list.Informes">
+                                            <td width="10%" align="center">
+                                                <a href="#" v-on:click.prevent="SelectInforme(Informe.IdInforme)">{{ Informe.IdInforme }}</a>
+                                            </td>
+                                            <td width="10%" align="center">{{ Informe.NumeroInforme }}</td>
+                                            <td width="5%" align="center">{{ Informe.Interno }}</td>
+                                            <td width="5%" align="center">{{ Informe.Placa }}</td>
+                                            <td width="20%" align="center">{{ Informe.Chofer }}</td>
+                                            <td width="10%" align="center">{{ Informe.Oficina }}</td>
+                                            <td width="10%">{{ Informe.Fecha }}</td>
+                                            <td width="15%" align="center">{{ Informe.Usr_Nombre }}</td>
+                                            <td width="5%" align="center">{{ Informe.Tipo }}</td>
+                                            <td width="10%" align="center">{{ Informe.FechaCierre }}</td>
+                                            <td width="5%">{{ Informe.TIPOU }}</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-inverse waves-effect waves-light text-left" @@click="close(1)">
+                    <span class="glyphicon glyphicon-log-out fa-fw"></span>Cancelar
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal -->
+<!-- /.row -->
+<!-- .row -->
