@@ -369,7 +369,7 @@
                                 _this.list.Mantenimientos = [];
                             }
                             if (res.data.Estado === false) {
-                                Notifications.Messages.warning("esta registro no se pudo eliminar");
+                                Notifications.Messages.warning(res.data.Mensaje);
                             }
 
                         }).catch(error => {

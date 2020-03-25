@@ -210,3 +210,68 @@ System.Data.SqlClient.SqlException (0x80131904): La subconsulta ha devuelto más 
    en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
 ClientConnectionId:28afd3c0-03c9-4525-9588-37be9cc20dcf
 Error Number:512,State:1,Class:16
+2020-03-25 11:59:04,908 [43] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): La subconsulta ha devuelto más de un valor, lo que no es correcto cuando va a continuación de =, !=, <, <=, >, >= o cuando se utiliza como expresión.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.TipoMantenimientoData.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.DataAccess\TipoMantenimientoData.cs:línea 83
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
+ClientConnectionId:62f35611-99af-48e6-b12c-9a9edc3342e7
+Error Number:512,State:1,Class:16
+2020-03-25 11:59:15,637 [43] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): La subconsulta ha devuelto más de un valor, lo que no es correcto cuando va a continuación de =, !=, <, <=, >, >= o cuando se utiliza como expresión.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.TipoMantenimientoData.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.DataAccess\TipoMantenimientoData.cs:línea 83
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
+ClientConnectionId:62f35611-99af-48e6-b12c-9a9edc3342e7
+Error Number:512,State:1,Class:16
+2020-03-25 11:59:17,368 [38] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): La subconsulta ha devuelto más de un valor, lo que no es correcto cuando va a continuación de =, !=, <, <=, >, >= o cuando se utiliza como expresión.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.TipoMantenimientoData.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.DataAccess\TipoMantenimientoData.cs:línea 83
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
+ClientConnectionId:62f35611-99af-48e6-b12c-9a9edc3342e7
+Error Number:512,State:1,Class:16
+2020-03-25 11:59:20,880 [43] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): La subconsulta ha devuelto más de un valor, lo que no es correcto cuando va a continuación de =, !=, <, <=, >, >= o cuando se utiliza como expresión.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.TipoMantenimientoData.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.DataAccess\TipoMantenimientoData.cs:línea 83
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
+ClientConnectionId:62f35611-99af-48e6-b12c-9a9edc3342e7
+Error Number:512,State:1,Class:16
+2020-03-25 11:59:23,802 [38] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): La subconsulta ha devuelto más de un valor, lo que no es correcto cuando va a continuación de =, !=, <, <=, >, >= o cuando se utiliza como expresión.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.TipoMantenimientoData.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.DataAccess\TipoMantenimientoData.cs:línea 83
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
+ClientConnectionId:62f35611-99af-48e6-b12c-9a9edc3342e7
+Error Number:512,State:1,Class:16

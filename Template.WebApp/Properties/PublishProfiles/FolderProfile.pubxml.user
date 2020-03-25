@@ -10,13 +10,19 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>10/09/2013 16:29:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>10/09/2013 16:29:20</publishTime>
+      <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/itextsharp.dll">
       <publishTime>06/20/2019 17:39:40</publishTime>
+    </File>
+    <File Include="bin/JBLV.Log.dll">
+      <publishTime>02/24/2020 16:52:27</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>02/24/2020 16:52:28</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/25/2012 11:48:56</publishTime>
@@ -31,7 +37,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>11/28/2018 12:59:46</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>11/28/2018 13:00:12</publishTime>
@@ -45,68 +51,74 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="bin/System.Web.Webpages.Razor.dll">
       <publishTime>11/28/2018 13:04:24</publishTime>
     </File>
+    <File Include="bin/Template.Utility.dll">
+      <publishTime>03/25/2020 12:01:44</publishTime>
+    </File>
+    <File Include="bin/Template.Utility.pdb">
+      <publishTime>03/25/2020 12:01:44</publishTime>
+    </File>
     <File Include="bin/Template.WebApp.dll">
-      <publishTime>03/20/2020 12:59:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Template.WebApp.pdb">
-      <publishTime>03/20/2020 12:59:34</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfArticuloTResponseozx_PhYH51.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfAuxilioMecanicoResponseH6V5Udoc.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfBaseResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfClaseMResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfFallasDResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfInformeResponseH6V5Udoc.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfLoginResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMarcaModeloResponseozx_PhYH51.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfMtbfResponseH6V5Udoc.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfOrdenMasivaResponseH6V5Udoc.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfProductoResponseozx_PhYH51.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfPwdResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSistemasResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfSubSistemasResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMPResponseozx_PhYH51.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTareaMResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMPResponseozx_PhYH51.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Connected Services/ServiceMantenimiento/Mantenimiento.WebApp.ServiceMantenimiento.ResponseOfTipoMResponseozx_PhYH5.datasource">
-      <publishTime>03/20/2020 12:57:22</publishTime>
+      <publishTime>03/25/2020 11:53:08</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>02/24/2020 16:52:28</publishTime>
@@ -199,7 +211,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>03/20/2020 10:06:24</publishTime>
     </File>
     <File Include="Views/OrdenMasiva/TareasPendientes.cshtml">
-      <publishTime>03/20/2020 10:06:24</publishTime>
+      <publishTime>03/25/2020 11:31:31</publishTime>
     </File>
     <File Include="Views/Perfil/Index.cshtml">
       <publishTime>02/24/2020 16:52:28</publishTime>
@@ -2617,7 +2629,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/24/2020 16:52:30</publishTime>
     </File>
     <File Include="wwwroot/css/base.css">
-      <publishTime>02/24/2020 16:52:30</publishTime>
+      <publishTime>03/25/2020 10:05:13</publishTime>
     </File>
     <File Include="wwwroot/css/custom-style.css">
       <publishTime>02/24/2020 16:52:30</publishTime>
@@ -2695,7 +2707,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/24/2020 16:52:30</publishTime>
     </File>
     <File Include="wwwroot/js/Vue/Views/AuxilioMecanico.js">
-      <publishTime>02/24/2020 16:52:30</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="wwwroot/js/Vue/Views/ClaseM.js">
       <publishTime>02/24/2020 16:52:30</publishTime>
@@ -2704,7 +2716,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/24/2020 16:52:30</publishTime>
     </File>
     <File Include="wwwroot/js/Vue/Views/Informe.js">
-      <publishTime>03/13/2020 09:26:10</publishTime>
+      <publishTime>03/23/2020 16:41:21</publishTime>
     </File>
     <File Include="wwwroot/js/Vue/Views/Mtbf.js">
       <publishTime>02/24/2020 16:52:30</publishTime>

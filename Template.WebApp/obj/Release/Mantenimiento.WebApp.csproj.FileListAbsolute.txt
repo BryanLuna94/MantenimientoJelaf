@@ -138,3 +138,7 @@ D:\BRYAN\Proyectos\Template.WebApp\obj\Release\Mantenimiento.WebApp.csprojAssemb
 D:\BRYAN\Proyectos\Template.WebApp\obj\Release\Mantenimiento.WebApp.csproj.CopyComplete
 D:\BRYAN\Proyectos\Template.WebApp\obj\Release\Template.WebApp.dll
 D:\BRYAN\Proyectos\Template.WebApp\obj\Release\Template.WebApp.pdb
+D:\BRYAN\Proyectos\Template.WebApp\bin\Template.Utility.dll
+D:\BRYAN\Proyectos\Template.WebApp\bin\JBLV.Log.dll
+D:\BRYAN\Proyectos\Template.WebApp\bin\log4net.dll
+D:\BRYAN\Proyectos\Template.WebApp\bin\Template.Utility.pdb

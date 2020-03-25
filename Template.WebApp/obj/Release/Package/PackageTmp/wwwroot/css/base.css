@@ -1,5 +1,5 @@
 ﻿/* LOGIN */
- 
+
 .new-login-register .new-login-box {
     margin-top: 7% !important;
 }
@@ -73,3 +73,27 @@
     height: 6px !important;
     width: 6px !important;
 }
+
+.table-fixed {
+    width: 100%;
+}
+
+    .table-fixed tbody {
+        height: 200px;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+        display: block;
+    }
+
+        .table-fixed tbody td {
+            float: left;
+        }
+
+        /*.table-fixed thead tr th {
+            float: left;
+            background-color: #f39c12;
+            border-color: #e67e22;
+        }*/

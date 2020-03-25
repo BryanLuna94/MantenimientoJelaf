@@ -8,26 +8,22 @@
             </div>
             <div class="modal-body" style="padding-top:5px;">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="table-responsive">
-                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableBus" ref="#tableBus">
+                            <table class="table table-fixed" id="tableBus" ref="#tableBus">
                                 <thead>
                                     <tr class="advanced-table active">
-                                        <td>Código</td>
-                                        <td>Placa</td>
+                                        <td colspan="2">Lista de Buses</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="header" v-for="Bus in list.Buses">
-                                        <td width="50%" align="center">
+                                        <td width="80%" align="center">
                                             <a href="#" v-on:click.prevent="ListTareasPendientes(Bus.IdUnidad)">{{ Bus.IdUnidad }}</a>
+                                            {{ Bus.BusPlaca }}
                                         </td>
-                                        <td width="50%" align="center">{{ Bus.BusPlaca }}</td>
-                                        <td width="50%" align="center" hidden="hidden">{{ Bus.CODI_PROGRAMACION_REAL }}</td>
-                                        <td width="50%" align="center">
-                                            <button class="btn btn-info waves-effect waves-light text-center" @@click="VerImprimirPreventivo(Bus.IdUnidad,Bus.CODI_PROGRAMACION_REAL)">
-                                                <span class="glyphicon glyphicon-print fa-fw"></span>
-                                            </button>
+                                        <td width="20%" align="center">
+                                            <button type="button" v-on:click.prevent="VerImprimirPreventivo(Bus.IdUnidad,Bus.CODI_PROGRAMACION_REAL)" title="Imprimir" class="btn btn-info btn-outline btn-circle btn-sm m-r-5"><i class="ti-printer"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -36,31 +32,23 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="table-responsive">
-                            <table class="table editable-table table-bordered table-striped m-b-0" id="tableTareas" ref="#tableTareas">
+                    <div class="col-lg-9">
+                        <div style="overflow-x:auto;">
+                            <table class="table table-fixed" id="tableTareas" ref="#tableTareas">
                                 <thead>
                                     <tr class="advanced-table active">
-                                        <td>Mantenimiento</td>
-                                        <td>Tarea</td>
-                                        <td>km. Aviso</td>
-                                        <td>Km. Recorrido</td>
-                                        <td>Horas</td>
-                                        <td>Horas Recorrido</td>
-                                        <td>Dias</td>
-                                        <td>Dias Recorrido</td>
+                                        <td class="col-md-3" style="width:40%">Mtn. / Tarea</td>
+                                        <td class="col-md-3" style="width:20%">km. Aviso / Recorrido</td>
+                                        <td class="col-md-3" style="width:20%">Hs. / Recorrido</td>
+                                        <td class="col-md-3" style="width:20%">Dias Aviso / Recorrido</td>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="header" v-for="TareaPendiente in list.TareasPendientes">
-                                        <td width="20%" align="center">{{ TareaPendiente.Descripcion }}</td>
-                                        <td width="40%" align="center">{{ TareaPendiente.DescripcionTarea }}</td>
-                                        <td width="20%" align="center">{{ TareaPendiente.KmtAviso }}</td>
-                                        <td width="20%" align="center">{{ TareaPendiente.KmtActual }}</td>
-                                        <td width="40%" align="center">{{ TareaPendiente.Horas }}</td>
-                                        <td width="40%" align="center">{{ TareaPendiente.HorasRecorrido }}</td>
-                                        <td width="40%" align="center">{{ TareaPendiente.Dias }}</td>
-                                        <td width="40%" align="center">{{ TareaPendiente.DiasRecorrido }}</td>
+                                    <tr style="height:90px" v-for="TareaPendiente in list.TareasPendientes">
+                                        <td class="col-md-3" style="width:40%">{{ TareaPendiente.Descripcion }} / {{ TareaPendiente.DescripcionTarea }}</td>
+                                        <td class="col-md-3" style="width:20%">{{ TareaPendiente.KmtAviso }} / {{ TareaPendiente.KmtActual }}</td>
+                                        <td class="col-md-3" style="width:20%">{{ TareaPendiente.Horas }} / {{ TareaPendiente.HorasRecorrido }}</td>
+                                        <td class="col-md-3" style="width:20%">{{ TareaPendiente.Dias }} / {{ TareaPendiente.DiasRecorrido }}</td>
                                     </tr>
                                 </tbody>
 
