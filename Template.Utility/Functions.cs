@@ -421,6 +421,28 @@ namespace Mantenimiento.Utility
             public string Descripcion { get; set; }
         }
 
+        public class ColumnsTable
+        {
+            public int id { get; set; }
+            public int IdTarea { get; set; }
+            public string Tarea_Descripcion { get; set; }
+            public int ID_tb_Sistema_Mant { get; set; }
+            public string Sistema_Descripcion { get; set; }
+            public int Activo { get; set; }
+            public string Operacion { get; set; }
+        }
+
+        public class ColumnsTableUnion
+        {
+            public int id { get; set; }
+            public int IdTarea1 { get; set; }
+            public string Tarea_Descripcion1 { get; set; }
+            public string Sistema_Descripcion1 { get; set; }
+            public int IdTarea2 { get; set; }
+            public string Tarea_Descripcion2 { get; set; }
+            public string Sistema_Descripcion2 { get; set; }
+        }
+
         public static string NombreMes(int numeroMes)
         {
             try
@@ -457,6 +479,85 @@ namespace Mantenimiento.Utility
             };
 
             return listaMeses;
+        }
+
+        public static string RetornaNumeroRomano(int numero)
+        {
+            string numeroRomano = string.Empty;
+            int Miles, Resto, Cen, Dec, Uni, N;
+
+            N = numero;
+            Miles = N / 1000;
+            Resto = N % 1000;
+            Cen = Resto / 100;
+            Resto = Resto % 100;
+            Dec = Resto / 10;
+            Resto = Resto % 10;
+            Uni = Resto;
+
+            switch (Miles)
+            {
+                case 1: numeroRomano = "M"; break;
+                case 2: numeroRomano = "MM"; break;
+                case 3: numeroRomano = "MMM"; break;
+            }
+            switch (Cen)
+            {
+                case 1: numeroRomano = "C"; break;
+                case 2: numeroRomano = "CC"; break;
+                case 3: numeroRomano = "CCC"; break;
+                case 4: numeroRomano = "CD"; break;
+                case 5: numeroRomano = "D"; break;
+                case 6: numeroRomano = "DC"; break;
+                case 7: numeroRomano = "DCC"; break;
+                case 8: numeroRomano = "DCCC"; break;
+                case 9: numeroRomano = "CM"; break;
+            }
+            switch (Dec)
+            {
+                case 1:
+                    numeroRomano = "X";
+                    break;
+                case 2:
+                    numeroRomano = "XX";
+                    break;
+                case 3:
+                    numeroRomano = "XXX";
+                    break;
+                case 4:
+                    numeroRomano = "XL";
+                    break;
+                case 5:
+                    numeroRomano = "L";
+                    break;
+                case 6:
+                    numeroRomano = "LX";
+                    break;
+                case 7:
+                    numeroRomano = "LXX";
+                    break;
+                case 8:
+                    numeroRomano = "LXXX";
+                    break;
+                case 9:
+                    numeroRomano = "XC";
+                    break;
+            }
+            switch (Uni)
+            {
+                case 1: numeroRomano = "I"; break;
+                case 2: numeroRomano = "II"; break;
+                case 3: numeroRomano = "III"; break;
+                case 4: numeroRomano = "IV"; break;
+                case 5: numeroRomano = "V"; break;
+                case 6: numeroRomano = "VI"; break;
+                case 7: numeroRomano = "VII"; break;
+                case 8: numeroRomano = "VIII"; break;
+                case 9: numeroRomano = "IX"; break;
+            }
+
+
+            return numeroRomano;
         }
     }
 }

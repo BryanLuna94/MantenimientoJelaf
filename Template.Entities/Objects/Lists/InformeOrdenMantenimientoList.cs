@@ -16,6 +16,7 @@
         public string Observacion { get; set; }
         public int Estado { get; set; }
         public string Dia { get; set; }
+        public int Duracion { get; set; }
 
     }
 }

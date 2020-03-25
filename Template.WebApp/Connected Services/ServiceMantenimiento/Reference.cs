@@ -6015,6 +6015,9 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
         private string DiaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DuracionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -6092,6 +6095,19 @@ namespace Mantenimiento.WebApp.ServiceMantenimiento {
                 if ((object.ReferenceEquals(this.DiaField, value) != true)) {
                     this.DiaField = value;
                     this.RaisePropertyChanged("Dia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Duracion {
+            get {
+                return this.DuracionField;
+            }
+            set {
+                if ((this.DuracionField.Equals(value) != true)) {
+                    this.DuracionField = value;
+                    this.RaisePropertyChanged("Duracion");
                 }
             }
         }

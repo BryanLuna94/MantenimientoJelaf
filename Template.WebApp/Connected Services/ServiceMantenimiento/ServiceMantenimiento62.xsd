@@ -157,6 +157,7 @@
       <xs:element minOccurs="0" name="Ben_Nombre" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="BusPlaca" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Dia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duracion" type="xs:int" />
       <xs:element minOccurs="0" name="Estado" type="xs:int" />
       <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:string" />

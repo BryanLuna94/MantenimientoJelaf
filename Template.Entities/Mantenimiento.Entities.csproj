@@ -85,6 +85,7 @@
     <Compile Include="Objects\Lists\OrdenMasivaList.cs" />
     <Compile Include="Objects\Lists\TareaMecanicosAyudanteList.cs" />
     <Compile Include="Objects\Lists\TareasPendientesList.cs" />
+    <Compile Include="Objects\Others\ColumnsTable.cs" />
     <Compile Include="Objects\Others\Response.cs" />
     <Compile Include="Peticiones\Requests\AuxilioMecanicoRequest.cs" />
     <Compile Include="Peticiones\Requests\FallasDRequest.cs" />

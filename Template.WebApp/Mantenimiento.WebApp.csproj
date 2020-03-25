@@ -1166,6 +1166,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceMantenimiento\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Template.Utility\Mantenimiento.Utility.csproj">
+      <Project>{5f6704d4-7fe4-4ea7-955d-0bbe83fbd93d}</Project>
+      <Name>Mantenimiento.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
