@@ -18,6 +18,7 @@ namespace Mantenimiento.WebApp.Reports
         int _totalColumn = 8;
         Document _document;
         Font _fontstyle;
+        Font _fontstyle1;
         PdfPTable _pdfTable = new PdfPTable(8);
         PdfPCell _pdfPCell;
         MemoryStream _memorystream = new MemoryStream();
@@ -41,7 +42,7 @@ namespace Mantenimiento.WebApp.Reports
 
             PdfWriter.GetInstance(_document, _memorystream);
             _document.Open();
-            _pdfTable.SetWidths(new float[] { 20f, 20f, 20f, 20f, 20f, 20f, 20f, 20f });
+            _pdfTable.SetWidths(new float[] { 20f, 20f, 20f, 10f, 20f, 20f, 20f, 10f });
 
 
             this.ReportHeader();
@@ -575,22 +576,24 @@ namespace Mantenimiento.WebApp.Reports
             {
                 if (!string.IsNullOrEmpty(item.Sistema_Descripcion1))
                 {
-                    _pdfPCell = new PdfPCell(new Phrase(string.Concat(" ", item.Sistema_Descripcion1), _fontstyle));
+                    _fontstyle1 = FontFactory.GetFont("Tahoma", 9f, 1);
+                    _pdfPCell = new PdfPCell(new Phrase(string.Concat(" ", item.Sistema_Descripcion1), _fontstyle1));
                     _pdfPCell.Colspan = 4;
                     _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                     _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                    _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                    _pdfPCell.Border = 0;
+                    //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                    //_pdfPCell.Border = 0;
                     _pdfTable.AddCell(_pdfPCell);
 
                     if (!string.IsNullOrEmpty(item.Sistema_Descripcion2))
                     {
-                        _pdfPCell = new PdfPCell(new Phrase(string.Concat(" ", item.Sistema_Descripcion2), _fontstyle));
+                        _fontstyle1 = FontFactory.GetFont("Tahoma", 9f, 1);
+                        _pdfPCell = new PdfPCell(new Phrase(string.Concat(" ", item.Sistema_Descripcion2), _fontstyle1));
                         _pdfPCell.Colspan = 4;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 0;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 0;
                         _pdfTable.AddCell(_pdfPCell);
                         _pdfTable.CompleteRow();
 
@@ -602,24 +605,24 @@ namespace Mantenimiento.WebApp.Reports
                         _pdfPCell.Colspan = 1;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 1;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 1;
                         _pdfTable.AddCell(_pdfPCell);
 
                         _pdfPCell = new PdfPCell(new Phrase(item.Tarea_Descripcion2.ToString(), _fontstyle));
                         _pdfPCell.Colspan = 2;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 1;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 1;
                         _pdfTable.AddCell(_pdfPCell);
 
                         _pdfPCell = new PdfPCell(new Phrase("❒", _fontstyle));
                         _pdfPCell.Colspan = 1;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 1;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 1;
                         _pdfTable.AddCell(_pdfPCell);
                         _pdfTable.CompleteRow();
 
@@ -632,34 +635,35 @@ namespace Mantenimiento.WebApp.Reports
                     _pdfPCell.Colspan = 1;
                     _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                     _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                    _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                    _pdfPCell.Border = 1;
+                    //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                    //_pdfPCell.Border = 1;
                     _pdfTable.AddCell(_pdfPCell);
 
                     _pdfPCell = new PdfPCell(new Phrase((item.Tarea_Descripcion1 == null) ? string.Empty : item.Tarea_Descripcion1.ToString(), _fontstyle));
                     _pdfPCell.Colspan = 2;
                     _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                     _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                    _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                    _pdfPCell.Border = 1;
+                    //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                    //_pdfPCell.Border = 1;
                     _pdfTable.AddCell(_pdfPCell);
 
                     _pdfPCell = new PdfPCell(new Phrase("❒", _fontstyle));
                     _pdfPCell.Colspan = 1;
                     _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                     _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                    _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                    _pdfPCell.Border = 1;
+                    //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                    //_pdfPCell.Border = 1;
                     _pdfTable.AddCell(_pdfPCell);
 
                     if (!string.IsNullOrEmpty(item.Sistema_Descripcion2))
                     {
-                        _pdfPCell = new PdfPCell(new Phrase(string.Concat(" ", item.Sistema_Descripcion2), _fontstyle));
+                        _fontstyle1 = FontFactory.GetFont("Tahoma", 9f, 1);
+                        _pdfPCell = new PdfPCell(new Phrase(string.Concat(" ", item.Sistema_Descripcion2), _fontstyle1));
                         _pdfPCell.Colspan = 4;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 0;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 0;
                         _pdfTable.AddCell(_pdfPCell);
                         _pdfTable.CompleteRow();
 
@@ -671,24 +675,24 @@ namespace Mantenimiento.WebApp.Reports
                         _pdfPCell.Colspan = 1;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 1;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 1;
                         _pdfTable.AddCell(_pdfPCell);
 
                         _pdfPCell = new PdfPCell(new Phrase(item.Tarea_Descripcion2.ToString(), _fontstyle));
                         _pdfPCell.Colspan = 2;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_LEFT;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 1;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 1;
                         _pdfTable.AddCell(_pdfPCell);
 
                         _pdfPCell = new PdfPCell(new Phrase("❒", _fontstyle));
                         _pdfPCell.Colspan = 1;
                         _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                         _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                        _pdfPCell.BackgroundColor = BaseColor.WHITE;
-                        _pdfPCell.Border = 1;
+                        //_pdfPCell.BackgroundColor = BaseColor.WHITE;
+                        //_pdfPCell.Border = 1;
                         _pdfTable.AddCell(_pdfPCell);
                         _pdfTable.CompleteRow();
 
@@ -831,6 +835,280 @@ namespace Mantenimiento.WebApp.Reports
             _pdfPCell.ExtraParagraphSpace = 0;
             _pdfTable.AddCell(_pdfPCell);
             _pdfTable.CompleteRow();
+
+            // ESPACIO EN BLANCO
+            _fontstyle = FontFactory.GetFont("Tahoma", 2F, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 8;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.Border = 0;
+            _pdfPCell.BackgroundColor = BaseColor.WHITE;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 11f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("PERSONAL QUE REALIZA LAS ACTIVIDADES", _fontstyle));
+            _pdfPCell.Colspan = 8;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.Border = 0;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+            // ESPACIO EN BLANCO
+            _fontstyle = FontFactory.GetFont("Tahoma", 2F, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 8;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.Border = 0;
+            _pdfPCell.BackgroundColor = BaseColor.WHITE;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("IT", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("APELLIDOS Y NOMBRES", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("CARGO", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("HORAS", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("IT", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("APELLIDOS Y NOMBRES", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("CARGO", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("HORAS", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.BackgroundColor = BaseColor.GRAY;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+            //DATA
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("01", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("04", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("02", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("05", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("03", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase("06", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+
+            _fontstyle = FontFactory.GetFont("Tahoma", 9f, 1);
+            _pdfPCell = new PdfPCell(new Phrase(" ", _fontstyle));
+            _pdfPCell.Colspan = 1;
+            _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
+            _pdfPCell.ExtraParagraphSpace = 0;
+            _pdfTable.AddCell(_pdfPCell);
+            _pdfTable.CompleteRow();
+
+            //DATA
+
 
             // ESPACIO EN BLANCO
             _fontstyle = FontFactory.GetFont("Tahoma", 2F, 1);
