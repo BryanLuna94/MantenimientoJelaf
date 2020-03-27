@@ -188,7 +188,6 @@
 
         },
 
-
         ListTareaSistema: async function (areCodigo, IdClaseMantenimiento) {
 
             let _this = this;
@@ -209,7 +208,6 @@
                 });
         },
 
-
         ListAreBus: async function (areCodigo,codigoProgramacionReal) {
 
             let _this = this;
@@ -221,8 +219,10 @@
                 }
             })
                 .then(res => {
-                    if (res.data.Estado) {
-                        
+
+                    if (res.data.indexOf('appLogin') > -1) {
+                        window.location.href = _rutaLogin;
+                    }else if (res.data.Estado) {
                         _this.list.AreBus = (res.data.Valor.ListAreEntity) ? res.data.Valor.ListAreEntity : [];
                     }
                 }).catch(error => {
@@ -369,8 +369,6 @@
                     Notifications.Messages.error('Ocurrió una excepción en el metodo GuardarTareas');
                 });
         },
-
-
 
         VerPreventivos: async function () {
 
