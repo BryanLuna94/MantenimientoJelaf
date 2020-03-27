@@ -48,10 +48,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/Template.Service.dll">
-      <publishTime>03/25/2020 12:01:46</publishTime>
+      <publishTime>03/26/2020 21:26:36</publishTime>
     </File>
     <File Include="bin/Template.Service.pdb">
-      <publishTime>03/25/2020 12:01:46</publishTime>
+      <publishTime>03/26/2020 21:26:36</publishTime>
     </File>
     <File Include="bin/Template.Utility.dll">
       <publishTime>03/25/2020 12:01:44</publishTime>

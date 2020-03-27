@@ -173,8 +173,6 @@
 
         ImprimirPlantilla: async function (areCodigo, codigoProgramacionReal, idClaseMantenimiento) {
 
-            let _this = this;
-
             await axios.get(getBaseUrl.obtenerUrlAbsoluta('OrdenMasiva/ReportPlantillaTemp'), {
                 params: {
                     are_codigo: areCodigo,

@@ -1,0 +1,13 @@
+2020-03-26 21:11:12,565 [23] ERROR [en JBLV.Log.Log.RegistrarLog(NivelLog nivel, Exception ex)] 
+System.Data.SqlClient.SqlException (0x80131904): Error al convertir el tipo de datos varchar a numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Mantenimiento.DataAccess.TipoMantenimientoData.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.DataAccess\TipoMantenimientoData.cs:línea 83
+   en Mantenimiento.BusinessLayer.OrdenMasivaLogic.ListAreBus(String are_codigo, String codigo_programacion_real) en D:\BRYAN\Proyectos\Template.BusinessLayer\OrdenMasivaLogic.cs:línea 81
+ClientConnectionId:963bcbe1-30ab-4b7f-b908-6e6ae2e98b08
+Error Number:8114,State:5,Class:16
